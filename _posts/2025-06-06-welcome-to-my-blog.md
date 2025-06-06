@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: "Welcome to My Blog"
 date: 2025-06-06 10:00:00 -0000
 categories: [welcome, introduction]
