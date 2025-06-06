@@ -16,9 +16,9 @@ author:
   bio: "I'm a Data Scientist, AI Engineer and AI Governance Speciailist. I work at the intersection of AI and data science, focusing on responsible AI practices and innovative solutions."
   location: "Hong Kong"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:your-email@example.com"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/yuxichau/"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://yuxichau.github.io"
