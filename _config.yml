@@ -54,7 +54,17 @@ defaults:
       comments: false
       share: true
       related: true
-  permalink: /posts/
+      permalink: /posts/:title/
+
+# Main navigation
+navigation:
+  main:
+    - title: "Home"
+      url: /
+    - title: "Posts"
+      url: /posts/
+    - title: "About"
+      url: /about/
 
 footer:
   links:
