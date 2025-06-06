@@ -1,9 +1,4 @@
-title: Yu# Site Author
-author:
-  name: "Yuxi Chau"
-  avatar: "/assets/images/bio-photo.png" # Optional
-  bio: "Professional description here"
-  location: "Your Location"u's Blog
+title: "Yuxi Chau's Blog"
 description: My professional website and blog
 url: "https://yuxichau.github.io"
 baseurl: "/yuxichau"
