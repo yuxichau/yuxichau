@@ -6,8 +6,6 @@ permalink: /about/
 
 Hi, I'm **Yu-Xi Chau**, a seasoned technology leader with a career built at the intersection of Data Science, MLOps, and AI Governance. As one of Hong Kong's early data scientists, I have spent over a decade translating complex data challenges into tangible business value across diverse industries. I am passionate about building not just AI models, but entire systems and frameworks that enable organizations to innovate responsibly and at scale.
 
-I am excited to be starting my next chapter as a Head of Department, where I will continue to drive AI strategy and execution.
-
 ## My Professional Journey
 
 My foundation is in academia, where I earned a PhD in Applied Mathematics with a focus on Complexity Science (specifically, Interacting Particle Systems). This rigorous background in stochastic systems gave me a unique lens through which to view and solve complex business problems.
