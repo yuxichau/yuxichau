@@ -10,9 +10,9 @@ minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon"
 # Site Author
 author:
   name: "Yu Xi Chau"
-  avatar: "/assets/images/bio-photo.png" # Optional
-  bio: "Professional description here"
-  location: "Your Location"
+  avatar: "assets/images/bio-photo.png" # Optional
+  bio: "I'm a Data Scientist, AI Engineer and AI Governance Speciailist. I work at the intersection of AI and data science, focusing on responsible AI practices and innovative solutions."
+  location: "Hong Kong"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
