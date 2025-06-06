@@ -1,0 +1,12 @@
+title: Yuxi Chau's Blog
+description: My professional website and blog
+url: "https://yuxichau.github.io"
+baseurl: "/yuxichau"
+
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+permalink: /:categories/:year/:month/:day/:title/
