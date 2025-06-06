@@ -52,4 +52,13 @@ defaults:
       share: true
       related: true
 
+# Main navigation
+main:
+  - title: "Home"
+    url: /
+  - title: "Posts"
+    url: /posts/
+  - title: "About"
+    url: /about/
+
 permalink: /:categories/:year/:month/:day/:title/

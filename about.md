@@ -10,22 +10,24 @@ Hi, I'm **Yuxi Chau**, and welcome to my professional website!
 
 ## Background
 
-[Add your background information here - education, experience, etc.]
+I'm a [your profession/role] with [X years] of experience in [your field]. I graduated from [University] with a degree in [your degree].
 
 ## Skills & Expertise
 
-[List your skills, technologies you work with, areas of expertise]
+- **Programming Languages**: [e.g., Python, JavaScript, Java]
+- **Technologies**: [e.g., React, Node.js, AWS]
+- **Areas of Focus**: [e.g., Web Development, Data Science, Machine Learning]
 
 ## Current Focus
 
-[What are you currently working on or interested in?]
+Currently, I'm working on [current projects/interests] and learning more about [technologies/skills you're developing].
 
 ## Contact
 
 Feel free to reach out:
-- **Email**: [your-email@example.com]
-- **LinkedIn**: [Your LinkedIn Profile]
-- **GitHub**: [Your GitHub Profile]
+- **Email**: [your-actual-email@example.com]
+- **LinkedIn**: [Your LinkedIn URL]
+- **GitHub**: [Your GitHub URL]
 
 ## About This Site
 
