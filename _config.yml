@@ -55,24 +55,6 @@ defaults:
       share: true
       related: true
 
-# Main navigation
-# navigation:
-#   main:
-#     - title: "Home"
-#       url: /
-#     - title: "Posts"
-#       url: /posts/
-#     - title: "About"
-#       url: /about/
-
-links:
-  - title: "Home"
-    url: "/"
-  - title: "Posts"
-    url: "/posts/"
-  - title: "About"
-    url: "/about/"
-
 footer:
   links:
     - label: "GitHub"
