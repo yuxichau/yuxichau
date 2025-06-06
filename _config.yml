@@ -1,11 +1,13 @@
-title: "Yuxi Chau's Blog"
+title: "Yu Xi Chau"
 description: My professional website and blog
 url: "https://yuxichau.github.io"
 baseurl: "/yuxichau"
+logo: "assets/images/logo.png" 
+
 
 # Theme
 theme: minimal-mistakes-jekyll
-# minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Author
 author:
@@ -23,6 +25,7 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/yuxichau"
+
 
 # Build settings
 markdown: kramdown
@@ -53,13 +56,21 @@ defaults:
       related: true
 
 # Main navigation
-navigation:
-  main:
-    - title: "Home"
-      url: /
-    - title: "Posts"
-      url: /posts/
-    - title: "About"
-      url: /about/
+# navigation:
+#   main:
+#     - title: "Home"
+#       url: /
+#     - title: "Posts"
+#       url: /posts/
+#     - title: "About"
+#       url: /about/
+
+links:
+  - title: "Home"
+    url: "/"
+  - title: "Posts"
+    url: "/posts/"
+  - title: "About"
+    url: "/about/"
 
 permalink: /:categories/:year/:month/:day/:title/

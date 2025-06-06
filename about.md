@@ -6,7 +6,9 @@ permalink: /about/
 
 # About Me
 
-Hi, I'm **Yuxi Chau**, and welcome to my professional website!
+Hi, I'm **Yu Xi Chau**, and welcome to my page!
+
+[img](assets/images/bio-photo.png)
 
 ## Background
 
@@ -25,13 +27,8 @@ Currently, I'm working on [current projects/interests] and learning more about [
 ## Contact
 
 Feel free to reach out:
-- **Email**: [your-actual-email@example.com]
 - **LinkedIn**: [Your LinkedIn URL]
 - **GitHub**: [Your GitHub URL]
-
-## About This Site
-
-This website is built with Jekyll and hosted on GitHub Pages. The source code is available on [GitHub](https://github.com/yuxichau/yuxichau).
 
 ---
 
