@@ -1,4 +1,9 @@
-title: Yuxi Chau's Blog
+title: Yu# Site Author
+author:
+  name: "Yuxi Chau"
+  avatar: "/assets/images/bio-photo.png" # Optional
+  bio: "Professional description here"
+  location: "Your Location"u's Blog
 description: My professional website and blog
 url: "https://yuxichau.github.io"
 baseurl: "/yuxichau"
@@ -9,7 +14,7 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 
 # Site Author
 author:
-  name: "Yuxi Chau"
+  name: "Yu Xi Chau"
   avatar: "/assets/images/bio-photo.png" # Optional
   bio: "Professional description here"
   location: "Your Location"
@@ -53,12 +58,13 @@ defaults:
       related: true
 
 # Main navigation
-main:
-  - title: "Home"
-    url: /
-  - title: "Posts"
-    url: /posts/
-  - title: "About"
-    url: /about/
+navigation:
+  main:
+    - title: "Home"
+      url: /
+    - title: "Posts"
+      url: /posts/
+    - title: "About"
+      url: /about/
 
 permalink: /:categories/:year/:month/:day/:title/
