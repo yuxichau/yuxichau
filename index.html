@@ -1,27 +1,6 @@
 ---
-layout: default
-title: Home
+layout: home
+title: "Welcome to My Blog"
 ---
 
-<section class="hero">
-    <h2>Welcome to {{ site.title }}</h2>
-    <p>{{ site.description }}</p>
-</section>
-
-<section class="recent-posts">
-    <h3>Recent Blog Posts</h3>
-    {% if site.posts.size > 0 %}
-        <ul class="post-list">
-        {% for post in site.posts limit: 5 %}
-            <li>
-                <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
-                <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
-                <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-            </li>
-        {% endfor %}
-        </ul>
-        <p><a href="{{ '/blog' | relative_url }}">View all posts →</a></p>
-    {% else %}
-        <p>No blog posts yet. Check back soon!</p>
-    {% endif %}
-</section>
+Welcome to my professional website and blog!

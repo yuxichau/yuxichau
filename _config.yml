@@ -3,10 +3,53 @@ description: My professional website and blog
 url: "https://yuxichau.github.io"
 baseurl: "/yuxichau"
 
+# Theme
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Site Author
+author:
+  name: "Yuxi Chau"
+  avatar: "/assets/images/bio-photo.png" # Optional
+  bio: "Professional description here"
+  location: "Your Location"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:your-email@example.com"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://yuxichau.github.io"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/yuxichau"
+
+# Build settings
 markdown: kramdown
 highlighter: rouge
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-include-cache
+
+# Pagination
+paginate: 5
+paginate_path: /page:num/
+
+# Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
 
 permalink: /:categories/:year/:month/:day/:title/
