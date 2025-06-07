@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Welcome to Yu Xi Chau's Blog"
+title: "Yu-Xi"
 author_profile: true
 ---
 
