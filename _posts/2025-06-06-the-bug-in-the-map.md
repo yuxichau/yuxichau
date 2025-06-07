@@ -16,7 +16,9 @@ The person who found it was asking for help. Where was Cheung Po? No one knew. I
 
 As so often happens, the bug wasn't in the history itself, but in the data entry. "Cheung Po" was almost certainly a Brit's attempt at writing down a Cantonese name. The most likely candidate was 軍陂 (pronounced roughly *Gwan Po*), a small area just west of the old Shenzhen market—Sham Chun Hui. An 1866 map, drawn by an industrious Italian missionary, confirmed it. There, right next to "Sham Chun," was a place he'd labeled "Sheung Po." We were getting closer. The map can be found in [CUHK's archive](https://repository.lib.cuhk.edu.hk/en/item/cuhk-2612080).
 
-![1866 Map of San on](/assets/images/20250607-map-sanon.png)
+<!-- ![1866 Map of San on](/assets/images/20250607-map-sanon.png) -->
+
+![1866 Map of San on]({{ "/assets/images/20250607-map-sanon.png" | relative_url }})
 
 The date, 1899, was the real key. In 1898, Britain had leased a huge tract of land from Qing China, which would become Hong Kong's New Territories. But the local clans living there hadn't been consulted, and they weren't happy about it. When British troops arrived in 1899 to hoist the Union Jack, they were met with armed resistance.
 

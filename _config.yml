@@ -1,7 +1,7 @@
 title: "Yu Xi Chau"
 description: My professional website and blog
 url: "https://yuxichau.github.io"
-baseurl: ""
+baseurl: "/yuxichau"
 logo: "assets/images/logo.png" 
 
 
