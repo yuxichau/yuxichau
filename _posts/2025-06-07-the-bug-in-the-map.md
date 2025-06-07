@@ -1,3 +1,11 @@
+---
+layout: single
+title: "The Bug in the Map"
+date: 2025-06-07 10:00:00 -0000
+tags: [History, AI Applications]
+author: Yu Xi Chau
+---
+
 I love it when you find a bug in the world. Not a software bug, but an error in the official story of things. A detail that doesn't quite fit.
 
 A while ago, I stumbled upon one. It started with an old piece of military memorabilia, a small metal artifact stamped with just three words: "Cheung Po 1899." This was posted in a [reddit post](https://www.reddit.com/r/HongKong/comments/1l3t0ik/any_help_identifiying_where_this_came_from_please/). 

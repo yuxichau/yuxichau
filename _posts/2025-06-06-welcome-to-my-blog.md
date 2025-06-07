@@ -3,7 +3,7 @@ layout: single
 title: "The Great Consolidation"
 date: 2025-06-06 10:00:00 -0000
 tags: [Singularity, Copilot, Trends]
-author: Yuxi Chau
+author: Yu Xi Chau
 ---
 
 I've noticed something when using GitHub Copilot. If I start writing some code to analyze data, it almost always suggests I use Python and the `pandas` library. It’s usually a good suggestion. But it is *always* that suggestion. It feels less like magic and more like I'm walking on a path that has been worn smooth by thousands of people before me.
