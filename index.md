@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Yu-Xi"
+title: "Yu Xi Chau"
 author_profile: true
 ---
 
