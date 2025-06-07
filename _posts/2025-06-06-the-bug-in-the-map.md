@@ -14,7 +14,7 @@ A while ago, I stumbled upon one. It started with an old piece of military memor
 <!-- ![Image of Cheung Po memorablia](/assets/images/cheungpo-1899.webp) -->
 
 <!-- For Jekyll build: -->
-![Image of Cheung Po memorablia]({{ "/assets/images/20250607-map-sanon.png" | relative_url }})
+![Image of Cheung Po memorablia]({{ "/assets/images/cheungpo-1899.webp" | relative_url }})
 
 The person who found it was asking for help. Where was Cheung Po? No one knew. It's not on any modern map of Hong Kong or Shenzhen. It seemed to be a ghost, a place that existed for a moment and then vanished. It was a dangling pointer. A bug in the historical record. And like any good bug, it hinted that the underlying system was more complex than the documentation suggested.
 
