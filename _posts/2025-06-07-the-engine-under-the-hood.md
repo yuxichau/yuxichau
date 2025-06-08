@@ -16,7 +16,7 @@ This dominance isn't just theoretical; it's visible in plain sight on leaderboar
 <!-- ![Gemini's Price-Performance on Arena Leaderboards](/assets/images/areana_price.png) -->
 
 <!-- For Jekyll build: -->
-![Gemini's Price-Performance on Arena Leaderboards]({{ "/assets/images/areana_price.png" | relative_url }})
+![Gemini's Price-Performance on Arena Leaderboards]({{ "/assets/images/20250607-areana-cost.png" | relative_url }})
 
 This consistent lead begs the question: how are they doing it? This isn't a temporary sale or a minor lead. It’s a structural advantage. The answer has less to do with the models themselves and more to do with the custom engines they run on.
 
