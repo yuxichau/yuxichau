@@ -13,10 +13,10 @@ If you’ve looked at the price-performance charts for large language models rec
 This dominance isn't just theoretical; it's visible in plain sight on leaderboards like the LMSYS Chatbot Arena, which pits models against each other in blind tests. Across the entire spectrum, Google's Gemini family is establishing an undeniable pattern. Whether it's the small and versatile Gemma, lightning fast and inexpensive Gemini Flash, or the top-tier and powerful Gemini Pro, each model consistently delivers performance that punches far above its price point. This isn't just winning one category; it's a strategic placement across all tiers, offering remarkable performance for value no matter the use case.
 
 <!-- For local VS Code preview: -->
-<!-- ![Gemini's Price-Performance on Arena Leaderboards](/assets/images/areana_price.png) -->
+<!-- ![Gemini's Price-Performance on Arena Leaderboards](/assets/images/20250607-arena-cost.png) -->
 
 <!-- For Jekyll build: -->
-![Gemini's Price-Performance on Arena Leaderboards]({{ "/assets/images/20250607-areana-cost.png" | relative_url }})
+![Gemini's Price-Performance on Arena Leaderboards]({{ "/assets/images/20250607-arena-cost.png" | relative_url }})
 
 This consistent lead begs the question: how are they doing it? This isn't a temporary sale or a minor lead. It’s a structural advantage. The answer has less to do with the models themselves and more to do with the custom engines they run on.
 
