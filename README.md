@@ -48,5 +48,3 @@ This project uses GitHub Actions to automatically deploy the website to GitHub P
 ## License
 
 This project is licensed under the MIT License.
-
-Add line for test.
