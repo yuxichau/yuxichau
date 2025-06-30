@@ -46,3 +46,5 @@ If you work in a large organization, especially one with a heavy .NET presence, 
 If you’re a small team building an AI-native product, and you've bet your future on OpenAI's models, you'd be crazy not to use the tools they built for you. You take the speed and agility of the Agent SDK.
 
 You see this fork in the road everywhere in technology. The broad, stable tool versus the sharp, fast one. When it comes to building AI agents today, your choice of scaffolding depends entirely on the shape of what you're building. Choose the one that fits.
+
+.
