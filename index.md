@@ -4,12 +4,12 @@ title: "Yu Xi Chau"
 author_profile: true
 ---
 
-Hi, I'm **Yu-Xi Chau**, and welcome to my digital space. Here, I explore the intersection of MLOps, AI Governance, and practical business solutions.
+Hey, I'm **Yu-Xi Chau**. I currently work as a Generative AI Lead at FWD Insurance, where I focus on building GenAI solutions and establishing AI Governance frameworks.
 
-I am a Data Science veteran turned **MLOps Engineer** and **AI Governance Lead**. As one of the earliest Data Scientists in Hong Kong, my career has been a journey of constant evolution, spanning industries from gaming and retail to properties and insurance.
+I've been working with data and AI for over a decade, starting as one of the early data scientists in Hong Kong. These days, I'm deep in the world of LLMs, RAG systems, and agentic workflows—building things that actually ship to production.
 
-My journey is rooted in a PhD in Applied Mathematics (specializing in Complexity and Stochastic Systems), which built the foundation for a career dedicated to applying machine learning to solve real-world business problems. While my title has often been "Data Scientist," I've worn many hats, delving into data management, data engineering, and, most recently, specializing in the critical areas of MLOps and AI Governance.
+I have a PhD in Applied Mathematics (Complexity Science), which gave me a solid foundation for working with complex systems. Over the years, I've worked across insurance, real estate, retail, CRM, and gaming—the industries change, but the core challenge stays the same: how do you build AI systems that are reliable, governable, and actually deliver value?
 
-My primary focus is on ensuring AI is not just innovative, but also reliable, scalable, and deployed responsibly. In my previous role as a Senior Manager, I led initiatives to standardize and accelerate model deployment, creating a safe and efficient platform for our teams. This work extended to delivering cutting-edge **Generative AI** solutions, including chatbots built with RAG and agentic workflows.
+Right now at FWD, I lead Generative AI initiatives and AI Governance work, which means building and deploying GenAI applications, setting up guardrails for responsible AI, and making sure our systems are production-ready.
 
-On this site, I'll be sharing insights from my professional work. I also plan to write about some of my personal interests, including my passion for history (especially the Ming Dynasty and Hong Kong) and my experiments with productivity systems like the Zettlekasten method for knowledge management.
+On this site, I write about AI systems, MLOps, and whatever else I'm exploring. I'm also working on integrating the **Zettelkasten method** into my personal knowledge management workflow. Outside of tech, I'm a history nerd who reads a lot about the Ming Dynasty and Hong Kong history.
