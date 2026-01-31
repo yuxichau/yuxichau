@@ -1,50 +1,49 @@
-# My Static Website
+# yuxichau
 
-This is a simple static website project that is hosted on GitHub Pages. The project includes HTML, CSS, and JavaScript files, along with a favicon.
+Personal blog built with Jekyll and hosted on GitHub Pages.
+
+**Live site**: https://yuxichau.github.io/yuxichau/
+
+## About
+
+This is a Jekyll-based blog where I write about software development, AI agents, and technical topics.
+
+## Local Development
+
+1. Install dependencies:
+   ```bash
+   bundle install
+   ```
+
+2. Run the development server:
+   ```bash
+   bundle exec jekyll serve
+   ```
+
+3. Open http://localhost:4000/yuxichau/ in your browser.
 
 ## Project Structure
 
+- `_posts/` - Blog posts in Markdown format
+- `_pages/` - Static pages (about, posts index)
+- `_data/` - Site data files (navigation, etc.)
+- `_includes/` - Reusable HTML components
+- `assets/` - Images and other static assets
+- `docs/` - Development workflow documentation
+
+## Writing Posts
+
+Create a new file in `_posts/` with the format `YYYY-MM-DD-title.md` and include front matter:
+
+```markdown
+---
+title: "Your Post Title"
+date: YYYY-MM-DD
+---
+
+Your content here.
 ```
-my-static-website
-├── src
-│   ├── index.html        # Main HTML document
-│   ├── css
-│   │   └── styles.css    # Styles for the website
-│   ├── js
-│   │   └── main.js       # JavaScript functionality
-│   └── assets
-│       └── favicon.ico    # Favicon for the website
-├── .github
-│   └── workflows
-│       └── deploy.yml     # GitHub Actions workflow for deployment
-├── .gitignore             # Files to ignore by Git
-└── README.md              # Project documentation
-```
-
-## Setup Instructions
-
-1. Clone the repository to your local machine:
-   ```
-   git clone https://github.com/yourusername/my-static-website.git
-   ```
-
-2. Navigate to the project directory:
-   ```
-   cd my-static-website
-   ```
-
-3. Open the `src/index.html` file in your browser to view the website.
-
-## Usage
-
-- Modify the `src/index.html` file to change the content of the website.
-- Update `src/css/styles.css` to change the styles.
-- Add functionality in `src/js/main.js`.
 
 ## Deployment
 
-This project uses GitHub Actions to automatically deploy the website to GitHub Pages whenever changes are pushed to the repository. The workflow is defined in `.github/workflows/deploy.yml`.
-
-## License
-
-This project is licensed under the MIT License.
+The site automatically deploys to GitHub Pages when changes are pushed to the main branch.

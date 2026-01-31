@@ -4,38 +4,32 @@ title: About Me
 permalink: /about/
 ---
 
-Hi, I'm **Yu-Xi Chau**, a seasoned technology leader with a career built at the intersection of Data Science, MLOps, and AI Governance. As one of Hong Kong's early Data Scientists, I have spent over a decade translating complex data challenges into tangible business value across diverse industries, most recently in Insurance. I am passionate about building not just AI models, but entire systems and frameworks that enable organizations to innovate responsibly and at scale. 
+Hey, I'm **Yu-Xi Chau**. I currently work as a Generative AI Lead at FWD Insurance, where I focus on building GenAI solutions and establishing AI Governance frameworks.
 
-## My Professional Journey
+I've been working with data and AI for over a decade, starting as one of the early data scientists in Hong Kong. These days, I'm deep in the world of LLMs, RAG systems, and agentic workflows—building things that actually ship to production.
 
-My foundation is in academia, where I earned a PhD in Applied Mathematics with a focus on Complexity Science. 
+## Background
 
-My professional path has taken me through a wide range of industries, including **Insurance, Real Estate, Retail, CRM, and Gaming**. While the context changed, my mission remained the same: to leverage data and AI for strategic advantage. I have developed particularly deep expertise in the **insurance sector**, leading projects that delivered significant value to both operations and agency channels.
+I have a PhD in Applied Mathematics (Complexity Science). It gave me a solid foundation in how complex systems work, which turns out to be pretty useful when you're trying to make AI work in real organizations.
 
-Though often titled a Data Scientist, my roles have required me to be a versatile problem-solver, wearing the hats of a Data Engineer, MLOps Architect, and AI Governance Lead as needed to get the job done.
+Over the years, I've worked across insurance, real estate, retail, CRM, and gaming. The industries change, but the core challenge stays the same: how do you build AI systems that are reliable, governable, and actually deliver value?
 
-## Core Expertise & Philosophy
+## What I Do
 
-I believe that successful AI implementation is not just about algorithms, but about people, processes, and platforms. My expertise is centered around these three pillars.
+Right now at FWD, I lead Generative AI initiatives and AI Governance work. This means:
+- Building and deploying GenAI applications
+- Setting up the processes for responsible AI deployment
+- Making sure our AI systems are ops-ready and maintainable
 
-*   **Executive Leadership & Strategy**: As a senior manager, I have led and mentored  cross-functional teams of business analysts, project managers, and engineers. I excel at aligning technical strategy with business objectives and fostering a culture of collaboration and innovation.
+I'm also into MLOps—building the infrastructure and processes that let teams ship AI reliably. In my previous role, I built out an MLOps platform using Azure ML, Jenkins, and other tools to standardize how we deploy models.
 
-*   **MLOps & Operationalizing AI**: I like building the "factory" for AI, especially when its a rapidly evolving topic. In my recent role, I spearheaded the standardization of the machine learning deployment lifecycle. By designing and implementing a robust MLOps platform using **Azure Machine Learning, Jenkins, Bitbucket, and Jira**, we accelerated our time-to-market while ensuring safe, governed, and reliable deployments.
+## What You'll Find Here
 
-*   **Generative AI & Modern Applications**: I have hands-on experience in the delivery of cutting-edge Generative AI solutions, including building enterprise-level applications with **Retrieval-Augmented Generation (RAG) and Agentic Workflows**.
+I'm working on integrating the **Zettelkasten method** into my personal knowledge management workflow. Expect posts about that, along with thoughts on AI systems, MLOps, and whatever else I'm exploring at the moment.
 
-*   **Technical Toolkit**:
-    *   **Languages**: Python, R, C++
-    *   **Cloud & Platforms**: Microsoft Azure (Azure Machine Learning)
-    *   **DevOps & MLOps**: Jenkins, Bitbucket, Jira, AI Foundry
+## Outside of Tech
 
-## On This Website
-
-This site is a space for me to explore my interests further. One of my current projects is optimizing my personal knowledge management by integrating the **Zettelkasten method** into my note-taking workflow, a topic I plan to write about here.
-
-## Beyond the Code
-
-When I'm not immersed in technology, I have a deep passion for history. I'm an avid reader, particularly drawn to the histories of the Ming Dynasty and Hong Kong.
+I'm a history nerd. I read a lot about the Ming Dynasty and Hong Kong history when I'm not coding.
 
 ---
 
