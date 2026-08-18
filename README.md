@@ -1,8 +1,8 @@
 # Personal Blog
 
-Personal blog built with Jekyll and hosted on GitHub Pages.
+Personal blog built with Jekyll and hosted on Cloudflare Pages.
 
-**Live site**: https://yuxichau.github.io/yuxichau/
+**Live site**: https://yuxichau.com
 
 ## About
 
@@ -20,7 +20,7 @@ This is a Jekyll-based blog where I write about software development, AI agents,
    bundle exec jekyll serve
    ```
 
-3. Open http://localhost:4000/yuxichau/ in your browser.
+3. Open http://localhost:4000/ in your browser.
 
 ## Project Structure
 
@@ -29,7 +29,7 @@ This is a Jekyll-based blog where I write about software development, AI agents,
 - `_data/` - Site data files (navigation, etc.)
 - `_includes/` - Reusable HTML components
 - `assets/` - Images and other static assets
-- `docs/` - Development workflow documentation
+- `_redirects` - Cloudflare Pages redirect rules (legacy /yuxichau/* URLs)
 
 ## Writing Posts
 
@@ -46,4 +46,4 @@ Your content here.
 
 ## Deployment
 
-The site automatically deploys to GitHub Pages when changes are pushed to the main branch.
+The site automatically deploys to Cloudflare Pages (project: `yuxichau`) when changes are pushed to the main branch.

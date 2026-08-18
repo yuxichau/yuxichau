@@ -1,7 +1,7 @@
 title: "Yu Xi Chau"
 description: My professional website and blog
-url: "https://yuxichau.github.io"
-baseurl: "/yuxichau"
+url: "https://yuxichau.com"
+baseurl: ""
 logo: "assets/images/logo.png" 
 
 
@@ -21,7 +21,7 @@ author:
       url: "https://www.linkedin.com/in/yuxichau/"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://yuxichau.github.io"
+      url: "https://yuxichau.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/yuxichau"
