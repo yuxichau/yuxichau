@@ -2,7 +2,8 @@ title: "Yu Xi Chau"
 description: My professional website and blog
 url: "https://yuxichau.com"
 baseurl: ""
-logo: "assets/images/logo.png" 
+logo: "assets/images/logo.png"
+favicon: "assets/images/favicon.svg" 
 
 
 # Theme
@@ -66,21 +67,10 @@ defaults:
       layout: single
       author_profile: true
 
-# Main navigation
-navigation:
-  main:
-    - title: "Home"
-      url: /
-    - title: "Posts"
-      url: /posts/
-    - title: "About"
-      url: /about/
+# Main navigation lives in _data/navigation.yml (single source of truth)
 
 footer:
   links:
     - label: "GitHub"
       icon: "fab fa-github"
-      url: "https://github.com/yourusername"
-
-
-permalink: /:categories/:year/:month/:day/:title/
+      url: "https://github.com/yuxichau"
