@@ -198,6 +198,10 @@ permalink: /projects/llm-model-analysis/
     <div class="chips" id="fCreators"></div>
   </div>
   <div class="fgroup">
+    <label>Model family</label>
+    <select id="fFamily"></select>
+  </div>
+  <div class="fgroup">
     <label>Reasoning mode</label>
     <select id="fReasoning"></select>
   </div>
@@ -253,11 +257,13 @@ const $ = id => document.getElementById(id);
 
 function filter() {
   const q = $("fSearch").value.toLowerCase();
+  const family = $("fFamily").value;
   const reasoning = $("fReasoning").value;
   const effort = $("fEffort").value;
   const minII = parseInt($("fMinII").value, 10);
   shown = DATA.filter(d => {
     if (!activeCreators.has(d.creator)) return false;
+    if (family !== "all" && d.family !== family) return false;
     if (reasoning !== "all" && d.reasoning !== reasoning) return false;
     if (effort !== "all" && d.effort !== effort) return false;
     if (d.ii < minII) return false;
@@ -357,6 +363,7 @@ function renderTable() {
     { k: "rank", label: "#", cls: "num" },
     { k: "name", label: "Model" },
     { k: "creator", label: "Lab" },
+    { k: "family", label: "Family" },
     { k: "reasoning", label: "Reasoning" },
     { k: "effort", label: "Effort" },
     { k: "ii", label: "Intelligence", cls: "num" },
@@ -390,6 +397,7 @@ function renderTable() {
       "<td class=\"num\">" + d.rank + "</td>" +
       "<td><strong>" + d.name.replace(/(<|>)/g, m => m === "<" ? "&lt;" : "&gt;") + "</strong></td>" +
       "<td>" + d.creator + "</td>" +
+      "<td>" + d.family + "</td>" +
       "<td>" + badges.join("") + "</td>" +
       "<td>" + (d.effort ? d.effort : '<span class="na">-</span>') + "</td>" +
       "<td class=\"num\">" + fmtNum(d.ii) + "</td>" +
@@ -418,17 +426,20 @@ function initControls() {
     else { activeCreators.add(cr); ch.classList.add("on"); }
     render();
   });
+  const FAMILY_ORDER = ["Claude", "GPT", "Gemini", "Qwen", "Grok", "DeepSeek", "Kimi", "GLM", "Muse", "MiniMax", "Motif"];
+  $("fFamily").innerHTML = '<option value="all">All families</option>' +
+    FAMILY_ORDER.filter(f => DATA.some(d => d.family === f)).map(f => '<option value="' + f + '">' + f + '</option>').join("");
   $("fReasoning").innerHTML = '<option value="all">All modes</option>' +
     REASONING_ORDER.map(r => '<option value="' + r + '">' + r + '</option>').join("");
   $("fEffort").innerHTML = '<option value="all">Any effort</option>' +
     EFFORT_ORDER.map(e => '<option value="' + e + '">' + e + '</option>').join("");
-  ["fReasoning", "fEffort"].forEach(id => $(id).onchange = render);
+  ["fFamily", "fReasoning", "fEffort"].forEach(id => $(id).onchange = render);
   $("fSearch").oninput = render;
   $("fMinII").oninput = () => { $("minIILabel").textContent = $("fMinII").value; render(); };
   $("fReset").onclick = () => {
     activeCreators = new Set([...new Set(DATA.map(d => d.creator))]);
     $("fCreators").querySelectorAll(".chip").forEach(ch => ch.classList.add("on"));
-    $("fSearch").value = ""; $("fReasoning").value = "all"; $("fEffort").value = "all";
+    $("fSearch").value = ""; $("fFamily").value = "all"; $("fReasoning").value = "all"; $("fEffort").value = "all";
     $("fMinII").value = 0; $("minIILabel").textContent = "0";
     render();
   };
