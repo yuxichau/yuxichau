@@ -43,3 +43,6 @@ vendor/
 
 # docs - internal documentation
 docs/
+
+# Cloudflare
+.wrangler/

@@ -6,30 +6,34 @@ tags: [Google, TPU, GPU]
 author: Yu Xi Chau
 ---
 
-If you’ve looked at the price-performance charts for large language models recently, you might have noticed something strange. Google, the company many had written off as being on its back foot in the AI race, is quietly dominating the corner that matters most: the one for models that are both very good and very cheap.
+In most companies running a generative AI programme, I'm the person people send when they can't decide which model to pick. The question comes around every few months, dressed up differently each time. "Is OpenAI still the answer?" "Should we move to Gemini?" "Why do the competitors keep changing?" Underneath, they're all the same question, and it isn't about which chatbot is smarter. It's about what it costs to run the thing you actually do.
 
-#### A Clear Lead in Performance-for-Value
+The part people usually skip is the engine. The model is what gets the press, but the price you pay is set by the hardware it runs on. And the company that quietly decided to build its own hardware a decade ago is the one that keeps showing up at the cheap end of every leaderboard.
 
-This dominance isn't just theoretical; it's visible in plain sight on leaderboards like the LMSYS Chatbot Arena, which pits models against each other in blind tests. Across the entire spectrum, Google's Gemini family is establishing an undeniable pattern. Whether it's the small and versatile Gemma, lightning fast and inexpensive Gemini Flash, or the top-tier and powerful Gemini Pro, each model consistently delivers performance that punches far above its price point. This isn't just winning one category; it's a strategic placement across all tiers, offering remarkable performance for value no matter the use case.
+The LMSYS Chatbot Arena ranks models by blind tests, and the Gemini family is all over it. The small Gemma models, Flash at the fast and inexpensive middle, Pro at the top. At every tier, the pattern holds: Google's models deliver more for less than comparable alternatives. The whole lineup is arranged that way on purpose.
 
-<!-- For local VS Code preview: -->
-<!-- ![Gemini's Price-Performance on Arena Leaderboards](/assets/images/20250607-arena-cost.png) -->
+The obvious question is how. The answer sits underneath the models, in the engines they run on.
 
-<!-- For Jekyll build: -->
-![Gemini's Price-Performance on Arena Leaderboards]({{ "/assets/images/20250607-arena-cost.png" | relative_url }})
+Run AI at any serious scale and you end up paying a tax to NVIDIA. Their GPUs are the only realistic option, so they set the price, and it is priced as the only realistic option. The hardware itself is excellent. That is exactly why the tax holds.
 
-This consistent lead begs the question: how are they doing it? This isn't a temporary sale or a minor lead. It’s a structural advantage. The answer has less to do with the models themselves and more to do with the custom engines they run on.
+Google made a different bet more than a decade ago: build its own chip. The Tensor Processing Unit is vertical integration in the mould of Apple, where the people who design the silicon also decide what runs on it. Google did not rent a factory, it built one, and it designed every machine inside.
 
-#### The NVIDIA Tax and the TPU Gambit
+The design philosophy matters as much as the engineering. A GPU is a general-purpose engine: graphics, scientific computing, AI. A TPU is built for one job, running neural networks. Neural networks, under the hood, are mostly a long series of matrix multiplications, tensors multiplied together over and over again. Google's TPUs remove everything that is not that one operation and perfect the Matrix Multiply Unit at the centre of the chip. Instead of a sedan that hauls anything, you get a race car built for one track.
 
-For most companies, the AI boom comes with a hefty tax. It's paid to NVIDIA. To build or run any serious AI at scale, you need to buy or rent their GPUs, and you pay the price for their market dominance. This isn't a criticism of NVIDIA; they make exceptional hardware. It's just a statement of fact about the economics of the industry.
+The specialization runs deeper. Modern models deal in sparse tensors. Pull one user's viewing history from billions of hours of YouTube and you get an enormous array where almost every entry is zero, because they have not watched that video. A general-purpose chip multiplies those zeros anyway, spending power and time on nothing. Google's SparseCores are built to skip the zeros and compute only the entries that matter. That is the quiet reason Google Search and Ads run at planetary scale without the compute bill swallowing the company.
 
-Google decided to play a different game. Over a decade ago, they started building their own chips: the Tensor Processing Units (TPUs). This is fundamentally an argument about vertical integration, which is not dissimilar to how Apple sees its Hardware and Software going hand-in-hand. Instead of renting a factory, they built their own. But more importantly, they got to design every machine inside it.
+The newer generations, Trillium and Ironwood, push the same direction: more memory, more efficiency at the workloads becoming AI's biggest bottleneck. Faster, and also cheaper per unit of useful work, and the second number is the one that decides what AI products can cost.
 
-A GPU is a powerful, general-purpose engine. We use it for graphics, scientific computing, or AI. A TPU is different. It's a custom-built engine designed for exactly one purpose: running neural networks. At their core, neural networks process information by performing a staggering number of matrix multiplications. Data is represented in large, multi-dimensional arrays in the form of "tensors," and training or running a model is essentially a marathon of multiplying these tensors together. A TPU strips away unnecessary components and perfects this one operation. Its architecture, built around a dedicated Matrix Multiply Unit (MXU), is like a hyper-efficient assembly line designed for this single mathematical task. It’s less like a car engine that can do anything and more like a Formula 1 engine designed for pure, unadulterated speed on a specific track.
+So while the industry argues about which model writes the better email, the contest underneath is about economics. Most companies in the AI race buy their fuel from a single supplier. Google owns the refinery.
 
-This specialization goes even deeper. Modern AI often deals with "sparse" tensors. Imagine looking up a single user's viewing history from the billions of hours on YouTube. The resulting data tensor would be enormous, but nearly every value in it would be zero, representing a video the user *hasn't* watched. A general-purpose chip wastes immense effort and energy multiplying by zero over and over again, which is a computationally useless task. Google’s TPUs have specialized hardware called SparseCores that are built to handle this exact problem. They are engineered to identify and skip these zero-value entries, only performing calculations on the meaningful, non-zero data. This isn't a theoretical edge; it's what makes products like Google Search and Ads run efficiently at planetary scale.
+I think the TPUs are structurally good. The engineering choices, the specialization in training and inference, the refusal to be a general-purpose anything, add up to something real. And I say that hoping I am wrong. Not because I want Google to fail, but because a field with room for many engines is a more interesting field than one where the answer was settled years ago. So far nobody has managed to unsettle it, and I keep half-waiting for someone to.
 
-When you see the results of this strategy, like the prices for Gemini, you're not seeing a marketing gimmick. You're seeing the economic output of a more efficient machine. Google can afford to charge less because it *costs* them less to get the answer. And this advantage is compounding. Their newer TPU generations, Trillium and Ironwood, show an obsessive focus on widening this lead by dramatically increasing memory and improving an already specialized architecture. They aren't just getting faster; they're getting more efficient at the exact workloads that are becoming AI's biggest bottlenecks.
+---
 
-So while we obsess over which chatbot is more clever, the real moat in AI may be forming at a much deeper level. It might not be the model's intelligence, which can be fleeting, but the brutal economics of running it at scale. Other companies are in a race where the cost of fuel is set by a single supplier. Google is quietly showing everyone what happens when you own the oil refinery.
+*Post-script, added later.*
+
+I wanted to come back to this, because the thesis got tested in the field sooner than I expected. We were processing general medical documents, the kind every insurer handles: clinical letters, referral forms, lab reports, scans of pages that were never born digital. The incumbent approach was Microsoft's Content Understanding, which had grown a semantic layer and an LLM integration over the years, and the ledger showed it: it was expensive, and the price kept climbing as Microsoft modernised it.
+
+Then we pointed Gemini 3 Flash at the same stack of documents. Zero-shot, no retraining, no custom extractor. It read the medical documents better than the specialised document service — better than the OCR-plus-semantics pipeline we had been paying for — at about half the cost.
+
+That is the part I find worth sitting with. A general-purpose model, pointed at a job a specialised tool was built for, and it won on both quality and price. It does not mean TPUs are right for everyone, and it does not mean the specialised tools are doomed. It means the field is more open than the consensus assumes, which is exactly what I said I was hoping for. I got my wish sooner than I expected to.

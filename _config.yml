@@ -13,7 +13,7 @@ minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon"
 author:
   name: "Yu Xi Chau"
   avatar: "/assets/images/bio-photo.png" # Optional
-  bio: "I'm a Data Scientist, AI Engineer and AI Governance Speciailist. I work at the intersection of AI and data science, focusing on responsible AI practices and innovative solutions."
+  bio: "Data Scientist and Generative AI Lead. I build GenAI applications and set up AI governance at FWD Insurance."
   location: "Hong Kong"
   links:
     - label: "LinkedIn"
@@ -38,7 +38,7 @@ plugins:
   - jekyll-include-cache
 
 # Include files/folders
-include: ["_pages"]
+include: ["_pages", "_redirects"]
 
 # Pagination
 paginate: 5
