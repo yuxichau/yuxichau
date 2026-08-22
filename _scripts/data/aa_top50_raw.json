@@ -1,0 +1,1636 @@
+{
+ "pulled_at": "2026-08-22T13:19:26.410259+00:00",
+ "intelligence_index_version": "4.1",
+ "top_50": [
+  {
+   "id": "b8fc61f7-5e9a-49e6-8547-6ac56db24627",
+   "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)",
+   "slug": "claude-opus-5",
+   "release_date": "2026-07-24",
+   "model_creator": {
+    "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "name": "Anthropic"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 63.1,
+    "artificial_analysis_coding_index": 78,
+    "artificial_analysis_agentic_index": 59.2
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 3836.05,
+    "cost_per_task": {
+     "total_cost": 2.3369
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 5,
+    "price_1m_output_tokens": 25,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": 6.25
+   },
+   "performance": {
+    "median_output_tokens_per_second": 52.97,
+    "median_time_to_first_token_seconds": 59.97,
+    "median_time_to_first_answer_token_seconds": 59.97,
+    "median_end_to_end_response_time_seconds": 69.4
+   }
+  },
+  {
+   "id": "1305c921-7aaa-4d6d-99b5-99b3acf15e19",
+   "name": "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)",
+   "slug": "claude-opus-5-xhigh",
+   "release_date": "2026-07-24",
+   "model_creator": {
+    "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "name": "Anthropic"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 62.5,
+    "artificial_analysis_coding_index": 77,
+    "artificial_analysis_agentic_index": 58.4
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 2909.3,
+    "cost_per_task": {
+     "total_cost": 1.8012
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 5,
+    "price_1m_output_tokens": 25,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": 6.25
+   },
+   "performance": {
+    "median_output_tokens_per_second": 53.86,
+    "median_time_to_first_token_seconds": 40.5,
+    "median_time_to_first_answer_token_seconds": 40.5,
+    "median_end_to_end_response_time_seconds": 49.79
+   }
+  },
+  {
+   "id": "cd55210d-358e-4df1-ba9c-9acb5f186cc9",
+   "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)",
+   "slug": "claude-fable-5",
+   "release_date": "2026-06-09",
+   "model_creator": {
+    "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "name": "Anthropic"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 62.1,
+    "artificial_analysis_coding_index": 76.5,
+    "artificial_analysis_agentic_index": 56.6
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 5455.22,
+    "cost_per_task": {
+     "total_cost": 3.1396
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 10,
+    "price_1m_output_tokens": 50,
+    "price_1m_cache_hit_tokens": 1,
+    "price_1m_cache_write_tokens": 12.5
+   },
+   "performance": {
+    "median_output_tokens_per_second": 66.64,
+    "median_time_to_first_token_seconds": 148.12,
+    "median_time_to_first_answer_token_seconds": 148.12,
+    "median_end_to_end_response_time_seconds": 155.62
+   }
+  },
+  {
+   "id": "712be54a-77ae-41b2-9a58-21181479d6ee",
+   "name": "Claude Opus 5 (Adaptive Reasoning, High Effort)",
+   "slug": "claude-opus-5-high",
+   "release_date": "2026-07-24",
+   "model_creator": {
+    "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "name": "Anthropic"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 61.5,
+    "artificial_analysis_coding_index": 76.5,
+    "artificial_analysis_agentic_index": 56.1
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 1974.35,
+    "cost_per_task": {
+     "total_cost": 1.2268
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 5,
+    "price_1m_output_tokens": 25,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": 6.25
+   },
+   "performance": {
+    "median_output_tokens_per_second": 51.46,
+    "median_time_to_first_token_seconds": 20.61,
+    "median_time_to_first_answer_token_seconds": 20.61,
+    "median_end_to_end_response_time_seconds": 30.33
+   }
+  },
+  {
+   "id": "c8adc5cf-fd5a-407b-af51-dc3bede3e49c",
+   "name": "Grok 4.6 (high)",
+   "slug": "grok-4-6",
+   "release_date": "2026-08-12",
+   "model_creator": {
+    "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+    "name": "SpaceXAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 60.9,
+    "artificial_analysis_coding_index": 76.8,
+    "artificial_analysis_agentic_index": 58.7
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 1068.47,
+    "cost_per_task": {
+     "total_cost": 0.8367
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 2,
+    "price_1m_output_tokens": 6,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 56.47,
+    "median_time_to_first_token_seconds": 36.89,
+    "median_time_to_first_answer_token_seconds": 36.89,
+    "median_end_to_end_response_time_seconds": 45.74
+   }
+  },
+  {
+   "id": "d93edfe8-bf35-49ad-b56e-b18116142a1c",
+   "name": "GPT-5.6 Sol (max)",
+   "slug": "gpt-5-6-sol",
+   "release_date": "2026-07-09",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 60.9,
+    "artificial_analysis_coding_index": 77.4,
+    "artificial_analysis_agentic_index": 57.8
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 2823.25,
+    "cost_per_task": {
+     "total_cost": 1.2312
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 5,
+    "price_1m_output_tokens": 30,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": 6.25
+   },
+   "performance": {
+    "median_output_tokens_per_second": 65.01,
+    "median_time_to_first_token_seconds": 208.71,
+    "median_time_to_first_answer_token_seconds": 208.71,
+    "median_end_to_end_response_time_seconds": 216.4
+   }
+  },
+  {
+   "id": "f7d2fc3e-1f7b-405f-818c-07952a4af78f",
+   "name": "Kimi K3 (max)",
+   "slug": "kimi-k3",
+   "release_date": "2026-07-16",
+   "model_creator": {
+    "id": "0a177021-87dd-4250-9a37-f01df196bfe0",
+    "name": "Kimi"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 59.7,
+    "artificial_analysis_coding_index": 76.2,
+    "artificial_analysis_agentic_index": 54.3
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 2425.11,
+    "cost_per_task": {
+     "total_cost": 0.8375
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 3,
+    "price_1m_output_tokens": 15,
+    "price_1m_cache_hit_tokens": 0.3,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 37.75,
+    "median_time_to_first_token_seconds": 2.67,
+    "median_time_to_first_answer_token_seconds": 55.65,
+    "median_end_to_end_response_time_seconds": 68.9
+   }
+  },
+  {
+   "id": "cd684ea4-b475-4269-b001-d469d06d8a7a",
+   "name": "GLM-5.3 (max)",
+   "slug": "glm-5-3",
+   "release_date": "2026-08-18",
+   "model_creator": {
+    "id": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
+    "name": "Z AI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 59.5,
+    "artificial_analysis_coding_index": 74.8,
+    "artificial_analysis_agentic_index": 59.1
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 1238.5,
+    "cost_per_task": {
+     "total_cost": 0.6829
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 1.4,
+    "price_1m_output_tokens": 4.4,
+    "price_1m_cache_hit_tokens": 0.26,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 84.72,
+    "median_time_to_first_token_seconds": 1.88,
+    "median_time_to_first_answer_token_seconds": 25.49,
+    "median_end_to_end_response_time_seconds": 31.39
+   }
+  },
+  {
+   "id": "d998db47-9b67-4727-a2bb-2e1261020ac0",
+   "name": "GPT-5.6 Sol (xhigh)",
+   "slug": "gpt-5-6-sol-xhigh",
+   "release_date": "2026-07-09",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 59,
+    "artificial_analysis_coding_index": 78.3,
+    "artificial_analysis_agentic_index": 53.6
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 1525,
+    "cost_per_task": {
+     "total_cost": 0.8072
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 5,
+    "price_1m_output_tokens": 30,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": 6.25
+   },
+   "performance": {
+    "median_output_tokens_per_second": 62.5,
+    "median_time_to_first_token_seconds": 50.77,
+    "median_time_to_first_answer_token_seconds": 50.77,
+    "median_end_to_end_response_time_seconds": 58.77
+   }
+  },
+  {
+   "id": "ff51be8f-e362-4a7e-9043-687ba15de207",
+   "name": "Claude Opus 5 (Adaptive Reasoning, Medium Effort)",
+   "slug": "claude-opus-5-medium",
+   "release_date": "2026-07-24",
+   "model_creator": {
+    "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "name": "Anthropic"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 58.6,
+    "artificial_analysis_coding_index": 74.3,
+    "artificial_analysis_agentic_index": 50.4
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 1116.24,
+    "cost_per_task": {
+     "total_cost": 0.7243
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 5,
+    "price_1m_output_tokens": 25,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": 6.25
+   },
+   "performance": {
+    "median_output_tokens_per_second": 49.59,
+    "median_time_to_first_token_seconds": 6.01,
+    "median_time_to_first_answer_token_seconds": 6.01,
+    "median_end_to_end_response_time_seconds": 16.1
+   }
+  },
+  {
+   "id": "5e5b4ce7-bc54-47b2-b911-21b9cad8394c",
+   "name": "Qwen3.8 Max",
+   "slug": "qwen3-8-max",
+   "release_date": "2026-08-03",
+   "model_creator": {
+    "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+    "name": "Alibaba"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 58.1,
+    "artificial_analysis_coding_index": 71.8,
+    "artificial_analysis_agentic_index": 58.4
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 1741.41,
+    "cost_per_task": {
+     "total_cost": 1.132
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 2,
+    "price_1m_output_tokens": 6,
+    "price_1m_cache_hit_tokens": 0.25,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 44.5,
+    "median_time_to_first_token_seconds": 2.63,
+    "median_time_to_first_answer_token_seconds": 47.58,
+    "median_end_to_end_response_time_seconds": 58.82
+   }
+  },
+  {
+   "id": "8df710d3-9dae-4498-9b4e-9818238e6f31",
+   "name": "Qwen3.8 2.4T A95B",
+   "slug": "qwen3-8-2-4t-a95b",
+   "release_date": "2026-08-12",
+   "model_creator": {
+    "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+    "name": "Alibaba"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 57.7,
+    "artificial_analysis_coding_index": 71.9,
+    "artificial_analysis_agentic_index": 57.1
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 1671.89,
+    "cost_per_task": {
+     "total_cost": 1.0919
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 2,
+    "price_1m_output_tokens": 6,
+    "price_1m_cache_hit_tokens": 0.25,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 46.18,
+    "median_time_to_first_token_seconds": 2.65,
+    "median_time_to_first_answer_token_seconds": 45.96,
+    "median_end_to_end_response_time_seconds": 56.79
+   }
+  },
+  {
+   "id": "8afc250d-b538-45a2-812a-4605f4ffd87e",
+   "name": "GPT-5.6 Sol (high)",
+   "slug": "gpt-5-6-sol-high",
+   "release_date": "2026-07-09",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 57.3,
+    "artificial_analysis_coding_index": 77.2,
+    "artificial_analysis_agentic_index": 50.6
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 954.95,
+    "cost_per_task": {
+     "total_cost": 0.5477
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 5,
+    "price_1m_output_tokens": 30,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": 6.25
+   },
+   "performance": {
+    "median_output_tokens_per_second": 63.23,
+    "median_time_to_first_token_seconds": 16.09,
+    "median_time_to_first_answer_token_seconds": 16.09,
+    "median_end_to_end_response_time_seconds": 23.99
+   }
+  },
+  {
+   "id": "992b7b84-5069-4c6a-9295-834252553d50",
+   "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)",
+   "slug": "claude-opus-4-8",
+   "release_date": "2026-05-28",
+   "model_creator": {
+    "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "name": "Anthropic"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 57.3,
+    "artificial_analysis_coding_index": 74.3,
+    "artificial_analysis_agentic_index": 49.4
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 3752.32,
+    "cost_per_task": {
+     "total_cost": 2.0315
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 5,
+    "price_1m_output_tokens": 25,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": 6.25
+   },
+   "performance": {
+    "median_output_tokens_per_second": 54.37,
+    "median_time_to_first_token_seconds": 22.3,
+    "median_time_to_first_answer_token_seconds": 22.3,
+    "median_end_to_end_response_time_seconds": 31.5
+   }
+  },
+  {
+   "id": "04ee6719-0327-463b-a1a1-70a6a78254f9",
+   "name": "Muse Spark 1.2 (xhigh)",
+   "slug": "muse-spark-1-2",
+   "release_date": "2026-08-05",
+   "model_creator": {
+    "id": "e1694725-0192-4e54-b1b8-c97e816c6cbe",
+    "name": "Meta"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 56.8,
+    "artificial_analysis_coding_index": 72.2,
+    "artificial_analysis_agentic_index": 49.3
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 639.27,
+    "cost_per_task": {
+     "total_cost": 0.3992
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 1.25,
+    "price_1m_output_tokens": 4.25,
+    "price_1m_cache_hit_tokens": 0.15,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": null,
+    "median_time_to_first_token_seconds": null,
+    "median_time_to_first_answer_token_seconds": null,
+    "median_end_to_end_response_time_seconds": null
+   }
+  },
+  {
+   "id": "bcf8db0a-3bb6-4d82-9516-0f57370c85a6",
+   "name": "GPT-5.6 Terra (max)",
+   "slug": "gpt-5-6-terra",
+   "release_date": "2026-07-09",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 56.6,
+    "artificial_analysis_coding_index": 76.7,
+    "artificial_analysis_agentic_index": 50.2
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 1389.66,
+    "cost_per_task": {
+     "total_cost": 0.508
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 2,
+    "price_1m_output_tokens": 12,
+    "price_1m_cache_hit_tokens": 0.2,
+    "price_1m_cache_write_tokens": 2.5
+   },
+   "performance": {
+    "median_output_tokens_per_second": 118.74,
+    "median_time_to_first_token_seconds": 186.73,
+    "median_time_to_first_answer_token_seconds": 186.73,
+    "median_end_to_end_response_time_seconds": 190.94
+   }
+  },
+  {
+   "id": "1f054429-397e-4fdb-9e71-67bc92c1735e",
+   "name": "GPT-5.5 (xhigh)",
+   "slug": "gpt-5-5",
+   "release_date": "2026-04-23",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 56.3,
+    "artificial_analysis_coding_index": 74.9,
+    "artificial_analysis_agentic_index": 47.4
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 2778.13,
+    "cost_per_task": {
+     "total_cost": 1.1747
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 5,
+    "price_1m_output_tokens": 30,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 84.99,
+    "median_time_to_first_token_seconds": 68.86,
+    "median_time_to_first_answer_token_seconds": 68.86,
+    "median_end_to_end_response_time_seconds": 74.74
+   }
+  },
+  {
+   "id": "b2331108-72ed-415a-82d1-188633875bbc",
+   "name": "Gemini 3.7 Flash (high)",
+   "slug": "gemini-3-7-flash",
+   "release_date": "2026-08-13",
+   "model_creator": {
+    "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "name": "Google"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 56,
+    "artificial_analysis_coding_index": 76.1,
+    "artificial_analysis_agentic_index": 45.1
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 484.73,
+    "cost_per_task": {
+     "total_cost": 0.4022
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 0.75,
+    "price_1m_output_tokens": 3.75,
+    "price_1m_cache_hit_tokens": 0.07,
+    "price_1m_cache_write_tokens": 0.75
+   },
+   "performance": {
+    "median_output_tokens_per_second": 323.29,
+    "median_time_to_first_token_seconds": 15.15,
+    "median_time_to_first_answer_token_seconds": 15.15,
+    "median_end_to_end_response_time_seconds": 16.7
+   }
+  },
+  {
+   "id": "794f69b5-cede-482b-b1cc-d769478497cd",
+   "name": "Grok 4.5 (high)",
+   "slug": "grok-4-5",
+   "release_date": "2026-07-08",
+   "model_creator": {
+    "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+    "name": "SpaceXAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 55.8,
+    "artificial_analysis_coding_index": 72.4,
+    "artificial_analysis_agentic_index": 48.9
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 579.21,
+    "cost_per_task": {
+     "total_cost": 0.3601
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 2,
+    "price_1m_output_tokens": 6,
+    "price_1m_cache_hit_tokens": 0.3,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 49.8,
+    "median_time_to_first_token_seconds": 14.03,
+    "median_time_to_first_answer_token_seconds": 14.03,
+    "median_end_to_end_response_time_seconds": 24.07
+   }
+  },
+  {
+   "id": "6f174934-5b7d-4333-86cb-f5ebf4a862e3",
+   "name": "GPT-5.6 Sol (medium)",
+   "slug": "gpt-5-6-sol-medium",
+   "release_date": "2026-07-09",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 55.6,
+    "artificial_analysis_coding_index": 76.3,
+    "artificial_analysis_agentic_index": 47.9
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 580.17,
+    "cost_per_task": {
+     "total_cost": 0.3717
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 5,
+    "price_1m_output_tokens": 30,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": 6.25
+   },
+   "performance": {
+    "median_output_tokens_per_second": 62.57,
+    "median_time_to_first_token_seconds": 4.56,
+    "median_time_to_first_answer_token_seconds": 4.56,
+    "median_end_to_end_response_time_seconds": 12.55
+   }
+  },
+  {
+   "id": "23c86e4a-c769-43c0-a056-79e3cd15834f",
+   "name": "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)",
+   "slug": "claude-sonnet-5",
+   "release_date": "2026-06-30",
+   "model_creator": {
+    "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "name": "Anthropic"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 55.3,
+    "artificial_analysis_coding_index": 71.5,
+    "artificial_analysis_agentic_index": 49.7
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 4010.51,
+    "cost_per_task": {
+     "total_cost": 1.7173
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 2,
+    "price_1m_output_tokens": 10,
+    "price_1m_cache_hit_tokens": 0.2,
+    "price_1m_cache_write_tokens": 2.5
+   },
+   "performance": {
+    "median_output_tokens_per_second": 75.99,
+    "median_time_to_first_token_seconds": 184.48,
+    "median_time_to_first_answer_token_seconds": 184.48,
+    "median_end_to_end_response_time_seconds": 191.06
+   }
+  },
+  {
+   "id": "e9a09db3-8fd6-41dd-ba2f-20e0a2bff7f2",
+   "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)",
+   "slug": "claude-opus-4-7",
+   "release_date": "2026-04-16",
+   "model_creator": {
+    "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "name": "Anthropic"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 55,
+    "artificial_analysis_coding_index": 73.6,
+    "artificial_analysis_agentic_index": 46.3
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 3742.65,
+    "cost_per_task": {
+     "total_cost": 2.2285
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 5,
+    "price_1m_output_tokens": 25,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": 6.25
+   },
+   "performance": {
+    "median_output_tokens_per_second": 47.94,
+    "median_time_to_first_token_seconds": 15.61,
+    "median_time_to_first_answer_token_seconds": 15.61,
+    "median_end_to_end_response_time_seconds": 26.05
+   }
+  },
+  {
+   "id": "b13c1257-d746-4027-8fc8-4892dc14701c",
+   "name": "GPT-5.5 (high)",
+   "slug": "gpt-5-5-high",
+   "release_date": "2026-04-23",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 54.7,
+    "artificial_analysis_coding_index": 71.6,
+    "artificial_analysis_agentic_index": 45.9
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 1721.17,
+    "cost_per_task": {
+     "total_cost": 0.8033
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 5,
+    "price_1m_output_tokens": 30,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 74.3,
+    "median_time_to_first_token_seconds": 23.75,
+    "median_time_to_first_answer_token_seconds": 23.75,
+    "median_end_to_end_response_time_seconds": 30.48
+   }
+  },
+  {
+   "id": "eb0d4272-7204-42b9-b875-8866fed58548",
+   "name": "Gemini 3.7 Flash (medium)",
+   "slug": "gemini-3-7-flash-medium",
+   "release_date": "2026-08-13",
+   "model_creator": {
+    "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "name": "Google"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 53.4,
+    "artificial_analysis_coding_index": 71.5,
+    "artificial_analysis_agentic_index": 45.1
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 277.5,
+    "cost_per_task": {
+     "total_cost": 0.2629
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 0.75,
+    "price_1m_output_tokens": 3.75,
+    "price_1m_cache_hit_tokens": 0.07,
+    "price_1m_cache_write_tokens": 0.75
+   },
+   "performance": {
+    "median_output_tokens_per_second": 316.98,
+    "median_time_to_first_token_seconds": 4.63,
+    "median_time_to_first_answer_token_seconds": 4.63,
+    "median_end_to_end_response_time_seconds": 6.21
+   }
+  },
+  {
+   "id": "83173329-c09a-41f1-a028-a282a5f908d7",
+   "name": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)",
+   "slug": "deepseek-v4-pro",
+   "release_date": "2026-08-13",
+   "model_creator": {
+    "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
+    "name": "DeepSeek"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 53.2,
+    "artificial_analysis_coding_index": 68.8,
+    "artificial_analysis_agentic_index": 49.6
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 604.51,
+    "cost_per_task": {
+     "total_cost": 0.2521
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 1.32,
+    "price_1m_output_tokens": 3.96,
+    "price_1m_cache_hit_tokens": 0.04,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 74.49,
+    "median_time_to_first_token_seconds": 1.66,
+    "median_time_to_first_answer_token_seconds": 28.51,
+    "median_end_to_end_response_time_seconds": 35.22
+   }
+  },
+  {
+   "id": "d61493e2-43ff-460c-9054-eaf6ba317360",
+   "name": "Muse Spark 1.1 (xhigh)",
+   "slug": "muse-spark-1-1",
+   "release_date": "2026-07-09",
+   "model_creator": {
+    "id": "e1694725-0192-4e54-b1b8-c97e816c6cbe",
+    "name": "Meta"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 53.2,
+    "artificial_analysis_coding_index": 71.3,
+    "artificial_analysis_agentic_index": 39.7
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 547.32,
+    "cost_per_task": {
+     "total_cost": 0.2923
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 1.25,
+    "price_1m_output_tokens": 4.25,
+    "price_1m_cache_hit_tokens": 0.15,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 200.16,
+    "median_time_to_first_token_seconds": 1.48,
+    "median_time_to_first_answer_token_seconds": 11.47,
+    "median_end_to_end_response_time_seconds": 13.97
+   }
+  },
+  {
+   "id": "a89c4b28-2d8c-456e-88ea-255fb51fd2b6",
+   "name": "GPT-5.4 (xhigh)",
+   "slug": "gpt-5-4",
+   "release_date": "2026-03-05",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 53.1,
+    "artificial_analysis_coding_index": 71.1,
+    "artificial_analysis_agentic_index": 44.2
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 2182.79,
+    "cost_per_task": {
+     "total_cost": 1.1038
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 2.5,
+    "price_1m_output_tokens": 15,
+    "price_1m_cache_hit_tokens": 0.25,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 130.54,
+    "median_time_to_first_token_seconds": 144.08,
+    "median_time_to_first_answer_token_seconds": 144.08,
+    "median_end_to_end_response_time_seconds": 147.91
+   }
+  },
+  {
+   "id": "9e30696f-16fa-4b4f-ba53-161895a85fed",
+   "name": "GPT-5.6 Terra (xhigh)",
+   "slug": "gpt-5-6-terra-xhigh",
+   "release_date": "2026-07-09",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 52.8,
+    "artificial_analysis_coding_index": 70.6,
+    "artificial_analysis_agentic_index": 46.5
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 589.65,
+    "cost_per_task": {
+     "total_cost": 0.305
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 2,
+    "price_1m_output_tokens": 12,
+    "price_1m_cache_hit_tokens": 0.2,
+    "price_1m_cache_write_tokens": 2.5
+   },
+   "performance": {
+    "median_output_tokens_per_second": 102.05,
+    "median_time_to_first_token_seconds": 27,
+    "median_time_to_first_answer_token_seconds": 27,
+    "median_end_to_end_response_time_seconds": 31.9
+   }
+  },
+  {
+   "id": "f7a4ea75-e548-4069-80d4-9be8bc7c009b",
+   "name": "GLM-5.2 (max)",
+   "slug": "glm-5-2",
+   "release_date": "2026-06-16",
+   "model_creator": {
+    "id": "67437eb6-7dc1-4e93-befd-22c8b8ec2065",
+    "name": "Z AI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 52.6,
+    "artificial_analysis_coding_index": 68.8,
+    "artificial_analysis_agentic_index": 45.7
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 843.44,
+    "cost_per_task": {
+     "total_cost": 0.4445
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 1.4,
+    "price_1m_output_tokens": 4.4,
+    "price_1m_cache_hit_tokens": 0.26,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 113.04,
+    "median_time_to_first_token_seconds": 1.72,
+    "median_time_to_first_answer_token_seconds": 19.41,
+    "median_end_to_end_response_time_seconds": 23.83
+   }
+  },
+  {
+   "id": "20928ba9-3a3f-415f-9519-b84ff64ecf34",
+   "name": "Claude Opus 5 (Adaptive Reasoning, Low Effort)",
+   "slug": "claude-opus-5-low",
+   "release_date": "2026-07-24",
+   "model_creator": {
+    "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "name": "Anthropic"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 52.5,
+    "artificial_analysis_coding_index": 66.9,
+    "artificial_analysis_agentic_index": 42.1
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 555.25,
+    "cost_per_task": {
+     "total_cost": 0.4252
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 5,
+    "price_1m_output_tokens": 25,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": 6.25
+   },
+   "performance": {
+    "median_output_tokens_per_second": 48.61,
+    "median_time_to_first_token_seconds": 3.45,
+    "median_time_to_first_answer_token_seconds": 3.45,
+    "median_end_to_end_response_time_seconds": 13.74
+   }
+  },
+  {
+   "id": "426d24c8-49ae-482a-b4a8-20f1c53f21c1",
+   "name": "GPT-5.6 Luna (max)",
+   "slug": "gpt-5-6-luna",
+   "release_date": "2026-07-09",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 52.3,
+    "artificial_analysis_coding_index": 71.4,
+    "artificial_analysis_agentic_index": 46.9
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 172.17,
+    "cost_per_task": {
+     "total_cost": 0.0471
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 0.2,
+    "price_1m_output_tokens": 1.2,
+    "price_1m_cache_hit_tokens": 0.02,
+    "price_1m_cache_write_tokens": 0.25
+   },
+   "performance": {
+    "median_output_tokens_per_second": 158.61,
+    "median_time_to_first_token_seconds": 159.4,
+    "median_time_to_first_answer_token_seconds": 159.4,
+    "median_end_to_end_response_time_seconds": 162.55
+   }
+  },
+  {
+   "id": "0097ebf5-124f-42f6-9463-33b00e711f03",
+   "name": "Gemini 3.5 Flash (high)",
+   "slug": "gemini-3-5-flash",
+   "release_date": "2026-05-19",
+   "model_creator": {
+    "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "name": "Google"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 52,
+    "artificial_analysis_coding_index": 70.1,
+    "artificial_analysis_agentic_index": 39.7
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 1042.43,
+    "cost_per_task": {
+     "total_cost": 0.6934
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 1.5,
+    "price_1m_output_tokens": 9,
+    "price_1m_cache_hit_tokens": 0.15,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 170.59,
+    "median_time_to_first_token_seconds": 27.29,
+    "median_time_to_first_answer_token_seconds": 27.29,
+    "median_end_to_end_response_time_seconds": 30.22
+   }
+  },
+  {
+   "id": "b01dee41-c62b-48ed-8d16-984adc405e5c",
+   "name": "Qwen3.8 27B",
+   "slug": "qwen3-8-27b",
+   "release_date": "2026-08-14",
+   "model_creator": {
+    "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+    "name": "Alibaba"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 52,
+    "artificial_analysis_coding_index": 68.1,
+    "artificial_analysis_agentic_index": 50.9
+   },
+   "artificial_analysis_intelligence_index_cost": null,
+   "pricing": {
+    "price_1m_input_tokens": 0.45,
+    "price_1m_output_tokens": 3.2,
+    "price_1m_cache_hit_tokens": 0.05,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": null,
+    "median_time_to_first_token_seconds": null,
+    "median_time_to_first_answer_token_seconds": null,
+    "median_end_to_end_response_time_seconds": null
+   }
+  },
+  {
+   "id": "fe4c0848-e284-4e52-a79d-cdc28392f1a9",
+   "name": "DeepSeek V4 Flash 0731 (Reasoning, Max Effort)",
+   "slug": "deepseek-v4-flash",
+   "release_date": "2026-07-31",
+   "model_creator": {
+    "id": "58b835bf-4c87-4f87-a846-df4b692c6e7d",
+    "name": "DeepSeek"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 51.8,
+    "artificial_analysis_coding_index": 69.1,
+    "artificial_analysis_agentic_index": 48.4
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 323.26,
+    "cost_per_task": {
+     "total_cost": 0.1122
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 0.44,
+    "price_1m_output_tokens": 1.32,
+    "price_1m_cache_hit_tokens": 0.01,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 103.47,
+    "median_time_to_first_token_seconds": 1.23,
+    "median_time_to_first_answer_token_seconds": 20.56,
+    "median_end_to_end_response_time_seconds": 25.39
+   }
+  },
+  {
+   "id": "78332c88-fe60-42c8-af9d-3617e44cf1f5",
+   "name": "Gemini 3.6 Flash (high)",
+   "slug": "gemini-3-6-flash",
+   "release_date": "2026-07-21",
+   "model_creator": {
+    "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "name": "Google"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 51.6,
+    "artificial_analysis_coding_index": 69.2,
+    "artificial_analysis_agentic_index": 40.5
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 412.03,
+    "cost_per_task": {
+     "total_cost": 0.3442
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 0.75,
+    "price_1m_output_tokens": 3.75,
+    "price_1m_cache_hit_tokens": 0.15,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 199,
+    "median_time_to_first_token_seconds": 18.47,
+    "median_time_to_first_answer_token_seconds": 18.47,
+    "median_end_to_end_response_time_seconds": 20.98
+   }
+  },
+  {
+   "id": "6b79f899-e3c0-45f6-923c-243faccdb2fc",
+   "name": "GPT-5.5 (medium)",
+   "slug": "gpt-5-5-medium",
+   "release_date": "2026-04-23",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 51.4,
+    "artificial_analysis_coding_index": 71.5,
+    "artificial_analysis_agentic_index": 39.2
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 939.07,
+    "cost_per_task": {
+     "total_cost": 0.5002
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 5,
+    "price_1m_output_tokens": 30,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 78.66,
+    "median_time_to_first_token_seconds": 6.88,
+    "median_time_to_first_answer_token_seconds": 6.88,
+    "median_end_to_end_response_time_seconds": 13.24
+   }
+  },
+  {
+   "id": "ddfdaf64-3f8e-40a6-a492-608ee83a1351",
+   "name": "Gemini 3.7 Flash (low)",
+   "slug": "gemini-3-7-flash-low",
+   "release_date": "2026-08-13",
+   "model_creator": {
+    "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "name": "Google"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 50.9,
+    "artificial_analysis_coding_index": 71,
+    "artificial_analysis_agentic_index": 41.6
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 165.16,
+    "cost_per_task": {
+     "total_cost": 0.1648
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 0.75,
+    "price_1m_output_tokens": 3.75,
+    "price_1m_cache_hit_tokens": 0.07,
+    "price_1m_cache_write_tokens": 0.75
+   },
+   "performance": {
+    "median_output_tokens_per_second": 303.36,
+    "median_time_to_first_token_seconds": 0.83,
+    "median_time_to_first_answer_token_seconds": 0.83,
+    "median_end_to_end_response_time_seconds": 2.48
+   }
+  },
+  {
+   "id": "0904b596-8932-43bd-9b21-324f128e1723",
+   "name": "GPT-5.6 Sol (low)",
+   "slug": "gpt-5-6-sol-low",
+   "release_date": "2026-07-09",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 50.7,
+    "artificial_analysis_coding_index": 69.7,
+    "artificial_analysis_agentic_index": 41.6
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 343.87,
+    "cost_per_task": {
+     "total_cost": 0.2311
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 5,
+    "price_1m_output_tokens": 30,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": 6.25
+   },
+   "performance": {
+    "median_output_tokens_per_second": 56.81,
+    "median_time_to_first_token_seconds": 3.51,
+    "median_time_to_first_answer_token_seconds": 3.51,
+    "median_end_to_end_response_time_seconds": 12.31
+   }
+  },
+  {
+   "id": "81972fba-1219-477e-bbfb-18c656a63ff7",
+   "name": "GPT-5.6 Terra (high)",
+   "slug": "gpt-5-6-terra-high",
+   "release_date": "2026-07-09",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 50.1,
+    "artificial_analysis_coding_index": 67.1,
+    "artificial_analysis_agentic_index": 43.5
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 395.38,
+    "cost_per_task": {
+     "total_cost": 0.2183
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 2,
+    "price_1m_output_tokens": 12,
+    "price_1m_cache_hit_tokens": 0.2,
+    "price_1m_cache_write_tokens": 2.5
+   },
+   "performance": {
+    "median_output_tokens_per_second": 103.87,
+    "median_time_to_first_token_seconds": 2.8,
+    "median_time_to_first_answer_token_seconds": 2.8,
+    "median_end_to_end_response_time_seconds": 7.61
+   }
+  },
+  {
+   "id": "87110ff0-1f79-41b4-9976-eda250597317",
+   "name": "GPT-5.6 Luna (xhigh)",
+   "slug": "gpt-5-6-luna-xhigh",
+   "release_date": "2026-07-09",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 50.1,
+    "artificial_analysis_coding_index": 68.6,
+    "artificial_analysis_agentic_index": 44.4
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 95.13,
+    "cost_per_task": {
+     "total_cost": 0.0316
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 0.2,
+    "price_1m_output_tokens": 1.2,
+    "price_1m_cache_hit_tokens": 0.02,
+    "price_1m_cache_write_tokens": 0.25
+   },
+   "performance": {
+    "median_output_tokens_per_second": 158.09,
+    "median_time_to_first_token_seconds": 46.12,
+    "median_time_to_first_answer_token_seconds": 46.12,
+    "median_end_to_end_response_time_seconds": 49.29
+   }
+  },
+  {
+   "id": "df8d14e0-3997-4e4d-b4ad-9c047acc9c69",
+   "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)",
+   "slug": "claude-sonnet-4-6-adaptive",
+   "release_date": "2026-02-17",
+   "model_creator": {
+    "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "name": "Anthropic"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 48.4,
+    "artificial_analysis_coding_index": 63,
+    "artificial_analysis_agentic_index": 42.1
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 3355.27,
+    "cost_per_task": {
+     "total_cost": 1.2182
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 3,
+    "price_1m_output_tokens": 15,
+    "price_1m_cache_hit_tokens": 0.3,
+    "price_1m_cache_write_tokens": 3.75
+   },
+   "performance": {
+    "median_output_tokens_per_second": 54.56,
+    "median_time_to_first_token_seconds": 149.24,
+    "median_time_to_first_answer_token_seconds": 149.24,
+    "median_end_to_end_response_time_seconds": 158.41
+   }
+  },
+  {
+   "id": "512d17ef-13d2-4f65-bf9b-154b0dec7e8d",
+   "name": "Kimi K3 (low)",
+   "slug": "kimi-k3-low",
+   "release_date": "2026-07-16",
+   "model_creator": {
+    "id": "0a177021-87dd-4250-9a37-f01df196bfe0",
+    "name": "Kimi"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 48.3,
+    "artificial_analysis_coding_index": 72,
+    "artificial_analysis_agentic_index": 39.6
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 282.64,
+    "cost_per_task": {
+     "total_cost": 0.2419
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 3,
+    "price_1m_output_tokens": 15,
+    "price_1m_cache_hit_tokens": 0.3,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 36.23,
+    "median_time_to_first_token_seconds": 2.82,
+    "median_time_to_first_answer_token_seconds": 58.03,
+    "median_end_to_end_response_time_seconds": 71.83
+   }
+  },
+  {
+   "id": "bbd93ebe-80da-4594-bb19-61e69d0331df",
+   "name": "Gemini 3.1 Pro Preview",
+   "slug": "gemini-3-1-pro-preview",
+   "release_date": "2026-02-19",
+   "model_creator": {
+    "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "name": "Google"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 47.7,
+    "artificial_analysis_coding_index": 68.8,
+    "artificial_analysis_agentic_index": 23
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 811.9,
+    "cost_per_task": {
+     "total_cost": 0.3346
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 2,
+    "price_1m_output_tokens": 12,
+    "price_1m_cache_hit_tokens": 0.2,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 107.91,
+    "median_time_to_first_token_seconds": 32.45,
+    "median_time_to_first_answer_token_seconds": 32.45,
+    "median_end_to_end_response_time_seconds": 37.08
+   }
+  },
+  {
+   "id": "b01eefb1-c9f8-412d-8353-571031a52f23",
+   "name": "Motif 3",
+   "slug": "motif-3",
+   "release_date": "2026-08-12",
+   "model_creator": {
+    "id": "366bf3fc-4436-4baf-8d8f-acb7ec04d342",
+    "name": "Motif Technologies"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 47.4,
+    "artificial_analysis_coding_index": 63.5,
+    "artificial_analysis_agentic_index": 37.6
+   },
+   "artificial_analysis_intelligence_index_cost": null,
+   "pricing": {
+    "price_1m_input_tokens": null,
+    "price_1m_output_tokens": null,
+    "price_1m_cache_hit_tokens": null,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": null,
+    "median_time_to_first_token_seconds": null,
+    "median_time_to_first_answer_token_seconds": null,
+    "median_end_to_end_response_time_seconds": null
+   }
+  },
+  {
+   "id": "aa55297e-8fbf-4372-b4ab-9b068dc6396c",
+   "name": "GPT-5.6 Luna (high)",
+   "slug": "gpt-5-6-luna-high",
+   "release_date": "2026-07-09",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 47,
+    "artificial_analysis_coding_index": 63.3,
+    "artificial_analysis_agentic_index": 41
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 55.02,
+    "cost_per_task": {
+     "total_cost": 0.0216
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 0.2,
+    "price_1m_output_tokens": 1.2,
+    "price_1m_cache_hit_tokens": 0.02,
+    "price_1m_cache_write_tokens": 0.25
+   },
+   "performance": {
+    "median_output_tokens_per_second": 144.16,
+    "median_time_to_first_token_seconds": 11.08,
+    "median_time_to_first_answer_token_seconds": 11.08,
+    "median_end_to_end_response_time_seconds": 14.55
+   }
+  },
+  {
+   "id": "26e0f83a-ca98-4f34-94ac-7c5e251ee410",
+   "name": "GPT-5.6 Terra (medium)",
+   "slug": "gpt-5-6-terra-medium",
+   "release_date": "2026-07-09",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 46.8,
+    "artificial_analysis_coding_index": 64.7,
+    "artificial_analysis_agentic_index": 39.1
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 192.06,
+    "cost_per_task": {
+     "total_cost": 0.119
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 2,
+    "price_1m_output_tokens": 12,
+    "price_1m_cache_hit_tokens": 0.2,
+    "price_1m_cache_write_tokens": 2.5
+   },
+   "performance": {
+    "median_output_tokens_per_second": 97.8,
+    "median_time_to_first_token_seconds": 1.98,
+    "median_time_to_first_answer_token_seconds": 1.98,
+    "median_end_to_end_response_time_seconds": 7.09
+   }
+  },
+  {
+   "id": "5016ea75-7b0e-4737-a7e6-1062c6d90fd4",
+   "name": "Gemini 3.5 Flash (medium)",
+   "slug": "gemini-3-5-flash-medium",
+   "release_date": "2026-05-19",
+   "model_creator": {
+    "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "name": "Google"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 46.7,
+    "artificial_analysis_coding_index": null,
+    "artificial_analysis_agentic_index": null
+   },
+   "artificial_analysis_intelligence_index_cost": null,
+   "pricing": {
+    "price_1m_input_tokens": 1.5,
+    "price_1m_output_tokens": 9,
+    "price_1m_cache_hit_tokens": 0.15,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 179.96,
+    "median_time_to_first_token_seconds": 20.69,
+    "median_time_to_first_answer_token_seconds": 20.69,
+    "median_end_to_end_response_time_seconds": 23.46
+   }
+  },
+  {
+   "id": "69534bed-2ffd-4235-832b-e20a810333ab",
+   "name": "Qwen3.7 Max",
+   "slug": "qwen3-7-max",
+   "release_date": "2026-05-19",
+   "model_creator": {
+    "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
+    "name": "Alibaba"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 46.7,
+    "artificial_analysis_coding_index": 66,
+    "artificial_analysis_agentic_index": 30.9
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 1063.86,
+    "cost_per_task": {
+     "total_cost": 0.5413
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 2.5,
+    "price_1m_output_tokens": 7.5,
+    "price_1m_cache_hit_tokens": 0.5,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 201.39,
+    "median_time_to_first_token_seconds": 2.26,
+    "median_time_to_first_answer_token_seconds": 14.22,
+    "median_end_to_end_response_time_seconds": 16.71
+   }
+  },
+  {
+   "id": "59b5b14b-5365-4ee7-824a-18a8e6309644",
+   "name": "GPT-5.3 Codex (xhigh)",
+   "slug": "gpt-5-3-codex",
+   "release_date": "2026-02-05",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 45.5,
+    "artificial_analysis_coding_index": null,
+    "artificial_analysis_agentic_index": null
+   },
+   "artificial_analysis_intelligence_index_cost": null,
+   "pricing": {
+    "price_1m_input_tokens": 1.75,
+    "price_1m_output_tokens": 14,
+    "price_1m_cache_hit_tokens": 0.17,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 125.1,
+    "median_time_to_first_token_seconds": 74.62,
+    "median_time_to_first_answer_token_seconds": 74.62,
+    "median_end_to_end_response_time_seconds": 78.62
+   }
+  },
+  {
+   "id": "277f939a-985b-4b37-859d-b3eabc7c0b26",
+   "name": "MiniMax-M3",
+   "slug": "minimax-m3",
+   "release_date": "2026-06-01",
+   "model_creator": {
+    "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+    "name": "MiniMax"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 45.4,
+    "artificial_analysis_coding_index": 58.6,
+    "artificial_analysis_agentic_index": 36.1
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 204.82,
+    "cost_per_task": {
+     "total_cost": 0.1387
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 0.3,
+    "price_1m_output_tokens": 1.2,
+    "price_1m_cache_hit_tokens": 0.06,
+    "price_1m_cache_write_tokens": 0.38
+   },
+   "performance": {
+    "median_output_tokens_per_second": 90.23,
+    "median_time_to_first_token_seconds": 1.35,
+    "median_time_to_first_answer_token_seconds": 23.51,
+    "median_end_to_end_response_time_seconds": 29.06
+   }
+  }
+ ]
+}
