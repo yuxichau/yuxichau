@@ -1,26 +1,49 @@
 #!/usr/bin/env python3
 """Generate the LLM Intelligence vs Cost dashboard page for yuxichau.com.
 
-Reads the Artificial Analysis free-tier API snapshot (saved as /tmp/aa_p*.json),
-takes the top 50 models by Intelligence Index (v4.1), and writes:
+Reads the Artificial Analysis free-tier API snapshots (saved in this repo under
+_scripts/data/snapshots/aa_p*.json), takes the top 50 models by Intelligence
+Index (v4.1), and writes:
   - _pages/llm-model-analysis.html   (the dashboard page, embedded data)
-  - _scripts/data/aa_top50_raw.json  (raw snapshot for audit / regeneration)
+  - _scripts/data/aa_top50_raw.json  (top-50 raw snapshot for audit)
 
-Requires: ARTIFICIAL_ANALYSIS_API env var if re-fetching; this script just reads
-the saved snapshot files, so no API calls are made.
+All inputs are repo-relative, so the pipeline runs from any checkout:
+  generate:    python3 _scripts/generate_llm_dashboard.py
+  full refresh: bash _scripts/refresh_dashboard.sh   (fetch -> generate -> deploy)
+The Chart.js bundle (v4.4.1, vendored at _scripts/vendor/chart.umd.js) is
+inlined into the page for self-containment. See _scripts/README.md.
 """
 import json
 import re
 import os
 from datetime import datetime, timezone
+from pathlib import Path
 
-SNAPS = ["/tmp/aa_p1.json", "/tmp/aa_p2.json", "/tmp/aa_p3.json", "/tmp/aa_p4.json"]
-REPO = "/workspace/repos/yuxichau-blog"
-PAGE = os.path.join(REPO, "_pages/llm-model-analysis.html")
-RAW  = os.path.join(REPO, "_scripts/data/aa_top50_raw.json")
-CHARTJS = "/tmp/chartlib/node_modules/chart.js/dist/chart.umd.js"  # v4.4.1, inlined for self-containment
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO = SCRIPT_DIR.parent
+SNAPS = [SCRIPT_DIR / "data" / "snapshots" / f"aa_p{i}.json" for i in range(1, 5)]
+PAGE = REPO / "_pages/llm-model-analysis.html"
+RAW = SCRIPT_DIR / "data" / "aa_top50_raw.json"
+CHARTJS = SCRIPT_DIR / "vendor" / "chart.umd.js"  # v4.4.1, inlined for self-containment
+PULLED_MARKER = SCRIPT_DIR / "data" / "snapshots" / "pulled_at.txt"
 
 EFFORT_RANK = {"max": 0, "xhigh": 1, "high": 2, "medium": 3, "low": 4, "minimal": 5}
+
+def pulled_date() -> str:
+    """Date the current snapshot was fetched (from the fetch marker, else the
+    existing raw snapshot's pulled_at, else today)."""
+    try:
+        txt = PULLED_MARKER.read_text().strip()
+        if txt:
+            return txt[:10]
+    except OSError:
+        pass
+    try:
+        with open(RAW) as f:
+            return (json.load(f).get("pulled_at") or "")[:10]
+    except (OSError, json.JSONDecodeError):
+        pass
+    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
 def effort_of(name: str):
     m = re.search(r"\((.*?)\)", name)
@@ -104,7 +127,7 @@ def main():
                    "top_50": [m for m in top]}, f, indent=1)
 
     data_json = json.dumps(rows)
-    pulled = "2026-08-22"
+    pulled = pulled_date()
     with open(CHARTJS) as f:
         chartjs = f.read()
     # drop the sourceMappingURL trailer; the map isn't served, avoids a console 404
