@@ -87,7 +87,7 @@ permalink: /projects/hk-rent-index/
   <ul class="reading">
     <li>Data: RVD historical statistics <em>his_data_3.xls</em>, "Private Domestic &mdash; Rental Indices by Class (Territory-Wide)". Retrieved August 2026.</li>
     <li>Classes are by saleable area: A under 40 m&#178;; B 40&ndash;69.9; C 70&ndash;99.9; D 100&ndash;159.9; E 160 or above. All Classes is the RVD aggregate.</li>
-    <li>The chart is rebased for reading convenience: whatever window you pick, the first observation becomes 100, so lines show cumulative change within the window. The official series remains base 1999 = 100.</li>
+    <li>The chart is rebased for reading convenience: whatever window you pick, each series is rebased so its first available observation becomes 100, so lines show cumulative change within the window. (The All Classes aggregate begins 1980 Q3; classes A&ndash;E begin 1979 Q4.) The official series remains base 1999 = 100.</li>
     <li>Quarterly observations before Jan 1993 are plotted as-is at quarter start months. The most recent month is provisional and subject to revision.</li>
   </ul>
 </div>
@@ -119,10 +119,15 @@ function render(){
   const datasets=[];
   for(const [key,label,color] of SERIES_DEF){
     if(!active.has(key)) continue;
-    const base=rows[0][key];
+    // Rebase from the FIRST OBSERVATION AVAILABLE within the window. RVD's
+    // All Classes aggregate starts 1980 Q3 (classes A-E start 1979 Q4), so
+    // rebasing off rows[0] blindly yields undefined/null -> invisible line.
+    let base=null,bi=-1;
+    for(let i=0;i<rows.length;i++){ if(rows[i][key]!=null){ base=rows[i][key]; bi=i; break; } }
     let last=null;
-    const data=rows.map(r=>{
-      if(r[key]==null||base==null) return last;
+    const data=rows.map((r,i)=>{
+      if(base==null||i<bi) return null;
+      if(r[key]==null) return last;
       last=+(r[key]/base*100).toFixed(1); return last;
     });
     datasets.push({label,data,borderColor:color,backgroundColor:color+"22",
@@ -143,19 +148,24 @@ function render(){
   renderKpis(rows);
   document.getElementById("hri-note").textContent=
     "Window "+labelOf(rows[0])+" to "+labelOf(rows[rows.length-1])+
-    " ("+rows.length+" observations) \u00B7 rebased: "+labelOf(rows[0])+" = 100";
+    " ("+rows.length+" observations) \u00B7 "+
+    (SERIES_DEF.some(([k])=>active.has(k)&&rows[0][k]==null)
+      ? "each series rebased: its first available observation = 100"
+      : "rebased: "+labelOf(rows[0])+" = 100");
 }
 
 function renderKpis(rows){
   const firstR=rows[0],lastR=rows[rows.length-1];
-  function chg(k){ return (firstR[k]!=null&&lastR[k]!=null)?(lastR[k]/firstR[k]-1)*100:null; }
+  // First available value per key (ALL starts 1980 Q3; see render()).
+  function firstVal(k){ for(const r of rows){ if(r[k]!=null) return r[k]; } return null; }
+  function chg(k){ const f=firstVal(k); return (f!=null&&lastR[k]!=null)?(lastR[k]/f-1)*100:null; }
   let peak=null; rows.forEach(r=>{ if(r.ALL!=null&&(!peak||r.ALL>peak.v)) peak={lab:labelOf(r),v:r.ALL}; });
   const spanYears=((lastR.y-firstR.y)+(lastR.m-firstR.m)/12).toFixed(1);
   const fmt=v=>v==null?"n/a":(v>=0?"+":"")+v.toFixed(1)+"%";
   const cls=v=>v==null?"":(v>=0?"pos":"neg");
   document.getElementById("hri-kpis").innerHTML=`
     <div class="kpi"><div class="k-label">Latest (${labelOf(lastR)})</div><div class="k-value">${lastR.ALL!=null?lastR.ALL.toFixed(1):"n/a"}</div><div class="k-note">${lastR.p?"provisional":""}</div></div>
-    <div class="kpi"><div class="k-label">Change over window</div><div class="k-value ${cls(chg("ALL"))}">${fmt(chg("ALL"))}</div><div class="k-note">rebased to 100 at ${labelOf(firstR)}</div></div>
+    <div class="kpi"><div class="k-label">Change over window</div><div class="k-value ${cls(chg("ALL"))}">${fmt(chg("ALL"))}</div><div class="k-note">rebased to 100 at ${firstVal("ALL")!=null?labelOf(rows.find(r=>r.ALL!=null)):labelOf(firstR)}</div></div>
     <div class="kpi"><div class="k-label">Peak in window</div><div class="k-value">${peak?peak.v.toFixed(1):"n/a"}</div><div class="k-note">${peak?peak.lab:""}</div></div>
     <div class="kpi"><div class="k-label">Window span</div><div class="k-value">${spanYears} yrs</div><div class="k-note">${rows.length} observations</div></div>`;
 }
