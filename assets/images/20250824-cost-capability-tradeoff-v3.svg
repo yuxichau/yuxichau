@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 510" width="760" height="510">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .title { font-size: 17px; font-weight: 600; fill: #1a1a2e; }
+      .subtitle { font-size: 11px; fill: #777; }
+      .axis-title { font-size: 12px; font-weight: 500; fill: #444; }
+      .axis-tick { font-size: 10px; fill: #999; }
+      .model-name { font-size: 11px; font-weight: 600; }
+      .model-score { font-size: 10px; fill: #555; }
+      .model-price { font-size: 9px; fill: #666; }
+      .callout { font-size: 10px; }
+      .zone-label { font-size: 11px; font-style: italic; fill: #555; }
+      .sep-line { stroke: #bbb; stroke-dasharray: 4,3; }
+      .note { font-size: 9px; fill: #888; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="760" height="510" fill="#fafbfc"/>
+
+  <!-- Title -->
+  <text x="380" y="28" text-anchor="middle" class="title">The Commoditization Curve</text>
+  <text x="380" y="44" text-anchor="middle" class="subtitle">Ox Alpha reaches ~80% of frontier coding capability at near-zero cost</text>
+
+  <!-- NOTE: Linear Y-axis mapping: 0%=y420, 100%=y80. Formula: y = 420 - 3.4*score -->
+
+  <!-- Axes -->
+  <line x1="100" y1="80" x2="100" y2="420" stroke="#ccd0d5" stroke-width="1.5"/>
+  <line x1="100" y1="420" x2="720" y2="420" stroke="#ccd0d5" stroke-width="1.5"/>
+
+  <!-- X axis labels -->
+  <text x="410" y="460" text-anchor="middle" class="axis-title">Cost per million output tokens →</text>
+  <text x="130" y="435" text-anchor="middle" class="axis-tick">$0</text>
+  <text x="260" y="435" text-anchor="middle" class="axis-tick">$2</text>
+  <text x="390" y="435" text-anchor="middle" class="axis-tick">$10</text>
+  <text x="520" y="435" text-anchor="middle" class="axis-tick">$25</text>
+  <text x="650" y="435" text-anchor="middle" class="axis-tick">$40</text>
+  <text x="720" y="435" text-anchor="middle" class="axis-tick">$50</text>
+
+  <!-- Y axis title -->
+  <text x="38" y="250" text-anchor="middle" class="axis-title" transform="rotate(-90, 38, 250)">Approximate coding capability →</text>
+
+  <!-- Y axis tick labels (linear scale, y = 420 - 3.4*score) -->
+  <text x="90" y="425" text-anchor="end" class="axis-tick">0%</text>
+  <text x="90" y="355" text-anchor="end" class="axis-tick">20%</text>
+  <text x="90" y="286" text-anchor="end" class="axis-tick">40%</text>
+  <text x="90" y="250" text-anchor="end" class="axis-tick">50%</text>
+  <text x="90" y="216" text-anchor="end" class="axis-tick">60%</text>
+  <text x="90" y="182" text-anchor="end" class="axis-tick">70%</text>
+  <text x="90" y="148" text-anchor="end" class="axis-tick">80%</text>
+  <text x="90" y="114" text-anchor="end" class="axis-tick">90%</text>
+  <text x="90" y="84"  text-anchor="end" class="axis-tick">100%</text>
+
+  <!-- Grid lines at major ticks -->
+  <line x1="100" y1="352" x2="720" y2="352" stroke="#e8eaed" stroke-width="1"/>
+  <line x1="100" y1="284" x2="720" y2="284" stroke="#e8eaed" stroke-width="1"/>
+  <line x1="100" y1="216" x2="720" y2="216" stroke="#e8eaed" stroke-width="1"/>
+  <line x1="100" y1="148" x2="720" y2="148" stroke="#e8eaed" stroke-width="1"/>
+  <line x1="100" y1="114" x2="720" y2="114" stroke="#e8eaed" stroke-width="1"/>
+
+  <!-- Zones -->
+  <rect x="100" y="216" width="620" height="138" fill="#e8f5e9" opacity="0.35"/>
+  <rect x="100" y="80"  width="620" height="136" fill="#fff3e0" opacity="0.3"/>
+  <text x="390" y="235" text-anchor="middle" class="zone-label">Most commercial coding tasks live here</text>
+  <text x="390" y="105" text-anchor="middle" class="zone-label">Frontier: the last ~15% of capability costs 25× as much</text>
+
+  <!-- Separator between comparable and non-comparable -->
+  <line x1="100" y1="148" x2="720" y2="148" class="sep-line"/>
+  <text x="680" y="143" text-anchor="end" class="note">Ox Alpha score is from a 10-task community subset, not full SWE-bench</text>
+
+  <!-- DATA POINTS -->
+
+  <!-- Ox Alpha: ~80% on DeepSWE subset. y = 420 - 3.4*80 = 148 -->
+  <circle cx="130" cy="148" r="8" fill="#e53935" stroke="#fff" stroke-width="2"/>
+  <text x="130" y="145" text-anchor="middle" class="model-score" fill="#fff" font-weight="700">80%</text>
+  <text x="130" y="135" text-anchor="middle" class="model-name" fill="#c62828">Ox Alpha</text>
+  <text x="130" y="175" text-anchor="middle" class="model-price" fill="#c62828">10-task DeepSWE subset · $0</text>
+
+  <!-- DeepSeek V4 Pro: ~96% SWE-bench Verified. y = 420 - 3.4*96 = 93.6 ≈ 94 -->
+  <circle cx="260" cy="94" r="6" fill="#fb8c00" stroke="#fff" stroke-width="2"/>
+  <text x="260" y="91" text-anchor="middle" class="model-score" fill="#fff" font-size="9" font-weight="700">96%</text>
+  <text x="260" y="76" text-anchor="middle" class="model-name" fill="#e65100">DeepSeek V4 Pro</text>
+  <text x="260" y="65" text-anchor="middle" class="model-price" fill="#e65100">SWE-bench Verified · ~$2</text>
+
+  <!-- GPT-5.6 Sol: ~96.2% SWE-bench. y ≈ 93 -->
+  <circle cx="520" cy="93" r="6" fill="#1e88e5" stroke="#fff" stroke-width="2"/>
+  <text x="520" y="90" text-anchor="middle" class="model-score" fill="#fff" font-size="9" font-weight="700">96%</text>
+  <text x="520" y="76" text-anchor="middle" class="model-name" fill="#1565c0">GPT-5.6 Sol</text>
+  <text x="520" y="65" text-anchor="middle" class="model-price" fill="#1565c0">SWE-bench Verified · $30</text>
+
+  <!-- Claude Fable 5: ~96% SWE-bench Pro. y ≈ 93 -->
+  <circle cx="680" cy="93" r="6" fill="#8e24aa" stroke="#fff" stroke-width="2"/>
+  <text x="680" y="90" text-anchor="middle" class="model-score" fill="#fff" font-size="9" font-weight="700">96%</text>
+  <text x="680" y="76" text-anchor="middle" class="model-name" fill="#6a1b9a">Claude Fable 5</text>
+  <text x="680" y="65" text-anchor="middle" class="model-price" fill="#6a1b9a">SWE-bench Pro · $50</text>
+
+  <!-- Value shift annotation -->
+  <line x1="220" y1="335" x2="400" y2="335" stroke="#4caf50" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="310" y="328" text-anchor="middle" class="callout" fill="#2e7d32" font-weight="600">Value shifts to cheap + "good enough"</text>
+
+  <defs>
+    <marker id="ah" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4caf50"/>
+    </marker>
+  </defs>
+
+  <!-- Footnotes -->
+  <text x="380" y="485" text-anchor="middle" class="note">DeepSWE subset (10 tasks, unaudited) vs SWE-bench Verified (full, audited). Scores are not directly comparable.</text>
+  <text x="380" y="498" text-anchor="middle" class="note">The point: "good enough" capability may now be available at near-zero cost, even if frontier models remain stronger on full benchmarks.</text>
+</svg>
