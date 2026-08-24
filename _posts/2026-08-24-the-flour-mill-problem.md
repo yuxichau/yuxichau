@@ -8,7 +8,7 @@ author: Yu Xi Chau
 
 On August 20, a model called Ox Alpha appeared on OpenRouter with no company name, no press release, and no logo. Just a stealth label and a price tag of zero. For roughly one week, anyone could send it a million tokens of text, images, or video, and pay nothing.
 
-By the second day, independent developers had run it through coding benchmarks. On DeepSWE, a test of real software engineering tasks, it reportedly scored 80% on a community subset. That places it above Claude Fable 5 at 65% and GPT-5.6 Sol at 52% on the same tasks. Those are frontier models priced at $10 to $50 per million output tokens. Ox Alpha was free.
+By the second day, independent developers had run it through coding benchmarks. On DeepSWE, a test of real software engineering tasks, it reportedly scored 80% on a community subset. To compare, Claude Fable 5 and GPT-5.6 Sol sit at roughly 96% on the full, audited SWE-bench Verified. The 65% and 52% figures you may have seen come from the same tiny 10-task subset, not the full benchmark. Ox Alpha is not more capable than the frontier. It is cheaper, and in some contexts that matters more.
 
 The fingerprinting community is nearly certain it comes from Zhipu AI, makers of the GLM family. This is the fifth anonymous Chinese model to drop in six months. The pattern is familiar now. The previous four followed the same script: a quiet debut, a burst of free traffic, then a company stepping forward with aggressive pricing.
 
