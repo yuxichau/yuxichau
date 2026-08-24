@@ -18,7 +18,7 @@ For two years the AI industry has been obsessed with the frontier. Who has the s
 
 I think that assumption is about to break.
 
-![Cost-capability tradeoff diagram]({{ "/assets/images/20250824-cost-capability-tradeoff-1400w.png" | relative_url }})
+![Cost-capability tradeoff diagram]({{ "/assets/images/20250824-cost-capability-tradeoff-v2-1400w.png" | relative_url }})
 
 Consider a flour mill. One mill produces flour of exceptional purity, milled to specifications that would satisfy a royal bakery. It costs a fortune to build and run. Another mill produces flour that is perfectly fine for bread, cakes, and pasta. It costs half as much. Once the second mill is running at scale, the royal bakery becomes a niche business. The market moves to the cheaper flour, because most customers were never royal bakers. They just needed bread.
 

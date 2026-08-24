@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" width="720" height="460">
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+      .title { font-size: 17px; font-weight: 600; fill: #1a1a2e; }
+      .subtitle { font-size: 11px; fill: #777; }
+      .axis-title { font-size: 12px; font-weight: 500; fill: #444; }
+      .axis-tick { font-size: 10px; fill: #999; }
+      .model-name { font-size: 11px; font-weight: 600; }
+      .model-price { font-size: 9px; fill: #666; }
+      .model-score { font-size: 9px; fill: #555; }
+      .callout { font-size: 10px; fill: #555; }
+      .zone-label { font-size: 11px; font-style: italic; fill: #666; }
+      .arrow { fill: #4a90d9; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="720" height="460" fill="#fafbfc"/>
+
+  <!-- Title -->
+  <text x="360" y="28" text-anchor="middle" class="title">Cost vs. Capability: The "Good Enough" Disruption</text>
+  <text x="360" y="44" text-anchor="middle" class="subtitle">DeepSWE coding benchmark, community subset, August 2026</text>
+
+  <!-- Axes lines -->
+  <line x1="90" y1="390" x2="680" y2="390" stroke="#ccd0d5" stroke-width="1.5"/>
+  <line x1="90" y1="390" x2="90" y2="70" stroke="#ccd0d5" stroke-width="1.5"/>
+
+  <!-- X axis: Cost (log-ish spacing) -->
+  <text x="385" y="430" text-anchor="middle" class="axis-title">Cost per million output tokens →</text>
+
+  <text x="130" y="405" text-anchor="middle" class="axis-tick">$0</text>
+  <text x="265" y="405" text-anchor="middle" class="axis-tick">$1</text>
+  <text x="400" y="405" text-anchor="middle" class="axis-tick">$10</text>
+  <text x="540" y="405" text-anchor="middle" class="axis-tick">$30</text>
+  <text x="675" y="405" text-anchor="middle" class="axis-tick">$50</text>
+
+  <!-- Y axis: Capability -->
+  <text x="24" y="230" text-anchor="middle" class="axis-title" transform="rotate(-90, 24, 230)">Capability (benchmark score) →</text>
+
+  <text x="80" y="395" text-anchor="end" class="axis-tick">0%</text>
+  <text x="80" y="325" text-anchor="end" class="axis-tick">50%</text>
+  <text x="80" y="255" text-anchor="end" class="axis-tick">70%</text>
+  <text x="80" y="185" text-anchor="end" class="axis-tick">85%</text>
+  <text x="80" y="115" text-anchor="end" class="axis-tick">95%</text>
+  <text x="80" y="75"  text-anchor="end" class="axis-tick">100%</text>
+
+  <!-- Grid lines -->
+  <line x1="90" y1="320" x2="680" y2="320" stroke="#e8eaed" stroke-width="1"/>
+  <line x1="90" y1="250" x2="680" y2="250" stroke="#e8eaed" stroke-width="1"/>
+  <line x1="90" y1="180" x2="680" y2="180" stroke="#e8eaed" stroke-width="1"/>
+  <line x1="90" y1="110" x2="680" y2="110" stroke="#e8eaed" stroke-width="1"/>
+
+  <!-- Zone backgrounds -->
+  <rect x="90" y="190" width="590" height="130" fill="#e8f5e9" opacity="0.35"/>
+  <rect x="90" y="70"  width="590" height="120" fill="#fff3e0" opacity="0.3"/>
+
+  <text x="385" y="210" text-anchor="middle" class="zone-label">Most commercial tasks live here</text>
+  <text x="385" y="100" text-anchor="middle" class="zone-label">Frontier: marginal gains at exponential cost</text>
+
+  <!-- Data points -->
+
+  <!-- Ox Alpha -->
+  <circle cx="130" cy="240" r="7" fill="#e53935" stroke="#fff" stroke-width="2"/>
+  <text x="130" y="235" text-anchor="middle" class="model-name" fill="#fff">Ox</text>
+  <text x="130" y="270" text-anchor="middle" class="model-name" fill="#c62828">Ox Alpha</text>
+  <text x="130" y="282" text-anchor="middle" class="model-price" fill="#c62828">80% DeepSWE · $0</text>
+
+  <!-- DeepSeek V4 Pro -->
+  <circle cx="265" cy="200" r="6" fill="#fb8c00" stroke="#fff" stroke-width="2"/>
+  <text x="265" y="180" text-anchor="middle" class="model-name" fill="#e65100">DeepSeek V4 Pro</text>
+  <text x="265" y="192" text-anchor="middle" class="model-price" fill="#e65100">96% SWE-bench · ~$2</text>
+
+  <!-- GPT-5.6 Sol -->
+  <circle cx="540" cy="120" r="6" fill="#1e88e5" stroke="#fff" stroke-width="2"/>
+  <text x="540" y="100" text-anchor="middle" class="model-name" fill="#1565c0">GPT-5.6 Sol</text>
+  <text x="540" y="112" text-anchor="middle" class="model-price" fill="#1565c0">96% SWE-bench · $30</text>
+
+  <!-- Claude Fable 5 -->
+  <circle cx="675" cy="110" r="6" fill="#8e24aa" stroke="#fff" stroke-width="2"/>
+  <text x="675" y="145" text-anchor="middle" class="model-name" fill="#6a1b9a">Claude Fable 5</text>
+  <text x="675" y="157" text-anchor="middle" class="model-price" fill="#6a1b9a">96% SWE-bench · $50</text>
+
+  <!-- Arrow: value shift -->
+  <line x1="200" y1="300" x2="340" y2="300" stroke="#4caf50" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="270" y="295" text-anchor="middle" class="callout" fill="#2e7d32" font-weight="600">Value shifts to cheap + good enough</text>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4caf50"/>
+    </marker>
+  </defs>
+
+  <!-- Footnote -->
+  <text x="360" y="448" text-anchor="middle" class="subtitle">Ox Alpha / GLM-5 results from a 10-task community subset, not audited SWE-bench Verified.</text>
+</svg>
