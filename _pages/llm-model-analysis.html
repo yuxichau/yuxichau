@@ -47,12 +47,24 @@ permalink: /projects/llm-model-analysis/
 #llm-dash .tbl td { padding: .4rem .5rem; border-bottom: 1px solid #eaeef2; vertical-align: top; }
 #llm-dash .tbl tr:hover td { background: #f0f6ff; }
 #llm-dash .tbl tr.row-hl td { background: var(--accent-bg); }
+#llm-dash .tbl tr.row-bic td { background: #f6fef9; box-shadow: inset 3px 0 0 var(--good); }
 #llm-dash .badge { display: inline-block; font-size: .68rem; padding: .08rem .4rem; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); white-space: nowrap; }
 #llm-dash .badge.adaptive { color: var(--good); border-color: #7ee2a8; background: var(--good-bg); }
 #llm-dash .badge.reasoning { color: var(--accent); border-color: #9cc7ff; background: var(--accent-bg); }
 #llm-dash .badge.standard { color: var(--warn); border-color: #ecd9a3; background: var(--warn-bg); }
 #llm-dash .num { text-align: right; font-variant-numeric: tabular-nums; }
 #llm-dash .na { color: #afb8c1; }
+#llm-dash .badge.open { color: var(--good); border-color: #7ee2a8; background: var(--good-bg); }
+#llm-dash .badge.prop { color: #57606a; border-color: #d0d7de; background: #fff; }
+#llm-dash .bic { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: .9rem 1rem; margin-top: 1rem; margin-bottom: 1.25rem; }
+#llm-dash .bic h2 { font-size: 1.05rem; margin: 0 0 .15rem; }
+#llm-dash .bic-sub { font-size: .8rem; color: var(--muted); margin: 0 0 .6rem; }
+#llm-dash .bic-head { font-size: .74rem; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); font-weight: 600; margin: .6rem 0 .3rem; }
+#llm-dash #bicList ol { margin: 0; padding-left: 1.4rem; font-size: .86rem; }
+#llm-dash #bicList li { margin: .28rem 0; }
+#llm-dash .bic-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--good); margin-right: .3rem; }
+#llm-dash .bic-eff { color: var(--muted); font-size: .78rem; }
+#llm-dash .bic-meta { color: var(--muted); }
 #llm-dash .foot { font-size: .78rem; color: var(--muted); margin-top: 1.5rem; border-top: 1px solid var(--border); padding-top: .8rem; }
 #llm-dash .foot a { color: var(--accent); }
 @media (max-width: 800px) {
@@ -86,6 +98,14 @@ permalink: /projects/llm-model-analysis/
     <select id="fReasoning"></select>
   </div>
   <div class="fgroup">
+    <label>License</label>
+    <select id="fLicense">
+      <option value="all">All</option>
+      <option value="Proprietary">Proprietary</option>
+      <option value="Open source">Open source</option>
+    </select>
+  </div>
+  <div class="fgroup">
     <label>Effort level</label>
     <select id="fEffort"></select>
   </div>
@@ -99,7 +119,13 @@ permalink: /projects/llm-model-analysis/
 
 <div class="chart-card">
   <div class="chart-wrap"><canvas id="scatter"></canvas></div>
-  <p class="chart-legend">X axis is log-scaled cost per task (USD). Hover a point for details; click to highlight the row in the table. Models without published cost-per-task data are listed in the table but not plotted.</p>
+  <p class="chart-legend">X axis is log-scaled cost per task (USD). Hover a point for details; click to highlight the row in the table. Models without published cost-per-task data are listed in the table but not plotted. The green step line is the <strong>best-in-class frontier</strong>: at each price it marks the highest intelligence any model achieves, so every model below the line is beaten on intelligence by a cheaper or equal-cost one.</p>
+</div>
+
+<div class="bic">
+  <h2><span class="bic-dot"></span>Best in class for its price</h2>
+  <p class="bic-sub">A model makes this list when no cheaper model scores higher (ties: the cheaper one wins). These are the only models that are ever the smartest choice at some budget.</p>
+  <div id="bicList"></div>
 </div>
 
 <p class="countline" id="countline"></p>
@@ -112,6 +138,7 @@ permalink: /projects/llm-model-analysis/
 
 <div class="foot">
   <p><strong>Methodology.</strong> Intelligence Index v4.1 and cost-per-task figures are published by <a href="https://artificialanalysis.ai" target="_blank" rel="noopener">Artificial Analysis</a> and reproduced here with attribution. Cost per task is the USD price to complete their standard intelligence-index task set at a 3:1 input-output ratio. Where Artificial Analysis has not published a cost (4 of the top 50), the model appears in the table only. Scores from different index versions are not comparable; this snapshot uses one version throughout.</p>
+  <p><strong>Best in class.</strong> The green step line connects models where no cheaper model scores higher, so it hugs the top-left edge of the point cloud; anything below the line is dominated on intelligence per dollar at its own price point. License labels reflect weights availability at the data-pull date (open-weights releases after that date are not reflected); Kimi K3 ships under its own license with commercial conditions and is counted as open source.</p>
 </div>
 
 <script>
@@ -131,7 +158,7 @@ permalink: /projects/llm-model-analysis/
 </script>
 <script>
 (function(){
-const DATA = [{"rank": 1, "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)", "creator": "Anthropic", "family": "Claude", "reasoning": "Adaptive", "effort": "max", "ii": 63.1, "coding": 78, "cost": 2.3369, "price_in": 5, "price_out": 25, "tok_s": 52.97, "ttft": 59.97, "release": "2026-07-24"}, {"rank": 2, "name": "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)", "creator": "Anthropic", "family": "Claude", "reasoning": "Adaptive", "effort": "xhigh", "ii": 62.5, "coding": 77, "cost": 1.8012, "price_in": 5, "price_out": 25, "tok_s": 53.86, "ttft": 40.5, "release": "2026-07-24"}, {"rank": 3, "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)", "creator": "Anthropic", "family": "Claude", "reasoning": "Adaptive", "effort": "max", "ii": 62.1, "coding": 76.5, "cost": 3.1396, "price_in": 10, "price_out": 50, "tok_s": 66.64, "ttft": 148.12, "release": "2026-06-09"}, {"rank": 4, "name": "Claude Opus 5 (Adaptive Reasoning, High Effort)", "creator": "Anthropic", "family": "Claude", "reasoning": "Adaptive", "effort": "high", "ii": 61.5, "coding": 76.5, "cost": 1.2268, "price_in": 5, "price_out": 25, "tok_s": 52.3, "ttft": 11.81, "release": "2026-07-24"}, {"rank": 5, "name": "Grok 4.6 (high)", "creator": "SpaceXAI", "family": "Grok", "reasoning": "Reasoning", "effort": "high", "ii": 60.9, "coding": 76.8, "cost": 0.8367, "price_in": 2, "price_out": 6, "tok_s": 56.47, "ttft": 36.89, "release": "2026-08-12"}, {"rank": 6, "name": "GPT-5.6 Sol (max)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "max", "ii": 60.9, "coding": 77.4, "cost": 1.2312, "price_in": 5, "price_out": 30, "tok_s": 65.01, "ttft": 208.71, "release": "2026-07-09"}, {"rank": 7, "name": "Kimi K3 (max)", "creator": "Kimi", "family": "Kimi", "reasoning": "Reasoning", "effort": "max", "ii": 59.7, "coding": 76.2, "cost": 0.8375, "price_in": 3, "price_out": 15, "tok_s": 37.75, "ttft": 2.67, "release": "2026-07-16"}, {"rank": 8, "name": "GLM-5.3 (max)", "creator": "Z AI", "family": "GLM", "reasoning": "Reasoning", "effort": "max", "ii": 59.5, "coding": 74.8, "cost": 0.6829, "price_in": 1.4, "price_out": 4.4, "tok_s": 84.72, "ttft": 1.88, "release": "2026-08-18"}, {"rank": 9, "name": "GPT-5.6 Sol (xhigh)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "xhigh", "ii": 59, "coding": 78.3, "cost": 0.8072, "price_in": 5, "price_out": 30, "tok_s": 62.5, "ttft": 50.77, "release": "2026-07-09"}, {"rank": 10, "name": "Claude Opus 5 (Adaptive Reasoning, Medium Effort)", "creator": "Anthropic", "family": "Claude", "reasoning": "Adaptive", "effort": "medium", "ii": 58.6, "coding": 74.3, "cost": 0.7243, "price_in": 5, "price_out": 25, "tok_s": 52.85, "ttft": 4.92, "release": "2026-07-24"}, {"rank": 11, "name": "Qwen3.8 Max", "creator": "Alibaba", "family": "Qwen", "reasoning": "Reasoning", "effort": "max", "ii": 58.1, "coding": 71.8, "cost": 1.132, "price_in": 2, "price_out": 6, "tok_s": 49.81, "ttft": 2.56, "release": "2026-08-03"}, {"rank": 12, "name": "Qwen3.8 2.4T A95B", "creator": "Alibaba", "family": "Qwen", "reasoning": "Standard", "effort": null, "ii": 57.7, "coding": 71.9, "cost": 1.0919, "price_in": 2, "price_out": 6, "tok_s": 44.77, "ttft": 2.53, "release": "2026-08-12"}, {"rank": 13, "name": "GPT-5.6 Sol (high)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "high", "ii": 57.3, "coding": 77.2, "cost": 0.5477, "price_in": 5, "price_out": 30, "tok_s": 69.58, "ttft": 9.27, "release": "2026-07-09"}, {"rank": 14, "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)", "creator": "Anthropic", "family": "Claude", "reasoning": "Adaptive", "effort": "max", "ii": 57.3, "coding": 74.3, "cost": 2.0315, "price_in": 5, "price_out": 25, "tok_s": 56.09, "ttft": 12.05, "release": "2026-05-28"}, {"rank": 15, "name": "Muse Spark 1.2 (xhigh)", "creator": "Meta", "family": "Muse", "reasoning": "Reasoning", "effort": "xhigh", "ii": 56.8, "coding": 72.2, "cost": 0.3992, "price_in": 1.25, "price_out": 4.25, "tok_s": null, "ttft": null, "release": "2026-08-05"}, {"rank": 16, "name": "GPT-5.6 Terra (max)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "max", "ii": 56.6, "coding": 76.7, "cost": 0.508, "price_in": 2, "price_out": 12, "tok_s": 118.74, "ttft": 186.73, "release": "2026-07-09"}, {"rank": 17, "name": "GPT-5.5 (xhigh)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "xhigh", "ii": 56.3, "coding": 74.9, "cost": 1.1747, "price_in": 5, "price_out": 30, "tok_s": 84.99, "ttft": 68.86, "release": "2026-04-23"}, {"rank": 18, "name": "Gemini 3.7 Flash (high)", "creator": "Google", "family": "Gemini", "reasoning": "Reasoning", "effort": "high", "ii": 56, "coding": 76.1, "cost": 0.4022, "price_in": 0.75, "price_out": 3.75, "tok_s": 323.29, "ttft": 15.15, "release": "2026-08-13"}, {"rank": 19, "name": "Grok 4.5 (high)", "creator": "SpaceXAI", "family": "Grok", "reasoning": "Reasoning", "effort": "high", "ii": 55.8, "coding": 72.4, "cost": 0.3601, "price_in": 2, "price_out": 6, "tok_s": 64.41, "ttft": 5.85, "release": "2026-07-08"}, {"rank": 20, "name": "GPT-5.6 Sol (medium)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "medium", "ii": 55.6, "coding": 76.3, "cost": 0.3717, "price_in": 5, "price_out": 30, "tok_s": 73.28, "ttft": 3.52, "release": "2026-07-09"}, {"rank": 21, "name": "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)", "creator": "Anthropic", "family": "Claude", "reasoning": "Adaptive", "effort": "max", "ii": 55.3, "coding": 71.5, "cost": 1.7173, "price_in": 2, "price_out": 10, "tok_s": 75.99, "ttft": 184.48, "release": "2026-06-30"}, {"rank": 22, "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)", "creator": "Anthropic", "family": "Claude", "reasoning": "Adaptive", "effort": "max", "ii": 55, "coding": 73.6, "cost": 2.2285, "price_in": 5, "price_out": 25, "tok_s": 47.94, "ttft": 15.61, "release": "2026-04-16"}, {"rank": 23, "name": "GPT-5.5 (high)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "high", "ii": 54.7, "coding": 71.6, "cost": 0.8033, "price_in": 5, "price_out": 30, "tok_s": 74.3, "ttft": 23.75, "release": "2026-04-23"}, {"rank": 24, "name": "Gemini 3.7 Flash (medium)", "creator": "Google", "family": "Gemini", "reasoning": "Reasoning", "effort": "medium", "ii": 53.4, "coding": 71.5, "cost": 0.2629, "price_in": 0.75, "price_out": 3.75, "tok_s": 316.98, "ttft": 4.63, "release": "2026-08-13"}, {"rank": 25, "name": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)", "creator": "DeepSeek", "family": "DeepSeek", "reasoning": "Reasoning", "effort": "max", "ii": 53.2, "coding": 68.8, "cost": 0.2521, "price_in": 1.32, "price_out": 3.96, "tok_s": 74.22, "ttft": 1.7, "release": "2026-08-13"}, {"rank": 26, "name": "Muse Spark 1.1 (xhigh)", "creator": "Meta", "family": "Muse", "reasoning": "Reasoning", "effort": "xhigh", "ii": 53.2, "coding": 71.3, "cost": 0.2923, "price_in": 1.25, "price_out": 4.25, "tok_s": 200.16, "ttft": 1.48, "release": "2026-07-09"}, {"rank": 27, "name": "GPT-5.4 (xhigh)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "xhigh", "ii": 53.1, "coding": 71.1, "cost": 1.1038, "price_in": 2.5, "price_out": 15, "tok_s": 130.54, "ttft": 144.08, "release": "2026-03-05"}, {"rank": 28, "name": "GPT-5.6 Terra (xhigh)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "xhigh", "ii": 52.8, "coding": 70.6, "cost": 0.305, "price_in": 2, "price_out": 12, "tok_s": 100.68, "ttft": 19.53, "release": "2026-07-09"}, {"rank": 29, "name": "GLM-5.2 (max)", "creator": "Z AI", "family": "GLM", "reasoning": "Reasoning", "effort": "max", "ii": 52.6, "coding": 68.8, "cost": 0.4445, "price_in": 1.4, "price_out": 4.4, "tok_s": 113.04, "ttft": 1.72, "release": "2026-06-16"}, {"rank": 30, "name": "Claude Opus 5 (Adaptive Reasoning, Low Effort)", "creator": "Anthropic", "family": "Claude", "reasoning": "Adaptive", "effort": "low", "ii": 52.5, "coding": 66.9, "cost": 0.4252, "price_in": 5, "price_out": 25, "tok_s": 48.61, "ttft": 3.45, "release": "2026-07-24"}, {"rank": 31, "name": "GPT-5.6 Luna (max)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "max", "ii": 52.3, "coding": 71.4, "cost": 0.0471, "price_in": 0.2, "price_out": 1.2, "tok_s": 158.61, "ttft": 159.4, "release": "2026-07-09"}, {"rank": 32, "name": "Gemini 3.5 Flash (high)", "creator": "Google", "family": "Gemini", "reasoning": "Reasoning", "effort": "high", "ii": 52, "coding": 70.1, "cost": 0.6934, "price_in": 1.5, "price_out": 9, "tok_s": 170.59, "ttft": 27.29, "release": "2026-05-19"}, {"rank": 33, "name": "Qwen3.8 27B", "creator": "Alibaba", "family": "Qwen", "reasoning": "Standard", "effort": null, "ii": 52, "coding": 68.1, "cost": null, "price_in": 0.45, "price_out": 3.2, "tok_s": null, "ttft": null, "release": "2026-08-14"}, {"rank": 34, "name": "DeepSeek V4 Flash 0731 (Reasoning, Max Effort)", "creator": "DeepSeek", "family": "DeepSeek", "reasoning": "Reasoning", "effort": "max", "ii": 51.8, "coding": 69.1, "cost": 0.1122, "price_in": 0.44, "price_out": 1.32, "tok_s": 132.54, "ttft": 1.15, "release": "2026-07-31"}, {"rank": 35, "name": "Gemini 3.6 Flash (high)", "creator": "Google", "family": "Gemini", "reasoning": "Reasoning", "effort": "high", "ii": 51.6, "coding": 69.2, "cost": 0.3442, "price_in": 0.75, "price_out": 3.75, "tok_s": 222.25, "ttft": 15.93, "release": "2026-07-21"}, {"rank": 36, "name": "GPT-5.5 (medium)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "medium", "ii": 51.4, "coding": 71.5, "cost": 0.5002, "price_in": 5, "price_out": 30, "tok_s": 75.57, "ttft": 5.49, "release": "2026-04-23"}, {"rank": 37, "name": "Gemini 3.7 Flash (low)", "creator": "Google", "family": "Gemini", "reasoning": "Reasoning", "effort": "low", "ii": 50.9, "coding": 71, "cost": 0.1648, "price_in": 0.75, "price_out": 3.75, "tok_s": 303.36, "ttft": 0.83, "release": "2026-08-13"}, {"rank": 38, "name": "GPT-5.6 Sol (low)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "low", "ii": 50.7, "coding": 69.7, "cost": 0.2311, "price_in": 5, "price_out": 30, "tok_s": 56.81, "ttft": 3.51, "release": "2026-07-09"}, {"rank": 39, "name": "GPT-5.6 Terra (high)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "high", "ii": 50.1, "coding": 67.1, "cost": 0.2183, "price_in": 2, "price_out": 12, "tok_s": 103.2, "ttft": 2.33, "release": "2026-07-09"}, {"rank": 40, "name": "GPT-5.6 Luna (xhigh)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "xhigh", "ii": 50.1, "coding": 68.6, "cost": 0.0316, "price_in": 0.2, "price_out": 1.2, "tok_s": 146.41, "ttft": 43.84, "release": "2026-07-09"}, {"rank": 41, "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)", "creator": "Anthropic", "family": "Claude", "reasoning": "Adaptive", "effort": "max", "ii": 48.4, "coding": 63, "cost": 1.2182, "price_in": 3, "price_out": 15, "tok_s": 54.56, "ttft": 149.24, "release": "2026-02-17"}, {"rank": 42, "name": "Kimi K3 (low)", "creator": "Kimi", "family": "Kimi", "reasoning": "Reasoning", "effort": "low", "ii": 48.3, "coding": 72, "cost": 0.2419, "price_in": 3, "price_out": 15, "tok_s": 36.23, "ttft": 2.82, "release": "2026-07-16"}, {"rank": 43, "name": "Gemini 3.1 Pro Preview", "creator": "Google", "family": "Gemini", "reasoning": "Standard", "effort": null, "ii": 47.7, "coding": 68.8, "cost": 0.3346, "price_in": 2, "price_out": 12, "tok_s": 107.91, "ttft": 32.45, "release": "2026-02-19"}, {"rank": 44, "name": "Motif 3", "creator": "Motif Technologies", "family": "Motif", "reasoning": "Standard", "effort": null, "ii": 47.4, "coding": 63.5, "cost": null, "price_in": null, "price_out": null, "tok_s": null, "ttft": null, "release": "2026-08-12"}, {"rank": 45, "name": "GPT-5.6 Luna (high)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "high", "ii": 47, "coding": 63.3, "cost": 0.0216, "price_in": 0.2, "price_out": 1.2, "tok_s": 144.16, "ttft": 11.08, "release": "2026-07-09"}, {"rank": 46, "name": "GPT-5.6 Terra (medium)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "medium", "ii": 46.8, "coding": 64.7, "cost": 0.119, "price_in": 2, "price_out": 12, "tok_s": 97.8, "ttft": 1.98, "release": "2026-07-09"}, {"rank": 47, "name": "Gemini 3.5 Flash (medium)", "creator": "Google", "family": "Gemini", "reasoning": "Reasoning", "effort": "medium", "ii": 46.7, "coding": null, "cost": null, "price_in": 1.5, "price_out": 9, "tok_s": 179.96, "ttft": 20.69, "release": "2026-05-19"}, {"rank": 48, "name": "Qwen3.7 Max", "creator": "Alibaba", "family": "Qwen", "reasoning": "Reasoning", "effort": "max", "ii": 46.7, "coding": 66, "cost": 0.5413, "price_in": 2.5, "price_out": 7.5, "tok_s": 211.95, "ttft": 2.24, "release": "2026-05-19"}, {"rank": 49, "name": "GPT-5.3 Codex (xhigh)", "creator": "OpenAI", "family": "GPT", "reasoning": "Reasoning", "effort": "xhigh", "ii": 45.5, "coding": null, "cost": null, "price_in": 1.75, "price_out": 14, "tok_s": 132.23, "ttft": 64.93, "release": "2026-02-05"}, {"rank": 50, "name": "MiniMax-M3", "creator": "MiniMax", "family": "MiniMax", "reasoning": "Reasoning", "effort": "max", "ii": 45.4, "coding": 58.6, "cost": 0.1387, "price_in": 0.3, "price_out": 1.2, "tok_s": 90.23, "ttft": 1.35, "release": "2026-06-01"}];
+const DATA = [{"rank": 1, "name": "Claude Opus 5 (Adaptive Reasoning, Max Effort)", "creator": "Anthropic", "license": "Proprietary", "family": "Claude", "reasoning": "Adaptive", "effort": "max", "ii": 63.1, "coding": 78, "cost": 2.3369, "price_in": 5, "price_out": 25, "tok_s": 52.97, "ttft": 59.97, "release": "2026-07-24"}, {"rank": 2, "name": "Claude Opus 5 (Adaptive Reasoning, Xhigh Effort)", "creator": "Anthropic", "license": "Proprietary", "family": "Claude", "reasoning": "Adaptive", "effort": "xhigh", "ii": 62.5, "coding": 77, "cost": 1.8012, "price_in": 5, "price_out": 25, "tok_s": 53.86, "ttft": 40.5, "release": "2026-07-24"}, {"rank": 3, "name": "Claude Fable 5 (Adaptive Reasoning, Max Effort, Opus 4.8 Fallback)", "creator": "Anthropic", "license": "Proprietary", "family": "Claude", "reasoning": "Adaptive", "effort": "max", "ii": 62.1, "coding": 76.5, "cost": 3.1396, "price_in": 10, "price_out": 50, "tok_s": 66.64, "ttft": 148.12, "release": "2026-06-09"}, {"rank": 4, "name": "Claude Opus 5 (Adaptive Reasoning, High Effort)", "creator": "Anthropic", "license": "Proprietary", "family": "Claude", "reasoning": "Adaptive", "effort": "high", "ii": 61.5, "coding": 76.5, "cost": 1.2268, "price_in": 5, "price_out": 25, "tok_s": 52.3, "ttft": 11.81, "release": "2026-07-24"}, {"rank": 5, "name": "Grok 4.6 (high)", "creator": "SpaceXAI", "license": "Proprietary", "family": "Grok", "reasoning": "Reasoning", "effort": "high", "ii": 60.9, "coding": 76.8, "cost": 0.8367, "price_in": 2, "price_out": 6, "tok_s": 56.47, "ttft": 36.89, "release": "2026-08-12"}, {"rank": 6, "name": "GPT-5.6 Sol (max)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "max", "ii": 60.9, "coding": 77.4, "cost": 1.2312, "price_in": 5, "price_out": 30, "tok_s": 65.01, "ttft": 208.71, "release": "2026-07-09"}, {"rank": 7, "name": "Kimi K3 (max)", "creator": "Kimi", "license": "Open source", "family": "Kimi", "reasoning": "Reasoning", "effort": "max", "ii": 59.7, "coding": 76.2, "cost": 0.8375, "price_in": 3, "price_out": 15, "tok_s": 37.75, "ttft": 2.67, "release": "2026-07-16"}, {"rank": 8, "name": "GLM-5.3 (max)", "creator": "Z AI", "license": "Open source", "family": "GLM", "reasoning": "Reasoning", "effort": "max", "ii": 59.5, "coding": 74.8, "cost": 0.6829, "price_in": 1.4, "price_out": 4.4, "tok_s": 84.72, "ttft": 1.88, "release": "2026-08-18"}, {"rank": 9, "name": "GPT-5.6 Sol (xhigh)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "xhigh", "ii": 59, "coding": 78.3, "cost": 0.8072, "price_in": 5, "price_out": 30, "tok_s": 62.5, "ttft": 50.77, "release": "2026-07-09"}, {"rank": 10, "name": "Claude Opus 5 (Adaptive Reasoning, Medium Effort)", "creator": "Anthropic", "license": "Proprietary", "family": "Claude", "reasoning": "Adaptive", "effort": "medium", "ii": 58.6, "coding": 74.3, "cost": 0.7243, "price_in": 5, "price_out": 25, "tok_s": 52.85, "ttft": 4.92, "release": "2026-07-24"}, {"rank": 11, "name": "Qwen3.8 Max", "creator": "Alibaba", "license": "Open source", "family": "Qwen", "reasoning": "Reasoning", "effort": "max", "ii": 58.1, "coding": 71.8, "cost": 1.132, "price_in": 2, "price_out": 6, "tok_s": 49.81, "ttft": 2.56, "release": "2026-08-03"}, {"rank": 12, "name": "Qwen3.8 2.4T A95B", "creator": "Alibaba", "license": "Open source", "family": "Qwen", "reasoning": "Standard", "effort": null, "ii": 57.7, "coding": 71.9, "cost": 1.0919, "price_in": 2, "price_out": 6, "tok_s": 44.77, "ttft": 2.53, "release": "2026-08-12"}, {"rank": 13, "name": "GPT-5.6 Sol (high)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "high", "ii": 57.3, "coding": 77.2, "cost": 0.5477, "price_in": 5, "price_out": 30, "tok_s": 69.58, "ttft": 9.27, "release": "2026-07-09"}, {"rank": 14, "name": "Claude Opus 4.8 (Adaptive Reasoning, Max Effort)", "creator": "Anthropic", "license": "Proprietary", "family": "Claude", "reasoning": "Adaptive", "effort": "max", "ii": 57.3, "coding": 74.3, "cost": 2.0315, "price_in": 5, "price_out": 25, "tok_s": 56.09, "ttft": 12.05, "release": "2026-05-28"}, {"rank": 15, "name": "Muse Spark 1.2 (xhigh)", "creator": "Meta", "license": "Proprietary", "family": "Muse", "reasoning": "Reasoning", "effort": "xhigh", "ii": 56.8, "coding": 72.2, "cost": 0.3992, "price_in": 1.25, "price_out": 4.25, "tok_s": null, "ttft": null, "release": "2026-08-05"}, {"rank": 16, "name": "GPT-5.6 Terra (max)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "max", "ii": 56.6, "coding": 76.7, "cost": 0.508, "price_in": 2, "price_out": 12, "tok_s": 118.74, "ttft": 186.73, "release": "2026-07-09"}, {"rank": 17, "name": "GPT-5.5 (xhigh)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "xhigh", "ii": 56.3, "coding": 74.9, "cost": 1.1747, "price_in": 5, "price_out": 30, "tok_s": 84.99, "ttft": 68.86, "release": "2026-04-23"}, {"rank": 18, "name": "Gemini 3.7 Flash (high)", "creator": "Google", "license": "Proprietary", "family": "Gemini", "reasoning": "Reasoning", "effort": "high", "ii": 56, "coding": 76.1, "cost": 0.4022, "price_in": 0.75, "price_out": 3.75, "tok_s": 323.29, "ttft": 15.15, "release": "2026-08-13"}, {"rank": 19, "name": "Grok 4.5 (high)", "creator": "SpaceXAI", "license": "Proprietary", "family": "Grok", "reasoning": "Reasoning", "effort": "high", "ii": 55.8, "coding": 72.4, "cost": 0.3601, "price_in": 2, "price_out": 6, "tok_s": 64.41, "ttft": 5.85, "release": "2026-07-08"}, {"rank": 20, "name": "GPT-5.6 Sol (medium)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "medium", "ii": 55.6, "coding": 76.3, "cost": 0.3717, "price_in": 5, "price_out": 30, "tok_s": 73.28, "ttft": 3.52, "release": "2026-07-09"}, {"rank": 21, "name": "Claude Sonnet 5 (Adaptive Reasoning, Max Effort)", "creator": "Anthropic", "license": "Proprietary", "family": "Claude", "reasoning": "Adaptive", "effort": "max", "ii": 55.3, "coding": 71.5, "cost": 1.7173, "price_in": 2, "price_out": 10, "tok_s": 75.99, "ttft": 184.48, "release": "2026-06-30"}, {"rank": 22, "name": "Claude Opus 4.7 (Adaptive Reasoning, Max Effort)", "creator": "Anthropic", "license": "Proprietary", "family": "Claude", "reasoning": "Adaptive", "effort": "max", "ii": 55, "coding": 73.6, "cost": 2.2285, "price_in": 5, "price_out": 25, "tok_s": 47.94, "ttft": 15.61, "release": "2026-04-16"}, {"rank": 23, "name": "GPT-5.5 (high)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "high", "ii": 54.7, "coding": 71.6, "cost": 0.8033, "price_in": 5, "price_out": 30, "tok_s": 74.3, "ttft": 23.75, "release": "2026-04-23"}, {"rank": 24, "name": "Gemini 3.7 Flash (medium)", "creator": "Google", "license": "Proprietary", "family": "Gemini", "reasoning": "Reasoning", "effort": "medium", "ii": 53.4, "coding": 71.5, "cost": 0.2629, "price_in": 0.75, "price_out": 3.75, "tok_s": 316.98, "ttft": 4.63, "release": "2026-08-13"}, {"rank": 25, "name": "DeepSeek V4 Pro 0813 (Reasoning, Max Effort)", "creator": "DeepSeek", "license": "Open source", "family": "DeepSeek", "reasoning": "Reasoning", "effort": "max", "ii": 53.2, "coding": 68.8, "cost": 0.2521, "price_in": 1.32, "price_out": 3.96, "tok_s": 74.22, "ttft": 1.7, "release": "2026-08-13"}, {"rank": 26, "name": "Muse Spark 1.1 (xhigh)", "creator": "Meta", "license": "Proprietary", "family": "Muse", "reasoning": "Reasoning", "effort": "xhigh", "ii": 53.2, "coding": 71.3, "cost": 0.2923, "price_in": 1.25, "price_out": 4.25, "tok_s": 200.16, "ttft": 1.48, "release": "2026-07-09"}, {"rank": 27, "name": "GPT-5.4 (xhigh)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "xhigh", "ii": 53.1, "coding": 71.1, "cost": 1.1038, "price_in": 2.5, "price_out": 15, "tok_s": 130.54, "ttft": 144.08, "release": "2026-03-05"}, {"rank": 28, "name": "GPT-5.6 Terra (xhigh)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "xhigh", "ii": 52.8, "coding": 70.6, "cost": 0.305, "price_in": 2, "price_out": 12, "tok_s": 100.68, "ttft": 19.53, "release": "2026-07-09"}, {"rank": 29, "name": "GLM-5.2 (max)", "creator": "Z AI", "license": "Open source", "family": "GLM", "reasoning": "Reasoning", "effort": "max", "ii": 52.6, "coding": 68.8, "cost": 0.4445, "price_in": 1.4, "price_out": 4.4, "tok_s": 113.04, "ttft": 1.72, "release": "2026-06-16"}, {"rank": 30, "name": "Claude Opus 5 (Adaptive Reasoning, Low Effort)", "creator": "Anthropic", "license": "Proprietary", "family": "Claude", "reasoning": "Adaptive", "effort": "low", "ii": 52.5, "coding": 66.9, "cost": 0.4252, "price_in": 5, "price_out": 25, "tok_s": 48.61, "ttft": 3.45, "release": "2026-07-24"}, {"rank": 31, "name": "GPT-5.6 Luna (max)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "max", "ii": 52.3, "coding": 71.4, "cost": 0.0471, "price_in": 0.2, "price_out": 1.2, "tok_s": 158.61, "ttft": 159.4, "release": "2026-07-09"}, {"rank": 32, "name": "Gemini 3.5 Flash (high)", "creator": "Google", "license": "Proprietary", "family": "Gemini", "reasoning": "Reasoning", "effort": "high", "ii": 52, "coding": 70.1, "cost": 0.6934, "price_in": 1.5, "price_out": 9, "tok_s": 170.59, "ttft": 27.29, "release": "2026-05-19"}, {"rank": 33, "name": "Qwen3.8 27B", "creator": "Alibaba", "license": "Open source", "family": "Qwen", "reasoning": "Standard", "effort": null, "ii": 52, "coding": 68.1, "cost": null, "price_in": 0.45, "price_out": 3.2, "tok_s": null, "ttft": null, "release": "2026-08-14"}, {"rank": 34, "name": "DeepSeek V4 Flash 0731 (Reasoning, Max Effort)", "creator": "DeepSeek", "license": "Open source", "family": "DeepSeek", "reasoning": "Reasoning", "effort": "max", "ii": 51.8, "coding": 69.1, "cost": 0.1122, "price_in": 0.44, "price_out": 1.32, "tok_s": 132.54, "ttft": 1.15, "release": "2026-07-31"}, {"rank": 35, "name": "Gemini 3.6 Flash (high)", "creator": "Google", "license": "Proprietary", "family": "Gemini", "reasoning": "Reasoning", "effort": "high", "ii": 51.6, "coding": 69.2, "cost": 0.3442, "price_in": 0.75, "price_out": 3.75, "tok_s": 222.25, "ttft": 15.93, "release": "2026-07-21"}, {"rank": 36, "name": "GPT-5.5 (medium)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "medium", "ii": 51.4, "coding": 71.5, "cost": 0.5002, "price_in": 5, "price_out": 30, "tok_s": 75.57, "ttft": 5.49, "release": "2026-04-23"}, {"rank": 37, "name": "Gemini 3.7 Flash (low)", "creator": "Google", "license": "Proprietary", "family": "Gemini", "reasoning": "Reasoning", "effort": "low", "ii": 50.9, "coding": 71, "cost": 0.1648, "price_in": 0.75, "price_out": 3.75, "tok_s": 303.36, "ttft": 0.83, "release": "2026-08-13"}, {"rank": 38, "name": "GPT-5.6 Sol (low)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "low", "ii": 50.7, "coding": 69.7, "cost": 0.2311, "price_in": 5, "price_out": 30, "tok_s": 56.81, "ttft": 3.51, "release": "2026-07-09"}, {"rank": 39, "name": "GPT-5.6 Terra (high)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "high", "ii": 50.1, "coding": 67.1, "cost": 0.2183, "price_in": 2, "price_out": 12, "tok_s": 103.2, "ttft": 2.33, "release": "2026-07-09"}, {"rank": 40, "name": "GPT-5.6 Luna (xhigh)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "xhigh", "ii": 50.1, "coding": 68.6, "cost": 0.0316, "price_in": 0.2, "price_out": 1.2, "tok_s": 146.41, "ttft": 43.84, "release": "2026-07-09"}, {"rank": 41, "name": "Claude Sonnet 4.6 (Adaptive Reasoning, Max Effort)", "creator": "Anthropic", "license": "Proprietary", "family": "Claude", "reasoning": "Adaptive", "effort": "max", "ii": 48.4, "coding": 63, "cost": 1.2182, "price_in": 3, "price_out": 15, "tok_s": 54.56, "ttft": 149.24, "release": "2026-02-17"}, {"rank": 42, "name": "Kimi K3 (low)", "creator": "Kimi", "license": "Open source", "family": "Kimi", "reasoning": "Reasoning", "effort": "low", "ii": 48.3, "coding": 72, "cost": 0.2419, "price_in": 3, "price_out": 15, "tok_s": 36.23, "ttft": 2.82, "release": "2026-07-16"}, {"rank": 43, "name": "Gemini 3.1 Pro Preview", "creator": "Google", "license": "Proprietary", "family": "Gemini", "reasoning": "Standard", "effort": null, "ii": 47.7, "coding": 68.8, "cost": 0.3346, "price_in": 2, "price_out": 12, "tok_s": 107.91, "ttft": 32.45, "release": "2026-02-19"}, {"rank": 44, "name": "Motif 3", "creator": "Motif Technologies", "license": "Proprietary", "family": "Motif", "reasoning": "Standard", "effort": null, "ii": 47.4, "coding": 63.5, "cost": null, "price_in": null, "price_out": null, "tok_s": null, "ttft": null, "release": "2026-08-12"}, {"rank": 45, "name": "GPT-5.6 Luna (high)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "high", "ii": 47, "coding": 63.3, "cost": 0.0216, "price_in": 0.2, "price_out": 1.2, "tok_s": 144.16, "ttft": 11.08, "release": "2026-07-09"}, {"rank": 46, "name": "GPT-5.6 Terra (medium)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "medium", "ii": 46.8, "coding": 64.7, "cost": 0.119, "price_in": 2, "price_out": 12, "tok_s": 97.8, "ttft": 1.98, "release": "2026-07-09"}, {"rank": 47, "name": "Gemini 3.5 Flash (medium)", "creator": "Google", "license": "Proprietary", "family": "Gemini", "reasoning": "Reasoning", "effort": "medium", "ii": 46.7, "coding": null, "cost": null, "price_in": 1.5, "price_out": 9, "tok_s": 179.96, "ttft": 20.69, "release": "2026-05-19"}, {"rank": 48, "name": "Qwen3.7 Max", "creator": "Alibaba", "license": "Proprietary", "family": "Qwen", "reasoning": "Reasoning", "effort": "max", "ii": 46.7, "coding": 66, "cost": 0.5413, "price_in": 2.5, "price_out": 7.5, "tok_s": 211.95, "ttft": 2.24, "release": "2026-05-19"}, {"rank": 49, "name": "GPT-5.3 Codex (xhigh)", "creator": "OpenAI", "license": "Proprietary", "family": "GPT", "reasoning": "Reasoning", "effort": "xhigh", "ii": 45.5, "coding": null, "cost": null, "price_in": 1.75, "price_out": 14, "tok_s": 132.23, "ttft": 64.93, "release": "2026-02-05"}, {"rank": 50, "name": "MiniMax-M3", "creator": "MiniMax", "license": "Open source", "family": "MiniMax", "reasoning": "Reasoning", "effort": "max", "ii": 45.4, "coding": 58.6, "cost": 0.1387, "price_in": 0.3, "price_out": 1.2, "tok_s": 90.23, "ttft": 1.35, "release": "2026-06-01"}];
 const CREATOR_COLORS = {
   "OpenAI": "#0969da", "Anthropic": "#cf222e", "Google": "#1a7f37", "Alibaba": "#9a6700",
   "DeepSeek": "#8250df", "Meta": "#57606a", "Kimi": "#d1242f", "Z AI": "#1f883d",
@@ -152,16 +179,32 @@ function filter() {
   const family = $("fFamily").value;
   const reasoning = $("fReasoning").value;
   const effort = $("fEffort").value;
+  const license = $("fLicense") ? $("fLicense").value : "all";
   const minII = parseInt($("fMinII").value, 10);
   shown = DATA.filter(d => {
     if (!activeCreators.has(d.creator)) return false;
     if (family !== "all" && d.family !== family) return false;
     if (reasoning !== "all" && d.reasoning !== reasoning) return false;
+    if (license !== "all" && d.license !== license) return false;
     if (effort !== "all" && d.effort !== effort) return false;
     if (d.ii < minII) return false;
     if (q && !(d.name.toLowerCase().includes(q) || d.creator.toLowerCase().includes(q))) return false;
     return true;
   });
+}
+
+// Best-in-class frontier: models where no cheaper model scores higher
+// (equal-II ties go to the cheaper model). Computed on the filtered set so it
+// follows the chart; only plotted models (with a published cost) can qualify.
+function bicOf(list) {
+  const pts = list.filter(d => d.cost != null).sort((a, b) => a.cost - b.cost || b.ii - a.ii);
+  let best = -Infinity;
+  const out = [];
+  pts.forEach(d => {
+    if (d.ii > best) { out.push(d); best = d.ii; }
+  });
+  const ids = new Set(out.map(d => d.rank));
+  return { list: out, ids };
 }
 
 function fmtUSD(v, digits) {
@@ -175,7 +218,27 @@ function fmtNum(v, d) {
 }
 
 function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
-function kpis() {
+
+function renderBic(bic) {
+  const el = $("bicList");
+  if (!el) return;
+  if (!bic.list.length) {
+    el.innerHTML = '<p class="bic-sub">No plotted models match the current filters.</p>';
+    return;
+  }
+  const cheapest = bic.list[0].cost;
+  let html = '<ol>' + bic.list.map(d => {
+    const meta = d.cost === cheapest ? "cheapest overall" : ("from $" + fmtUSD(d.cost).slice(1) + " per task");
+    return "<li><strong>" + esc(d.name.replace(/(<|>)/g, m => m === "<" ? "&lt;" : "&gt;")) + "</strong> " +
+      '<span class="badge ' + (d.license === "Open source" ? "open" : "prop") + '">' + d.license + '</span> ' +
+      '<span class="bic-meta">· ' + d.creator + ' · II ' + d.ii + ' · ' + meta + '</span></li>';
+  }).join("") + "</ol>";
+  html += '<p class="bic-eff">' + bic.list.length + ' of ' +
+    shown.filter(d => d.cost != null).length + ' plotted models sit on the frontier under the current filters.</p>';
+  el.innerHTML = html;
+}
+
+function kpis(bic) {
   const withCost = shown.filter(d => d.cost != null);
   const best = [...withCost].sort((a, b) => (b.ii / b.cost) - (a.ii / a.cost))[0];
   const top = shown.length ? shown.reduce((a, b) => a.ii > b.ii ? a : b) : null;
@@ -186,13 +249,14 @@ function kpis() {
     ["Top intelligence", top ? (top.name.split(" (")[0].slice(0, 28) + " · " + top.ii) : "n/a", ""],
     ["Best value", best ? (best.name.split(" (")[0].slice(0, 24) + " · " + (best.ii / best.cost).toFixed(0) + " II/$") : "n/a", "intelligence per dollar"],
     ["Median cost/task", medianCost != null ? fmtUSD(medianCost) : "n/a", "of models with published cost"],
+    ["Best-in-class models", String(bic.list.length), "on the price frontier"],
   ];
   $("kpis").innerHTML = cards.map(c =>
     '<div class="kpi"><div class="k-label">' + c[0] + '</div><div class="k-value" title="' + esc(c[1]) + '">' + c[1] + '</div><div class="k-note">' + c[2] + '</div></div>'
   ).join("");
 }
 
-function renderChart() {
+function renderChart(bic) {
   const plotted = shown.filter(d => d.cost != null);
   const datasets = [];
   const creators = [...new Set(plotted.map(d => d.creator))].sort();
@@ -206,6 +270,18 @@ function renderChart() {
       pointRadius: 5, pointHoverRadius: 7, borderWidth: 0,
     });
   });
+  // best-in-class frontier as a green step line through the top-left corner
+  if (bic.list.length) {
+    datasets.push({
+      type: "line",
+      label: "Best in class (price frontier)",
+      data: bic.list.map(d => ({ x: d.cost, y: d.ii })),
+      borderColor: "#1a7f37", backgroundColor: "transparent",
+      borderWidth: 2, pointRadius: 0, pointHitRadius: 0,
+      fill: false, tension: 0, stepped: "after",
+      order: -1,
+    });
+  }
   const ctx = $("scatter").getContext("2d");
   if (chart) chart.destroy();
   chart = new Chart(ctx, {
@@ -213,6 +289,7 @@ function renderChart() {
     data: { datasets },
     options: {
       responsive: true, maintainAspectRatio: false,
+      interaction: { mode: "nearest", intersect: true },
       onClick: (evt, el) => {
         if (!el.length) return;
         const idx = el[0].datasetIndex, pidx = el[0].index;
@@ -230,6 +307,7 @@ function renderChart() {
           callbacks: {
             label: (c) => {
               const d = c.raw;
+              if (!d.name) return ""; // frontier line points carry no model info
               return [
                 d.name,
                 "Intelligence: " + d.y,
@@ -250,12 +328,13 @@ function renderChart() {
   });
 }
 
-function renderTable() {
+function renderTable(bic) {
   const cols = [
     { k: "rank", label: "#", cls: "num" },
     { k: "name", label: "Model" },
     { k: "creator", label: "Lab" },
     { k: "family", label: "Family" },
+    { k: "license", label: "License" },
     { k: "reasoning", label: "Reasoning" },
     { k: "effort", label: "Effort" },
     { k: "ii", label: "Intelligence", cls: "num" },
@@ -285,11 +364,14 @@ function renderTable() {
     if (d.reasoning === "Adaptive") badges.push('<span class="badge adaptive">Adaptive</span>');
     else if (d.reasoning === "Reasoning") badges.push('<span class="badge reasoning">Reasoning</span>');
     else if (d.reasoning === "Standard") badges.push('<span class="badge standard">Standard</span>');
-    return "<tr data-rank=\"" + d.rank + "\">" +
+    const onFrontier = bic.ids.has(d.rank);
+    const star = onFrontier ? '<span class="bic-dot" title="Best in class for its price"></span>' : "";
+    return "<tr data-rank=\"" + d.rank + "\"" + (onFrontier ? ' class="row-bic"' : "") + ">" +
       "<td class=\"num\">" + d.rank + "</td>" +
-      "<td><strong>" + d.name.replace(/(<|>)/g, m => m === "<" ? "&lt;" : "&gt;") + "</strong></td>" +
+      "<td>" + star + "<strong>" + d.name.replace(/(<|>)/g, m => m === "<" ? "&lt;" : "&gt;") + "</strong></td>" +
       "<td>" + d.creator + "</td>" +
       "<td>" + d.family + "</td>" +
+      "<td>" + (d.license ? '<span class="badge ' + (d.license === "Open source" ? "open" : "prop") + '">' + d.license + '</span>' : "") + "</td>" +
       "<td>" + badges.join("") + "</td>" +
       "<td>" + (d.effort ? d.effort : '<span class="na">-</span>') + "</td>" +
       "<td class=\"num\">" + fmtNum(d.ii) + "</td>" +
@@ -305,7 +387,14 @@ function renderTable() {
     (shown.length < DATA.length ? " (filters active)" : "");
 }
 
-function render() { filter(); kpis(); renderChart(); renderTable(); }
+function render() {
+  filter();
+  const bic = bicOf(shown);
+  kpis(bic);
+  renderChart(bic);
+  renderTable(bic);
+  renderBic(bic);
+}
 
 function initControls() {
   const creators = [...new Set(DATA.map(d => d.creator))].sort();
@@ -325,13 +414,14 @@ function initControls() {
     REASONING_ORDER.map(r => '<option value="' + r + '">' + r + '</option>').join("");
   $("fEffort").innerHTML = '<option value="all">Any effort</option>' +
     EFFORT_ORDER.map(e => '<option value="' + e + '">' + e + '</option>').join("");
-  ["fFamily", "fReasoning", "fEffort"].forEach(id => $(id).onchange = render);
+  ["fFamily", "fReasoning", "fEffort", "fLicense"].forEach(id => $(id).onchange = render);
   $("fSearch").oninput = render;
   $("fMinII").oninput = () => { $("minIILabel").textContent = $("fMinII").value; render(); };
   $("fReset").onclick = () => {
     activeCreators = new Set([...new Set(DATA.map(d => d.creator))]);
     $("fCreators").querySelectorAll(".chip").forEach(ch => ch.classList.add("on"));
     $("fSearch").value = ""; $("fFamily").value = "all"; $("fReasoning").value = "all"; $("fEffort").value = "all";
+    if ($("fLicense")) $("fLicense").value = "all";
     $("fMinII").value = 0; $("minIILabel").textContent = "0";
     render();
   };
