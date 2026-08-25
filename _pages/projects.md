@@ -35,4 +35,20 @@ The Rating and Valuation Department has published a territory-wide rental index 
 
 ---
 
+## Sumo Elo History (All Divisions)
+
+<figure style="margin:0 0 1rem;">
+  <a href="/projects/sumo-elo/"><img src="/assets/images/projects/sumo-elo.png" alt="Sumo Elo explorer with Hakuho, Terunofuji, Aonishiki and Kotozakura curves" style="border:1px solid #d0d7de; border-radius:8px; max-width:100%;"></a>
+</figure>
+
+Every honbasho bout from March 1958 to July 2026 replayed through an Elo engine, all six divisions, 9,048 rikishi, 748,204 bouts. Each rikishi starts from a seed rating based on the division they first appeared in, then moves bout-by-bout with K=64. Withdrawals and forfeit wins are excluded, and there is no decay, so the rating pool is conserved across the full 68-year history.
+
+**What you can do:** search any rikishi and overlay their career curve against anyone else's, slide the time window to read the leaderboard at any point in history, and filter by division. The top-ten highest ratings ever recorded are all here: Hakuho at 3,773, then Harumafuji, Asashoryu, Kakuryu, Terunofuji and the rest.
+
+**Why I built it:** sumo fans argue about who was strongest all the time, and there is no objective record. Elo gives every rikishi and every era one comparable number.
+
+[Open the dashboard →](/projects/sumo-elo/)
+
+---
+
 *More projects coming. I'm also working on a private essay-summarisation pipeline and a church worship site, and will document them here as they stabilise.*
