@@ -12,7 +12,7 @@ There are real merits here. The messy-jobs framing is genuinely useful, and the 
 
 Two things give me pause.
 
-Nothing is predictable at this speed. Capability jumps in the last two years have repeatedly invalidated expert predictions written six months earlier, and nothing suggests that stops. Any list of safe jobs written today has a shelf life measured in months, not decades. Staying adaptable beats picking a supposedly safe lane, because you cannot bet a career on seeing the board that far ahead.
+Nothing is predictable at this speed. Capability jumps in the last two years have repeatedly invalidated expert predictions written six months earlier, and nothing suggests that stops. Any list of safe jobs written today has a shelf life of months. Staying adaptable beats picking a supposedly safe lane, because you cannot bet a career on seeing the board that far ahead.
 
 The AI proficiency advice is also less of a hurdle than it sounds. Using these tools well is closer to mastering Excel than to learning to code. Pick up the advanced patterns: the formulas, the macros, the prompts that actually work. Within a month or two you are better than 95% of the population, mostly because nobody bothers. Just like the colleague who summons a pivot table from nowhere, you look like a wizard. A few weekends of deliberate work beats a career change any day, which turns the scariest item on Cowen's list into the easiest.
 
