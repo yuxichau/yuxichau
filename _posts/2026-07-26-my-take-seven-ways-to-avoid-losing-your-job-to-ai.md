@@ -8,7 +8,7 @@ author: Yu Xi Chau
 
 Tyler Cowen wrote [Seven Ways to Avoid Losing Your Job to AI](https://www.thefp.com/p/tyler-cowen-seven-ways-to-avoid-losing) for The Free Press. The short version: look for messy jobs that are hard to describe, be wary of work from home, become genuinely good with AI tools, work in biomedicine, run experiments, gather data, and get hands-on with energy. The common thread is that AI eats describable, repeatable, screen-bound tasks first, so your best move is to orient away from those.
 
-There are real merits here. The messy-jobs framing is genuinely useful, and the data and energy points are solid. Those are the actual bottlenecks of the AI era and both are turning into hiring markets. As an economist's argument it is honest too. These are hedges, not guarantees.
+There are real merits here. The messy-jobs framing is genuinely useful, and the data and energy points are solid. Those are the actual bottlenecks of the AI era and both are turning into hiring markets. As an economist's argument it is honest too.
 
 Two things give me pause.
 
