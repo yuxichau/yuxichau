@@ -2,7 +2,7 @@
 layout: single
 title: "Blame the saving rate"
 date: 2026-08-26 00:05:00 -0000
-tags: [China, Economics]
+tags: [Economics]
 author: Yu Xi Chau
 ---
 

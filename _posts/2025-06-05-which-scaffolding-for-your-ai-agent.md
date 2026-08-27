@@ -3,7 +3,7 @@ layout: single
 title: "Which Scaffolding for Your AI Agent?"
 date: 2025-06-05 10:00:00 -0000
 author: Yu Xi Chau
-tags: [Agents, Microsoft, OpenAI]
+tags: [Technology]
 author_profile: false
 read_time: true
 comments: false

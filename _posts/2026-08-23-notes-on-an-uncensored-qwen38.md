@@ -2,7 +2,7 @@
 layout: single
 title: "Notes on an uncensored Qwen3.8"
 date: 2026-08-23 09:00:00 -0000
-tags: [AI, Interpretability, Neuroscience]
+tags: [AI]
 author: Yu Xi Chau
 ---
 

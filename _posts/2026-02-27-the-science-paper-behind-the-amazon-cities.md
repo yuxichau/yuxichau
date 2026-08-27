@@ -2,7 +2,7 @@
 layout: single
 title: "The Science Paper Behind the Amazon Cities"
 date: 2026-02-27 09:00:00 -0000
-tags: [History, Science, AI]
+tags: [History, AI]
 author: Yu Xi Chau
 ---
 

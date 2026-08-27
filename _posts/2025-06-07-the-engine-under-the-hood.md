@@ -2,7 +2,7 @@
 layout: single
 title: "The Engine Under the Hood"
 date: 2025-06-07 10:00:00 -0000
-tags: [Google, TPU, GPU]
+tags: [Technology]
 author: Yu Xi Chau
 ---
 

@@ -2,7 +2,7 @@
 layout: single
 title: "My Take: Seven Ways to Avoid Losing Your Job to AI"
 date: 2026-07-26 10:00:00 -0000
-tags: [AI, Career]
+tags: [Work, AI]
 author: Yu Xi Chau
 ---
 

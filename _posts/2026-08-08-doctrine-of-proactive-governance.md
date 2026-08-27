@@ -2,7 +2,7 @@
 layout: single
 title: "Doctrine of Proactive Governance"
 date: 2026-08-08 10:00:00 -0000
-tags: [Governance, Risk, Financial Services, Engineering]
+tags: [Governance]
 author: Yu Xi Chau
 ---
 

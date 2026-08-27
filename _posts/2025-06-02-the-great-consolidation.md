@@ -2,7 +2,7 @@
 layout: single
 title: "The Great Consolidation"
 date: 2025-06-02 10:00:00 -0000
-tags: [Singularity, Copilot, Trends]
+tags: [AI]
 author: Yu Xi Chau
 ---
 

@@ -2,7 +2,7 @@
 layout: single
 title: "When even the experts feel like clients"
 date: 2026-08-25 00:10:00 -0000
-tags: [AI, Agents, Software]
+tags: [Work, AI]
 author: Yu Xi Chau
 ---
 

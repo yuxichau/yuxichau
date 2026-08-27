@@ -2,7 +2,7 @@
 layout: single
 title: "The Bug in the Map"
 date: 2025-06-06 10:00:00 -0000
-tags: [History, AI Applications]
+tags: [History, AI]
 author: Yu Xi Chau
 ---
 

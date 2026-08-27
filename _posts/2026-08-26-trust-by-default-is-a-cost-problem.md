@@ -2,7 +2,7 @@
 layout: single
 title: "Trust by Default Is a Cost Problem"
 date: "2026-08-26 22:00:00 -0000"
-tags: [Agents, Security, AI]
+tags: [AI, Technology]
 author: Yu Xi Chau
 ---
 

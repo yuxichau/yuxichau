@@ -2,7 +2,7 @@
 layout: single
 title: "An Elo rating for every rikishi since 1958"
 date: 2026-08-25 09:00:00 -0000
-tags: [Sumo, Data, Projects]
+tags: [Projects]
 author: Yu Xi Chau
 ---
 

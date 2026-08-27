@@ -2,7 +2,7 @@
 layout: single
 title: "The Flour Mill Problem: Why 'Good Enough' AI Changes Everything"
 date: 2026-08-24 10:00:00 -0000
-tags: [AI, Economics, Models, China]
+tags: [AI, Economics]
 author: Yu Xi Chau
 ---
 

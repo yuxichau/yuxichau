@@ -2,7 +2,7 @@
 layout: single
 title: "The Dilemma of B2B Software in the Agent-First Age"
 date: "2026-08-22 03:04:20 -0000"
-tags: [Agents, SaaS, B2B, AI]
+tags: [Economics, Technology, AI]
 author: Yu Xi Chau
 ---
 
