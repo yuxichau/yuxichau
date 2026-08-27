@@ -46,6 +46,10 @@ paginate: 5
 paginate_path: /page:num/
 
 # Defaults
+tag_archive:
+  type: Liquid
+  path: /tags/
+
 defaults:
   # _posts
   - scope:
