@@ -81,7 +81,7 @@
   
   <!-- Annotation -->
   <text x="360" y="345" text-anchor="start" class="axis" font-size="10" fill="#ff9800">Diminishing returns</text>
-  <text x="360" y="357" text-anchor="start" class="axis" font-size="10" fill="#ff9800">for 2&times;-25&times; cost</text>
+  <text x="360" y="357" text-anchor="start" class="axis" font-size="10" fill="#ff9800">for 2×-25× cost</text>
   
   <!-- Legend -->
   <text x="560" y="240" text-anchor="start" class="axis" font-size="10" fill="#666">DeepSWE coding benchmark</text>
