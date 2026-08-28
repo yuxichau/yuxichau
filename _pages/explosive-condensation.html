@@ -138,7 +138,7 @@ permalink: /projects/explosive-condensation/
     </ul>
 
     <h3>About this demo</h3>
-    <p style="font-size:.9rem; color:#57606a;">Sites are picked uniformly from the non-empty ones and each sends out one particle per unit time. The destination (left or right neighbour) is chosen with probability proportional to <code>m^β</code>, where <code>m</code> is the mass already there. In the misanthrope / zero-range process the departure rate from a site is independent of its occupation, which is what creates the positive feedback: a crowded site receives more than it loses. The Gini coefficient measures mass inequality. When β ≥ 1, watch how quickly the white peak swallows the system.</p>
+    <p style="font-size:.9rem; color:#57606a;">Sites are picked uniformly from the non-empty ones and each emits one particle per unit time. The destination is chosen with probability proportional to <code>m<sup>β</sup></code>. To make the late-stage coarsening visible in real time, a site with <strong>≥15</strong> particles is treated as a cluster: it can move <strong>collectively</strong> (the whole mass hops as a unit) or <strong>break up</strong> (shedding a small shard). This is exactly the fast-coarsening approximation I used years ago in the original simulations.</p>
   </div>
 </div>
 
@@ -262,39 +262,104 @@ function draw() {
 }
 
 /* === Simulation engine === */
-function step() {
+// Microscopic dynamics: single-particle hops
+function microStep() {
   const beta = +document.getElementById('ec-beta').value;
 
-  // Number of moves per frame: scale with active sites so animation
-  // speed stays visually consistent as the system empties.
-  const activeSites = masses.reduce((a, m) => a + (m > 0 ? 1 : 0), 0);
-  const nj = Math.max(1, Math.round(activeSites * 0.4));
+  // Pick a random NON-EMPTY site uniformly.
+  let src;
+  let guard = 0;
+  do {
+    src = Math.floor(Math.random() * N);
+    if (++guard > 1000) return 0;
+  } while (masses[src] === 0);
 
-  for (let k = 0; k < nj; k++) {
-    // Pick a random NON-EMPTY site uniformly.
-    // This is the key difference: in a misanthrope / zero-range process the
-    // total departure rate from a site is independent of its occupation
-    // (or sublinear), not proportional to it.
-    let src;
-    let guard = 0;
-    do {
-      src = Math.floor(Math.random() * N);
-      if (++guard > 1000) return; // safety valve
-    } while (masses[src] === 0);
+  // Choose destination with probability proportional to m_dest^beta
+  const left = (src - 1 + N) % N;
+  const right = (src + 1) % N;
+  const ml = Math.max(masses[left], 0.2);
+  const mr = Math.max(masses[right], 0.2);
+  const wl = Math.pow(ml, beta);
+  const wr = Math.pow(mr, beta);
+  const dest = (Math.random() * (wl + wr) < wl) ? left : right;
 
-    // Choose destination with probability proportional to m_dest^beta
-    const left = (src - 1 + N) % N;
-    const right = (src + 1) % N;
-    const ml = Math.max(masses[left], 0.2);
-    const mr = Math.max(masses[right], 0.2);
-    const wl = Math.pow(ml, beta);
-    const wr = Math.pow(mr, beta);
-    const dest = (Math.random() * (wl + wr) < wl) ? left : right;
+  masses[src]--;
+  masses[dest]++;
+  return 1; // count as 1 particle move
+}
 
-    masses[src]--;
-    masses[dest]++;
+// Cluster (bulk) dynamics: when a site has >= BULK_THRESHOLD particles
+// we let the whole cluster hop collectively or break up, which is much
+// faster than waiting for N individual single-particle hops.
+const BULK_THRESHOLD = 15;
+
+function bulkStep() {
+  const beta = +document.getElementById('ec-beta').value;
+
+  // Find bulk sites
+  const bulk = [];
+  for (let i = 0; i < N; i++) {
+    if (masses[i] >= BULK_THRESHOLD) bulk.push(i);
   }
-  steps += nj;
+  if (bulk.length === 0) return 0;
+
+  // Pick one bulk site at random
+  const src = bulk[Math.floor(Math.random() * bulk.length)];
+  const m = masses[src];
+
+  // Collective hop probability grows with mass: ~ 0.3 * (1 - 1/m)
+  const pCollective = 0.30 * (1 - 1 / m);
+  // Break-up probability (shed small shards): ~ 0.02-0.05
+  const pBreakup = m < 25 ? 0.05 : 0.02;
+
+  const left = (src - 1 + N) % N;
+  const right = (src + 1) % N;
+  const ml = Math.max(masses[left], 0.2);
+  const mr = Math.max(masses[right], 0.2);
+  const wl = Math.pow(ml, beta);
+  const wr = Math.pow(mr, beta);
+  const dest = (Math.random() * (wl + wr) < wl) ? left : right;
+
+  const r = Math.random();
+
+  if (r < pCollective) {
+    // === COLLECTIVE HOP ===
+    // The entire cluster moves to the destination as a single unit.
+    // This is the fast-coarsening approximation.
+    masses[src] = 0;
+    masses[dest] += m;
+    return m; // counts as m particle-moves for timekeeping
+  } else if (r < pCollective + pBreakup) {
+    // === BREAKUP ===
+    // Shed a small random shard (1–5 particles) to the destination.
+    const shard = 1 + Math.floor(Math.random() * Math.min(m - 1, 5));
+    masses[src] -= shard;
+    masses[dest] += shard;
+    return shard;
+  } else {
+    // === IDLE ===
+    // Nothing happens this timestep.
+    return 0;
+  }
+}
+
+function step() {
+  // We mix microscopic + bulk dynamics each frame.
+  // Bulk moves are attempted first (they dominate late-stage coarsening),
+  // then many microscopic hops fill in the local redistribution.
+  let moved = 0;
+
+  // --- bulk dynamics (fast large-cluster motion) ---
+  moved += bulkStep();
+
+  // --- microscopic dynamics (local mass redistribution) ---
+  const activeSites = masses.reduce((a, m) => a + (m > 0 ? 1 : 0), 0);
+  const nj = Math.max(5, Math.round(activeSites * 0.6));
+  for (let k = 0; k < nj; k++) {
+    moved += microStep();
+  }
+
+  steps += moved;
 }
 
 function gini(arr) {
@@ -337,21 +402,24 @@ function loop(timestamp) {
   if (!running) return;
   if (!lastTime) lastTime = timestamp;
   const elapsed = timestamp - lastTime;
+  const stepsBefore = steps;
 
-  // run multiple simulation steps per frame for smooth animation
-  step();
-  step();
-  step();
+  step();        // one combined frame (bulk + micro)
 
   draw();
   updateMetrics();
 
-  // speed estimate
-  speedAccum += 3; // 3 step() calls
+  // speed estimate: particle-moves per second
+  const movedThisFrame = steps - stepsBefore;
+  speedAccum += movedThisFrame;
   speedCount++;
   if (speedCount >= 30) {
     const sps = Math.round(speedAccum * 1000 / elapsed);
-    document.getElementById('m-speed').textContent = `${(sps/1000).toFixed(1)}k steps/sec`;
+    if (sps >= 1000) {
+      document.getElementById('m-speed').textContent = `${(sps/1000).toFixed(1)}k moves/sec`;
+    } else {
+      document.getElementById('m-speed').textContent = `${sps} moves/sec`;
+    }
     speedAccum = 0;
     speedCount = 0;
     lastTime = timestamp;
