@@ -17,10 +17,10 @@ permalink: /projects/explosive-condensation/
 #ec-app .sub { color:#57606a; margin:0 0 1.2rem; font-size:.88rem; }
 #ec-app .nostalgia { background:#fff8c5; border:1px solid #d4a72c; border-radius:8px; padding:.6rem .9rem; font-size:.88rem; color:#5c3b00; margin-bottom:1rem; }
 #ec-app .nostalgia strong { color:#3d2600; }
-#ec-app .stage { position:relative; background:#0d1117; border-radius:12px; padding:1.25rem; margin-bottom:1rem; }
-#ec-app #ec-canvas { display:block; margin:0 auto; border-radius:8px; max-width:100%; height:auto; }
+#ec-app .stage { position:relative; background:#f6f8fa; border:1px solid #d0d7de; border-radius:12px; padding:1.25rem; margin-bottom:1rem; }
+#ec-app #ec-canvas { display:block; margin:0 auto; border-radius:8px; max-width:100%; height:auto; background:#ffffff; border:1px solid #d0d7de; }
 #ec-app .legend { display:flex; flex-wrap:wrap; gap:.5rem 1.2rem; justify-content:center; margin-top:.75rem; }
-#ec-app .legend-item { display:flex; align-items:center; gap:.35rem; font-size:.75rem; color:#c9d1d9; }
+#ec-app .legend-item { display:flex; align-items:center; gap:.35rem; font-size:.75rem; color:#57606a; }
 #ec-app .legend-dot { width:12px; height:12px; border-radius:50%; }
 #ec-app .panel { background:#f6f8fa; border:1px solid #d0d7de; border-radius:8px; padding:.9rem 1rem; margin-bottom:1rem; }
 #ec-app .controls { display:flex; flex-wrap:wrap; gap:.5rem .7rem; align-items:center; margin-bottom:.6rem; }
@@ -52,58 +52,6 @@ permalink: /projects/explosive-condensation/
 <div class="nostalgia">
   <strong>Note from the author:</strong> This is a paper I wrote many years ago. Since then I have left my academic career entirely to work in industry, so this page is more <em>nostalgic</em> than a reflection of up-to-date research in the field. The models and results here still hold, but the story is now a personal snapshot from a different chapter.
 </div>
-
-<div class="stage">
-  <canvas id="ec-canvas" width="640" height="480"></canvas>
-  <div class="legend">
-    <div class="legend-item"><div class="legend-dot" style="background:#58a6ff;"></div> Low mass</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#f0883e;"></div> Medium mass</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#f85149;"></div> High mass</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#ffffff;"></div> Condensate peak</div>
-  </div>
-</div>
-
-<div class="panel">
-  <div class="controls">
-    <button id="ec-start" class="primary">Start</button>
-    <button id="ec-pause" disabled>Pause</button>
-    <button id="ec-reset">Reset</button>
-    <span style="margin-left:auto;"></span>
-    <span class="ctl-label">Bias β</span>
-    <input type="range" id="ec-beta" min="0" max="3" step="0.1" value="1.5">
-    <span id="ec-beta-val" class="ctl-label">1.5</span>
-  </div>
-  <div class="note">
-    <strong>β = 0</strong>: unbiased random walk &bull;
-    <strong>0 &lt; β &lt; 1</strong>: weak attraction, normal coarsening &bull;
-    <strong>β ≥ 1</strong>: <em>explosive</em> condensation — the condensate forms in vanishing time as system size grows
-  </div>
-</div>
-
-<div class="metrics" id="ec-metrics">
-  <div class="metric">
-    <div class="m-label">Max mass</div>
-    <div class="m-value" id="m-max">1</div>
-    <div class="m-sub" id="m-max-sub">1 / 100 = 1.0%</div>
-  </div>
-  <div class="metric">
-    <div class="m-label">Particles present</div>
-    <div class="m-value" id="m-active">100</div>
-    <div class="m-sub">lattice sites occupied</div>
-  </div>
-  <div class="metric">
-    <div class="m-label">Gini coefficient</div>
-    <div class="m-value" id="m-gini">0.000</div>
-    <div class="m-sub">0 = uniform, 1 = all in one site</div>
-  </div>
-  <div class="metric">
-    <div class="m-label">Steps elapsed</div>
-    <div class="m-value" id="m-steps">0</div>
-    <div class="m-sub" id="m-speed">0 steps/sec</div>
-  </div>
-</div>
-
-<hr style="border:none; border-top:1px solid #d0d7de; margin:1.5rem 0;">
 
 <div class="two-col">
   <div>
@@ -171,7 +119,7 @@ permalink: /projects/explosive-condensation/
     <li><strong>γ ≥ 1</strong>: strong attraction. <em>Explosive</em> condensation — the condensate forms in vanishing time as <em>L</em> → ∞.</li>
   </ul>
 
-  <p>The demo above uses β = γ for the slider, so set β ≥ 1 to see the explosive regime.</p>
+  <p>The demo below uses β = γ for the slider, so set β ≥ 1 to see the explosive regime.</p>
 </div>
 
 <div class="panel">
@@ -194,7 +142,7 @@ permalink: /projects/explosive-condensation/
   <h3>The mechanism</h3>
   <p>The explosive regime works because of a positive feedback loop. Consider a small fluctuation where one site temporarily has more particles than its neighbours. With γ ≥ 1, the probability of a particle jumping <em>into</em> this site grows at least linearly with its excess mass, while the probability of a particle jumping <em>out</em> is independent of the site's mass (in the zero-range limit). The imbalance is self-reinforcing: the site gets richer, which makes it even more attractive, which makes it richer still. The runaway happens on a timescale that is a decreasing function of system size — hence "explosive."</p>
 
-  <p>In the symmetric case, the condensate can also move. It performs a biased random walk around the ring, absorbing smaller clusters it encounters. In the simulation above, this is what you see: a white-hot condensate sweeping the lattice and mopping up everything in its path.</p>
+  <p>In the symmetric case, the condensate can also move. It performs a biased random walk around the ring, absorbing smaller clusters it encounters. In the simulation below, this is what you see: a dark condensate sweeping the lattice and mopping up everything in its path.</p>
 </div>
 
 <div class="panel">
@@ -210,6 +158,58 @@ permalink: /projects/explosive-condensation/
   </ul>
 
   <p>The distinction between <em>normal coarsening</em> (diverging time) and <em>explosive condensation</em> (vanishing time) is sharp: it separates systems that you can watch equilibrate from systems where the condensate appears essentially instantaneously on large scales. Our result extended the explosion from a special one-directional model to the more realistic symmetric case, making the physics applicable to a broader class of real systems.</p>
+</div>
+
+<h2 id="sim">Try the simulation</h2>
+
+<div class="stage">
+  <canvas id="ec-canvas" width="640" height="480"></canvas>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#0969da;"></div> Low mass</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#f0883e;"></div> Medium mass</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#cf222e;"></div> High mass</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#24292f; border:1px solid #57606a;"></div> Condensate peak</div>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="controls">
+    <button id="ec-start" class="primary">Start</button>
+    <button id="ec-pause" disabled>Pause</button>
+    <button id="ec-reset">Reset</button>
+    <span style="margin-left:auto;"></span>
+    <span class="ctl-label">Bias β</span>
+    <input type="range" id="ec-beta" min="0" max="3" step="0.1" value="1.5">
+    <span id="ec-beta-val" class="ctl-label">1.5</span>
+  </div>
+  <div class="note">
+    <strong>β = 0</strong>: unbiased random walk &bull;
+    <strong>0 &lt; β &lt; 1</strong>: weak attraction, normal coarsening &bull;
+    <strong>β ≥ 1</strong>: <em>explosive</em> condensation — the condensate forms in vanishing time as system size grows
+  </div>
+</div>
+
+<div class="metrics" id="ec-metrics">
+  <div class="metric">
+    <div class="m-label">Max mass</div>
+    <div class="m-value" id="m-max">1</div>
+    <div class="m-sub" id="m-max-sub">1 / 100 = 1.0%</div>
+  </div>
+  <div class="metric">
+    <div class="m-label">Particles present</div>
+    <div class="m-value" id="m-active">100</div>
+    <div class="m-sub">lattice sites occupied</div>
+  </div>
+  <div class="metric">
+    <div class="m-label">Gini coefficient</div>
+    <div class="m-value" id="m-gini">0.000</div>
+    <div class="m-sub">0 = uniform, 1 = all in one site</div>
+  </div>
+  <div class="metric">
+    <div class="m-label">Steps elapsed</div>
+    <div class="m-value" id="m-steps">0</div>
+    <div class="m-sub" id="m-speed">0 moves/sec</div>
+  </div>
 </div>
 
 <div class="panel">
@@ -252,23 +252,21 @@ function reset() {
 }
 
 function colorFor(m, maxM) {
-  if (m === 0) return '#21262d';
-  if (maxM <= 1) return '#58a6ff';
+  if (m === 0) return '#d0d7de';
+  if (maxM <= 1) return '#0969da';
   const t = Math.min(1, (m - 1) / Math.max(1, maxM - 1));
   // blue → orange → red
   if (t < 0.5) {
-    // blue to orange
     const u = t * 2;
-    const r = Math.round(88 + (240 - 88) * u);
-    const g = Math.round(166 + (136 - 166) * u);
-    const b = Math.round(255 + (60 - 255) * u);
+    const r = Math.round(9 + (240 - 9) * u);
+    const g = Math.round(105 + (136 - 105) * u);
+    const b = Math.round(218 + (60 - 218) * u);
     return `rgb(${r},${g},${b})`;
   } else {
-    // orange to red
     const u = (t - 0.5) * 2;
-    const r = Math.round(240 + (248 - 240) * u);
-    const g = Math.round(136 + (81 - 136) * u);
-    const b = Math.round(60 + (73 - 60) * u);
+    const r = Math.round(240 + (207 - 240) * u);
+    const g = Math.round(136 + (34 - 136) * u);
+    const b = Math.round(60 + (46 - 60) * u);
     return `rgb(${r},${g},${b})`;
   }
 }
@@ -283,12 +281,12 @@ function posFor(i) {
 
 function draw() {
   const maxM = Math.max(...masses);
-  // background
-  ctx.fillStyle = '#0d1117';
+  // Clean white background
+  ctx.fillStyle = '#ffffff';
   ctx.fillRect(0, 0, W, H);
 
-  // connect adjacent sites with faint lines
-  ctx.strokeStyle = '#21262d';
+  // Connect adjacent sites with faint grey lines
+  ctx.strokeStyle = '#d0d7de';
   ctx.lineWidth = 1;
   for (let i = 0; i < N; i++) {
     const p = posFor(i);
@@ -299,49 +297,55 @@ function draw() {
     ctx.stroke();
   }
 
-  // draw dots
+  // Draw dots
   for (let i = 0; i < N; i++) {
     const m = masses[i];
     const p = posFor(i);
     const size = BASE_DOT + Math.sqrt(m) * 2;
 
-    // glow for high masses
+    // Glow for high masses (dark halo visible on white)
     if (m > maxM * 0.5 && m > 5) {
       ctx.beginPath();
       ctx.arc(p.x, p.y, size * 2.5, 0, Math.PI * 2);
-      ctx.fillStyle = colorFor(m, maxM) + '18';
+      ctx.fillStyle = colorFor(m, maxM) + '22';
       ctx.fill();
     }
 
-    // dot
+    // Dot fill
     ctx.beginPath();
     ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
     ctx.fillStyle = colorFor(m, maxM);
     ctx.fill();
 
-    // white border for the peak
+    // Dark border for all dots with mass
+    if (m > 0) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
+      ctx.strokeStyle = 'rgba(0,0,0,0.15)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    // Thick dark border for the peak
     if (m === maxM && m > 1) {
       ctx.beginPath();
-      ctx.arc(p.x, p.y, size + 2, 0, Math.PI * 2);
-      ctx.strokeStyle = '#ffffff';
-      ctx.lineWidth = 2;
+      ctx.arc(p.x, p.y, size + 3, 0, Math.PI * 2);
+      ctx.strokeStyle = '#24292f';
+      ctx.lineWidth = 2.5;
       ctx.stroke();
     }
   }
 
-  // central annotation
-  ctx.fillStyle = '#8b949e';
+  // Central annotation
+  ctx.fillStyle = '#57606a';
   ctx.font = '13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
   ctx.textAlign = 'center';
   ctx.fillText(`${N} sites · ${M} particles · β=${(+document.getElementById('ec-beta').value).toFixed(1)}`, CX, CY + 4);
 }
 
 /* === Simulation engine === */
-// Microscopic dynamics: single-particle hops
 function microStep() {
   const beta = +document.getElementById('ec-beta').value;
-
-  // Pick a random NON-EMPTY site uniformly.
   let src;
   let guard = 0;
   do {
@@ -349,9 +353,8 @@ function microStep() {
     if (++guard > 1000) return 0;
   } while (masses[src] === 0);
 
-  // Choose destination with probability proportional to m_dest^beta
   const left = (src - 1 + N) % N;
-  const right = (src + 1) % N;
+  const right = (src + 1 + N) % N;
   const ml = Math.max(masses[left], 0.2);
   const mr = Math.max(masses[right], 0.2);
   const wl = Math.pow(ml, beta);
@@ -360,26 +363,21 @@ function microStep() {
 
   masses[src]--;
   masses[dest]++;
-  return 1; // count as 1 particle move
+  return 1;
 }
 
-// Cluster (bulk) dynamics: when a site has >= BULK_THRESHOLD particles
-// we let the whole cluster hop collectively or break up, which is much
-// faster than waiting for N individual single-particle hops.
 const BULK_THRESHOLD = 15;
 
 function bulkStep() {
   const beta = +document.getElementById('ec-beta').value;
   let moved = 0;
 
-  // Find all current cluster sites
   const bulk = [];
   for (let i = 0; i < N; i++) {
     if (masses[i] >= BULK_THRESHOLD) bulk.push(i);
   }
   if (bulk.length === 0) return 0;
 
-  // Shuffle processing order so clusters interact fairly
   for (let i = bulk.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [bulk[i], bulk[j]] = [bulk[j], bulk[i]];
@@ -387,7 +385,7 @@ function bulkStep() {
 
   for (const src of bulk) {
     const m = masses[src];
-    if (m < BULK_THRESHOLD) continue; // may have been emptied by earlier hop
+    if (m < BULK_THRESHOLD) continue;
 
     const left = (src - 1 + N) % N;
     const right = (src + 1 + N) % N;
@@ -397,19 +395,15 @@ function bulkStep() {
     const wr = Math.pow(mr, beta);
     const dest = (Math.random() * (wl + wr) < wl) ? left : right;
 
-    // Large clusters should be highly mobile — they hop almost every frame,
-    // sweeping through the lattice much faster than individual particles.
     const pCollective = 0.70 + 0.25 * Math.tanh((m - BULK_THRESHOLD) / 15);
     const pBreakup = 0.02;
 
     const r = Math.random();
     if (r < pCollective) {
-      // === COLLECTIVE HOP ===
       masses[src] = 0;
       masses[dest] += m;
       moved += m;
     } else if (r < pCollective + pBreakup) {
-      // === BREAKUP ===
       const shard = 1 + Math.floor(Math.random() * Math.min(m - 1, 5));
       masses[src] -= shard;
       masses[dest] += shard;
@@ -420,27 +414,17 @@ function bulkStep() {
 }
 
 function step() {
-  // We mix microscopic + bulk dynamics each frame.
-  // Bulk moves are attempted first (they dominate late-stage coarsening),
-  // then many microscopic hops fill in the local redistribution.
   let moved = 0;
-
-  // --- bulk dynamics (fast large-cluster motion) ---
   moved += bulkStep();
-
-  // --- microscopic dynamics (local mass redistribution) ---
   const activeSites = masses.reduce((a, m) => a + (m > 0 ? 1 : 0), 0);
   const nj = Math.max(5, Math.round(activeSites * 0.6));
   for (let k = 0; k < nj; k++) {
     moved += microStep();
   }
-
   steps += moved;
 }
 
 function gini(arr) {
-  // Gini coefficient for array of masses
-  // 0 = perfectly uniform, 1 = all concentrated in one site
   const sorted = Array.from(arr).sort((a, b) => a - b);
   let cum = 0, sum = 0;
   for (let i = 0; i < sorted.length; i++) {
@@ -470,6 +454,7 @@ function updateMetrics() {
     maxSub.textContent = `${maxM} / ${M} = ${(maxM/M*100).toFixed(1)}% — CONDENSED!`;
   } else {
     maxDiv.classList.remove('condensed');
+    maxSub.textContent = `${maxM} / ${M} = ${(maxM/M*100).toFixed(1)}%`;
   }
 }
 
@@ -480,12 +465,11 @@ function loop(timestamp) {
   const elapsed = timestamp - lastTime;
   const stepsBefore = steps;
 
-  step();        // one combined frame (bulk + micro)
+  step();
 
   draw();
   updateMetrics();
 
-  // speed estimate: particle-moves per second
   const movedThisFrame = steps - stepsBefore;
   speedAccum += movedThisFrame;
   speedCount++;
