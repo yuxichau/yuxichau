@@ -295,52 +295,53 @@ const BULK_THRESHOLD = 15;
 
 function bulkStep() {
   const beta = +document.getElementById('ec-beta').value;
+  let moved = 0;
 
-  // Find bulk sites
+  // Find all current cluster sites
   const bulk = [];
   for (let i = 0; i < N; i++) {
     if (masses[i] >= BULK_THRESHOLD) bulk.push(i);
   }
   if (bulk.length === 0) return 0;
 
-  // Pick one bulk site at random
-  const src = bulk[Math.floor(Math.random() * bulk.length)];
-  const m = masses[src];
-
-  // Collective hop probability grows with mass: ~ 0.3 * (1 - 1/m)
-  const pCollective = 0.30 * (1 - 1 / m);
-  // Break-up probability (shed small shards): ~ 0.02-0.05
-  const pBreakup = m < 25 ? 0.05 : 0.02;
-
-  const left = (src - 1 + N) % N;
-  const right = (src + 1) % N;
-  const ml = Math.max(masses[left], 0.2);
-  const mr = Math.max(masses[right], 0.2);
-  const wl = Math.pow(ml, beta);
-  const wr = Math.pow(mr, beta);
-  const dest = (Math.random() * (wl + wr) < wl) ? left : right;
-
-  const r = Math.random();
-
-  if (r < pCollective) {
-    // === COLLECTIVE HOP ===
-    // The entire cluster moves to the destination as a single unit.
-    // This is the fast-coarsening approximation.
-    masses[src] = 0;
-    masses[dest] += m;
-    return m; // counts as m particle-moves for timekeeping
-  } else if (r < pCollective + pBreakup) {
-    // === BREAKUP ===
-    // Shed a small random shard (1–5 particles) to the destination.
-    const shard = 1 + Math.floor(Math.random() * Math.min(m - 1, 5));
-    masses[src] -= shard;
-    masses[dest] += shard;
-    return shard;
-  } else {
-    // === IDLE ===
-    // Nothing happens this timestep.
-    return 0;
+  // Shuffle processing order so clusters interact fairly
+  for (let i = bulk.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [bulk[i], bulk[j]] = [bulk[j], bulk[i]];
   }
+
+  for (const src of bulk) {
+    const m = masses[src];
+    if (m < BULK_THRESHOLD) continue; // may have been emptied by earlier hop
+
+    const left = (src - 1 + N) % N;
+    const right = (src + 1 + N) % N;
+    const ml = Math.max(masses[left], 0.2);
+    const mr = Math.max(masses[right], 0.2);
+    const wl = Math.pow(ml, beta);
+    const wr = Math.pow(mr, beta);
+    const dest = (Math.random() * (wl + wr) < wl) ? left : right;
+
+    // Large clusters should be highly mobile — they hop almost every frame,
+    // sweeping through the lattice much faster than individual particles.
+    const pCollective = 0.70 + 0.25 * Math.tanh((m - BULK_THRESHOLD) / 15);
+    const pBreakup = 0.02;
+
+    const r = Math.random();
+    if (r < pCollective) {
+      // === COLLECTIVE HOP ===
+      masses[src] = 0;
+      masses[dest] += m;
+      moved += m;
+    } else if (r < pCollective + pBreakup) {
+      // === BREAKUP ===
+      const shard = 1 + Math.floor(Math.random() * Math.min(m - 1, 5));
+      masses[src] -= shard;
+      masses[dest] += shard;
+      moved += shard;
+    }
+  }
+  return moved;
 }
 
 function step() {
