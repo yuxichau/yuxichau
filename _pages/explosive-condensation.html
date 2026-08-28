@@ -12,158 +12,212 @@ permalink: /projects/explosive-condensation/
 #ec-app a { color:#0969da; text-decoration:none; }
 #ec-app a:hover { text-decoration:underline; }
 #ec-app h1 { font-size:1.7rem; margin:0 0 .25rem; }
-#ec-app h2 { font-size:1.15rem; margin:1.2rem 0 .5rem; padding-bottom:.35rem; border-bottom:1px solid #d0d7de; }
-#ec-app h3 { font-size:1rem; margin:.9rem 0 .3rem; }
+#ec-app h2 { font-size:1.15rem; margin:1.6rem 0 .5rem; padding-bottom:.35rem; border-bottom:1px solid #d0d7de; }
+#ec-app h3 { font-size:1rem; margin:1rem 0 .35rem; }
+#ec-app p { margin:.55rem 0; }
 #ec-app .sub { color:#57606a; margin:0 0 1.2rem; font-size:.88rem; }
-#ec-app .nostalgia { background:#fff8c5; border:1px solid #d4a72c; border-radius:8px; padding:.6rem .9rem; font-size:.88rem; color:#5c3b00; margin-bottom:1rem; }
+#ec-app .nostalgia { background:#fff8c5; border:1px solid #d4a72c; border-radius:8px; padding:.6rem .9rem; font-size:.88rem; color:#5c3b00; margin:0 0 1.25rem; }
 #ec-app .nostalgia strong { color:#3d2600; }
+#ec-app .toc { background:#f6f8fa; border:1px solid #d0d7de; border-radius:8px; padding:.75rem 1rem; margin-bottom:1.25rem; font-size:.85rem; }
+#ec-app .toc strong { display:block; margin-bottom:.4rem; font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; color:#656d76; }
+#ec-app .toc a { display:inline-block; margin:0 .6rem .35rem 0; }
 #ec-app .stage { position:relative; background:#f6f8fa; border:1px solid #d0d7de; border-radius:12px; padding:1.25rem; margin-bottom:1rem; }
-#ec-app #ec-canvas { display:block; margin:0 auto; border-radius:8px; max-width:100%; height:auto; background:#ffffff; border:1px solid #d0d7de; }
+#ec-app .canvas-box { text-align:center; }
+#ec-app canvas { display:inline-block; border-radius:8px; max-width:100%; height:auto; background:#ffffff; border:1px solid #d0d7de; }
 #ec-app .legend { display:flex; flex-wrap:wrap; gap:.5rem 1.2rem; justify-content:center; margin-top:.75rem; }
 #ec-app .legend-item { display:flex; align-items:center; gap:.35rem; font-size:.75rem; color:#57606a; }
 #ec-app .legend-dot { width:12px; height:12px; border-radius:50%; }
-#ec-app .panel { background:#f6f8fa; border:1px solid #d0d7de; border-radius:8px; padding:.9rem 1rem; margin-bottom:1rem; }
+#ec-app .panel { background:#f6f8fa; border:1px solid #d0d7de; border-radius:8px; padding:.9rem 1rem; margin:1rem 0; }
 #ec-app .controls { display:flex; flex-wrap:wrap; gap:.5rem .7rem; align-items:center; margin-bottom:.6rem; }
 #ec-app .ctl-label { font-size:.78rem; color:#57606a; font-weight:600; white-space:nowrap; }
 #ec-app button { font-size:.82rem; padding:.35rem .85rem; border:1px solid #d0d7de; background:#fff; color:#1f2328; border-radius:6px; cursor:pointer; }
 #ec-app button.primary { background:#0969da; border-color:#0969da; color:#fff; }
 #ec-app button:disabled { opacity:.5; cursor:not-allowed; }
 #ec-app input[type="range"] { width:100%; max-width:160px; }
-#ec-app .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:.6rem; }
+#ec-app .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:.6rem; margin-top:1rem; }
 #ec-app .metric { background:#fff; border:1px solid #d0d7de; border-radius:6px; padding:.6rem .75rem; }
 #ec-app .metric .m-label { font-size:.68rem; text-transform:uppercase; letter-spacing:.04em; color:#656d76; }
 #ec-app .metric .m-value { font-size:1.15rem; font-weight:600; margin-top:.1rem; }
 #ec-app .m-sub { font-size:.72rem; color:#656d76; }
 #ec-app .metric.condensed { background:#dafbe1; border-color:#1a7f37; }
-#ec-app .metric.condensed .m-label { color:#1a7f37; }
-#ec-app .metric.condensed .m-value { color:#1a7f37; }
-#ec-app .metric.condensed .m-sub { color:#1a7f37; }
-#ec-app .two-col { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+#ec-app .metric.condensed .m-label, #ec-app .metric.condensed .m-value, #ec-app .metric.condensed .m-sub { color:#1a7f37; }
+#ec-app .two-col { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; }
 @media(max-width:700px){ #ec-app .two-col{grid-template-columns:1fr;} }
 #ec-app .note { font-size:.85rem; color:#57606a; margin-top:.5rem; }
 #ec-app .paper-card { background:#fff; border:1px solid #d0d7de; border-radius:8px; padding:.9rem 1rem; }
 #ec-app .paper-card h3 { margin-top:0; }
 #ec-app .paper-meta { font-size:.8rem; color:#57606a; margin:.3rem 0 .6rem; }
+#ec-app .eq { background:#fff; border:1px solid #d0d7de; border-radius:6px; padding:.6rem 1rem; margin:.7rem auto; font-family:Georgia,'Times New Roman',serif; font-size:1.05rem; text-align:center; max-width:34rem; }
+#ec-app .demo-tag { display:inline-block; background:#0969da; color:#fff; font-size:.7rem; font-weight:600; letter-spacing:.05em; text-transform:uppercase; border-radius:100px; padding:.15rem .7rem; margin-left:.4rem; vertical-align:middle; }
+#ec-app ul.plain { padding-left:1.5rem; color:#57606a; }
+#ec-app ul.plain li { margin-bottom:.35rem; }
 </style>
 
 <h1>Explosive Condensation</h1>
-<p class="sub">An interactive demo of a mass-transport model I studied years ago &bull; <a href="https://arxiv.org/abs/1508.07516" target="_blank" rel="noopener">arXiv:1508.07516</a></p>
+<p class="sub">An interactive demo of a mass-transport model I studied years ago &bull; <a href="https://arxiv.org/abs/1508.07516" target="_blank" rel="noopener">arXiv:1508.07516</a> &bull; J. Stat. Mech. (2015) P11031</p>
 
 <div class="nostalgia">
   <strong>Note from the author:</strong> This is a paper I wrote many years ago. Since then I have left my academic career entirely to work in industry, so this page is more <em>nostalgic</em> than a reflection of up-to-date research in the field. The models and results here still hold, but the story is now a personal snapshot from a different chapter.
 </div>
 
-<div class="two-col">
-  <div>
-    <h2>What is explosive condensation?</h2>
-
-    <p>Imagine a ring of boxes, each holding some number of balls. At each tick, you pick one ball at random and move it to a neighbouring box. If the move is completely unbiased, every box ends up with roughly the same number of balls. That is normal diffusive mixing.</p>
-
-    <p>Now add a twist: the probability of a ball moving <em>to</em> a box depends on how many balls are already there. The richer the box, the more likely it is to attract new arrivals. This is the <strong>misanthrope process</strong> with nonlinear jump rates.</p>
-
-    <p>With strong enough nonlinearity, a <strong>condensate</strong> appears — one box hoovers up a finite fraction of all the balls. In the <strong>explosive</strong> regime, this condensate forms so fast that the time to reach the steady state actually <em>vanishes</em> as the system grows. It is the spatial analogue of "instantaneous gelation" in mean-field coagulation.</p>
-  </div>
-  <div>
-    <div class="paper-card">
-      <h3>Paper</h3>
-      <div class="paper-meta">arXiv:1508.07516 &bull; J. Stat. Mech. (2015) P11031</div>
-      <p style="font-size:.9rem; margin:.3rem 0 .8rem;">
-        <strong>Explosive condensation in symmetric mass transport models</strong><br>
-        Yu-Xi Chau, Colm Connaughton, Stefan Grosskinsky
-      </p>
-      <a href="https://arxiv.org/abs/1508.07516" target="_blank" rel="noopener">Read on arXiv →</a> &nbsp;
-      <a href="https://arxiv.org/pdf/1508.07516" target="_blank" rel="noopener">PDF →</a>
-    </div>
-
-    <h3 style="margin-top:1.2rem;">Further reading</h3>
-    <ul style="font-size:.9rem; color:#57606a; padding-left:1.2rem;">
-      <li>B. Waclaw &amp; M. R. Evans, <em>Explosive Condensation in a Mass Transport Model</em>, Phys. Rev. Lett. <strong>108</strong>, 070601 (2012)</li>
-      <li>C. Godrèche, <em>Dynamics of condensation in zero-range processes</em>, J. Phys. A <strong>36</strong>, 6313 (2003)</li>
-      <li>M. R. Evans &amp; T. Hanney, <em>Nonequilibrium statistical mechanics of the zero-range process</em>, J. Phys. A <strong>38</strong>, R195 (2005)</li>
-    </ul>
-  </div>
+<div class="toc">
+  <strong>On this page</strong>
+  <a href="#ips">Interacting particle systems</a> ·
+  <a href="#model">The model</a> ·
+  <a href="#asym-work">The original asymmetric result</a> ·
+  <a href="#our-result">Our symmetric result</a> ·
+  <a href="#computation">Why symmetric is hard to simulate</a> ·
+  <a href="#approx">The large-cluster approximation</a> ·
+  <a href="#demo-sym">Demo 1: symmetric</a> ·
+  <a href="#demo-asym">Demo 2: asymmetric</a>
 </div>
 
-<div class="panel" style="margin-top:1.5rem;">
-  <h2>The model in detail</h2>
+<h2 id="ips">Interacting particle systems</h2>
 
-  <p>The model is a one-dimensional lattice of <em>L</em> sites with periodic boundary conditions (a ring), each site <em>i</em> holding an integer occupation <em>n</em><sub><em>i</em></sub> ≥ 0. The total number of particles is conserved:</p>
+<p>Interacting particle systems form a branch of probability theory and statistical mechanics that studies large collections of random walkers whose movement rules depend on the state of their neighbours. The subject took shape in the 1970s through the work of Spitzer and Liggett, who gave rigorous mathematical structure to models that physicists had been simulating for years. The basic setup is always the same:</p>
 
-  <div style="background:#fff; border:1px solid #d0d7de; border-radius:6px; padding:.6rem 1rem; margin:.6rem 0; font-family:'Times New Roman',serif; font-size:1.05rem; text-align:center;">
-    Σ<sub><em>i</em>=1</sub><sup><em>L</em></sup> <em>n</em><sub><em>i</em></sub> = <em>M</em> (fixed)
-  </div>
+<ul class="plain">
+  <li>a <strong>lattice</strong> — here a one-dimensional ring of <em>L</em> sites with periodic boundaries;</li>
+  <li>an integer <strong>occupation number</strong> <em>n<sub>i</sub></em> ≥ 0 on each site, evolving in continuous time as a Markov process;</li>
+  <li><strong>stochastic jump rules</strong> — each site emits particles at random times, with a rate that is a function of the local configuration.</li>
+</ul>
 
-  <p>Time is continuous. A particle at site <em>i</em> hops to the left or right neighbour with rate <em>u</em>(<em>n</em><sub><em>i</em></sub>, <em>n</em><sub><em>i</em>±1</sub>). The function <em>u</em>(<em>n</em>,<em>m</em>) is the <strong>jump rate</strong> from a site with <em>n</em> particles to a neighbour with <em>m</em> particles.</p>
+<p>What makes these systems interesting is that the microscopic rules are completely local and memoryless, yet the macroscopic behaviour can be dramatic: particles can <strong>phase-separate</strong> into a dense condensate plus a dilute background, coarsen slowly like droplets of morning mist, or — in the case studied here — condense <em>explosively</em>, faster than any diffuse system of comparable size.</p>
 
-  <h3>Factorized steady state</h3>
-  <p>A remarkable property of this class of models is that they admit a <strong>factorized steady state</strong>. The probability of finding the system in configuration {n<sub>1</sub>, …, n<sub>L</sub>} is:</p>
+<p>The most famous example is the <strong>zero-range process</strong> (ZRP), where a particle leaves site <em>i</em> at a rate depending only on <em>n<sub>i</sub></em>, the occupation of the departure site itself. A close cousin is the <strong>misanthrope process</strong>, where the hop rate depends on both the departure and the destination site. These models matter because they are among the very few spatially extended non-equilibrium systems whose steady states are known exactly, so they serve as theoretical laboratories: you can compute precisely what "condensation" means, when it happens, and how fast, and then check the predictions against simulation.</p>
 
-  <div style="background:#fff; border:1px solid #d0d7de; border-radius:6px; padding:.6rem 1rem; margin:.6rem 0; font-family:'Times New Roman',serif; font-size:1.05rem; text-align:center;">
-    P(<em>n</em><sub>1</sub>, …, <em>n</em><sub><em>L</em></sub>) = (1/<em>Z</em><sub><em>L</em>,<em>M</em></sub>) · ∏<sub><em>i</em>=1</sub><sup><em>L</em></sup> <em>f</em>(<em>n</em><sub><em>i</em></sub>)
-  </div>
+<p>The model in this paper is a misanthrope process with a <em>destination-biased</em> jump rate — the richer the target site, the faster particles pour into it. That single twist, taken far enough, produces explosive condensation.</p>
 
-  <p>where <em>f</em>(<em>n</em>) is the <strong>single-site weight</strong> and <em>Z</em><sub><em>L</em>,<em>M</em></sub> is the normalization (canonical partition function). This factorization makes the model analytically tractable — it is one of the few spatially-extended non-equilibrium systems where the full steady state is known exactly.</p>
+<h2 id="model">The model</h2>
 
-  <h3>The specific jump rate</h3>
-  <p>In our paper we studied a family of models where the jump rate depends on the <em>target</em> site's occupation via a power law:</p>
+<p>The lattice is a ring of <em>L</em> sites; site <em>i</em> holds <em>n<sub>i</sub></em> particles, and the total is conserved:</p>
 
-  <div style="background:#fff; border:1px solid #d0d7de; border-radius:6px; padding:.6rem 1rem; margin:.6rem 0; font-family:'Times New Roman',serif; font-size:1.05rem; text-align:center;">
-    <em>u</em>(<em>n</em>, <em>m</em>) ∝ <em>m</em><sup>γ</sup>
-  </div>
-
-  <p>(up to a mass-dependent factor that ensures the factorization property holds). The exponent γ controls the nonlinearity:</p>
-
-  <ul style="padding-left:1.5rem; color:#57606a;">
-    <li><strong>γ = 0</strong>: unbiased random walk. No condensation.</li>
-    <li><strong>0 &lt; γ &lt; 1</strong>: weak attraction. Condensation occurs, but via <em>normal coarsening</em> — the relaxation time grows with system size.</li>
-    <li><strong>γ ≥ 1</strong>: strong attraction. <em>Explosive</em> condensation — the condensate forms in vanishing time as <em>L</em> → ∞.</li>
-  </ul>
-
-  <p>The demo below uses β = γ for the slider, so set β ≥ 1 to see the explosive regime.</p>
+<div class="eq">
+  Σ<sub><em>i</em>=1</sub><sup><em>L</em></sup> <em>n</em><sub><em>i</em></sub> = <em>M</em> (fixed)
 </div>
 
-<div class="panel">
-  <h2>Results</h2>
+<p>A particle at site <em>i</em> hops to a neighbouring site <em>j</em> = <em>i</em> ± 1 with rate <em>u</em>(<em>n</em><sub><em>i</em></sub>, <em>n</em><sub><em>j</em></sub>). The family we studied takes the form</p>
 
-  <h3>What Waclaw &amp; Evans proved (2012)</h3>
-  <p>Barłomiej Waclaw and Martin Evans showed that in the <strong>asymmetric</strong> case — where particles can only hop in one direction (say, clockwise) — the model exhibits explosive condensation when γ &gt; 1. The mechanism is simple: once a condensate forms, it grows by absorbing particles from upstream faster than diffusion can redistribute them. The time to stationarity goes to zero as the system size increases.</p>
-
-  <h3>Our contribution (2015)</h3>
-  <p>The key question we asked was: <em>does explosion survive if particles can hop in both directions?</em> Symmetric dynamics are physically more realistic — they occur in isotropic systems like granular gases and colloids — but they also allow the condensate to lose particles by back-diffusion, which naively might seem to suppress the instability.</p>
-
-  <p>Our main results were:</p>
-
-  <ul style="padding-left:1.5rem; color:#57606a;">
-    <li><strong>Explosive condensation in 1D with symmetric hops</strong> does occur, provided γ ≥ 1. The critical exponent is the same threshold as in the asymmetric case.</li>
-    <li><strong>Sub-threshold coarsening</strong> for 0 &lt; γ &lt; 1: the system still condenses, but the time to reach the steady state diverges with system size as a power law. This is ordinary coarsening, analogous to Ostwald ripening or domain growth in magnets.</li>
-    <li><strong>Higher dimensions</strong> (d ≥ 2): we argued via mean-field reasoning that explosive condensation should be <em>generic</em> for <em>all</em> γ &gt; 0, because the higher connectivity makes it impossible for back-diffusion to counteract the attraction.</li>
-  </ul>
-
-  <h3>The mechanism</h3>
-  <p>The explosive regime works because of a positive feedback loop. Consider a small fluctuation where one site temporarily has more particles than its neighbours. With γ ≥ 1, the probability of a particle jumping <em>into</em> this site grows at least linearly with its excess mass, while the probability of a particle jumping <em>out</em> is independent of the site's mass (in the zero-range limit). The imbalance is self-reinforcing: the site gets richer, which makes it even more attractive, which makes it richer still. The runaway happens on a timescale that is a decreasing function of system size — hence "explosive."</p>
-
-  <p>In the symmetric case, the condensate can also move. It performs a biased random walk around the ring, absorbing smaller clusters it encounters. In the simulation below, this is what you see: a dark condensate sweeping the lattice and mopping up everything in its path.</p>
+<div class="eq">
+  <em>u</em>(<em>n</em>, <em>m</em>) = <em>v</em>(<em>n</em>) · <em>m</em><sup>γ</sup>
 </div>
 
-<div class="panel">
-  <h2>Why this matters</h2>
+<p>where <em>v</em>(<em>n</em>) is a mass-dependent prefactor chosen so the model keeps its exact solvability, and the interesting physics sits in the <em>m</em><sup>γ</sup> factor: the jump rate grows as a power of the occupation of the <strong>destination</strong> site. The exponent γ tunes the attraction:</p>
 
-  <p>Condensation in mass-transport models is a paradigm for phase separation in <strong>driven, non-equilibrium systems</strong>. It appears in:</p>
+<ul class="plain">
+  <li><strong>γ = 0</strong> — plain diffusion. Particles spread out; no condensation.</li>
+  <li><strong>0 &lt; γ &lt; 1</strong> — weak attraction. A condensate forms, but slowly: the relaxation time <em>grows</em> with system size (ordinary coarsening).</li>
+  <li><strong>γ ≥ 1</strong> — strong attraction. <strong>Explosive condensation</strong>: the time to reach the steady state <em>vanishes</em> as <em>L</em> → ∞.</li>
+</ul>
 
-  <ul style="padding-left:1.5rem; color:#57606a;">
-    <li><strong>Granular matter:</strong> When shaken, granular particles cluster; the inelastic collisions create an effective attractive dynamics.</li>
-    <li><strong>Network traffic:</strong> Packets or vehicles on a network can pile up at bottlenecks, an analogy to condensation at a single lattice site.</li>
-    <li><strong>Coagulation / aggregation:</strong> The mean-field limit of the model maps to the Smoluchowski coagulation equation, where the "explosive" regime corresponds to <em>instantaneous gelation</em> — a finite-size giant cluster appearing at t = 0⁺.</li>
-    <li><strong>Active matter:</strong> Self-propelled particles with quorum sensing or alignment rules can show similar runaway clustering when local density enhances recruitment.</li>
-  </ul>
+<h3>Why the steady state is known exactly</h3>
 
-  <p>The distinction between <em>normal coarsening</em> (diverging time) and <em>explosive condensation</em> (vanishing time) is sharp: it separates systems that you can watch equilibrate from systems where the condensate appears essentially instantaneously on large scales. Our result extended the explosion from a special one-directional model to the more realistic symmetric case, making the physics applicable to a broader class of real systems.</p>
+<p>This class of models admits a <strong>factorized steady state</strong>: the probability of a configuration splits into a product of single-site weights,</p>
+
+<div class="eq">
+  P(<em>n</em><sub>1</sub>, …, <em>n</em><sub><em>L</em></sub>) = (1/<em>Z</em><sub><em>L</em>,<em>M</em></sub>) · ∏<sub><em>i</em>=1</sub><sup><em>L</em></sup> <em>f</em>(<em>n</em><sub><em>i</em></sub>)
 </div>
 
-<h2 id="sim">Try the simulation</h2>
+<p>with <em>f</em>(<em>n</em>) the single-site weight and <em>Z</em><sub><em>L</em>,<em>M</em></sub> the canonical partition function. For the power-law family above, <em>f</em>(<em>n</em>) inherits a boundary condition — for γ ≥ 1 the weight of a large occupation behaves like <em>f</em>(<em>n</em>) ~ <em>n</em><sup>−γ</sup>, which fails to be normalisable in the grand-canonical ensemble above a critical density. That failure <em>is</em> the condensation transition: above density ρ<sub>c</sub>, the excess mass has nowhere to go in the product measure and collapses onto a single site.</p>
+
+<p>The factorization turns questions about condensation into questions about the large-<em>n</em> tail of one function <em>f</em>. It is the reason this model family is such a useful testing ground — and it is also why the <em>dynamical</em> questions (how fast does the condensate form?) remain hard and interesting: the stationary state says nothing directly about the path taken to reach it.</p>
+
+<h2 id="asym-work">The original asymmetric result</h2>
+
+<p>The story begins with <strong>Waclaw &amp; Evans, Phys. Rev. Lett. 108, 070601 (2012)</strong>. They studied the model with <em>asymmetric</em> dynamics: every hop is to the right (say, clockwise), never to the left. The jump rate of a particle from site <em>i</em> into site <em>i</em>+1 is <em>u</em>(<em>m</em>) ∝ <em>m</em><sup>γ</sup>, set by the occupation of the destination.</p>
+
+<p>Their striking finding: for γ &gt; 1, the system exhibits <strong>explosive condensation</strong>. Let <em>T</em>(<em>L</em>) denote the time for the system to reach its stationary state, starting from a homogeneous initial condition. In ordinary (non-explosive) condensation, <em>T</em>(<em>L</em>) <em>grows</em> with <em>L</em> — bigger systems take longer. Waclaw and Evans found that for γ &gt; 1 the opposite happens: <em>T</em>(<em>L</em>) <em>shrinks</em>, apparently to zero, as <em>L</em> increases. The condensate forms faster and faster the bigger the system — a spatially extended version of the <em>instantaneous gelation</em> known from mean-field coagulation, where a giant cluster appears at a finite time (possibly t = 0<sup>+</sup>) in the thermodynamic limit.</p>
+
+<p>The mechanism is a runaway positive feedback. Once a fluctuation gives one site extra mass, every site immediately upstream begins emitting into it at rate ∝ <em>m</em><sup>γ</sup> with γ &gt; 1 — faster than linear in the excess. The heavy site therefore attracts mass faster than one-for-one, grows, and attracts still faster. Because the dynamics are one-directional, there is no back-diffusion to oppose the inflow: nothing upstream can pull that mass back out. The instability is unopposed, and the bigger the lattice, the more mass is within reach of the growing condensate — hence the acceleration with system size.</p>
+
+<p>One caveat they noted, and which motivated the follow-up work: in the asymmetric case the stationary state is not reached by a condensate sitting still. The condensate emits downstream and is fed from upstream, and it performs a jerky drift around the ring. Whether "time to stationarity" is even well-defined, and how to measure it cleanly, required care in the simulations.</p>
+
+<h2 id="our-result">Our result: explosion survives symmetry</h2>
+
+<p>Our paper asked the natural next question: <strong>does explosive condensation survive if particles can hop both ways?</strong> Symmetry matters physically — real systems (colloids, granular gases, ﬂuids) are isotropic — and it matters mathematically, because now the condensate has an escape route: back-diffusion. A site next to the condensate can, in principle, drain it. Intuition suggested that this leakage might tame the instability and restore ordinary coarsening.</p>
+
+<p>It does not — provided the nonlinearity is strong enough. Our findings:</p>
+
+<ul class="plain">
+  <li><strong>Symmetric 1D, γ ≥ 1:</strong> explosive condensation persists. The threshold is the same γ ≥ 1 as in the asymmetric case. The condensate forms in a time that does not grow with system size.</li>
+  <li><strong>Symmetric 1D, 0 &lt; γ &lt; 1:</strong> condensation still occurs (above the critical density) but by ordinary coarsening — clusters merge slowly, and the equilibration time diverges with <em>L</em> as a power law, in the same universality class as droplet growth (Ostwald ripening).</li>
+  <li><strong>Dimensions d ≥ 2:</strong> mean-field reasoning suggests explosive condensation becomes <em>generic</em> for all γ &gt; 0 — with more neighbours feeding each site, the inflow advantage of a heavy site can no longer be balanced by back-diffusion at any positive γ.</li>
+</ul>
+
+<p>The mechanism in the symmetric case is subtler than in the asymmetric one. Back-diffusion does drain the condensate — but it drains it <em>isotropically and diffusively</em>, as a slow leak ∝ ∂<em>m</em>, while the attraction fills it super-linearly ∝ <em>m</em><sup>γ</sup>. For γ ≥ 1 the super-linear inflow always outruns the linear leak at large <em>m</em>, so the fixed point at "all mass in one site" is approached in finite, size-independent time. In the simulation below you can watch exactly this: a large cluster sweeps the ring, and its own diffusion is what carries it into fresh territory to absorb.</p>
+
+<h2 id="computation">Why the symmetric case is much harder to simulate</h2>
+
+<p>The asymmetric model is, computationally, a friendly system. Every site has exactly one possible move (emit right), the total event rate is easy to bound, and the condensate advances by a deterministic drift. The symmetric model is a different animal, and the difficulty is not cosmetic — it changes what is measurable:</p>
+
+<ul class="plain">
+  <li><strong>Two directions, weighted choices.</strong> Every emitting site now has two candidate destinations with rates <em>m</em><sub>left</sub><sup>γ</sup> and <em>m</em><sub>right</sub><sup>γ</sup>. Event bookkeeping roughly doubles, but that is the least of the problems.</li>
+  <li><strong>The clock runs at the speed of the condensate.</strong> Simulations use event-driven (Gillespie) time: between events, the clock advances by Δ<em>t</em> ~ Exp(1/Γ), where Γ = Σ<sub>i</sub> <em>u<sub>i</sub></em> is the total event rate. With destination-biased rates, the sites adjacent to a condensate of mass <em>m</em>* emit into it at rate ∝ (<em>m</em>*)<sup>γ</sup>. So as the condensate grows, Γ explodes, and each individual event advances physical time by only Δ<em>t</em> ∝ (<em>m</em>*)<sup>−γ</sup> — a vanishingly small step.</li>
+  <li><strong>Progress is measured in rare events.</strong> Reaching stationarity requires the condensate to make of order <em>L</em> net moves around the ring (to sweep up the background), and in the exact single-particle dynamics each one-site shift of the condensate requires O(<em>m</em>*) elementary hops. Total events: O(<em>L</em> · <em>m</em>*). With <em>m</em>* ∝ ρ<em>L</em>, that is O(<em>L</em>²) events — each worth only Δ<em>t</em> ∝ (<em>m</em>*)<sup>−γ</sup> of physical time. For lattices of 10<sup>4</sup>–10<sup>5</sup> sites, generating a single equilibration run, let alone the ensemble needed to average <em>T</em>(<em>L</em>), took very long runs — precisely because the interesting quantity, the time to condensation, had to be measured against a clock whose ticks became smaller the closer the system got to the answer.</li>
+</ul>
+
+<p>In short: the symmetric dynamics couple a <em>super-linearly growing event rate</em> to a <em>sub-linearly growing physical progress rate</em>. The simulation spends nearly all of its effort re-shuffling particles in and out of a condensate that barely moves. That is where the approximation comes in.</p>
+
+<h2 id="approx">The large-cluster approximation</h2>
+
+<p>To make the symmetric dynamics tractable, I used a coarse-graining approximation for large clusters — the same idea implemented in the interactive demo on this page. Mathematically it is a <em>time-rescaling of the collective degrees of freedom</em>:</p>
+
+<h3>Setup</h3>
+
+<p>Let the condensate be a site with mass <em>m</em> ≥ <em>m</em><sub>c</sub> (a coarse-graining threshold, <em>m</em><sub>c</sub> = 15 in the demo). Separate the state into the condensate position <em>X</em><sub>t</sub> ∈ {1,…,<em>L</em>} and the residual background masses. In the exact dynamics, the centre of mass of the condensate shifts by one lattice site only after a sequence of single-particle hops — each hop transfers δ = 1 particle, and about <em>m</em> of them must accumulate to displace mass <em>m</em> by one site.</p>
+
+<h3>The approximation</h3>
+
+<p>Replace the <em>m</em> elementary single-particle transfers by a single <strong>collective transfer</strong>:</p>
+
+<div class="eq">
+  {<em>m</em> hops of δ = 1 at rate <em>u</em>} &nbsp;&nbsp;⟶&nbsp;&nbsp; {1 hop of δ = <em>m</em> at rate <em>u</em>/<em>m</em>}
+</div>
+
+<p>That is, when the condensate moves, its <em>entire mass</em> <em>m</em> jumps to the adjacent site as one object, with per-event probability <em>p</em>(<em>m</em) &les; 1 (in the demo, <em>p</em>(<em>m</em>) = 0.70 + 0.25 tanh((<em>m</em> − <em>m</em><sub>c</sub>)/15), so large clusters hop almost every attempt). The one-site displacement of the centre of mass is preserved exactly; only the microscopic path taken to get there is integrated out.</p>
+
+<p>Two details keep the approximation honest:</p>
+
+<ul class="plain">
+  <li><strong>A small breakup probability ε.</strong> With probability ε (2% in the demo) a collective event instead sheds a small shard of 1–5 particles to the neighbour. This mimics the fluctuation-driven evaporation of the exact process, keeps the condensate from freezing into an absorbing state, and preserves ergodicity — the cluster can still lose its top position, as it does in the exact dynamics.</li>
+  <li><strong>Correct mass-dependence of mobility.</strong> In the exact dynamics the diffusion constant of a cluster of mass <em>m</em> scales like <em>D</em>(<em>m</em>) ∝ 1/<em>m</em> — heavy clusters are <em>slower</em> per particle but their centre of mass still random-walks. The collective hop reproduces this one-site-per-event random walk of the centre of mass directly, rather than reconstructing it from <em>m</em> correlated single-particle hops.</li>
+</ul>
+
+<h3>Why it works</h3>
+
+<p>The justification is a scale separation. The internal redistribution of mass between two adjacent sites (who is "on top") equilibrates in O(1) event time, while the relocation of the centre of mass takes O(<em>m</em>) events. Since the coarsening dynamics depend on <em>where</em> the condensate is, and only weakly on its internal micro-state, integrating out the fast variable and boosting each relocation to a single event preserves the coarse-grained path measure — the sequence of condensate positions — at a fraction of the computational cost.</p>
+
+<h3>What it buys</h3>
+
+<ul class="plain">
+  <li><strong>Event count per condensate site-move:</strong> O(<em>m</em>*) → O(1). Over a full coarsening sweep: O(<em>L</em>·<em>m</em>*) → O(<em>L</em>). For <em>L</em> = 10<sup>4</sup> and <em>m</em>* ~ 10<sup>3</sup>, that is a 10<sup>3</sup>-fold reduction — the difference between a run finishing overnight and one not finishing at all.</li>
+  <li><strong>The clock stops shrinking.</strong> In the approximated dynamics the collective event carries rate <em>u</em>/<em>m</em> instead of <em>m</em> separate rate-<em>u</em> events feeding Γ, so event-driven time increments stay O(1) and the measured time-to-condensation no longer drowns in a flood of microscopic ticks.</li>
+  <li><strong>Statistics become affordable.</strong> Measuring <em>T</em>(<em>L</em>) requires averaging over many independent runs. The approximation made ensembles of hundreds of runs feasible at sizes where the exact dynamics could produce only a handful — enough to establish the scaling of <em>T</em>(<em>L</em>) with system size, which was the whole point.</li>
+</ul>
+
+<p>Both effects together are why the interactive demo on this page can show you the symmetric condensate forming in seconds, where the faithful single-particle simulation would keep you waiting.</p>
+
+<h2>Why this matters</h2>
+
+<p>Condensation in mass-transport models is a paradigm for phase separation in <strong>driven, non-equilibrium systems</strong>:</p>
+
+<ul class="plain">
+  <li><strong>Granular matter:</strong> shaken granular particles cluster through inelastic collisions, producing an effective attractive dynamics of exactly this destination-biased type.</li>
+  <li><strong>Network traffic:</strong> packets or vehicles pile up at bottlenecks — condensation at a single "site" of a network.</li>
+  <li><strong>Coagulation / aggregation:</strong> the mean-field limit maps to the Smoluchowski coagulation equation, where the explosive regime corresponds to <em>instantaneous gelation</em>.</li>
+  <li><strong>Active matter:</strong> self-propelled particles with quorum-sensing recruitment show runaway clustering when local density enhances attraction — the same positive-feedback structure.</li>
+</ul>
+
+<p>The line between <em>normal coarsening</em> (equilibration time diverges) and <em>explosive condensation</em> (it vanishes) is a sharp qualitative boundary, and knowing that the boundary survives the restoration of symmetry tells you it is not an artefact of directed transport, but a robust feature of super-linear positive feedback.</p>
+
+<h2 id="demo-sym">Demo 1 — Symmetric dynamics <span class="demo-tag">this paper</span></h2>
+
+<p>Particles hop left or right; the destination is chosen with probability ∝ <em>m</em><sup>β</sup>. Set β ≥ 1 and watch the explosive regime: clusters coarsen, the largest cluster sweeps the ring as a moving condensate, and the Gini coefficient climbs toward 1.</p>
 
 <div class="stage">
-  <canvas id="ec-canvas" width="640" height="480"></canvas>
+  <div class="canvas-box">
+    <canvas id="c-sym" width="640" height="480"></canvas>
+  </div>
   <div class="legend">
     <div class="legend-item"><div class="legend-dot" style="background:#0969da;"></div> Low mass</div>
     <div class="legend-item"><div class="legend-dot" style="background:#f0883e;"></div> Medium mass</div>
@@ -174,357 +228,390 @@ permalink: /projects/explosive-condensation/
 
 <div class="panel">
   <div class="controls">
-    <button id="ec-start" class="primary">Start</button>
-    <button id="ec-pause" disabled>Pause</button>
-    <button id="ec-reset">Reset</button>
+    <button id="b-sym-start" class="primary">Start</button>
+    <button id="b-sym-pause" disabled>Pause</button>
+    <button id="b-sym-reset">Reset</button>
     <span style="margin-left:auto;"></span>
     <span class="ctl-label">Bias β</span>
-    <input type="range" id="ec-beta" min="0" max="3" step="0.1" value="1.5">
-    <span id="ec-beta-val" class="ctl-label">1.5</span>
+    <input type="range" id="r-sym-beta" min="0" max="3" step="0.1" value="1.5">
+    <span id="v-sym-beta" class="ctl-label">1.5</span>
   </div>
   <div class="note">
     <strong>β = 0</strong>: unbiased random walk &bull;
     <strong>0 &lt; β &lt; 1</strong>: weak attraction, normal coarsening &bull;
-    <strong>β ≥ 1</strong>: <em>explosive</em> condensation — the condensate forms in vanishing time as system size grows
+    <strong>β ≥ 1</strong>: <em>explosive</em> condensation
   </div>
 </div>
 
-<div class="metrics" id="ec-metrics">
+<div class="metrics" id="mx-sym">
   <div class="metric">
     <div class="m-label">Max mass</div>
-    <div class="m-value" id="m-max">1</div>
-    <div class="m-sub" id="m-max-sub">1 / 100 = 1.0%</div>
+    <div class="m-value" id="s-sym-max">1</div>
+    <div class="m-sub" id="s-sym-maxsub">1 / 100 = 1.0%</div>
   </div>
   <div class="metric">
-    <div class="m-label">Particles present</div>
-    <div class="m-value" id="m-active">100</div>
-    <div class="m-sub">lattice sites occupied</div>
+    <div class="m-label">Occupied sites</div>
+    <div class="m-value" id="s-sym-occ">100</div>
+    <div class="m-sub">of 100 lattice sites</div>
   </div>
   <div class="metric">
     <div class="m-label">Gini coefficient</div>
-    <div class="m-value" id="m-gini">0.000</div>
+    <div class="m-value" id="s-sym-gini">0.000</div>
     <div class="m-sub">0 = uniform, 1 = all in one site</div>
   </div>
   <div class="metric">
-    <div class="m-label">Steps elapsed</div>
-    <div class="m-value" id="m-steps">0</div>
-    <div class="m-sub" id="m-speed">0 moves/sec</div>
+    <div class="m-label">Particle moves</div>
+    <div class="m-value" id="s-sym-steps">0</div>
+    <div class="m-sub" id="s-sym-speed">0 moves/sec</div>
+  </div>
+</div>
+
+<h2 id="demo-asym">Demo 2 — Asymmetric transport <span class="demo-tag">waclaw &amp; evans 2012</span></h2>
+
+<p>The original setting: every hop is to the <strong>right</strong> only, with rate ∝ <em>m</em><sup>β</sup> into the destination. The condensate that forms is a travelling jam — it feeds from behind, leaks ahead, and drifts around the ring swallowing everything. Compare its character with the symmetric demo: same explosion, different gait.</p>
+
+<div class="stage">
+  <div class="canvas-box">
+    <canvas id="c-asym" width="640" height="480"></canvas>
+  </div>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#0969da;"></div> Low mass</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#f0883e;"></div> Medium mass</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#cf222e;"></div> High mass</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#24292f; border:1px solid #57606a;"></div> Condensate (travelling)</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#8250df;"></div> Flow direction &rarr;</div>
   </div>
 </div>
 
 <div class="panel">
-  <h2>About this demo</h2>
-  <p style="font-size:.9rem; color:#57606a;">Sites are picked uniformly from the non-empty ones and each emits one particle per unit time. The destination is chosen with probability proportional to <code>m<sup>β</sup></code>. To make the late-stage coarsening visible in real time, a site with <strong>≥15</strong> particles is treated as a cluster: it can move <strong>collectively</strong> (the whole mass hops as a unit) or <strong>break up</strong> (shedding a small shard). This is exactly the fast-coarsening approximation I used years ago in the original simulations.</p>
+  <div class="controls">
+    <button id="b-asym-start" class="primary">Start</button>
+    <button id="b-asym-pause" disabled>Pause</button>
+    <button id="b-asym-reset">Reset</button>
+    <span style="margin-left:auto;"></span>
+    <span class="ctl-label">Bias β</span>
+    <input type="range" id="r-asym-beta" min="0" max="3" step="0.1" value="1.5">
+    <span id="v-asym-beta" class="ctl-label">1.5</span>
+  </div>
+  <div class="note">
+    One-directional hops (clockwise). The arrow marks the flow direction: mass can only enter a site from its left neighbour.
+  </div>
+</div>
+
+<div class="metrics" id="mx-asym">
+  <div class="metric">
+    <div class="m-label">Max mass</div>
+    <div class="m-value" id="s-asym-max">1</div>
+    <div class="m-sub" id="s-asym-maxsub">1 / 100 = 1.0%</div>
+  </div>
+  <div class="metric">
+    <div class="m-label">Occupied sites</div>
+    <div class="m-value" id="s-asym-occ">100</div>
+    <div class="m-sub">of 100 lattice sites</div>
+  </div>
+  <div class="metric">
+    <div class="m-label">Gini coefficient</div>
+    <div class="m-value" id="s-asym-gini">0.000</div>
+    <div class="m-sub">0 = uniform, 1 = all in one site</div>
+  </div>
+  <div class="metric">
+    <div class="m-label">Particle moves</div>
+    <div class="m-value" id="s-asym-steps">0</div>
+    <div class="m-sub" id="s-asym-speed">0 moves/sec</div>
+  </div>
+</div>
+
+<div class="panel">
+  <h2>About these demos</h2>
+  <p style="font-size:.9rem; color:#57606a;">Sites are picked uniformly from the non-empty ones; the destination is chosen with probability ∝ <code>m<sup>β</sup></code> (Demo 1: either neighbour; Demo 2: the right neighbour only, with a hop probability normalized per attempt so the animation stays lively). Time is counted in particle-moves. Sites with ≥15 particles are treated as clusters under the large-cluster approximation described above: they can move collectively (the whole mass hops as a unit) or break up (shedding a small shard, ε = 2%). This is the same fast-coarsening approximation I used in the original simulations.</p>
+</div>
+
+<div class="panel">
+  <h2>References</h2>
+  <ul style="font-size:.9rem; color:#57606a; padding-left:1.2rem;">
+    <li>Y. X. Chau, C. Connaughton &amp; S. Grosskinsky, <em>Explosive condensation in symmetric mass transport models</em>, J. Stat. Mech. (2015) P11031. <a href="https://arxiv.org/abs/1508.07516" target="_blank" rel="noopener">arXiv:1508.07516</a></li>
+    <li>B. Waclaw &amp; M. R. Evans, <em>Explosive Condensation in a Mass Transport Model</em>, Phys. Rev. Lett. <strong>108</strong>, 070601 (2012)</li>
+    <li>C. Godrèche, <em>Dynamics of condensation in zero-range processes</em>, J. Phys. A <strong>36</strong>, 6313 (2003)</li>
+    <li>M. R. Evans &amp; T. Hanney, <em>Nonequilibrium statistical mechanics of the zero-range process</em>, J. Phys. A <strong>38</strong>, R195 (2005)</li>
+    <li>T. M. Liggett, <em>Interacting Particle Systems</em>, Springer (1985)</li>
+  </ul>
 </div>
 
 <script>
-/* === Configuration === */
-const N = 100;            // number of sites on ring
-const M = 100;            // total number of particles
-const W = 640, H = 480;   // canvas dims
-const CX = W/2, CY = H/2;
-const RADIUS = 180;       // ring radius in px
-const BASE_DOT = 6;       // base dot radius
-
-/* === State === */
-let masses = new Uint32Array(N);
-let animId = null;
-let running = false;
-let steps = 0;
-let lastTime = 0;
-let speedAccum = 0;
-let speedCount = 0;
-let condensed = false;
-
-/* === Canvas === */
-const canvas = document.getElementById('ec-canvas');
-const ctx = canvas.getContext('2d');
-
-function reset() {
-  masses.fill(0);
-  for (let i = 0; i < M; i++) masses[i % N]++;
-  steps = 0;
-  speedAccum = 0;
-  speedCount = 0;
-  condensed = false;
-  updateMetrics();
-  draw();
-}
-
-function colorFor(m, maxM) {
-  if (m === 0) return '#d0d7de';
-  if (maxM <= 1) return '#0969da';
-  const t = Math.min(1, (m - 1) / Math.max(1, maxM - 1));
-  // blue → orange → red
-  if (t < 0.5) {
-    const u = t * 2;
-    const r = Math.round(9 + (240 - 9) * u);
-    const g = Math.round(105 + (136 - 105) * u);
-    const b = Math.round(218 + (60 - 218) * u);
-    return `rgb(${r},${g},${b})`;
-  } else {
-    const u = (t - 0.5) * 2;
-    const r = Math.round(240 + (207 - 240) * u);
-    const g = Math.round(136 + (34 - 136) * u);
-    const b = Math.round(60 + (46 - 60) * u);
-    return `rgb(${r},${g},${b})`;
-  }
-}
-
-function posFor(i) {
-  const angle = (i / N) * Math.PI * 2 - Math.PI / 2;
-  return {
-    x: CX + RADIUS * Math.cos(angle),
-    y: CY + RADIUS * Math.sin(angle)
-  };
-}
-
-function draw() {
-  const maxM = Math.max(...masses);
-  // Clean white background
-  ctx.fillStyle = '#ffffff';
-  ctx.fillRect(0, 0, W, H);
-
-  // Connect adjacent sites with faint grey lines
-  ctx.strokeStyle = '#d0d7de';
-  ctx.lineWidth = 1;
-  for (let i = 0; i < N; i++) {
-    const p = posFor(i);
-    const q = posFor((i + 1) % N);
-    ctx.beginPath();
-    ctx.moveTo(p.x, p.y);
-    ctx.lineTo(q.x, q.y);
-    ctx.stroke();
-  }
-
-  // Draw dots
-  for (let i = 0; i < N; i++) {
-    const m = masses[i];
-    const p = posFor(i);
-    const size = BASE_DOT + Math.sqrt(m) * 2;
-
-    // Glow for high masses (dark halo visible on white)
-    if (m > maxM * 0.5 && m > 5) {
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, size * 2.5, 0, Math.PI * 2);
-      ctx.fillStyle = colorFor(m, maxM) + '22';
-      ctx.fill();
-    }
-
-    // Dot fill
-    ctx.beginPath();
-    ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
-    ctx.fillStyle = colorFor(m, maxM);
-    ctx.fill();
-
-    // Dark border for all dots with mass
-    if (m > 0) {
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
-      ctx.strokeStyle = 'rgba(0,0,0,0.15)';
-      ctx.lineWidth = 1;
-      ctx.stroke();
-    }
-
-    // Thick dark border for the peak
-    if (m === maxM && m > 1) {
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, size + 3, 0, Math.PI * 2);
-      ctx.strokeStyle = '#24292f';
-      ctx.lineWidth = 2.5;
-      ctx.stroke();
-    }
-  }
-
-  // Central annotation
-  ctx.fillStyle = '#57606a';
-  ctx.font = '13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
-  ctx.textAlign = 'center';
-  ctx.fillText(`${N} sites · ${M} particles · β=${(+document.getElementById('ec-beta').value).toFixed(1)}`, CX, CY + 4);
-}
-
-/* === Simulation engine === */
-function microStep() {
-  const beta = +document.getElementById('ec-beta').value;
-  let src;
-  let guard = 0;
-  do {
-    src = Math.floor(Math.random() * N);
-    if (++guard > 1000) return 0;
-  } while (masses[src] === 0);
-
-  const left = (src - 1 + N) % N;
-  const right = (src + 1 + N) % N;
-  const ml = Math.max(masses[left], 0.2);
-  const mr = Math.max(masses[right], 0.2);
-  const wl = Math.pow(ml, beta);
-  const wr = Math.pow(mr, beta);
-  const dest = (Math.random() * (wl + wr) < wl) ? left : right;
-
-  masses[src]--;
-  masses[dest]++;
-  return 1;
-}
-
+/* ============================================================
+   Ring condensation demos — one factory, two instances:
+   symmetric (either-direction hops) and asymmetric (right-only).
+   ============================================================ */
+const N = 100;            // lattice sites
+const M = 100;            // total particles
+const RADIUS = 180;
+const BASE_DOT = 6;
 const BULK_THRESHOLD = 15;
 
-function bulkStep() {
-  const beta = +document.getElementById('ec-beta').value;
-  let moved = 0;
+function createRingSim(cfg) {
+  // cfg: { canvasId, prefix, asymmetric }
+  const canvas = document.getElementById(cfg.canvasId);
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+  const CX = W / 2, CY = H / 2;
+  const pref = cfg.prefix;
 
-  const bulk = [];
-  for (let i = 0; i < N; i++) {
-    if (masses[i] >= BULK_THRESHOLD) bulk.push(i);
+  const betaEl = document.getElementById('r-' + pref + '-beta');
+  const betaValEl = document.getElementById('v-' + pref + '-beta');
+  const btnStart = document.getElementById('b-' + pref + '-start');
+  const btnPause = document.getElementById('b-' + pref + '-pause');
+  const btnReset = document.getElementById('b-' + pref + '-reset');
+
+  let masses = new Uint32Array(N);
+  let running = false, animId = null, lastTime = 0;
+  let moves = 0, speedAccum = 0, speedCount = 0;
+
+  function reset() {
+    masses.fill(0);
+    for (let i = 0; i < M; i++) masses[i % N]++;
+    moves = 0; speedAccum = 0; speedCount = 0;
+    updateMetrics(); draw();
   }
-  if (bulk.length === 0) return 0;
 
-  for (let i = bulk.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [bulk[i], bulk[j]] = [bulk[j], bulk[i]];
+  function colorFor(m, maxM) {
+    if (m === 0) return '#d0d7de';
+    if (maxM <= 1) return '#0969da';
+    const t = Math.min(1, (m - 1) / Math.max(1, maxM - 1));
+    let r, g, b;
+    if (t < 0.5) {
+      const u = t * 2;
+      r = Math.round(9 + (240 - 9) * u);
+      g = Math.round(105 + (136 - 105) * u);
+      b = Math.round(218 + (60 - 218) * u);
+    } else {
+      const u = (t - 0.5) * 2;
+      r = Math.round(240 + (207 - 240) * u);
+      g = Math.round(136 + (34 - 136) * u);
+      b = Math.round(60 + (46 - 60) * u);
+    }
+    return `rgb(${r},${g},${b})`;
   }
 
-  for (const src of bulk) {
-    const m = masses[src];
-    if (m < BULK_THRESHOLD) continue;
+  function posFor(i) {
+    const angle = (i / N) * Math.PI * 2 - Math.PI / 2;
+    return { x: CX + RADIUS * Math.cos(angle), y: CY + RADIUS * Math.sin(angle) };
+  }
 
+  function draw() {
+    const maxM = Math.max(...masses);
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, W, H);
+
+    // lattice ring
+    ctx.strokeStyle = '#d0d7de';
+    ctx.lineWidth = 1;
+    for (let i = 0; i < N; i++) {
+      const p = posFor(i), q = posFor((i + 1) % N);
+      ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
+    }
+
+    // flow direction arrow (asymmetric only)
+    if (cfg.asymmetric) {
+      const a = posFor(0);
+      ctx.fillStyle = '#8250df';
+      ctx.font = '16px sans-serif';
+      ctx.fillText('→', a.x + 14, a.y - 12);
+    }
+
+    for (let i = 0; i < N; i++) {
+      const m = masses[i];
+      const p = posFor(i);
+      const size = BASE_DOT + Math.sqrt(m) * 2;
+      if (m > maxM * 0.5 && m > 5) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, size * 2.5, 0, Math.PI * 2);
+        ctx.fillStyle = colorFor(m, maxM) + '22';
+        ctx.fill();
+      }
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
+      ctx.fillStyle = colorFor(m, maxM);
+      ctx.fill();
+      if (m > 0) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
+        ctx.strokeStyle = 'rgba(0,0,0,0.15)';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+      if (m === maxM && m > 1) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, size + 3, 0, Math.PI * 2);
+        ctx.strokeStyle = '#24292f';
+        ctx.lineWidth = 2.5;
+        ctx.stroke();
+      }
+    }
+
+    ctx.fillStyle = '#57606a';
+    ctx.font = '13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(`${N} sites · ${M} particles · β=${(+betaEl.value).toFixed(1)}${cfg.asymmetric ? ' · hops → only' : ''}`, CX, CY + 4);
+  }
+
+  /* --- microscopic single-particle hop --- */
+  function microStep() {
+    const beta = +betaEl.value;
+    let src, guard = 0;
+    do {
+      src = Math.floor(Math.random() * N);
+      if (++guard > 1000) return 0;
+    } while (masses[src] === 0);
+
+    if (cfg.asymmetric) {
+      // Right-only: hop with probability weighted by destination mass.
+      const right = (src + 1 + N) % N;
+      const wr = Math.pow(Math.max(masses[right], 0.2), beta);
+      if (Math.random() < wr / (1 + wr)) {
+        masses[src]--;
+        masses[right]++;
+        return 1;
+      }
+      return 0; // attempt failed this try
+    }
+
+    // Symmetric: destination ∝ m^β among {left, right}
     const left = (src - 1 + N) % N;
     const right = (src + 1 + N) % N;
-    const ml = Math.max(masses[left], 0.2);
-    const mr = Math.max(masses[right], 0.2);
-    const wl = Math.pow(ml, beta);
-    const wr = Math.pow(mr, beta);
+    const wl = Math.pow(Math.max(masses[left], 0.2), beta);
+    const wr = Math.pow(Math.max(masses[right], 0.2), beta);
     const dest = (Math.random() * (wl + wr) < wl) ? left : right;
+    masses[src]--;
+    masses[dest]++;
+    return 1;
+  }
 
-    const pCollective = 0.70 + 0.25 * Math.tanh((m - BULK_THRESHOLD) / 15);
-    const pBreakup = 0.02;
+  /* --- collective cluster dynamics (large-cluster approximation) --- */
+  function bulkStep() {
+    const beta = +betaEl.value;
+    let moved = 0;
+    const bulk = [];
+    for (let i = 0; i < N; i++) if (masses[i] >= BULK_THRESHOLD) bulk.push(i);
+    if (bulk.length === 0) return 0;
 
-    const r = Math.random();
-    if (r < pCollective) {
-      masses[src] = 0;
-      masses[dest] += m;
-      moved += m;
-    } else if (r < pCollective + pBreakup) {
-      const shard = 1 + Math.floor(Math.random() * Math.min(m - 1, 5));
-      masses[src] -= shard;
-      masses[dest] += shard;
-      moved += shard;
+    for (let i = bulk.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [bulk[i], bulk[j]] = [bulk[j], bulk[i]];
     }
+
+    for (const src of bulk) {
+      const m = masses[src];
+      if (m < BULK_THRESHOLD) continue;
+
+      const left = (src - 1 + N) % N;
+      const right = (src + 1 + N) % N;
+      let dest;
+      if (cfg.asymmetric) {
+        dest = right; // one-directional transport
+      } else {
+        const wl = Math.pow(Math.max(masses[left], 0.2), beta);
+        const wr = Math.pow(Math.max(masses[right], 0.2), beta);
+        dest = (Math.random() * (wl + wr) < wl) ? left : right;
+      }
+
+      const pCollective = 0.70 + 0.25 * Math.tanh((m - BULK_THRESHOLD) / 15);
+      const pBreakup = 0.02;
+      const r = Math.random();
+      if (r < pCollective) {
+        masses[src] = 0;
+        masses[dest] += m;
+        moved += m;
+      } else if (r < pCollective + pBreakup) {
+        const shard = 1 + Math.floor(Math.random() * Math.min(m - 1, 5));
+        masses[src] -= shard;
+        masses[dest] += shard;
+        moved += shard;
+      }
+    }
+    return moved;
   }
-  return moved;
-}
 
-function step() {
-  let moved = 0;
-  moved += bulkStep();
-  const activeSites = masses.reduce((a, m) => a + (m > 0 ? 1 : 0), 0);
-  const nj = Math.max(5, Math.round(activeSites * 0.6));
-  for (let k = 0; k < nj; k++) {
-    moved += microStep();
+  function step() {
+    let moved = bulkStep();
+    const activeSites = masses.reduce((a, m) => a + (m > 0 ? 1 : 0), 0);
+    const nj = Math.max(5, Math.round(activeSites * 0.6));
+    for (let k = 0; k < nj; k++) moved += microStep();
+    moves += moved;
   }
-  steps += moved;
-}
 
-function gini(arr) {
-  const sorted = Array.from(arr).sort((a, b) => a - b);
-  let cum = 0, sum = 0;
-  for (let i = 0; i < sorted.length; i++) {
-    cum += sorted[i];
-    sum += cum;
+  function gini(arr) {
+    const sorted = Array.from(arr).sort((a, b) => a - b);
+    let cum = 0, sum = 0;
+    for (let i = 0; i < sorted.length; i++) { cum += sorted[i]; sum += cum; }
+    if (cum === 0) return 0;
+    return (sorted.length + 1 - 2 * sum / cum) / sorted.length;
   }
-  const mean = cum / sorted.length;
-  if (mean === 0) return 0;
-  return (sorted.length + 1 - 2 * sum / cum) / sorted.length;
-}
 
-function updateMetrics() {
-  const maxM = Math.max(...masses);
-  const active = masses.filter(m => m > 0).length;
-  const g = gini(masses);
-
-  document.getElementById('m-max').textContent = maxM;
-  document.getElementById('m-max-sub').textContent = `${maxM} / ${M} = ${(maxM/M*100).toFixed(1)}%`;
-  document.getElementById('m-active').textContent = active;
-  document.getElementById('m-gini').textContent = g.toFixed(3);
-  document.getElementById('m-steps').textContent = steps.toLocaleString();
-
-  const maxDiv = document.getElementById('ec-metrics').children[0];
-  const maxSub = document.getElementById('m-max-sub');
-  if (maxM > M * 0.4) {
-    maxDiv.classList.add('condensed');
-    maxSub.textContent = `${maxM} / ${M} = ${(maxM/M*100).toFixed(1)}% — CONDENSED!`;
-  } else {
-    maxDiv.classList.remove('condensed');
-    maxSub.textContent = `${maxM} / ${M} = ${(maxM/M*100).toFixed(1)}%`;
-  }
-}
-
-/* === Animation loop === */
-function loop(timestamp) {
-  if (!running) return;
-  if (!lastTime) lastTime = timestamp;
-  const elapsed = timestamp - lastTime;
-  const stepsBefore = steps;
-
-  step();
-
-  draw();
-  updateMetrics();
-
-  const movedThisFrame = steps - stepsBefore;
-  speedAccum += movedThisFrame;
-  speedCount++;
-  if (speedCount >= 30) {
-    const sps = Math.round(speedAccum * 1000 / elapsed);
-    if (sps >= 1000) {
-      document.getElementById('m-speed').textContent = `${(sps/1000).toFixed(1)}k moves/sec`;
+  function updateMetrics() {
+    const maxM = Math.max(...masses);
+    const occ = masses.filter(m => m > 0).length;
+    const g = gini(masses);
+    document.getElementById('s-' + pref + '-max').textContent = maxM;
+    document.getElementById('s-' + pref + '-occ').textContent = occ;
+    document.getElementById('s-' + pref + '-gini').textContent = g.toFixed(3);
+    document.getElementById('s-' + pref + '-steps').textContent = moves.toLocaleString();
+    const maxSub = document.getElementById('s-' + pref + '-maxsub');
+    const maxDiv = document.getElementById('mx-' + pref).children[0];
+    if (maxM > M * 0.4) {
+      maxDiv.classList.add('condensed');
+      maxSub.textContent = `${maxM} / ${M} = ${(maxM/M*100).toFixed(1)}% — CONDENSED!`;
     } else {
-      document.getElementById('m-speed').textContent = `${sps} moves/sec`;
+      maxDiv.classList.remove('condensed');
+      maxSub.textContent = `${maxM} / ${M} = ${(maxM/M*100).toFixed(1)}%`;
     }
-    speedAccum = 0;
-    speedCount = 0;
-    lastTime = timestamp;
   }
 
-  animId = requestAnimationFrame(loop);
+  function loop(timestamp) {
+    if (!running) return;
+    if (!lastTime) lastTime = timestamp;
+    const elapsed = timestamp - lastTime;
+    const before = moves;
+    step();
+    draw();
+    updateMetrics();
+    speedAccum += moves - before;
+    speedCount++;
+    if (speedCount >= 30) {
+      const sps = Math.round(speedAccum * 1000 / elapsed);
+      document.getElementById('s-' + pref + '-speed').textContent =
+        sps >= 1000 ? `${(sps/1000).toFixed(1)}k moves/sec` : `${sps} moves/sec`;
+      speedAccum = 0; speedCount = 0; lastTime = timestamp;
+    }
+    animId = requestAnimationFrame(loop);
+  }
+
+  btnStart.addEventListener('click', () => {
+    running = true;
+    btnStart.disabled = true; btnPause.disabled = false;
+    lastTime = 0;
+    animId = requestAnimationFrame(loop);
+  });
+  btnPause.addEventListener('click', () => {
+    running = false;
+    if (animId) cancelAnimationFrame(animId);
+    btnStart.disabled = false; btnPause.disabled = true;
+    btnStart.textContent = 'Resume';
+  });
+  btnReset.addEventListener('click', () => {
+    running = false;
+    if (animId) cancelAnimationFrame(animId);
+    btnStart.disabled = false; btnPause.disabled = true;
+    btnStart.textContent = 'Start';
+    reset();
+  });
+  betaEl.addEventListener('input', () => {
+    betaValEl.textContent = (+betaEl.value).toFixed(1);
+  });
+
+  reset();
 }
 
-/* === Controls === */
-const btnStart = document.getElementById('ec-start');
-const btnPause = document.getElementById('ec-pause');
-const btnReset = document.getElementById('ec-reset');
-const betaSlider = document.getElementById('ec-beta');
-const betaVal = document.getElementById('ec-beta-val');
-
-btnStart.addEventListener('click', () => {
-  running = true;
-  btnStart.disabled = true;
-  btnPause.disabled = false;
-  lastTime = 0;
-  animId = requestAnimationFrame(loop);
-});
-
-btnPause.addEventListener('click', () => {
-  running = false;
-  if (animId) cancelAnimationFrame(animId);
-  btnStart.disabled = false;
-  btnPause.disabled = true;
-  btnStart.textContent = 'Resume';
-});
-
-btnReset.addEventListener('click', () => {
-  running = false;
-  if (animId) cancelAnimationFrame(animId);
-  btnStart.disabled = false;
-  btnPause.disabled = true;
-  btnStart.textContent = 'Start';
-  reset();
-});
-
-betaSlider.addEventListener('input', e => {
-  betaVal.textContent = (+e.target.value).toFixed(1);
-});
-
-// init
-reset();
+createRingSim({ canvasId: 'c-sym',  prefix: 'sym',  asymmetric: false });
+createRingSim({ canvasId: 'c-asym', prefix: 'asym', asymmetric: true  });
 </script>
 </div>
