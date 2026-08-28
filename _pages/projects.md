@@ -51,4 +51,12 @@ Every honbasho bout from March 1958 to July 2026 replayed through an Elo engine,
 
 ---
 
+## Explosive Condensation
+
+An interactive ring demo of a mass-transport model I studied in my academic days. Particles perform a biased random walk where the jump rate to a neighbour depends on the mass already there; with strong enough nonlinearity (β ≥ 1) a condensate forms explosively — and on this demo page you can watch it happen in real time. The paper (arXiv:1508.07516) dates from 2015; I include it here mostly as a nostalgic snapshot from before my industry pivot.
+
+[Try the demo →](/projects/explosive-condensation/)
+
+---
+
 *More projects coming. I'm also working on a private essay-summarisation pipeline and a church worship site, and will document them here as they stabilise.*

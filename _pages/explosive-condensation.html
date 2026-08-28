@@ -1,0 +1,406 @@
+---
+layout: single
+title: "Explosive Condensation"
+classes: wide
+author_profile: false
+permalink: /projects/explosive-condensation/
+---
+
+<div id="ec-app">
+<style>
+#ec-app { font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; color:#1f2328; line-height:1.55; }
+#ec-app a { color:#0969da; text-decoration:none; }
+#ec-app a:hover { text-decoration:underline; }
+#ec-app h1 { font-size:1.7rem; margin:0 0 .25rem; }
+#ec-app h2 { font-size:1.15rem; margin:1.2rem 0 .5rem; padding-bottom:.35rem; border-bottom:1px solid #d0d7de; }
+#ec-app h3 { font-size:1rem; margin:.9rem 0 .3rem; }
+#ec-app .sub { color:#57606a; margin:0 0 1.2rem; font-size:.88rem; }
+#ec-app .nostalgia { background:#fff8c5; border:1px solid #d4a72c; border-radius:8px; padding:.6rem .9rem; font-size:.88rem; color:#5c3b00; margin-bottom:1rem; }
+#ec-app .nostalgia strong { color:#3d2600; }
+#ec-app .stage { position:relative; background:#0d1117; border-radius:12px; padding:1.25rem; margin-bottom:1rem; }
+#ec-app #ec-canvas { display:block; margin:0 auto; border-radius:8px; max-width:100%; height:auto; }
+#ec-app .legend { display:flex; flex-wrap:wrap; gap:.5rem 1.2rem; justify-content:center; margin-top:.75rem; }
+#ec-app .legend-item { display:flex; align-items:center; gap:.35rem; font-size:.75rem; color:#c9d1d9; }
+#ec-app .legend-dot { width:12px; height:12px; border-radius:50%; }
+#ec-app .panel { background:#f6f8fa; border:1px solid #d0d7de; border-radius:8px; padding:.9rem 1rem; margin-bottom:1rem; }
+#ec-app .controls { display:flex; flex-wrap:wrap; gap:.5rem .7rem; align-items:center; margin-bottom:.6rem; }
+#ec-app .ctl-label { font-size:.78rem; color:#57606a; font-weight:600; white-space:nowrap; }
+#ec-app button { font-size:.82rem; padding:.35rem .85rem; border:1px solid #d0d7de; background:#fff; color:#1f2328; border-radius:6px; cursor:pointer; }
+#ec-app button.primary { background:#0969da; border-color:#0969da; color:#fff; }
+#ec-app button:disabled { opacity:.5; cursor:not-allowed; }
+#ec-app input[type="range"] { width:100%; max-width:160px; }
+#ec-app .metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:.6rem; }
+#ec-app .metric { background:#fff; border:1px solid #d0d7de; border-radius:6px; padding:.6rem .75rem; }
+#ec-app .metric .m-label { font-size:.68rem; text-transform:uppercase; letter-spacing:.04em; color:#656d76; }
+#ec-app .metric .m-value { font-size:1.15rem; font-weight:600; margin-top:.1rem; }
+#ec-app .m-sub { font-size:.72rem; color:#656d76; }
+#ec-app .metric.condensed { background:#dafbe1; border-color:#1a7f37; }
+#ec-app .metric.condensed .m-label { color:#1a7f37; }
+#ec-app .metric.condensed .m-value { color:#1a7f37; }
+#ec-app .metric.condensed .m-sub { color:#1a7f37; }
+#ec-app .two-col { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+@media(max-width:700px){ #ec-app .two-col{grid-template-columns:1fr;} }
+#ec-app .note { font-size:.85rem; color:#57606a; margin-top:.5rem; }
+#ec-app .paper-card { background:#fff; border:1px solid #d0d7de; border-radius:8px; padding:.9rem 1rem; }
+#ec-app .paper-card h3 { margin-top:0; }
+#ec-app .paper-meta { font-size:.8rem; color:#57606a; margin:.3rem 0 .6rem; }
+</style>
+
+<h1>Explosive Condensation</h1>
+<p class="sub">An interactive demo of a mass-transport model I studied years ago &bull; <a href="https://arxiv.org/abs/1508.07516" target="_blank" rel="noopener">arXiv:1508.07516</a></p>
+
+<div class="nostalgia">
+  <strong>Note from the author:</strong> This is a paper I wrote many years ago. Since then I have left my academic career entirely to work in industry, so this page is more <em>nostalgic</em> than a reflection of up-to-date research in the field. The models and results here still hold, but the story is now a personal snapshot from a different chapter.
+</div>
+
+<div class="stage">
+  <canvas id="ec-canvas" width="640" height="480"></canvas>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#58a6ff;"></div> Low mass</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#f0883e;"></div> Medium mass</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#f85149;"></div> High mass</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#ffffff;"></div> Condensate peak</div>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="controls">
+    <button id="ec-start" class="primary">Start</button>
+    <button id="ec-pause" disabled>Pause</button>
+    <button id="ec-reset">Reset</button>
+    <span style="margin-left:auto;"></span>
+    <span class="ctl-label">Bias β</span>
+    <input type="range" id="ec-beta" min="0" max="3" step="0.1" value="1.5">
+    <span id="ec-beta-val" class="ctl-label">1.5</span>
+  </div>
+  <div class="note">
+    <strong>β = 0</strong>: unbiased random walk &bull;
+    <strong>0 &lt; β &lt; 1</strong>: weak attraction, normal coarsening &bull;
+    <strong>β ≥ 1</strong>: <em>explosive</em> condensation — the condensate forms in vanishing time as system size grows
+  </div>
+</div>
+
+<div class="metrics" id="ec-metrics">
+  <div class="metric">
+    <div class="m-label">Max mass</div>
+    <div class="m-value" id="m-max">1</div>
+    <div class="m-sub" id="m-max-sub">1 / 100 = 1.0%</div>
+  </div>
+  <div class="metric">
+    <div class="m-label">Particles present</div>
+    <div class="m-value" id="m-active">100</div>
+    <div class="m-sub">lattice sites occupied</div>
+  </div>
+  <div class="metric">
+    <div class="m-label">Gini coefficient</div>
+    <div class="m-value" id="m-gini">0.000</div>
+    <div class="m-sub">0 = uniform, 1 = all in one site</div>
+  </div>
+  <div class="metric">
+    <div class="m-label">Steps elapsed</div>
+    <div class="m-value" id="m-steps">0</div>
+    <div class="m-sub" id="m-speed">0 steps/sec</div>
+  </div>
+</div>
+
+<hr style="border:none; border-top:1px solid #d0d7de; margin:1.5rem 0;">
+
+<div class="two-col">
+  <div>
+    <h2>What is explosive condensation?</h2>
+
+    <p>Imagine a ring of boxes, each holding some number of balls. At each tick, you pick one ball at random and move it to a neighbouring box. If the move is completely unbiased, every box ends up with roughly the same number of balls. That is normal diffusive mixing.</p>
+
+    <p>Now add a twist: the probability of a ball moving <em>to</em> a box depends on how many balls are already there. The richer the box, the more likely it is to attract new arrivals. This is the <strong>misanthrope process</strong> with nonlinear jump rates.</p>
+
+    <p>With strong enough nonlinearity, a <strong>condensate</strong> appears — one box hoovers up a finite fraction of all the balls. In the <strong>explosive</strong> regime, this condensate forms so fast that the time to reach the steady state actually <em>vanishes</em> as the system grows. It is the spatial analogue of "instantaneous gelation" in mean-field coagulation.</p>
+
+    <h3>Our result</h3>
+    <p>Waclaw &amp; Evans (PRL 2012) had proven explosive condensation for <em>asymmetric</em> one-dimensional dynamics. In our paper we showed the same explosion happens for <em>symmetric</em> dynamics too, provided the nonlinearity is strong enough (β ≥ 1). Below that threshold, the system enters ordinary coarsening where the relaxation time grows with system size. In dimensions d ≥ 2 we argued explosive condensation should be generic for all parameter values.</p>
+  </div>
+  <div>
+    <div class="paper-card">
+      <h3>Paper</h3>
+      <div class="paper-meta">arXiv:1508.07516 &bull; J. Stat. Mech. (2015) P11031</div>
+      <p style="font-size:.9rem; margin:.3rem 0 .8rem;">
+        <strong>Explosive condensation in symmetric mass transport models</strong><br>
+        Yu-Xi Chau, Colm Connaughton, Stefan Grosskinsky
+      </p>
+      <a href="https://arxiv.org/abs/1508.07516" target="_blank" rel="noopener">Read on arXiv →</a> &nbsp;
+      <a href="https://arxiv.org/pdf/1508.07516" target="_blank" rel="noopener">PDF →</a>
+    </div>
+
+    <h3 style="margin-top:1.2rem;">Further reading</h3>
+    <ul style="font-size:.9rem; color:#57606a; padding-left:1.2rem;">
+      <li>B. Waclaw &amp; M. R. Evans, <em>Explosive Condensation in a Mass Transport Model</em>, Phys. Rev. Lett. <strong>108</strong>, 070601 (2012)</li>
+      <li>C. Godrèche, <em>Dynamics of condensation in zero-range processes</em>, J. Phys. A <strong>36</strong>, 6313 (2003)</li>
+      <li>M. R. Evans &amp; T. Hanney, <em>Nonequilibrium statistical mechanics of the zero-range process</em>, J. Phys. A <strong>38</strong>, R195 (2005)</li>
+    </ul>
+
+    <h3>About this demo</h3>
+    <p style="font-size:.9rem; color:#57606a;">The ring animation above shows a continuous-time Monte-Carlo realisation. Each particle performs a symmetric random walk with a jump rate into a neighbouring site proportional to <code>m^β</code>, where <code>m</code> is the mass already at the destination. The Gini coefficient measures inequality. When β ≥ 1, watch how quickly the white peak swallows the mass.</p>
+  </div>
+</div>
+
+<script>
+/* === Configuration === */
+const N = 100;            // number of sites on ring
+const M = 100;            // total number of particles
+const W = 640, H = 480;   // canvas dims
+const CX = W/2, CY = H/2;
+const RADIUS = 180;       // ring radius in px
+const BASE_DOT = 6;       // base dot radius
+
+/* === State === */
+let masses = new Uint32Array(N);
+let animId = null;
+let running = false;
+let steps = 0;
+let lastTime = 0;
+let speedAccum = 0;
+let speedCount = 0;
+let condensed = false;
+
+/* === Canvas === */
+const canvas = document.getElementById('ec-canvas');
+const ctx = canvas.getContext('2d');
+
+function reset() {
+  masses.fill(0);
+  for (let i = 0; i < M; i++) masses[i % N]++;
+  steps = 0;
+  speedAccum = 0;
+  speedCount = 0;
+  condensed = false;
+  updateMetrics();
+  draw();
+}
+
+function colorFor(m, maxM) {
+  if (m === 0) return '#21262d';
+  if (maxM <= 1) return '#58a6ff';
+  const t = Math.min(1, (m - 1) / Math.max(1, maxM - 1));
+  // blue → orange → red
+  if (t < 0.5) {
+    // blue to orange
+    const u = t * 2;
+    const r = Math.round(88 + (240 - 88) * u);
+    const g = Math.round(166 + (136 - 166) * u);
+    const b = Math.round(255 + (60 - 255) * u);
+    return `rgb(${r},${g},${b})`;
+  } else {
+    // orange to red
+    const u = (t - 0.5) * 2;
+    const r = Math.round(240 + (248 - 240) * u);
+    const g = Math.round(136 + (81 - 136) * u);
+    const b = Math.round(60 + (73 - 60) * u);
+    return `rgb(${r},${g},${b})`;
+  }
+}
+
+function posFor(i) {
+  const angle = (i / N) * Math.PI * 2 - Math.PI / 2;
+  return {
+    x: CX + RADIUS * Math.cos(angle),
+    y: CY + RADIUS * Math.sin(angle)
+  };
+}
+
+function draw() {
+  const maxM = Math.max(...masses);
+  // background
+  ctx.fillStyle = '#0d1117';
+  ctx.fillRect(0, 0, W, H);
+
+  // connect adjacent sites with faint lines
+  ctx.strokeStyle = '#21262d';
+  ctx.lineWidth = 1;
+  for (let i = 0; i < N; i++) {
+    const p = posFor(i);
+    const q = posFor((i + 1) % N);
+    ctx.beginPath();
+    ctx.moveTo(p.x, p.y);
+    ctx.lineTo(q.x, q.y);
+    ctx.stroke();
+  }
+
+  // draw dots
+  for (let i = 0; i < N; i++) {
+    const m = masses[i];
+    const p = posFor(i);
+    const size = BASE_DOT + Math.sqrt(m) * 2;
+
+    // glow for high masses
+    if (m > maxM * 0.5 && m > 5) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, size * 2.5, 0, Math.PI * 2);
+      ctx.fillStyle = colorFor(m, maxM) + '18';
+      ctx.fill();
+    }
+
+    // dot
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, size, 0, Math.PI * 2);
+    ctx.fillStyle = colorFor(m, maxM);
+    ctx.fill();
+
+    // white border for the peak
+    if (m === maxM && m > 1) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, size + 2, 0, Math.PI * 2);
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 2;
+      ctx.stroke();
+    }
+  }
+
+  // central annotation
+  ctx.fillStyle = '#8b949e';
+  ctx.font = '13px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText(`${N} sites · ${M} particles · β=${(+document.getElementById('ec-beta').value).toFixed(1)}`, CX, CY + 4);
+}
+
+/* === Simulation engine === */
+function step() {
+  const beta = +document.getElementById('ec-beta').value;
+  const dt = 0.1; // time step in simulation units
+
+  // number of attempted jumps in this step ~ M * dt
+  const nj = Math.max(1, Math.round(M * dt));
+
+  for (let k = 0; k < nj; k++) {
+    // pick a random particle (random site weighted by mass, then uniform within site)
+    // shortcut: rejection sample a site weighted by mass
+    let src = -1;
+    let r = Math.floor(Math.random() * M);
+    let cum = 0;
+    for (let i = 0; i < N; i++) {
+      cum += masses[i];
+      if (r < cum) { src = i; break; }
+    }
+    if (src < 0 || masses[src] === 0) continue;
+
+    // choose left or right neighbor
+    const left = (src - 1 + N) % N;
+    const right = (src + 1) % N;
+    const ml = Math.max(masses[left], 0.2);
+    const mr = Math.max(masses[right], 0.2);
+
+    // rate to each neighbor proportional to m^beta
+    const wl = Math.pow(ml, beta);
+    const wr = Math.pow(mr, beta);
+    const total = wl + wr;
+    const dest = (Math.random() * total < wl) ? left : right;
+
+    if (src !== dest) {
+      masses[src]--;
+      masses[dest]++;
+    }
+  }
+  steps += nj;
+}
+
+function gini(arr) {
+  // Gini coefficient for array of masses
+  // 0 = perfectly uniform, 1 = all concentrated in one site
+  const sorted = Array.from(arr).sort((a, b) => a - b);
+  let cum = 0, sum = 0;
+  for (let i = 0; i < sorted.length; i++) {
+    cum += sorted[i];
+    sum += cum;
+  }
+  const mean = cum / sorted.length;
+  if (mean === 0) return 0;
+  return (sorted.length + 1 - 2 * sum / cum) / sorted.length;
+}
+
+function updateMetrics() {
+  const maxM = Math.max(...masses);
+  const active = masses.filter(m => m > 0).length;
+  const g = gini(masses);
+
+  document.getElementById('m-max').textContent = maxM;
+  document.getElementById('m-max-sub').textContent = `${maxM} / ${M} = ${(maxM/M*100).toFixed(1)}%`;
+  document.getElementById('m-active').textContent = active;
+  document.getElementById('m-gini').textContent = g.toFixed(3);
+  document.getElementById('m-steps').textContent = steps.toLocaleString();
+
+  const maxDiv = document.getElementById('ec-metrics').children[0];
+  const maxSub = document.getElementById('m-max-sub');
+  if (maxM > M * 0.4) {
+    maxDiv.classList.add('condensed');
+    maxSub.textContent = `${maxM} / ${M} = ${(maxM/M*100).toFixed(1)}% — CONDENSED!`;
+  } else {
+    maxDiv.classList.remove('condensed');
+  }
+}
+
+/* === Animation loop === */
+function loop(timestamp) {
+  if (!running) return;
+  if (!lastTime) lastTime = timestamp;
+  const elapsed = timestamp - lastTime;
+
+  // run multiple simulation steps per frame for smooth animation
+  step();
+  step();
+  step();
+
+  draw();
+  updateMetrics();
+
+  // speed estimate
+  speedAccum += 3; // 3 step() calls
+  speedCount++;
+  if (speedCount >= 30) {
+    const sps = Math.round(speedAccum * 1000 / elapsed);
+    document.getElementById('m-speed').textContent = `${(sps/1000).toFixed(1)}k steps/sec`;
+    speedAccum = 0;
+    speedCount = 0;
+    lastTime = timestamp;
+  }
+
+  animId = requestAnimationFrame(loop);
+}
+
+/* === Controls === */
+const btnStart = document.getElementById('ec-start');
+const btnPause = document.getElementById('ec-pause');
+const btnReset = document.getElementById('ec-reset');
+const betaSlider = document.getElementById('ec-beta');
+const betaVal = document.getElementById('ec-beta-val');
+
+btnStart.addEventListener('click', () => {
+  running = true;
+  btnStart.disabled = true;
+  btnPause.disabled = false;
+  lastTime = 0;
+  animId = requestAnimationFrame(loop);
+});
+
+btnPause.addEventListener('click', () => {
+  running = false;
+  if (animId) cancelAnimationFrame(animId);
+  btnStart.disabled = false;
+  btnPause.disabled = true;
+  btnStart.textContent = 'Resume';
+});
+
+btnReset.addEventListener('click', () => {
+  running = false;
+  if (animId) cancelAnimationFrame(animId);
+  btnStart.disabled = false;
+  btnPause.disabled = true;
+  btnStart.textContent = 'Start';
+  reset();
+});
+
+betaSlider.addEventListener('input', e => {
+  betaVal.textContent = (+e.target.value).toFixed(1);
+});
+
+// init
+reset();
+</script>
+</div>
