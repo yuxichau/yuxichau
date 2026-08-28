@@ -114,9 +114,6 @@ permalink: /projects/explosive-condensation/
     <p>Now add a twist: the probability of a ball moving <em>to</em> a box depends on how many balls are already there. The richer the box, the more likely it is to attract new arrivals. This is the <strong>misanthrope process</strong> with nonlinear jump rates.</p>
 
     <p>With strong enough nonlinearity, a <strong>condensate</strong> appears — one box hoovers up a finite fraction of all the balls. In the <strong>explosive</strong> regime, this condensate forms so fast that the time to reach the steady state actually <em>vanishes</em> as the system grows. It is the spatial analogue of "instantaneous gelation" in mean-field coagulation.</p>
-
-    <h3>Our result</h3>
-    <p>Waclaw &amp; Evans (PRL 2012) had proven explosive condensation for <em>asymmetric</em> one-dimensional dynamics. In our paper we showed the same explosion happens for <em>symmetric</em> dynamics too, provided the nonlinearity is strong enough (β ≥ 1). Below that threshold, the system enters ordinary coarsening where the relaxation time grows with system size. In dimensions d ≥ 2 we argued explosive condensation should be generic for all parameter values.</p>
   </div>
   <div>
     <div class="paper-card">
@@ -136,10 +133,88 @@ permalink: /projects/explosive-condensation/
       <li>C. Godrèche, <em>Dynamics of condensation in zero-range processes</em>, J. Phys. A <strong>36</strong>, 6313 (2003)</li>
       <li>M. R. Evans &amp; T. Hanney, <em>Nonequilibrium statistical mechanics of the zero-range process</em>, J. Phys. A <strong>38</strong>, R195 (2005)</li>
     </ul>
-
-    <h3>About this demo</h3>
-    <p style="font-size:.9rem; color:#57606a;">Sites are picked uniformly from the non-empty ones and each emits one particle per unit time. The destination is chosen with probability proportional to <code>m<sup>β</sup></code>. To make the late-stage coarsening visible in real time, a site with <strong>≥15</strong> particles is treated as a cluster: it can move <strong>collectively</strong> (the whole mass hops as a unit) or <strong>break up</strong> (shedding a small shard). This is exactly the fast-coarsening approximation I used years ago in the original simulations.</p>
   </div>
+</div>
+
+<div class="panel" style="margin-top:1.5rem;">
+  <h2>The model in detail</h2>
+
+  <p>The model is a one-dimensional lattice of <em>L</em> sites with periodic boundary conditions (a ring), each site <em>i</em> holding an integer occupation <em>n</em><sub><em>i</em></sub> ≥ 0. The total number of particles is conserved:</p>
+
+  <div style="background:#fff; border:1px solid #d0d7de; border-radius:6px; padding:.6rem 1rem; margin:.6rem 0; font-family:'Times New Roman',serif; font-size:1.05rem; text-align:center;">
+    Σ<sub><em>i</em>=1</sub><sup><em>L</em></sup> <em>n</em><sub><em>i</em></sub> = <em>M</em> (fixed)
+  </div>
+
+  <p>Time is continuous. A particle at site <em>i</em> hops to the left or right neighbour with rate <em>u</em>(<em>n</em><sub><em>i</em></sub>, <em>n</em><sub><em>i</em>±1</sub>). The function <em>u</em>(<em>n</em>,<em>m</em>) is the <strong>jump rate</strong> from a site with <em>n</em> particles to a neighbour with <em>m</em> particles.</p>
+
+  <h3>Factorized steady state</h3>
+  <p>A remarkable property of this class of models is that they admit a <strong>factorized steady state</strong>. The probability of finding the system in configuration {n<sub>1</sub>, …, n<sub>L</sub>} is:</p>
+
+  <div style="background:#fff; border:1px solid #d0d7de; border-radius:6px; padding:.6rem 1rem; margin:.6rem 0; font-family:'Times New Roman',serif; font-size:1.05rem; text-align:center;">
+    P(<em>n</em><sub>1</sub>, …, <em>n</em><sub><em>L</em></sub>) = (1/<em>Z</em><sub><em>L</em>,<em>M</em></sub>) · ∏<sub><em>i</em>=1</sub><sup><em>L</em></sup> <em>f</em>(<em>n</em><sub><em>i</em></sub>)
+  </div>
+
+  <p>where <em>f</em>(<em>n</em>) is the <strong>single-site weight</strong> and <em>Z</em><sub><em>L</em>,<em>M</em></sub> is the normalization (canonical partition function). This factorization makes the model analytically tractable — it is one of the few spatially-extended non-equilibrium systems where the full steady state is known exactly.</p>
+
+  <h3>The specific jump rate</h3>
+  <p>In our paper we studied a family of models where the jump rate depends on the <em>target</em> site's occupation via a power law:</p>
+
+  <div style="background:#fff; border:1px solid #d0d7de; border-radius:6px; padding:.6rem 1rem; margin:.6rem 0; font-family:'Times New Roman',serif; font-size:1.05rem; text-align:center;">
+    <em>u</em>(<em>n</em>, <em>m</em>) ∝ <em>m</em><sup>γ</sup>
+  </div>
+
+  <p>(up to a mass-dependent factor that ensures the factorization property holds). The exponent γ controls the nonlinearity:</p>
+
+  <ul style="padding-left:1.5rem; color:#57606a;">
+    <li><strong>γ = 0</strong>: unbiased random walk. No condensation.</li>
+    <li><strong>0 &lt; γ &lt; 1</strong>: weak attraction. Condensation occurs, but via <em>normal coarsening</em> — the relaxation time grows with system size.</li>
+    <li><strong>γ ≥ 1</strong>: strong attraction. <em>Explosive</em> condensation — the condensate forms in vanishing time as <em>L</em> → ∞.</li>
+  </ul>
+
+  <p>The demo above uses β = γ for the slider, so set β ≥ 1 to see the explosive regime.</p>
+</div>
+
+<div class="panel">
+  <h2>Results</h2>
+
+  <h3>What Waclaw &amp; Evans proved (2012)</h3>
+  <p>Barłomiej Waclaw and Martin Evans showed that in the <strong>asymmetric</strong> case — where particles can only hop in one direction (say, clockwise) — the model exhibits explosive condensation when γ &gt; 1. The mechanism is simple: once a condensate forms, it grows by absorbing particles from upstream faster than diffusion can redistribute them. The time to stationarity goes to zero as the system size increases.</p>
+
+  <h3>Our contribution (2015)</h3>
+  <p>The key question we asked was: <em>does explosion survive if particles can hop in both directions?</em> Symmetric dynamics are physically more realistic — they occur in isotropic systems like granular gases and colloids — but they also allow the condensate to lose particles by back-diffusion, which naively might seem to suppress the instability.</p>
+
+  <p>Our main results were:</p>
+
+  <ul style="padding-left:1.5rem; color:#57606a;">
+    <li><strong>Explosive condensation in 1D with symmetric hops</strong> does occur, provided γ ≥ 1. The critical exponent is the same threshold as in the asymmetric case.</li>
+    <li><strong>Sub-threshold coarsening</strong> for 0 &lt; γ &lt; 1: the system still condenses, but the time to reach the steady state diverges with system size as a power law. This is ordinary coarsening, analogous to Ostwald ripening or domain growth in magnets.</li>
+    <li><strong>Higher dimensions</strong> (d ≥ 2): we argued via mean-field reasoning that explosive condensation should be <em>generic</em> for <em>all</em> γ &gt; 0, because the higher connectivity makes it impossible for back-diffusion to counteract the attraction.</li>
+  </ul>
+
+  <h3>The mechanism</h3>
+  <p>The explosive regime works because of a positive feedback loop. Consider a small fluctuation where one site temporarily has more particles than its neighbours. With γ ≥ 1, the probability of a particle jumping <em>into</em> this site grows at least linearly with its excess mass, while the probability of a particle jumping <em>out</em> is independent of the site's mass (in the zero-range limit). The imbalance is self-reinforcing: the site gets richer, which makes it even more attractive, which makes it richer still. The runaway happens on a timescale that is a decreasing function of system size — hence "explosive."</p>
+
+  <p>In the symmetric case, the condensate can also move. It performs a biased random walk around the ring, absorbing smaller clusters it encounters. In the simulation above, this is what you see: a white-hot condensate sweeping the lattice and mopping up everything in its path.</p>
+</div>
+
+<div class="panel">
+  <h2>Why this matters</h2>
+
+  <p>Condensation in mass-transport models is a paradigm for phase separation in <strong>driven, non-equilibrium systems</strong>. It appears in:</p>
+
+  <ul style="padding-left:1.5rem; color:#57606a;">
+    <li><strong>Granular matter:</strong> When shaken, granular particles cluster; the inelastic collisions create an effective attractive dynamics.</li>
+    <li><strong>Network traffic:</strong> Packets or vehicles on a network can pile up at bottlenecks, an analogy to condensation at a single lattice site.</li>
+    <li><strong>Coagulation / aggregation:</strong> The mean-field limit of the model maps to the Smoluchowski coagulation equation, where the "explosive" regime corresponds to <em>instantaneous gelation</em> — a finite-size giant cluster appearing at t = 0⁺.</li>
+    <li><strong>Active matter:</strong> Self-propelled particles with quorum sensing or alignment rules can show similar runaway clustering when local density enhances recruitment.</li>
+  </ul>
+
+  <p>The distinction between <em>normal coarsening</em> (diverging time) and <em>explosive condensation</em> (vanishing time) is sharp: it separates systems that you can watch equilibrate from systems where the condensate appears essentially instantaneously on large scales. Our result extended the explosion from a special one-directional model to the more realistic symmetric case, making the physics applicable to a broader class of real systems.</p>
+</div>
+
+<div class="panel">
+  <h2>About this demo</h2>
+  <p style="font-size:.9rem; color:#57606a;">Sites are picked uniformly from the non-empty ones and each emits one particle per unit time. The destination is chosen with probability proportional to <code>m<sup>β</sup></code>. To make the late-stage coarsening visible in real time, a site with <strong>≥15</strong> particles is treated as a cluster: it can move <strong>collectively</strong> (the whole mass hops as a unit) or <strong>break up</strong> (shedding a small shard). This is exactly the fast-coarsening approximation I used years ago in the original simulations.</p>
 </div>
 
 <script>
