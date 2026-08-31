@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "A somber possibility"
-date: 2026-08-31 04:20:00 -0000
+date: 2026-08-31 03:00:00 -0000
 tags: [AI, Technology]
 author: Yu Xi Chau
 ---
