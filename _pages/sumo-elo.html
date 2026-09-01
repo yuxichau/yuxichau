@@ -40,7 +40,9 @@ permalink: /projects/sumo-elo/
 #sep-app .chart-lines .label { color:#57606a; font-size:.78rem; text-transform:uppercase; letter-spacing:.04em; }
 #sep-app .chips { display:flex; flex-wrap:wrap; gap:6px; }
 #sep-app .chip { display:inline-flex; align-items:center; gap:5px; background:#ddf4ff; color:#0969da; border:1px solid rgba(9,105,218,.35); border-radius:100px; padding:2px 6px 2px 11px; font-size:.82rem; }
-#sep-app .chip button { border:none; background:none; color:#57606a; cursor:pointer; font-size:1rem; line-height:1; padding:0 4px; }
+#sep-app .chip.off { background:#f6f8fa; color:#8c959f; border-color:#d0d7de; }
+#sep-app .chip .chip-toggle { border:none; background:none; color:inherit; cursor:pointer; font-size:.82rem; padding:0; }
+#sep-app .chip .chip-remove { border:none; background:none; color:#57606a; cursor:pointer; font-size:1rem; line-height:1; padding:0 2px; }
 #sep-app .chart-wrap { position:relative; height:400px; background:#fff; border:1px solid #d0d7de; border-radius:8px; padding:.5rem; }
 #sep-app .chart-note { font-size:.8rem; color:#656d76; margin-top:.5rem; }
 #sep-app .view-tabs { display:flex; gap:.4rem; margin-bottom:.7rem; }
@@ -150,7 +152,7 @@ const bashos = D.bashos, rikishi = D.rikishi, series = D.series;
 const DIVS = ["Makuuchi","Jūryō","Makushita","Sandanme","Jonidan","Jonokuchi"];
 const PALETTE = ["#0969da","#cf222e","#1a7f37","#9a6700","#8250df","#0550ae","#d1242f","#116329","#bc4c00","#563d7c","#0a3069","#953800"];
 let fromIdx = 0, toIdx = bashos.length - 1;
-let selected = [], activeDims = [true,true,true,true,true,true];
+let selected = [], disabled = new Set(), activeDims = [true,true,true,true,true,true];
 let view = "raw";
 
 // Additive location adjustment using the top-50 mean at each basho.
@@ -194,15 +196,20 @@ function ro(id){ for (const r of rikishi) if (r[0]===id) return r; return null; 
 function addRikishi(id){
   if (selected.includes(id)) return;
   selected.push(id);
-  if (selected.length > 8) selected.shift();
+  disabled.delete(id);
+  if (selected.length > 8) { disabled.delete(selected[0]); selected.shift(); }
   renderChips(); renderChart();
 }
-function removeRikishi(id){ selected = selected.filter(x=>x!==id); renderChips(); renderChart(); }
+function removeRikishi(id){ selected = selected.filter(x=>x!==id); disabled.delete(id); renderChips(); renderChart(); }
+function toggleRikishi(id){ if(disabled.has(id)) disabled.delete(id); else disabled.add(id); renderChips(); renderChart(); }
 function renderChips(){
   const c = $("sep-chips"); c.innerHTML = "";
-  selected.forEach(id=>{ const r = ro(id);
-    const sp = document.createElement("span"); sp.className="chip";
-    sp.innerHTML = `${r[1]} <button onclick="removeRikishi(${id})">&times;</button>`; c.appendChild(sp); });
+  selected.forEach(id=>{ const r = ro(id), off=disabled.has(id);
+    const sp = document.createElement("span"); sp.className=`chip${off ? " off" : ""}`;
+    const toggle=document.createElement("button"); toggle.className="chip-toggle"; toggle.type="button"; toggle.textContent=r[1]; toggle.title=off ? "Show on chart" : "Hide from chart"; toggle.setAttribute("aria-pressed",String(!off)); toggle.onclick=()=>toggleRikishi(id);
+    const remove=document.createElement("button"); remove.className="chip-remove"; remove.type="button"; remove.textContent="×"; remove.title="Remove filter"; remove.setAttribute("aria-label",`Remove ${r[1]}`); remove.onclick=()=>removeRikishi(id);
+    sp.append(toggle,remove); c.appendChild(sp);
+  });
 }
 
 const mainChart = new Chart($("sep-chart"), {
@@ -217,12 +224,13 @@ const mainChart = new Chart($("sep-chart"), {
 window.mainChart = mainChart;
 
 function renderChart(){
+  const plotted = selected.filter(id=>!disabled.has(id));
   // Compress the chart to the union of the selected rikishi's active dates.
   // The leaderboard window still controls the available outer bounds.
   let chartFrom = fromIdx, chartTo = toIdx;
-  if (selected.length) {
+  if (plotted.length) {
     const available = [];
-    selected.forEach(id=>{
+    plotted.forEach(id=>{
       const s = series[id];
       if (!s) return;
       for (let i=0;i+2<s.length;i+=3) if (s[i]>=fromIdx && s[i]<=toIdx) available.push(s[i]);
@@ -230,9 +238,9 @@ function renderChart(){
     if (available.length) { chartFrom=Math.min(...available); chartTo=Math.max(...available); }
   }
   const labels = bashos.slice(chartFrom, chartTo+1);
-  mainChart.options.plugins.legend.display = selected.length>1 && selected.length<=8;
+  mainChart.options.plugins.legend.display = plotted.length>1 && plotted.length<=8;
   mainChart.data = { labels, datasets: [] };
-  selected.forEach((id,si)=>{
+  plotted.forEach((id,si)=>{
     const s = series[id]; if (!s) return;
     const byIdx = new Map();
     for (let i=0;i+2<s.length;i+=3){ const bi=s[i]; if (bi>=chartFrom && bi<=chartTo) byIdx.set(bi, s[i+1]); }
@@ -243,9 +251,9 @@ function renderChart(){
   });
   mainChart.options.scales.y.title.text = view==="raw" ? "Raw Elo" : "Calibrated Elo";
   mainChart.update();
-  $("sep-note").textContent = selected.length
+  $("sep-note").textContent = plotted.length
     ? (view==="raw" ? "Raw Elo. The x-axis spans the selected rikishi's available dates; gaps are bashos where a selected rikishi was not on a banzuke (kyujo / retirement)." : `Calibrated Elo = raw Elo − top-50 mean at that basho + ${Math.round(referenceBaseline)}. This removes movement in the elite-field baseline while preserving contemporaneous gaps.`)
-    : "Search and add rikishi above to plot their Elo curves.";
+    : (selected.length ? "All selected filters are hidden. Use the controls below the graph to show a line or remove a filter." : "Search and add rikishi above to plot their Elo curves.");
 }
 
 function ratingAt(id, idx){
