@@ -116,7 +116,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 
 <div class="panel">
   <h2>Top 50 by peak calibrated Elo</h2>
-  <p class="muted">Each peak is adjusted against the top-50 mean at that basho, using the latest basho as the reference baseline. The date is when the calibrated peak was obtained.</p>
+  <p class="muted">The baseline is recalculated after every basho, using that basho's top-50 mean. The latest completed basho provides the reference scale. The date is when the calibrated peak was obtained.</p>
   <div class="tbl-wrap"><table><thead><tr><th>#</th><th>Rikishi</th><th class="num">Peak calibrated Elo</th><th>Date obtained</th><th class="num">Raw Elo then</th></tr></thead><tbody id="sep-cal-lb"></tbody></table></div>
 </div>
 
@@ -147,6 +147,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
     <li><strong>ky&#363;j&#333;.</strong> Withdrawals and forfeit (fusen) bouts are not wins or losses: neither side's rating moves. Only contested bouts count.</li>
     <li><strong>No decay.</strong> An absent rikishi's rating is frozen, so the rating pool is conserved across 68 years.</li>
     <li><strong>Coverage.</strong> Makuuchi and J&#363;ry&#333; have full bout records from Mar 1958. The four lower divisions have full bout records from Jan 1988; before that only aggregate W/L was published, so those rikishi hold their seed rating until 1988 or until they reach a sekitori division.</li>
+    <li><strong>Calibration.</strong> After each basho, the mean Elo of the top 50 rated rikishi is calculated. A rating is adjusted as raw Elo minus that basho's top-50 mean, plus the top-50 mean at the latest completed basho. This is a basho-level location adjustment, not an annual average.</li>
     <li><strong>Cross-era caution.</strong> Raw Elo is a within-pool performance measure, not an era-adjusted GOAT score. Later careers face a larger, deeper recorded pool and can accumulate higher ratings; compare a rikishi with the leaders of his own era as well as by raw peak.</li>
     <li><strong>Shikona.</strong> Names are the rikishi's latest ring name (Terunofuji debuted as Wakamisho; Kotozakura as Kotokamatani; Chiyonofuji as Oakimoto).</li>
     <li><strong>Data.</strong> 748,204 bouts reconstructed from sumo-api.com banzuke records (both rikishi's entries cross-checked; 3,517 fusen excluded). 9,048 rikishi rated across 409 bashos.</li>
