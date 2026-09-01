@@ -314,7 +314,7 @@ document.querySelectorAll("#sep-app .preset").forEach(b=>{
   kpi("Bouts replayed", "748,204");
   kpi("All-time #1", `${best[1]} <small>${best[3]}</small>`);
   // Stable IDs avoid selecting the older Hakuho (ID 2090) by name.
-  [3081,45,8854,20].forEach(id=>{ if (ro(id)) addRikishi(id); });
+  [3081,45,8850,20].forEach(id=>{ if (ro(id)) addRikishi(id); });
   renderLb();
   renderCalibratedLb();
 })();
