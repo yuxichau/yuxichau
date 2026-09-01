@@ -36,6 +36,8 @@ permalink: /projects/sumo-elo/
 #sep-app .search-results { position:absolute; top:32px; left:0; width:320px; background:#fff; border:1px solid #d0d7de; border-radius:6px; box-shadow:0 8px 24px rgba(0,0,0,.12); z-index:20; max-height:300px; overflow:auto; display:none; }
 #sep-app .search-results div { padding:6px 11px; font-size:.85rem; cursor:pointer; }
 #sep-app .search-results div:hover { background:#ddf4ff; }
+#sep-app .chart-lines { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:.6rem; }
+#sep-app .chart-lines .label { color:#57606a; font-size:.78rem; text-transform:uppercase; letter-spacing:.04em; }
 #sep-app .chips { display:flex; flex-wrap:wrap; gap:6px; }
 #sep-app .chip { display:inline-flex; align-items:center; gap:5px; background:#ddf4ff; color:#0969da; border:1px solid rgba(9,105,218,.35); border-radius:100px; padding:2px 6px 2px 11px; font-size:.82rem; }
 #sep-app .chip button { border:none; background:none; color:#57606a; cursor:pointer; font-size:1rem; line-height:1; padding:0 4px; }
@@ -69,9 +71,9 @@ permalink: /projects/sumo-elo/
       <input type="text" id="sep-q" placeholder="Search rikishi (e.g. Hakuho, Terunofuji, Aonishiki...)" autocomplete="off">
       <div class="search-results" id="sep-qr"></div>
     </div>
-    <span class="chips" id="sep-chips"></span>
   </div>
   <div class="chart-wrap"><canvas id="sep-chart"></canvas></div>
+  <div class="chart-lines"><span class="label">Chart lines</span><span class="chips" id="sep-chips"></span></div>
   <div class="chart-note" id="sep-note"></div>
 </div>
 
@@ -102,6 +104,7 @@ permalink: /projects/sumo-elo/
     <li><strong>ky&#363;j&#333;.</strong> Withdrawals and forfeit (fusen) bouts are not wins or losses: neither side's rating moves. Only contested bouts count.</li>
     <li><strong>No decay.</strong> An absent rikishi's rating is frozen, so the rating pool is conserved across 68 years.</li>
     <li><strong>Coverage.</strong> Makuuchi and J&#363;ry&#333; have full bout records from Mar 1958. The four lower divisions have full bout records from Jan 1988; before that only aggregate W/L was published, so those rikishi hold their seed rating until 1988 or until they reach a sekitori division.</li>
+    <li><strong>Cross-era caution.</strong> Raw Elo is a within-pool performance measure, not an era-adjusted GOAT score. Later careers face a larger, deeper recorded pool and can accumulate higher ratings; compare a rikishi with the leaders of his own era as well as by raw peak.</li>
     <li><strong>Shikona.</strong> Names are the rikishi's latest ring name (Terunofuji debuted as Wakamisho; Kotozakura as Kotokamatani; Chiyonofuji as Oakimoto).</li>
     <li><strong>Data.</strong> 748,204 bouts reconstructed from sumo-api.com banzuke records (both rikishi's entries cross-checked; 3,517 fusen excluded). 9,048 rikishi rated across 409 bashos.</li>
   </ul>
@@ -130,7 +133,7 @@ permalink: /projects/sumo-elo/
 (function(){
 const D = window.SUMO_DATA;
 const bashos = D.bashos, rikishi = D.rikishi, series = D.series;
-const DIVS = ["Makuuchi","J&#363;ry&#333;","Makushita","Sandanme","Jonidan","Jonokuchi"];
+const DIVS = ["Makuuchi","Jūryō","Makushita","Sandanme","Jonidan","Jonokuchi"];
 const PALETTE = ["#0969da","#cf222e","#1a7f37","#9a6700","#8250df","#0550ae","#d1242f","#116329","#bc4c00","#563d7c","#0a3069","#953800"];
 let fromIdx = 0, toIdx = bashos.length - 1;
 let selected = [], activeDims = [true,true,true,true,true,true];
@@ -159,7 +162,7 @@ q.addEventListener("input", ()=>{
   qr.innerHTML = "";
   if (!hits.length){ qr.style.display="none"; return; }
   hits.forEach(r=>{ const d=document.createElement("div");
-    d.textContent = `${r[1]} — debut ${bashos[r[2]]} · peak ${r[3]}`;
+    d.textContent = `${r[1]} — debut ${bashos[r[2]]} · peak ${r[3]} · ID ${r[0]}`;
     d.onclick = ()=>{ addRikishi(r[0]); q.value=""; qr.style.display="none"; }; qr.appendChild(d); });
   qr.style.display="block";
 });
@@ -260,9 +263,8 @@ document.querySelectorAll("#sep-app .preset").forEach(b=>{
   kpi("Rikishi rated", rikishi.length.toLocaleString());
   kpi("Bouts replayed", "748,204");
   kpi("All-time #1", `${best[1]} <small>${best[3]}</small>`);
-  ["Hakuho","Terunofuji","Aonishiki","Kotozakura"].forEach(n=>{
-    for (const r of rikishi) if (r[1]===n){ addRikishi(r[0]); break; }
-  });
+  // Stable IDs avoid selecting the older Hakuho (ID 2090) by name.
+  [3081,45,8854,20].forEach(id=>{ if (ro(id)) addRikishi(id); });
   renderLb();
 })();
 })();
