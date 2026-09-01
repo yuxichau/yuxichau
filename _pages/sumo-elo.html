@@ -195,21 +195,33 @@ const mainChart = new Chart($("sep-chart"), {
 window.mainChart = mainChart;
 
 function renderChart(){
-  const labels = bashos.slice(fromIdx, toIdx+1);
+  // Compress the chart to the union of the selected rikishi's active dates.
+  // The leaderboard window still controls the available outer bounds.
+  let chartFrom = fromIdx, chartTo = toIdx;
+  if (selected.length) {
+    const available = [];
+    selected.forEach(id=>{
+      const s = series[id];
+      if (!s) return;
+      for (let i=0;i+2<s.length;i+=3) if (s[i]>=fromIdx && s[i]<=toIdx) available.push(s[i]);
+    });
+    if (available.length) { chartFrom=Math.min(...available); chartTo=Math.max(...available); }
+  }
+  const labels = bashos.slice(chartFrom, chartTo+1);
   mainChart.options.plugins.legend.display = selected.length>1 && selected.length<=8;
   mainChart.data = { labels, datasets: [] };
   selected.forEach((id,si)=>{
     const s = series[id]; if (!s) return;
     const byIdx = new Map();
-    for (let i=0;i+2<s.length;i+=3){ const bi=s[i]; if (bi>=fromIdx && bi<=toIdx) byIdx.set(bi, s[i+1]); }
-    const data = labels.map((_,k)=>byIdx.has(fromIdx+k) ? byIdx.get(fromIdx+k) : null);
+    for (let i=0;i+2<s.length;i+=3){ const bi=s[i]; if (bi>=chartFrom && bi<=chartTo) byIdx.set(bi, s[i+1]); }
+    const data = labels.map((_,k)=>byIdx.has(chartFrom+k) ? byIdx.get(chartFrom+k) : null);
     mainChart.data.datasets.push({ label: (ro(id)||{1:String(id)})[1], data,
       borderColor: PALETTE[si%PALETTE.length], backgroundColor: PALETTE[si%PALETTE.length]+"22",
       fill:false, pointRadius:0, borderWidth:2, spanGaps:false, tension:.15 });
   });
   mainChart.update();
   $("sep-note").textContent = selected.length
-    ? "Gaps = bashos where the rikishi was not on a banzuke (kyujo / retirement)."
+    ? "The x-axis spans the selected rikishi's available dates; gaps are bashos where a selected rikishi was not on a banzuke (kyujo / retirement)."
     : "Search and add rikishi above to plot their Elo curves.";
 }
 
