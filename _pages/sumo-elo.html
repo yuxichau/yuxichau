@@ -43,6 +43,9 @@ permalink: /projects/sumo-elo/
 #sep-app .chip button { border:none; background:none; color:#57606a; cursor:pointer; font-size:1rem; line-height:1; padding:0 4px; }
 #sep-app .chart-wrap { position:relative; height:400px; background:#fff; border:1px solid #d0d7de; border-radius:8px; padding:.5rem; }
 #sep-app .chart-note { font-size:.8rem; color:#656d76; margin-top:.5rem; }
+#sep-app .view-tabs { display:flex; gap:.4rem; margin-bottom:.7rem; }
+#sep-app .view-tab { font-size:.82rem; padding:.35rem .8rem; border:1px solid #d0d7de; background:#fff; color:#57606a; border-radius:6px; cursor:pointer; }
+#sep-app .view-tab.active { background:#0969da; border-color:#0969da; color:#fff; }
 #sep-app .div-filter { display:flex; flex-wrap:wrap; gap:.5rem .8rem; align-items:center; margin-bottom:.6rem; font-size:.85rem; }
 #sep-app .div-filter label { color:#57606a; display:inline-flex; align-items:center; gap:4px; cursor:pointer; }
 #sep-app .tbl-wrap { max-height:460px; overflow:auto; border:1px solid #d0d7de; border-radius:6px; background:#fff; }
@@ -66,6 +69,10 @@ permalink: /projects/sumo-elo/
 
 <div class="panel">
   <h2>Rikishi explorer</h2>
+  <div class="view-tabs" role="tablist" aria-label="Rating view">
+    <button class="view-tab active" data-view="raw" role="tab" aria-selected="true">Raw Elo</button>
+    <button class="view-tab" data-view="calibrated" role="tab" aria-selected="false">Calibrated Elo</button>
+  </div>
   <div class="controls">
     <div class="searchbox">
       <input type="text" id="sep-q" placeholder="Search rikishi (e.g. Hakuho, Terunofuji, Aonishiki...)" autocomplete="off">
@@ -75,6 +82,12 @@ permalink: /projects/sumo-elo/
   <div class="chart-wrap"><canvas id="sep-chart"></canvas></div>
   <div class="chart-lines"><span class="label">Chart lines</span><span class="chips" id="sep-chips"></span></div>
   <div class="chart-note" id="sep-note"></div>
+</div>
+
+<div class="panel">
+  <h2>Top 50 by peak calibrated Elo</h2>
+  <p class="muted">Each peak is adjusted against the top-50 mean at that basho, using the latest basho as the reference baseline. The date is when the calibrated peak was obtained.</p>
+  <div class="tbl-wrap"><table><thead><tr><th>#</th><th>Rikishi</th><th class="num">Peak calibrated Elo</th><th>Date obtained</th><th class="num">Raw Elo then</th></tr></thead><tbody id="sep-cal-lb"></tbody></table></div>
 </div>
 
 <div class="panel">
@@ -137,6 +150,14 @@ const DIVS = ["Makuuchi","Jūryō","Makushita","Sandanme","Jonidan","Jonokuchi"]
 const PALETTE = ["#0969da","#cf222e","#1a7f37","#9a6700","#8250df","#0550ae","#d1242f","#116329","#bc4c00","#563d7c","#0a3069","#953800"];
 let fromIdx = 0, toIdx = bashos.length - 1;
 let selected = [], activeDims = [true,true,true,true,true,true];
+let view = "raw";
+
+// Additive location adjustment using the top-50 mean at each basho.
+const ratingsByBasho = bashos.map(()=>[]);
+for (const id in series) { const s=series[id]; for(let i=0;i+2<s.length;i+=3) ratingsByBasho[s[i]].push(s[i+1]); }
+const top50Mean = ratingsByBasho.map(xs=>{ const a=xs.slice().sort((a,b)=>b-a).slice(0,50); return a.length ? a.reduce((x,y)=>x+y,0)/a.length : null; });
+const referenceBaseline = top50Mean[top50Mean.length-1];
+function calibratedValue(raw, idx){ return raw - top50Mean[idx] + referenceBaseline; }
 
 const $ = id => document.getElementById(id);
 
@@ -214,27 +235,29 @@ function renderChart(){
     const s = series[id]; if (!s) return;
     const byIdx = new Map();
     for (let i=0;i+2<s.length;i+=3){ const bi=s[i]; if (bi>=chartFrom && bi<=chartTo) byIdx.set(bi, s[i+1]); }
-    const data = labels.map((_,k)=>byIdx.has(chartFrom+k) ? byIdx.get(chartFrom+k) : null);
+    const data = labels.map((_,k)=>byIdx.has(chartFrom+k) ? (view==="raw" ? byIdx.get(chartFrom+k) : calibratedValue(byIdx.get(chartFrom+k), chartFrom+k)) : null);
     mainChart.data.datasets.push({ label: (ro(id)||{1:String(id)})[1], data,
       borderColor: PALETTE[si%PALETTE.length], backgroundColor: PALETTE[si%PALETTE.length]+"22",
       fill:false, pointRadius:0, borderWidth:2, spanGaps:false, tension:.15 });
   });
+  mainChart.options.scales.y.title.text = view==="raw" ? "Raw Elo" : "Calibrated Elo";
   mainChart.update();
   $("sep-note").textContent = selected.length
-    ? "The x-axis spans the selected rikishi's available dates; gaps are bashos where a selected rikishi was not on a banzuke (kyujo / retirement)."
+    ? (view==="raw" ? "Raw Elo. The x-axis spans the selected rikishi's available dates; gaps are bashos where a selected rikishi was not on a banzuke (kyujo / retirement)." : `Calibrated Elo = raw Elo − top-50 mean at that basho + ${Math.round(referenceBaseline)}. This removes movement in the elite-field baseline while preserving contemporaneous gaps.`)
     : "Search and add rikishi above to plot their Elo curves.";
 }
 
 function ratingAt(id, idx){
   const s = series[id]; if (!s) return null;
   let best = null;
-  for (let i=0;i+2<s.length;i+=3){ if (s[i] > idx) break; best = [s[i+1], s[i+2]]; }
+  for (let i=0;i+2<s.length;i+=3){ if (s[i] > idx) break; best = [s[i+1], s[i+2], s[i]]; }
   return best;
 }
+function calibratedAt(id, idx){ const at=ratingAt(id,idx); return at ? [calibratedValue(at[0], at[2]),at[1],at[2]] : null; }
 function renderLb(){
   const rows = [];
   for (const r of rikishi){
-    const at = ratingAt(r[0], toIdx), st = ratingAt(r[0], fromIdx);
+    const at = view==="raw" ? ratingAt(r[0], toIdx) : calibratedAt(r[0], toIdx), st = view==="raw" ? ratingAt(r[0], fromIdx) : calibratedAt(r[0], fromIdx);
     if (!at) continue;
     if (!activeDims[at[1]]) continue;
     const s = series[r[0]]; let inWin = false;
@@ -253,6 +276,20 @@ function renderLb(){
   });
   if (!rows.length) tb.innerHTML = `<tr><td colspan="6" class="muted">No rikishi in this window/division selection.</td></tr>`;
 }
+
+function renderCalibratedLb(){
+  const rows=[];
+  for(const r of rikishi){ const s=series[r[0]]; if(!s) continue; let best=null;
+    for(let i=0;i+2<s.length;i+=3){ const v=calibratedValue(s[i+1],s[i]); if(!best || v>best.elo) best={elo:v,idx:s[i],raw:s[i+1]}; }
+    if(best) rows.push({name:r[1],id:r[0],elo:best.elo,idx:best.idx,raw:best.raw});
+  }
+  rows.sort((a,b)=>b.elo-a.elo); const tb=$("sep-cal-lb"); tb.innerHTML="";
+  rows.slice(0,50).forEach((x,i)=>{ const tr=document.createElement("tr"); tr.innerHTML=`<td>${i+1}</td><td><a href="#" onclick="event.preventDefault();addRikishi(${x.id})">${x.name}</a></td><td class="num">${Math.round(x.elo)}</td><td>${bashos[x.idx]}</td><td class="num">${Math.round(x.raw)}</td>`; tb.appendChild(tr); });
+}
+
+document.querySelectorAll("#sep-app .view-tab").forEach(b=>b.addEventListener("click",()=>{
+  view=b.dataset.view; document.querySelectorAll("#sep-app .view-tab").forEach(x=>{x.classList.toggle("active",x===b);x.setAttribute("aria-selected",x===b?"true":"false")}); renderChart(); renderLb();
+}));
 
 function setWindow(f,t){
   fromIdx=f; toIdx=t; fromSel.value=String(f); toSel.value=String(t);
@@ -278,6 +315,7 @@ document.querySelectorAll("#sep-app .preset").forEach(b=>{
   // Stable IDs avoid selecting the older Hakuho (ID 2090) by name.
   [3081,45,8854,20].forEach(id=>{ if (ro(id)) addRikishi(id); });
   renderLb();
+  renderCalibratedLb();
 })();
 })();
 </script>
