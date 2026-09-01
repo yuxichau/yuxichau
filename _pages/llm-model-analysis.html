@@ -119,7 +119,8 @@ permalink: /projects/llm-model-analysis/
 
 <div class="chart-card">
   <div class="chart-wrap"><canvas id="scatter"></canvas></div>
-  <p class="chart-legend">X axis is log-scaled cost per task (USD). Hover a point for details; click to highlight the row in the table. Models without published cost-per-task data are listed in the table but not plotted. The green step line is the <strong>best-in-class frontier</strong>: at each price it marks the highest intelligence any model achieves, so every model below the line is beaten on intelligence by a cheaper or equal-cost one.</p>
+  <p class="chart-legend">The X axis shows cost per task (USD), with log scale on by default. Use the toggle to compare log and linear views. Hover a point for details; click to highlight the row in the table. Models without published cost-per-task data are listed in the table but not plotted. The green line is the <strong>best-in-class frontier</strong>: each diagonal segment connects successive models where no cheaper model scores higher.</p>
+  <button class="btn" id="fScale" type="button" aria-pressed="true">Log X axis: On</button>
 </div>
 
 <div class="bic">
@@ -138,7 +139,7 @@ permalink: /projects/llm-model-analysis/
 
 <div class="foot">
   <p><strong>Methodology.</strong> Intelligence Index v4.1 and cost-per-task figures are published by <a href="https://artificialanalysis.ai" target="_blank" rel="noopener">Artificial Analysis</a> and reproduced here with attribution. Cost per task is the USD price to complete their standard intelligence-index task set at a 3:1 input-output ratio. Where Artificial Analysis has not published a cost (4 of the top 50), the model appears in the table only. Scores from different index versions are not comparable; this snapshot uses one version throughout.</p>
-  <p><strong>Best in class.</strong> The green step line connects models where no cheaper model scores higher, so it hugs the top-left edge of the point cloud; anything below the line is dominated on intelligence per dollar at its own price point. License labels reflect weights availability at the data-pull date (open-weights releases after that date are not reflected); Kimi K3 ships under its own license with commercial conditions and is counted as open source.</p>
+  <p><strong>Best in class.</strong> The green diagonal line connects models where no cheaper model scores higher, tracing the top-left edge of the point cloud; anything below the line is dominated on intelligence per dollar at its own price point. License labels reflect weights availability at the data-pull date (open-weights releases after that date are not reflected); Kimi K3 ships under its own license with commercial conditions and is counted as open source.</p>
 </div>
 
 <script>
@@ -170,6 +171,7 @@ const EFFORT_ORDER = ["max", "xhigh", "high", "medium", "low", "minimal"];
 let shown = DATA.slice();
 let activeCreators = new Set([...new Set(DATA.map(d => d.creator))]);
 let sortCol = "rank", sortAsc = true;
+let logX = true;
 let chart = null;
 
 const $ = id => document.getElementById(id);
@@ -270,7 +272,7 @@ function renderChart(bic) {
       pointRadius: 5, pointHoverRadius: 7, borderWidth: 0,
     });
   });
-  // best-in-class frontier as a green step line through the top-left corner
+  // best-in-class frontier as a green diagonal line through the top-left corner
   if (bic.list.length) {
     datasets.push({
       type: "line",
@@ -278,7 +280,7 @@ function renderChart(bic) {
       data: bic.list.map(d => ({ x: d.cost, y: d.ii })),
       borderColor: "#1a7f37", backgroundColor: "transparent",
       borderWidth: 2, pointRadius: 0, pointHitRadius: 0,
-      fill: false, tension: 0, stepped: "after",
+      fill: false, tension: 0,
       order: -1,
     });
   }
@@ -321,7 +323,7 @@ function renderChart(bic) {
         }
       },
       scales: {
-        x: { type: "logarithmic", title: { display: true, text: "Cost per task (USD, log scale)" }, grid: { color: "#eaeef2" } },
+        x: { type: logX ? "logarithmic" : "linear", title: { display: true, text: "Cost per task (USD, " + (logX ? "log scale" : "linear scale") + ")" }, grid: { color: "#eaeef2" } },
         y: { title: { display: true, text: "Intelligence Index (v4.1)" }, grid: { color: "#eaeef2" } }
       }
     }
@@ -417,6 +419,12 @@ function initControls() {
   ["fFamily", "fReasoning", "fEffort", "fLicense"].forEach(id => $(id).onchange = render);
   $("fSearch").oninput = render;
   $("fMinII").oninput = () => { $("minIILabel").textContent = $("fMinII").value; render(); };
+  $("fScale").onclick = () => {
+    logX = !logX;
+    $("fScale").textContent = "Log X axis: " + (logX ? "On" : "Off");
+    $("fScale").setAttribute("aria-pressed", String(logX));
+    render();
+  };
   $("fReset").onclick = () => {
     activeCreators = new Set([...new Set(DATA.map(d => d.creator))]);
     $("fCreators").querySelectorAll(".chip").forEach(ch => ch.classList.add("on"));
