@@ -20,7 +20,7 @@ author: Yu Xi Chau
 
 **Wright:** Thomas is famous for arguments for God's existence, but his account of God is more demanding than the familiar “first cause” summary. He insists that God is not one object inside the universe, even the largest or most powerful object. God is the creator on whom every creature depends for its existence.
 
-**Barron:** Aquinas calls God *ipsum esse subsistens*, subsistent being itself. That phrase can sound abstract, but it protects the biblical confession that God is not a rival to creation. God gives being to creatures without competing with them. Creation can be genuinely real and genuinely dependent at the same time.
+**Barron:** Aquinas calls God *ipsum esse subsistens*, subsistent being itself. That phrase can sound abstract, but it protects the biblical confession that God is not a rival to creation. God gives being to creatures without competing with them. Creation can be genuinely real and genuinely dependent at the same time. His account of divine simplicity and creation is developed in the [*Summa Theologiae*, Prima Pars](https://www.newadvent.org/summa/1.htm), while the limits of natural theology are discussed in the [Stanford Encyclopedia of Philosophy entry on Aquinas](https://plato.stanford.edu/entries/aquinas).
 
 **Wright:** And reason has a boundary. The human mind can argue toward God's existence and can say something true about God, but it cannot discover the Trinity or the incarnation by philosophy alone. Revelation is needed. The God of Christian theology is known most fully because God has acted and spoken in Israel and in Jesus.
 

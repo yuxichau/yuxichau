@@ -12,7 +12,7 @@ author: Yu Xi Chau
 
 **Mary Beard:** We should begin by refusing the tidy version of the story. People sometimes say that Christianity took a polygamous biblical world and invented monogamy. That gives Christianity too much credit and the ancient world too little complexity.
 
-**N. T. Wright:** Agreed. The Bible contains polygamous households. Abraham has Sarah and Hagar. Jacob has Leah, Rachel, Bilhah, and Zilpah. David and Solomon have several wives. The stories do not present each arrangement as a simple moral ideal, but neither does the Old Testament announce a general ban on polygyny.
+**N. T. Wright:** Agreed. The Bible contains polygamous households. Abraham has Sarah and Hagar. Jacob has Leah, Rachel, Bilhah, and Zilpah. David and Solomon have several wives. The stories do not present each arrangement as a simple moral ideal, but neither does the Old Testament announce a general ban on polygyny. The Torah regulates the practice and its consequences: [Deuteronomy 17](https://www.sefaria.org/Deuteronomy.17.17?lang=bi) warns Israel's kings against multiplying wives, [Deuteronomy 21](https://www.sefaria.org/Deuteronomy.21.15-17?lang=bi) addresses inheritance when a man has two wives, and [Exodus 21](https://www.sefaria.org/Exodus.21.10?lang=bi) protects an existing wife's food, clothing, and marital rights.
 
 **Beard:** And Rome matters. Roman law recognised one legal marriage at a time, although Roman sexual and domestic life was hardly a picture of modern equality or exclusive desire. A respectable man could have slaves, freedwomen, or lovers. Legal monogamy did not mean emotional or sexual monogamy.
 
