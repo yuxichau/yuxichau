@@ -32,6 +32,10 @@ permalink: /projects/sumo-elo/
 #sep-app button.pill.active { background:#0969da; border-color:#0969da; color:#fff; }
 #sep-app select.sel { font-size:.85rem; padding:.25rem .4rem; border:1px solid #d0d7de; border-radius:6px; background:#fff; color:#1f2328; max-width:9.5rem; }
 #sep-app input[type=text] { font-size:.85rem; padding:.35rem .5rem; border:1px solid #d0d7de; border-radius:6px; width:250px; max-width:100%; }
+#sep-app .chart-options { display:flex; flex-wrap:wrap; gap:.8rem; align-items:center; margin:0 0 .7rem; font-size:.82rem; color:#57606a; }
+#sep-app .chart-options label { display:inline-flex; align-items:center; gap:5px; }
+#sep-app .chart-options input[type=range] { width:120px; }
+#sep-app .chart-options output { min-width:3.2em; color:#1f2328; font-variant-numeric:tabular-nums; }
 #sep-app .searchbox { position:relative; }
 #sep-app .search-results { position:absolute; top:32px; left:0; width:320px; background:#fff; border:1px solid #d0d7de; border-radius:6px; box-shadow:0 8px 24px rgba(0,0,0,.12); z-index:20; max-height:300px; overflow:auto; display:none; }
 #sep-app .search-results div { padding:6px 11px; font-size:.85rem; cursor:pointer; }
@@ -77,9 +81,14 @@ permalink: /projects/sumo-elo/
   </div>
   <div class="controls">
     <div class="searchbox">
-      <input type="text" id="sep-q" placeholder="Search rikishi (e.g. Hakuho, Terunofuji, Aonishiki...)" autocomplete="off">
+      <input type="text" id="sep-q" placeholder="Search rikishi in English (e.g. Hakuho, Terunofuji, Aonishiki...)" autocomplete="off">
       <div class="search-results" id="sep-qr"></div>
     </div>
+  </div>
+  <div class="chart-options" aria-label="Chart display options">
+    <label><input type="checkbox" id="sep-smooth"> LOWESS smoothing</label>
+    <label for="sep-span">Parameter <input type="range" id="sep-span" min="0.05" max="0.80" step="0.01" value="0.20"><output id="sep-span-value">20%</output></label>
+    <label><input type="checkbox" id="sep-jp"> Japanese rikishi names</label>
   </div>
   <div class="chart-wrap"><canvas id="sep-chart"></canvas></div>
   <div class="chart-lines"><span class="label">Chart lines</span><span class="chips" id="sep-chips"></span></div>
@@ -153,7 +162,25 @@ const DIVS = ["Makuuchi","Jūryō","Makushita","Sandanme","Jonidan","Jonokuchi"]
 const PALETTE = ["#0969da","#cf222e","#1a7f37","#9a6700","#8250df","#0550ae","#d1242f","#116329","#bc4c00","#563d7c","#0a3069","#953800"];
 let fromIdx = 0, toIdx = bashos.length - 1;
 let selected = [], disabled = new Set(), activeDims = [true,true,true,true,true,true];
-let view = "raw";
+let view = "raw", smoothEnabled = false, lowessSpan = 0.20, jpNames = false;
+function displayName(r){ return (jpNames && r?.[4]) ? r[4] : (r?.[1] ?? ""); }
+function lowess(data, span){
+  const out=data.slice(); let start=0;
+  while(start<data.length){
+    while(start<data.length && data[start]==null) start++;
+    if(start>=data.length) break;
+    let end=start; while(end<data.length && data[end]!=null) end++;
+    const n=end-start, k=Math.max(2,Math.ceil(span*n));
+    for(let i=start;i<end;i++){
+      const ns=[]; for(let j=start;j<end;j++) ns.push([Math.abs(j-i),j,data[j]]); ns.sort((a,b)=>a[0]-b[0]);
+      const h=ns[Math.min(k-1,ns.length-1)][0]||1; let sw=0,sx=0,sy=0,sxx=0,sxy=0;
+      ns.slice(0,k).forEach(([dist,j,y])=>{ const u=dist/h,w=Math.pow(1-u*u*u,3); sw+=w;sx+=w*j;sy+=w*y;sxx+=w*j*j;sxy+=w*j*y; });
+      const den=sw*sxx-sx*sx; out[i]=den ? (sy*sxx-sx*sxy+(sw*sxy-sx*sy)*i)/den : sy/sw;
+    }
+    start=end;
+  }
+  return out;
+}
 
 // Additive location adjustment using the top-50 mean at each basho.
 const ratingsByBasho = bashos.map(()=>[]);
@@ -191,6 +218,10 @@ q.addEventListener("input", ()=>{
   qr.style.display="block";
 });
 document.addEventListener("click", e=>{ if(!e.target.closest(".searchbox")) qr.style.display="none"; });
+const smoothCtl=$("sep-smooth"), spanCtl=$("sep-span"), jpCtl=$("sep-jp"), spanValue=$("sep-span-value");
+smoothCtl.addEventListener("change", e=>{ smoothEnabled=e.target.checked; renderChart(); });
+spanCtl.addEventListener("input", e=>{ lowessSpan=+e.target.value; spanValue.textContent=Math.round(lowessSpan*100)+"%"; if(smoothEnabled) renderChart(); });
+jpCtl.addEventListener("change", e=>{ jpNames=e.target.checked; renderChips(); renderChart(); renderLb(); renderCalibratedLb(); });
 
 function ro(id){ for (const r of rikishi) if (r[0]===id) return r; return null; }
 function addRikishi(id){
@@ -206,8 +237,8 @@ function renderChips(){
   const c = $("sep-chips"); c.innerHTML = "";
   selected.forEach(id=>{ const r = ro(id), off=disabled.has(id);
     const sp = document.createElement("span"); sp.className=`chip${off ? " off" : ""}`;
-    const toggle=document.createElement("button"); toggle.className="chip-toggle"; toggle.type="button"; toggle.textContent=r[1]; toggle.title=off ? "Show on chart" : "Hide from chart"; toggle.setAttribute("aria-pressed",String(!off)); toggle.onclick=()=>toggleRikishi(id);
-    const remove=document.createElement("button"); remove.className="chip-remove"; remove.type="button"; remove.textContent="×"; remove.title="Remove filter"; remove.setAttribute("aria-label",`Remove ${r[1]}`); remove.onclick=()=>removeRikishi(id);
+    const toggle=document.createElement("button"); toggle.className="chip-toggle"; toggle.type="button"; toggle.textContent=displayName(r); toggle.title=off ? "Show on chart" : "Hide from chart"; toggle.setAttribute("aria-pressed",String(!off)); toggle.onclick=()=>toggleRikishi(id);
+    const remove=document.createElement("button"); remove.className="chip-remove"; remove.type="button"; remove.textContent="×"; remove.title="Remove filter"; remove.setAttribute("aria-label",`Remove ${displayName(r)}`); remove.onclick=()=>removeRikishi(id);
     sp.append(toggle,remove); c.appendChild(sp);
   });
 }
@@ -245,7 +276,8 @@ function renderChart(){
     const byIdx = new Map();
     for (let i=0;i+2<s.length;i+=3){ const bi=s[i]; if (bi>=chartFrom && bi<=chartTo) byIdx.set(bi, s[i+1]); }
     const data = labels.map((_,k)=>byIdx.has(chartFrom+k) ? (view==="raw" ? byIdx.get(chartFrom+k) : calibratedValue(byIdx.get(chartFrom+k), chartFrom+k)) : null);
-    mainChart.data.datasets.push({ label: (ro(id)||{1:String(id)})[1], data,
+    const plottedData = smoothEnabled ? lowess(data, lowessSpan) : data;
+    mainChart.data.datasets.push({ label: displayName(ro(id)) || String(id), data:plottedData,
       borderColor: PALETTE[si%PALETTE.length], backgroundColor: PALETTE[si%PALETTE.length]+"22",
       fill:false, pointRadius:0, borderWidth:2, spanGaps:false, tension:.15 });
   });
@@ -272,7 +304,7 @@ function renderLb(){
     const s = series[r[0]]; let inWin = false;
     for (let i=0;i+2<s.length;i+=3){ if (s[i]>=fromIdx && s[i]<=toIdx){ inWin=true; break; } }
     if (!inWin) continue;
-    rows.push({ id:r[0], name:r[1], div:at[1], elo:at[0], delta:st ? at[0]-st[0] : null, peak:r[3] });
+    rows.push({ id:r[0], name:displayName(r), div:at[1], elo:at[0], delta:st ? at[0]-st[0] : null, peak:r[3] });
   }
   rows.sort((a,b)=>b.elo-a.elo);
   const tb = $("sep-lb"); tb.innerHTML = "";
@@ -290,7 +322,7 @@ function renderCalibratedLb(){
   const rows=[];
   for(const r of rikishi){ const s=series[r[0]]; if(!s) continue; let best=null;
     for(let i=0;i+2<s.length;i+=3){ const v=calibratedValue(s[i+1],s[i]); if(!best || v>best.elo) best={elo:v,idx:s[i],raw:s[i+1]}; }
-    if(best) rows.push({name:r[1],id:r[0],elo:best.elo,idx:best.idx,raw:best.raw});
+    if(best) rows.push({name:displayName(r),id:r[0],elo:best.elo,idx:best.idx,raw:best.raw});
   }
   rows.sort((a,b)=>b.elo-a.elo); const tb=$("sep-cal-lb"); tb.innerHTML="";
   rows.slice(0,50).forEach((x,i)=>{ const tr=document.createElement("tr"); tr.innerHTML=`<td>${i+1}</td><td><a href="#" onclick="event.preventDefault();addRikishi(${x.id})">${x.name}</a></td><td class="num">${Math.round(x.elo)}</td><td>${bashos[x.idx]}</td><td class="num">${Math.round(x.raw)}</td>`; tb.appendChild(tr); });
