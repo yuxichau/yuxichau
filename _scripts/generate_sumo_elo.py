@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Generate _pages/sumo-elo.html -- All-Division Sumo Elo Explorer.
 
-Source dataset: window.SUMO_DATA = {bashos:[...], rikishi:[[id,name,debutIdx,peak,peakIdx]...],
-series:{id:[bashoIdx,rating,divCode,...]}} -- produced by /root/sumo-elo/gen_dashboard_data.py
+Source dataset: window.SUMO_DATA = {bashos:[...], rikishi:[[id,name,debutIdx,peak,japaneseName]...],
+series:{id:[bashoIdx,rating,divCode,...]}} -- produced by /root/sumo-elo/gen_dashboard_data.py.
+The optional Japanese name is populated from sumo-api.com where available; English remains the fallback.
 (sumo-api.com banzuke data, day-by-day Elo replay 1958-2026, K=64, fusen/kyujo excluded,
 no decay, all six divisions).
 
