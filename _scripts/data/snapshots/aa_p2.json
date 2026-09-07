@@ -1,6 +1,6 @@
 {
  "tier": "free",
- "intelligence_index_version": 4.1,
+ "intelligence_index_version": 4.2,
  "pagination": {
   "page": 2,
   "page_size": 200,
@@ -8,6 +8,174 @@
   "has_more": true
  },
  "data": [
+  {
+   "id": "4bbceacb-cf47-464b-b60f-e1d1fe016d67",
+   "name": "MiniMax-M2.7",
+   "slug": "minimax-m2-7",
+   "release_date": "2026-03-18",
+   "model_creator": {
+    "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
+    "name": "MiniMax"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 30.1,
+    "artificial_analysis_coding_index": 52.6,
+    "artificial_analysis_agentic_index": null
+   },
+   "artificial_analysis_intelligence_index_cost": null,
+   "pricing": {
+    "price_1m_input_tokens": 0.3,
+    "price_1m_output_tokens": 1.2,
+    "price_1m_cache_hit_tokens": 0.06,
+    "price_1m_cache_write_tokens": 0.38
+   },
+   "performance": {
+    "median_output_tokens_per_second": 71.44,
+    "median_time_to_first_token_seconds": 1.45,
+    "median_time_to_first_answer_token_seconds": 35.91,
+    "median_end_to_end_response_time_seconds": 42.91
+   }
+  },
+  {
+   "id": "4c111fbc-d13a-42b4-858c-1dc17fe3c1d1",
+   "name": "Grok-1",
+   "slug": "grok-1",
+   "release_date": "2024-03-17",
+   "model_creator": {
+    "id": "a1e3ddcf-d3e4-44a5-9e8f-029a69850875",
+    "name": "SpaceXAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 1,
+    "artificial_analysis_coding_index": null,
+    "artificial_analysis_agentic_index": null
+   },
+   "artificial_analysis_intelligence_index_cost": null,
+   "pricing": {
+    "price_1m_input_tokens": null,
+    "price_1m_output_tokens": null,
+    "price_1m_cache_hit_tokens": null,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": null,
+    "median_time_to_first_token_seconds": null,
+    "median_time_to_first_answer_token_seconds": null,
+    "median_end_to_end_response_time_seconds": null
+   }
+  },
+  {
+   "id": "4d6dd5ce-08cb-4e87-9288-1dd2f022aa35",
+   "name": "Doubao Seed Code",
+   "slug": "doubao-seed-code",
+   "release_date": "2025-11-11",
+   "model_creator": {
+    "id": "2354746c-4775-4a06-b64d-0ba4137785b8",
+    "name": "ByteDance Seed"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 19.5,
+    "artificial_analysis_coding_index": null,
+    "artificial_analysis_agentic_index": null
+   },
+   "artificial_analysis_intelligence_index_cost": null,
+   "pricing": {
+    "price_1m_input_tokens": null,
+    "price_1m_output_tokens": null,
+    "price_1m_cache_hit_tokens": null,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": null,
+    "median_time_to_first_token_seconds": null,
+    "median_time_to_first_answer_token_seconds": null,
+    "median_end_to_end_response_time_seconds": null
+   }
+  },
+  {
+   "id": "4dc12a38-b18f-4c43-8e1b-678f8434b5b1",
+   "name": "GPT-5.1 (high)",
+   "slug": "gpt-5-1",
+   "release_date": "2025-11-13",
+   "model_creator": {
+    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
+    "name": "OpenAI"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 29.1,
+    "artificial_analysis_coding_index": 49.4,
+    "artificial_analysis_agentic_index": null
+   },
+   "artificial_analysis_intelligence_index_cost": null,
+   "pricing": {
+    "price_1m_input_tokens": 1.25,
+    "price_1m_output_tokens": 10,
+    "price_1m_cache_hit_tokens": 0.13,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 86.25,
+    "median_time_to_first_token_seconds": 68.48,
+    "median_time_to_first_answer_token_seconds": 68.48,
+    "median_end_to_end_response_time_seconds": 74.28
+   }
+  },
+  {
+   "id": "5016ea75-7b0e-4737-a7e6-1062c6d90fd4",
+   "name": "Gemini 3.5 Flash (medium)",
+   "slug": "gemini-3-5-flash-medium",
+   "release_date": "2026-05-19",
+   "model_creator": {
+    "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "name": "Google"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 38,
+    "artificial_analysis_coding_index": null,
+    "artificial_analysis_agentic_index": null
+   },
+   "artificial_analysis_intelligence_index_cost": null,
+   "pricing": {
+    "price_1m_input_tokens": 1.5,
+    "price_1m_output_tokens": 9,
+    "price_1m_cache_hit_tokens": 0.15,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 222.96,
+    "median_time_to_first_token_seconds": 14.22,
+    "median_time_to_first_answer_token_seconds": 14.22,
+    "median_end_to_end_response_time_seconds": 16.46
+   }
+  },
+  {
+   "id": "504412c2-2ada-499b-aebf-7e0a35c9d286",
+   "name": "Claude 4 Opus (Non-reasoning)",
+   "slug": "claude-4-opus",
+   "release_date": "2025-05-22",
+   "model_creator": {
+    "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
+    "name": "Anthropic"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 19.1,
+    "artificial_analysis_coding_index": null,
+    "artificial_analysis_agentic_index": null
+   },
+   "artificial_analysis_intelligence_index_cost": null,
+   "pricing": {
+    "price_1m_input_tokens": 15,
+    "price_1m_output_tokens": 75,
+    "price_1m_cache_hit_tokens": 1.5,
+    "price_1m_cache_write_tokens": 18.75
+   },
+   "performance": {
+    "median_output_tokens_per_second": null,
+    "median_time_to_first_token_seconds": null,
+    "median_time_to_first_answer_token_seconds": null,
+    "median_end_to_end_response_time_seconds": null
+   }
+  },
   {
    "id": "508943e4-e9e1-4d10-9c0e-a7650e9d7315",
    "name": "EXAONE 4.5 33B",
@@ -18,7 +186,7 @@
     "name": "LG AI Research"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 20.5,
+    "artificial_analysis_intelligence_index": 14,
     "artificial_analysis_coding_index": 23.6,
     "artificial_analysis_agentic_index": null
    },
@@ -46,7 +214,7 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 30,
+    "artificial_analysis_intelligence_index": 22.7,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -58,10 +226,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 81.99,
-    "median_time_to_first_token_seconds": 5.61,
-    "median_time_to_first_answer_token_seconds": 5.61,
-    "median_end_to_end_response_time_seconds": 11.71
+    "median_output_tokens_per_second": 82.46,
+    "median_time_to_first_token_seconds": 5.63,
+    "median_time_to_first_answer_token_seconds": 5.63,
+    "median_end_to_end_response_time_seconds": 11.69
    }
   },
   {
@@ -74,7 +242,7 @@
     "name": "Mistral"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 9,
+    "artificial_analysis_intelligence_index": 3.5,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -102,16 +270,11 @@
     "name": "Kimi"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 48.3,
+    "artificial_analysis_intelligence_index": 38.8,
     "artificial_analysis_coding_index": 72,
-    "artificial_analysis_agentic_index": 39.6
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 282.64,
-    "cost_per_task": {
-     "total_cost": 0.2419
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 3,
     "price_1m_output_tokens": 15,
@@ -119,10 +282,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 38.68,
-    "median_time_to_first_token_seconds": 2.95,
-    "median_time_to_first_answer_token_seconds": 54.65,
-    "median_end_to_end_response_time_seconds": 67.58
+    "median_output_tokens_per_second": 38.72,
+    "median_time_to_first_token_seconds": 4.53,
+    "median_time_to_first_answer_token_seconds": 56.18,
+    "median_end_to_end_response_time_seconds": 69.1
    }
   },
   {
@@ -135,7 +298,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 2.8,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": 4.6,
     "artificial_analysis_agentic_index": null
    },
@@ -163,7 +326,7 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 9.9,
+    "artificial_analysis_intelligence_index": 4.3,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -175,10 +338,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 112.88,
-    "median_time_to_first_token_seconds": 2.19,
-    "median_time_to_first_answer_token_seconds": 2.19,
-    "median_end_to_end_response_time_seconds": 6.62
+    "median_output_tokens_per_second": 110.9,
+    "median_time_to_first_token_seconds": 2.17,
+    "median_time_to_first_answer_token_seconds": 2.17,
+    "median_end_to_end_response_time_seconds": 6.68
    }
   },
   {
@@ -191,7 +354,7 @@
     "name": "SpaceXAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 22.9,
+    "artificial_analysis_intelligence_index": 16.2,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -219,7 +382,7 @@
     "name": "DeepSeek"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 22.6,
+    "artificial_analysis_intelligence_index": 16,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -247,7 +410,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 8.7,
+    "artificial_analysis_intelligence_index": 3.3,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -259,10 +422,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 41.86,
-    "median_time_to_first_token_seconds": 0.76,
-    "median_time_to_first_answer_token_seconds": 0.76,
-    "median_end_to_end_response_time_seconds": 12.7
+    "median_output_tokens_per_second": 40.91,
+    "median_time_to_first_token_seconds": 0.84,
+    "median_time_to_first_answer_token_seconds": 0.84,
+    "median_end_to_end_response_time_seconds": 13.06
    }
   },
   {
@@ -275,7 +438,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 40.2,
+    "artificial_analysis_intelligence_index": 32.1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -287,10 +450,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 103.15,
-    "median_time_to_first_token_seconds": 1.49,
-    "median_time_to_first_answer_token_seconds": 1.49,
-    "median_end_to_end_response_time_seconds": 6.33
+    "median_output_tokens_per_second": 96.54,
+    "median_time_to_first_token_seconds": 1.53,
+    "median_time_to_first_answer_token_seconds": 1.53,
+    "median_end_to_end_response_time_seconds": 6.71
    }
   },
   {
@@ -303,7 +466,7 @@
     "name": "Anthropic"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 44.9,
+    "artificial_analysis_intelligence_index": 36.4,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -315,10 +478,10 @@
     "price_1m_cache_write_tokens": 6.25
    },
    "performance": {
-    "median_output_tokens_per_second": 40.76,
-    "median_time_to_first_token_seconds": 17.84,
-    "median_time_to_first_answer_token_seconds": 17.84,
-    "median_end_to_end_response_time_seconds": 30.11
+    "median_output_tokens_per_second": 42.97,
+    "median_time_to_first_token_seconds": 23.85,
+    "median_time_to_first_answer_token_seconds": 23.85,
+    "median_end_to_end_response_time_seconds": 35.48
    }
   },
   {
@@ -331,7 +494,7 @@
     "name": "AI21 Labs"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 2.3,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -359,7 +522,7 @@
     "name": "Allen Institute for AI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 4.7,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -387,7 +550,7 @@
     "name": "Amazon"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 7.5,
+    "artificial_analysis_intelligence_index": 2.1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -443,7 +606,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 11.6,
+    "artificial_analysis_intelligence_index": 5.9,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -471,7 +634,7 @@
     "name": "SpaceXAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 27.9,
+    "artificial_analysis_intelligence_index": 20.8,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -499,7 +662,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 12.3,
+    "artificial_analysis_intelligence_index": 6.5,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -527,27 +690,60 @@
     "name": "Meta"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 35.1,
+    "artificial_analysis_intelligence_index": 24.4,
     "artificial_analysis_coding_index": 49,
-    "artificial_analysis_agentic_index": 22.9
+    "artificial_analysis_agentic_index": 10.5
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 96.48,
+    "total_cost": 100.97,
     "cost_per_task": {
-     "total_cost": 0.0605
+     "total_cost": 0.0429
     }
    },
    "pricing": {
-    "price_1m_input_tokens": 0.32,
-    "price_1m_output_tokens": 1.35,
+    "price_1m_input_tokens": 0.35,
+    "price_1m_output_tokens": 1.5,
     "price_1m_cache_hit_tokens": 0.04,
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 103.42,
-    "median_time_to_first_token_seconds": 0.89,
-    "median_time_to_first_answer_token_seconds": 20.23,
-    "median_end_to_end_response_time_seconds": 25.06
+    "median_output_tokens_per_second": 99.49,
+    "median_time_to_first_token_seconds": 1.12,
+    "median_time_to_first_answer_token_seconds": 21.22,
+    "median_end_to_end_response_time_seconds": 26.25
+   }
+  },
+  {
+   "id": "58a40aba-a44f-457f-9cca-75b43d4e6934",
+   "name": "Muse Spark 1.3 (max)",
+   "slug": "muse-spark-1-3",
+   "release_date": "2026-09-02",
+   "model_creator": {
+    "id": "e1694725-0192-4e54-b1b8-c97e816c6cbe",
+    "name": "Meta"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 53,
+    "artificial_analysis_coding_index": 76.3,
+    "artificial_analysis_agentic_index": 55.6
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 1340.75,
+    "cost_per_task": {
+     "total_cost": 0.9588
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 1.25,
+    "price_1m_output_tokens": 4.25,
+    "price_1m_cache_hit_tokens": 0.15,
+    "price_1m_cache_write_tokens": null
+   },
+   "performance": {
+    "median_output_tokens_per_second": 190.12,
+    "median_time_to_first_token_seconds": 18.69,
+    "median_time_to_first_answer_token_seconds": 29.21,
+    "median_end_to_end_response_time_seconds": 31.84
    }
   },
   {
@@ -560,16 +756,11 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 38.9,
+    "artificial_analysis_intelligence_index": 30.2,
     "artificial_analysis_coding_index": 50.7,
-    "artificial_analysis_agentic_index": 31.8
+    "artificial_analysis_agentic_index": 25.5
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 21.49,
-    "cost_per_task": {
-     "total_cost": 0.0116
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.2,
     "price_1m_output_tokens": 1.2,
@@ -577,10 +768,10 @@
     "price_1m_cache_write_tokens": 0.25
    },
    "performance": {
-    "median_output_tokens_per_second": 123.36,
-    "median_time_to_first_token_seconds": 2.39,
-    "median_time_to_first_answer_token_seconds": 2.39,
-    "median_end_to_end_response_time_seconds": 6.45
+    "median_output_tokens_per_second": 107.05,
+    "median_time_to_first_token_seconds": 3.01,
+    "median_time_to_first_answer_token_seconds": 3.01,
+    "median_end_to_end_response_time_seconds": 7.68
    }
   },
   {
@@ -593,7 +784,7 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 2.2,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -621,16 +812,11 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 25.6,
+    "artificial_analysis_intelligence_index": 18.7,
     "artificial_analysis_coding_index": 34.7,
-    "artificial_analysis_agentic_index": 6.5
+    "artificial_analysis_agentic_index": 3.3
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 93.81,
-    "cost_per_task": {
-     "total_cost": 0.0432
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.25,
     "price_1m_output_tokens": 1.5,
@@ -638,10 +824,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 315.18,
-    "median_time_to_first_token_seconds": 4.99,
-    "median_time_to_first_answer_token_seconds": 4.99,
-    "median_end_to_end_response_time_seconds": 6.57
+    "median_output_tokens_per_second": 291.79,
+    "median_time_to_first_token_seconds": 5.42,
+    "median_time_to_first_answer_token_seconds": 5.42,
+    "median_end_to_end_response_time_seconds": 7.13
    }
   },
   {
@@ -654,7 +840,7 @@
     "name": "Kimi"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 8.4,
+    "artificial_analysis_intelligence_index": 2.9,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -682,7 +868,7 @@
     "name": "Meta"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 2.6,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -710,7 +896,7 @@
     "name": "Upstage"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 15.2,
+    "artificial_analysis_intelligence_index": 9.2,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -738,7 +924,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 45.5,
+    "artificial_analysis_intelligence_index": 36.9,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -750,10 +936,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 132.11,
-    "median_time_to_first_token_seconds": 42.67,
-    "median_time_to_first_answer_token_seconds": 42.67,
-    "median_end_to_end_response_time_seconds": 46.45
+    "median_output_tokens_per_second": 133.76,
+    "median_time_to_first_token_seconds": 60.05,
+    "median_time_to_first_answer_token_seconds": 60.05,
+    "median_end_to_end_response_time_seconds": 63.79
    }
   },
   {
@@ -766,7 +952,7 @@
     "name": "Mistral"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 12.5,
+    "artificial_analysis_intelligence_index": 6.7,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -778,10 +964,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 57.62,
-    "median_time_to_first_token_seconds": 1.44,
-    "median_time_to_first_answer_token_seconds": 1.44,
-    "median_end_to_end_response_time_seconds": 10.12
+    "median_output_tokens_per_second": 131.43,
+    "median_time_to_first_token_seconds": 2.28,
+    "median_time_to_first_answer_token_seconds": 2.28,
+    "median_end_to_end_response_time_seconds": 6.09
    }
   },
   {
@@ -794,7 +980,7 @@
     "name": "Liquid AI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 2.3,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -822,7 +1008,7 @@
     "name": "MBZUAI Institute of Foundation Models"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 17.4,
+    "artificial_analysis_intelligence_index": 11.2,
     "artificial_analysis_coding_index": 21,
     "artificial_analysis_agentic_index": null
    },
@@ -850,27 +1036,22 @@
     "name": "Z AI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 41,
+    "artificial_analysis_intelligence_index": 31.9,
     "artificial_analysis_coding_index": 55.8,
-    "artificial_analysis_agentic_index": 30.6
+    "artificial_analysis_agentic_index": 25.4
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 651.8,
-    "cost_per_task": {
-     "total_cost": 0.2861
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
-    "price_1m_input_tokens": 1.28,
-    "price_1m_output_tokens": 4.07,
+    "price_1m_input_tokens": 1.2,
+    "price_1m_output_tokens": 4.4,
     "price_1m_cache_hit_tokens": 0.26,
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 56.18,
-    "median_time_to_first_token_seconds": 1.8,
-    "median_time_to_first_answer_token_seconds": 69.29,
-    "median_end_to_end_response_time_seconds": 78.19
+    "median_output_tokens_per_second": 51.63,
+    "median_time_to_first_token_seconds": 1.82,
+    "median_time_to_first_answer_token_seconds": 75.24,
+    "median_end_to_end_response_time_seconds": 84.93
    }
   },
   {
@@ -883,7 +1064,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 23.9,
+    "artificial_analysis_intelligence_index": 17.1,
     "artificial_analysis_coding_index": 39.7,
     "artificial_analysis_agentic_index": null
    },
@@ -911,7 +1092,7 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 19.4,
+    "artificial_analysis_intelligence_index": 13,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -923,10 +1104,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 59.19,
-    "median_time_to_first_token_seconds": 4.01,
-    "median_time_to_first_answer_token_seconds": 4.01,
-    "median_end_to_end_response_time_seconds": 12.46
+    "median_output_tokens_per_second": 57.76,
+    "median_time_to_first_token_seconds": 3.98,
+    "median_time_to_first_answer_token_seconds": 3.98,
+    "median_end_to_end_response_time_seconds": 12.64
    }
   },
   {
@@ -939,27 +1120,22 @@
     "name": "NVIDIA"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 38.3,
+    "artificial_analysis_intelligence_index": 29.6,
     "artificial_analysis_coding_index": 49.3,
-    "artificial_analysis_agentic_index": 27.5
+    "artificial_analysis_agentic_index": 21.7
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 530.47,
-    "cost_per_task": {
-     "total_cost": 0.3859
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
-    "price_1m_input_tokens": 0.68,
-    "price_1m_output_tokens": 2.67,
-    "price_1m_cache_hit_tokens": 0.25,
+    "price_1m_input_tokens": 0.6,
+    "price_1m_output_tokens": 2.6,
+    "price_1m_cache_hit_tokens": 0.2,
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 68.54,
-    "median_time_to_first_token_seconds": 4.95,
-    "median_time_to_first_answer_token_seconds": 38.15,
-    "median_end_to_end_response_time_seconds": 45.44
+    "median_output_tokens_per_second": 169.41,
+    "median_time_to_first_token_seconds": 2.61,
+    "median_time_to_first_answer_token_seconds": 16.04,
+    "median_end_to_end_response_time_seconds": 18.99
    }
   },
   {
@@ -1000,16 +1176,11 @@
     "name": "LongCat"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 34,
+    "artificial_analysis_intelligence_index": 25.8,
     "artificial_analysis_coding_index": 45.3,
-    "artificial_analysis_agentic_index": 22
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 441.77,
-    "cost_per_task": {
-     "total_cost": 0.1213
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.75,
     "price_1m_output_tokens": 2.95,
@@ -1017,10 +1188,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 38.94,
-    "median_time_to_first_token_seconds": 2.77,
-    "median_time_to_first_answer_token_seconds": 54.14,
-    "median_end_to_end_response_time_seconds": 66.98
+    "median_output_tokens_per_second": 50.01,
+    "median_time_to_first_token_seconds": 3.36,
+    "median_time_to_first_answer_token_seconds": 43.35,
+    "median_end_to_end_response_time_seconds": 53.35
    }
   },
   {
@@ -1033,7 +1204,7 @@
     "name": "Amazon"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 6.7,
+    "artificial_analysis_intelligence_index": 1.4,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1045,10 +1216,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 176.23,
-    "median_time_to_first_token_seconds": 0.91,
-    "median_time_to_first_answer_token_seconds": 0.91,
-    "median_end_to_end_response_time_seconds": 3.75
+    "median_output_tokens_per_second": 167.91,
+    "median_time_to_first_token_seconds": 0.93,
+    "median_time_to_first_answer_token_seconds": 0.93,
+    "median_end_to_end_response_time_seconds": 3.91
    }
   },
   {
@@ -1061,7 +1232,7 @@
     "name": "ByteDance Seed"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 18.5,
+    "artificial_analysis_intelligence_index": 12.2,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1073,10 +1244,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 35.11,
-    "median_time_to_first_token_seconds": 2.76,
-    "median_time_to_first_answer_token_seconds": 59.73,
-    "median_end_to_end_response_time_seconds": 73.97
+    "median_output_tokens_per_second": 34.09,
+    "median_time_to_first_token_seconds": 2.66,
+    "median_time_to_first_answer_token_seconds": 61.33,
+    "median_end_to_end_response_time_seconds": 76
    }
   },
   {
@@ -1089,7 +1260,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 13.6,
+    "artificial_analysis_intelligence_index": 7.7,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1117,7 +1288,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 37,
+    "artificial_analysis_intelligence_index": 29.2,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1145,7 +1316,7 @@
     "name": "Z AI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 16.7,
+    "artificial_analysis_intelligence_index": 10.5,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1157,10 +1328,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 43.15,
-    "median_time_to_first_token_seconds": 5.94,
-    "median_time_to_first_answer_token_seconds": 52.29,
-    "median_end_to_end_response_time_seconds": 63.87
+    "median_output_tokens_per_second": 73.56,
+    "median_time_to_first_token_seconds": 2.66,
+    "median_time_to_first_answer_token_seconds": 29.84,
+    "median_end_to_end_response_time_seconds": 36.64
    }
   },
   {
@@ -1173,7 +1344,7 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 7.4,
+    "artificial_analysis_intelligence_index": 2.1,
     "artificial_analysis_coding_index": 2.9,
     "artificial_analysis_agentic_index": null
    },
@@ -1201,7 +1372,7 @@
     "name": "Xiaomi"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 41.4,
+    "artificial_analysis_intelligence_index": 33.1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1229,7 +1400,7 @@
     "name": "Trillion Labs"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 12.3,
+    "artificial_analysis_intelligence_index": 6.6,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1257,16 +1428,11 @@
     "name": "DeepSeek"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 43.7,
+    "artificial_analysis_intelligence_index": 34.6,
     "artificial_analysis_coding_index": 58.7,
-    "artificial_analysis_agentic_index": 35.3
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 108.77,
-    "cost_per_task": {
-     "total_cost": 0.0432
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.43,
     "price_1m_output_tokens": 0.87,
@@ -1274,10 +1440,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 65.02,
-    "median_time_to_first_token_seconds": 1.66,
-    "median_time_to_first_answer_token_seconds": 32.3,
-    "median_end_to_end_response_time_seconds": 39.99
+    "median_output_tokens_per_second": 63.76,
+    "median_time_to_first_token_seconds": 1.6,
+    "median_time_to_first_answer_token_seconds": 32.85,
+    "median_end_to_end_response_time_seconds": 40.69
    }
   },
   {
@@ -1290,7 +1456,7 @@
     "name": "IBM"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 4.9,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1302,10 +1468,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 36.3,
-    "median_time_to_first_token_seconds": 13.9,
-    "median_time_to_first_answer_token_seconds": 13.9,
-    "median_end_to_end_response_time_seconds": 27.68
+    "median_output_tokens_per_second": 26.35,
+    "median_time_to_first_token_seconds": 11.42,
+    "median_time_to_first_answer_token_seconds": 11.42,
+    "median_end_to_end_response_time_seconds": 30.4
    }
   },
   {
@@ -1318,16 +1484,11 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 14.6,
+    "artificial_analysis_intelligence_index": 8.6,
     "artificial_analysis_coding_index": 12.1,
-    "artificial_analysis_agentic_index": 1.8
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 152.02,
-    "cost_per_task": {
-     "total_cost": 0.0787
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.2,
     "price_1m_output_tokens": 2.4,
@@ -1335,10 +1496,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 133.75,
-    "median_time_to_first_token_seconds": 2.33,
-    "median_time_to_first_answer_token_seconds": 17.29,
-    "median_end_to_end_response_time_seconds": 21.03
+    "median_output_tokens_per_second": 154.38,
+    "median_time_to_first_token_seconds": 2.34,
+    "median_time_to_first_answer_token_seconds": 15.3,
+    "median_end_to_end_response_time_seconds": 18.54
    }
   },
   {
@@ -1351,7 +1512,7 @@
     "name": "Mistral"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 4.1,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1379,14 +1540,14 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 58.1,
+    "artificial_analysis_intelligence_index": 46.9,
     "artificial_analysis_coding_index": 71.8,
-    "artificial_analysis_agentic_index": 58.4
+    "artificial_analysis_agentic_index": 49.9
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 1532.07,
+    "total_cost": 1937.5,
     "cost_per_task": {
-     "total_cost": 0.9133
+     "total_cost": 1.1877
     }
    },
    "pricing": {
@@ -1396,10 +1557,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 40.54,
-    "median_time_to_first_token_seconds": 2.53,
-    "median_time_to_first_answer_token_seconds": 51.86,
-    "median_end_to_end_response_time_seconds": 64.19
+    "median_output_tokens_per_second": 39.73,
+    "median_time_to_first_token_seconds": 2.35,
+    "median_time_to_first_answer_token_seconds": 52.7,
+    "median_end_to_end_response_time_seconds": 65.28
    }
   },
   {
@@ -1412,7 +1573,7 @@
     "name": "SpaceXAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 36.9,
+    "artificial_analysis_intelligence_index": 29.1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1424,10 +1585,10 @@
     "price_1m_cache_write_tokens": 1.25
    },
    "performance": {
-    "median_output_tokens_per_second": 109.46,
-    "median_time_to_first_token_seconds": 9.76,
-    "median_time_to_first_answer_token_seconds": 9.76,
-    "median_end_to_end_response_time_seconds": 14.33
+    "median_output_tokens_per_second": 120.14,
+    "median_time_to_first_token_seconds": 13.47,
+    "median_time_to_first_answer_token_seconds": 13.47,
+    "median_end_to_end_response_time_seconds": 17.64
    }
   },
   {
@@ -1440,7 +1601,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 34.6,
+    "artificial_analysis_intelligence_index": 26.9,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1452,10 +1613,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 101.58,
-    "median_time_to_first_token_seconds": 34.16,
-    "median_time_to_first_answer_token_seconds": 34.16,
-    "median_end_to_end_response_time_seconds": 39.09
+    "median_output_tokens_per_second": 87.58,
+    "median_time_to_first_token_seconds": 43.86,
+    "median_time_to_first_answer_token_seconds": 43.86,
+    "median_end_to_end_response_time_seconds": 49.57
    }
   },
   {
@@ -1468,7 +1629,7 @@
     "name": "SpaceXAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 34.1,
+    "artificial_analysis_intelligence_index": 26.5,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1496,7 +1657,7 @@
     "name": "Perplexity"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 9.4,
+    "artificial_analysis_intelligence_index": 3.8,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1524,7 +1685,7 @@
     "name": "Meta"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 3,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1536,10 +1697,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 26.62,
-    "median_time_to_first_token_seconds": 1.07,
-    "median_time_to_first_answer_token_seconds": 1.07,
-    "median_end_to_end_response_time_seconds": 19.85
+    "median_output_tokens_per_second": 26.76,
+    "median_time_to_first_token_seconds": 1.1,
+    "median_time_to_first_answer_token_seconds": 1.1,
+    "median_end_to_end_response_time_seconds": 19.78
    }
   },
   {
@@ -1552,7 +1713,7 @@
     "name": "DeepSeek"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 10.3,
+    "artificial_analysis_intelligence_index": 4.7,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1580,7 +1741,7 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 41.1,
+    "artificial_analysis_intelligence_index": 32.9,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1592,10 +1753,10 @@
     "price_1m_cache_write_tokens": 1.63
    },
    "performance": {
-    "median_output_tokens_per_second": 58.38,
-    "median_time_to_first_token_seconds": 3.5,
-    "median_time_to_first_answer_token_seconds": 37.76,
-    "median_end_to_end_response_time_seconds": 46.33
+    "median_output_tokens_per_second": 54.34,
+    "median_time_to_first_token_seconds": 3.44,
+    "median_time_to_first_answer_token_seconds": 40.24,
+    "median_end_to_end_response_time_seconds": 49.45
    }
   },
   {
@@ -1608,7 +1769,7 @@
     "name": "LongCat"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 17.4,
+    "artificial_analysis_intelligence_index": 11.2,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1636,7 +1797,7 @@
     "name": "Trillion Labs"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 13.6,
+    "artificial_analysis_intelligence_index": 7.7,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1664,7 +1825,7 @@
     "name": "Amazon"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 20.8,
+    "artificial_analysis_intelligence_index": 14.3,
     "artificial_analysis_coding_index": 23,
     "artificial_analysis_agentic_index": null
    },
@@ -1676,10 +1837,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 166.39,
-    "median_time_to_first_token_seconds": 15.06,
-    "median_time_to_first_answer_token_seconds": 27.08,
-    "median_end_to_end_response_time_seconds": 30.08
+    "median_output_tokens_per_second": 163.22,
+    "median_time_to_first_token_seconds": 18.79,
+    "median_time_to_first_answer_token_seconds": 31.04,
+    "median_end_to_end_response_time_seconds": 34.11
    }
   },
   {
@@ -1692,7 +1853,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 23.4,
+    "artificial_analysis_intelligence_index": 16.7,
     "artificial_analysis_coding_index": 46.7,
     "artificial_analysis_agentic_index": null
    },
@@ -1720,16 +1881,11 @@
     "name": "NVIDIA"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 25.7,
+    "artificial_analysis_intelligence_index": 18.6,
     "artificial_analysis_coding_index": 37.7,
-    "artificial_analysis_agentic_index": 8.8
+    "artificial_analysis_agentic_index": 4.2
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 253.65,
-    "cost_per_task": {
-     "total_cost": 0.2286
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.2,
     "price_1m_output_tokens": 0.8,
@@ -1737,10 +1893,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 139.54,
-    "median_time_to_first_token_seconds": 1.82,
-    "median_time_to_first_answer_token_seconds": 16.15,
-    "median_end_to_end_response_time_seconds": 19.73
+    "median_output_tokens_per_second": 141.6,
+    "median_time_to_first_token_seconds": 1.81,
+    "median_time_to_first_answer_token_seconds": 15.93,
+    "median_end_to_end_response_time_seconds": 19.46
    }
   },
   {
@@ -1753,7 +1909,7 @@
     "name": "SpaceXAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 22.2,
+    "artificial_analysis_intelligence_index": 15.6,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1765,10 +1921,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 105.24,
+    "median_output_tokens_per_second": 97.67,
     "median_time_to_first_token_seconds": 0.59,
     "median_time_to_first_answer_token_seconds": 0.59,
-    "median_end_to_end_response_time_seconds": 5.34
+    "median_end_to_end_response_time_seconds": 5.71
    }
   },
   {
@@ -1781,7 +1937,7 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 20.4,
+    "artificial_analysis_intelligence_index": 13.9,
     "artificial_analysis_coding_index": 22.6,
     "artificial_analysis_agentic_index": null
    },
@@ -1793,10 +1949,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 26.75,
-    "median_time_to_first_token_seconds": 0.71,
-    "median_time_to_first_answer_token_seconds": 75.48,
-    "median_end_to_end_response_time_seconds": 94.17
+    "median_output_tokens_per_second": 22.8,
+    "median_time_to_first_token_seconds": 0.75,
+    "median_time_to_first_answer_token_seconds": 88.49,
+    "median_end_to_end_response_time_seconds": 110.42
    }
   },
   {
@@ -1809,7 +1965,7 @@
     "name": "Mistral"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 12.5,
+    "artificial_analysis_intelligence_index": 6.7,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1837,7 +1993,7 @@
     "name": "Kimi"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 24,
+    "artificial_analysis_intelligence_index": 17.2,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1849,10 +2005,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 40.65,
-    "median_time_to_first_token_seconds": 1.13,
-    "median_time_to_first_answer_token_seconds": 1.13,
-    "median_end_to_end_response_time_seconds": 13.43
+    "median_output_tokens_per_second": 40.26,
+    "median_time_to_first_token_seconds": 1.14,
+    "median_time_to_first_answer_token_seconds": 1.14,
+    "median_end_to_end_response_time_seconds": 13.56
    }
   },
   {
@@ -1865,16 +2021,11 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 44.5,
+    "artificial_analysis_intelligence_index": 35.2,
     "artificial_analysis_coding_index": 56.1,
-    "artificial_analysis_agentic_index": 49.8
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 398.33,
-    "cost_per_task": {
-     "total_cost": 0.284
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.5,
     "price_1m_output_tokens": 3,
@@ -1882,10 +2033,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 51.85,
-    "median_time_to_first_token_seconds": 3.84,
-    "median_time_to_first_answer_token_seconds": 42.41,
-    "median_end_to_end_response_time_seconds": 52.05
+    "median_output_tokens_per_second": 51.72,
+    "median_time_to_first_token_seconds": 3.89,
+    "median_time_to_first_answer_token_seconds": 42.56,
+    "median_end_to_end_response_time_seconds": 52.23
    }
   },
   {
@@ -1898,7 +2049,7 @@
     "name": "Motif Technologies"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 12.8,
+    "artificial_analysis_intelligence_index": 7,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -1926,16 +2077,11 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 24.6,
+    "artificial_analysis_intelligence_index": 17.1,
     "artificial_analysis_coding_index": 28.1,
-    "artificial_analysis_agentic_index": 19.2
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 529.96,
-    "cost_per_task": {
-     "total_cost": 0.63
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.38,
     "price_1m_output_tokens": 2.25,
@@ -1943,10 +2089,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 136.23,
-    "median_time_to_first_token_seconds": 2.05,
-    "median_time_to_first_answer_token_seconds": 2.05,
-    "median_end_to_end_response_time_seconds": 5.73
+    "median_output_tokens_per_second": 141.5,
+    "median_time_to_first_token_seconds": 2.1,
+    "median_time_to_first_answer_token_seconds": 2.1,
+    "median_end_to_end_response_time_seconds": 5.63
    }
   },
   {
@@ -1959,16 +2105,11 @@
     "name": "Mistral"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 7.1,
+    "artificial_analysis_intelligence_index": 1.7,
     "artificial_analysis_coding_index": 4.8,
-    "artificial_analysis_agentic_index": 1.6
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 91.59,
-    "cost_per_task": {
-     "total_cost": 0.1297
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.1,
     "price_1m_output_tokens": 0.1,
@@ -1976,10 +2117,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 187.76,
-    "median_time_to_first_token_seconds": 0.62,
-    "median_time_to_first_answer_token_seconds": 0.62,
-    "median_end_to_end_response_time_seconds": 3.28
+    "median_output_tokens_per_second": 216.31,
+    "median_time_to_first_token_seconds": 0.61,
+    "median_time_to_first_answer_token_seconds": 0.61,
+    "median_end_to_end_response_time_seconds": 2.92
    }
   },
   {
@@ -1992,7 +2133,7 @@
     "name": "Liquid AI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 1.3,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2020,7 +2161,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 17.7,
+    "artificial_analysis_intelligence_index": 11.5,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2048,16 +2189,11 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 46.7,
+    "artificial_analysis_intelligence_index": 37,
     "artificial_analysis_coding_index": 66,
-    "artificial_analysis_agentic_index": 30.9
+    "artificial_analysis_agentic_index": 23.9
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 1164.39,
-    "cost_per_task": {
-     "total_cost": 0.6792
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 2.5,
     "price_1m_output_tokens": 7.5,
@@ -2065,10 +2201,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 204.51,
-    "median_time_to_first_token_seconds": 2.24,
-    "median_time_to_first_answer_token_seconds": 14.01,
-    "median_end_to_end_response_time_seconds": 16.46
+    "median_output_tokens_per_second": 202.32,
+    "median_time_to_first_token_seconds": 2.29,
+    "median_time_to_first_answer_token_seconds": 14.2,
+    "median_end_to_end_response_time_seconds": 16.67
    }
   },
   {
@@ -2081,16 +2217,11 @@
     "name": "Z AI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 29.3,
+    "artificial_analysis_intelligence_index": 21.7,
     "artificial_analysis_coding_index": 45.8,
-    "artificial_analysis_agentic_index": 18.6
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 314.3,
-    "cost_per_task": {
-     "total_cost": 0.3046
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.55,
     "price_1m_output_tokens": 2.2,
@@ -2098,10 +2229,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 42.97,
-    "median_time_to_first_token_seconds": 2.77,
-    "median_time_to_first_answer_token_seconds": 49.31,
-    "median_end_to_end_response_time_seconds": 60.95
+    "median_output_tokens_per_second": 50.09,
+    "median_time_to_first_token_seconds": 2.52,
+    "median_time_to_first_answer_token_seconds": 42.45,
+    "median_end_to_end_response_time_seconds": 52.43
    }
   },
   {
@@ -2114,7 +2245,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 6.8,
+    "artificial_analysis_intelligence_index": 1.5,
     "artificial_analysis_coding_index": 13.1,
     "artificial_analysis_agentic_index": null
    },
@@ -2142,7 +2273,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 14.2,
+    "artificial_analysis_intelligence_index": 8.2,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2154,10 +2285,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 190.16,
-    "median_time_to_first_token_seconds": 0.46,
-    "median_time_to_first_answer_token_seconds": 0.46,
-    "median_end_to_end_response_time_seconds": 3.09
+    "median_output_tokens_per_second": 214.78,
+    "median_time_to_first_token_seconds": 0.43,
+    "median_time_to_first_answer_token_seconds": 0.43,
+    "median_end_to_end_response_time_seconds": 2.76
    }
   },
   {
@@ -2170,7 +2301,7 @@
     "name": "Meta"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 2.6,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2198,16 +2329,11 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 51.4,
+    "artificial_analysis_intelligence_index": 41.6,
     "artificial_analysis_coding_index": 71.5,
-    "artificial_analysis_agentic_index": 39.2
+    "artificial_analysis_agentic_index": 30.7
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 947.67,
-    "cost_per_task": {
-     "total_cost": 0.508
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 5,
     "price_1m_output_tokens": 30,
@@ -2215,10 +2341,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 82.87,
-    "median_time_to_first_token_seconds": 5.24,
-    "median_time_to_first_answer_token_seconds": 5.24,
-    "median_end_to_end_response_time_seconds": 11.27
+    "median_output_tokens_per_second": 71.4,
+    "median_time_to_first_token_seconds": 5.62,
+    "median_time_to_first_answer_token_seconds": 5.62,
+    "median_end_to_end_response_time_seconds": 12.63
    }
   },
   {
@@ -2231,7 +2357,7 @@
     "name": "Nous Research"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 9.9,
+    "artificial_analysis_intelligence_index": 4.3,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2243,10 +2369,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 80.92,
-    "median_time_to_first_token_seconds": 1.51,
-    "median_time_to_first_answer_token_seconds": 26.23,
-    "median_end_to_end_response_time_seconds": 32.41
+    "median_output_tokens_per_second": 85.57,
+    "median_time_to_first_token_seconds": 1.41,
+    "median_time_to_first_answer_token_seconds": 24.79,
+    "median_end_to_end_response_time_seconds": 30.63
    }
   },
   {
@@ -2259,16 +2385,11 @@
     "name": "StepFun"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 30.9,
+    "artificial_analysis_intelligence_index": 22.9,
     "artificial_analysis_coding_index": 39.6,
-    "artificial_analysis_agentic_index": 21.7
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 319.97,
-    "cost_per_task": {
-     "total_cost": 0.0913
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.2,
     "price_1m_output_tokens": 1.15,
@@ -2276,10 +2397,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 95.43,
-    "median_time_to_first_token_seconds": 2.86,
-    "median_time_to_first_answer_token_seconds": 23.82,
-    "median_end_to_end_response_time_seconds": 29.06
+    "median_output_tokens_per_second": 91.44,
+    "median_time_to_first_token_seconds": 2.76,
+    "median_time_to_first_answer_token_seconds": 24.64,
+    "median_end_to_end_response_time_seconds": 30.11
    }
   },
   {
@@ -2292,7 +2413,7 @@
     "name": "DeepSeek"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 25.1,
+    "artificial_analysis_intelligence_index": 18.3,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2320,7 +2441,7 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 11,
+    "artificial_analysis_intelligence_index": 5.3,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2332,10 +2453,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 61.9,
-    "median_time_to_first_token_seconds": 2.7,
-    "median_time_to_first_answer_token_seconds": 2.7,
-    "median_end_to_end_response_time_seconds": 10.77
+    "median_output_tokens_per_second": 73.15,
+    "median_time_to_first_token_seconds": 2.73,
+    "median_time_to_first_answer_token_seconds": 2.73,
+    "median_end_to_end_response_time_seconds": 9.56
    }
   },
   {
@@ -2348,7 +2469,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 26.5,
+    "artificial_analysis_intelligence_index": 19.6,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2360,10 +2481,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 66.35,
+    "median_output_tokens_per_second": 62.08,
     "median_time_to_first_token_seconds": 0.93,
     "median_time_to_first_answer_token_seconds": 0.93,
-    "median_end_to_end_response_time_seconds": 8.47
+    "median_end_to_end_response_time_seconds": 8.98
    }
   },
   {
@@ -2376,16 +2497,11 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 26.1,
+    "artificial_analysis_intelligence_index": 19.2,
     "artificial_analysis_coding_index": 39.3,
-    "artificial_analysis_agentic_index": 11
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 53.86,
-    "cost_per_task": {
-     "total_cost": 0.0391
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.12,
     "price_1m_output_tokens": 0.37,
@@ -2409,7 +2525,7 @@
     "name": "DeepSeek"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 31.9,
+    "artificial_analysis_intelligence_index": 24.5,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2421,10 +2537,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 51.47,
-    "median_time_to_first_token_seconds": 1.61,
-    "median_time_to_first_answer_token_seconds": 1.61,
-    "median_end_to_end_response_time_seconds": 11.32
+    "median_output_tokens_per_second": 59.29,
+    "median_time_to_first_token_seconds": 1.66,
+    "median_time_to_first_answer_token_seconds": 1.66,
+    "median_end_to_end_response_time_seconds": 10.09
    }
   },
   {
@@ -2437,7 +2553,7 @@
     "name": "NVIDIA"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 8.8,
+    "artificial_analysis_intelligence_index": 3.3,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2449,10 +2565,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 32.69,
-    "median_time_to_first_token_seconds": 10.67,
-    "median_time_to_first_answer_token_seconds": 71.85,
-    "median_end_to_end_response_time_seconds": 87.15
+    "median_output_tokens_per_second": 21.96,
+    "median_time_to_first_token_seconds": 15.41,
+    "median_time_to_first_answer_token_seconds": 106.5,
+    "median_end_to_end_response_time_seconds": 129.27
    }
   },
   {
@@ -2465,14 +2581,14 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 55.6,
+    "artificial_analysis_intelligence_index": 46,
     "artificial_analysis_coding_index": 76.3,
-    "artificial_analysis_agentic_index": 47.9
+    "artificial_analysis_agentic_index": 40.8
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 429.35,
+    "total_cost": 579.65,
     "cost_per_task": {
-     "total_cost": 0.2902
+     "total_cost": 0.3671
     }
    },
    "pricing": {
@@ -2482,10 +2598,10 @@
     "price_1m_cache_write_tokens": 5
    },
    "performance": {
-    "median_output_tokens_per_second": 70.76,
-    "median_time_to_first_token_seconds": 3.82,
-    "median_time_to_first_answer_token_seconds": 3.82,
-    "median_end_to_end_response_time_seconds": 10.89
+    "median_output_tokens_per_second": 71.65,
+    "median_time_to_first_token_seconds": 4.92,
+    "median_time_to_first_answer_token_seconds": 4.92,
+    "median_end_to_end_response_time_seconds": 11.9
    }
   },
   {
@@ -2498,16 +2614,11 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 35.8,
+    "artificial_analysis_intelligence_index": 27.3,
     "artificial_analysis_coding_index": 56.5,
-    "artificial_analysis_agentic_index": 26.1
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 211.75,
-    "cost_per_task": {
-     "total_cost": 0.2083
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 5,
     "price_1m_output_tokens": 30,
@@ -2515,10 +2626,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 84.1,
-    "median_time_to_first_token_seconds": 0.89,
-    "median_time_to_first_answer_token_seconds": 0.89,
-    "median_end_to_end_response_time_seconds": 6.84
+    "median_output_tokens_per_second": 76.77,
+    "median_time_to_first_token_seconds": 1.06,
+    "median_time_to_first_answer_token_seconds": 1.06,
+    "median_end_to_end_response_time_seconds": 7.57
    }
   },
   {
@@ -2531,7 +2642,7 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 19.2,
+    "artificial_analysis_intelligence_index": 12.9,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2543,10 +2654,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 226.93,
-    "median_time_to_first_token_seconds": 1.85,
-    "median_time_to_first_answer_token_seconds": 1.85,
-    "median_end_to_end_response_time_seconds": 4.06
+    "median_output_tokens_per_second": 236.26,
+    "median_time_to_first_token_seconds": 1.84,
+    "median_time_to_first_answer_token_seconds": 1.84,
+    "median_end_to_end_response_time_seconds": 3.95
    }
   },
   {
@@ -2559,16 +2670,11 @@
     "name": "Z AI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 34.5,
+    "artificial_analysis_intelligence_index": 26.2,
     "artificial_analysis_coding_index": 45.3,
-    "artificial_analysis_agentic_index": 26.2
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 607.19,
-    "cost_per_task": {
-     "total_cost": 0.3586
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.6,
     "price_1m_output_tokens": 2.2,
@@ -2576,10 +2682,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 95.32,
-    "median_time_to_first_token_seconds": 1.27,
-    "median_time_to_first_answer_token_seconds": 22.25,
-    "median_end_to_end_response_time_seconds": 27.5
+    "median_output_tokens_per_second": 99.45,
+    "median_time_to_first_token_seconds": 1.31,
+    "median_time_to_first_answer_token_seconds": 21.42,
+    "median_end_to_end_response_time_seconds": 26.45
    }
   },
   {
@@ -2592,7 +2698,7 @@
     "name": "Amazon"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 18,
+    "artificial_analysis_intelligence_index": 11.7,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2604,10 +2710,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 165.41,
-    "median_time_to_first_token_seconds": 8.69,
-    "median_time_to_first_answer_token_seconds": 20.78,
-    "median_end_to_end_response_time_seconds": 23.8
+    "median_output_tokens_per_second": 168.42,
+    "median_time_to_first_token_seconds": 8.34,
+    "median_time_to_first_answer_token_seconds": 20.22,
+    "median_end_to_end_response_time_seconds": 23.18
    }
   },
   {
@@ -2620,16 +2726,11 @@
     "name": "Mistral"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 11.5,
+    "artificial_analysis_intelligence_index": 5.7,
     "artificial_analysis_coding_index": 14.7,
-    "artificial_analysis_agentic_index": 1.5
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 300.78,
-    "cost_per_task": {
-     "total_cost": 0.295
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.5,
     "price_1m_output_tokens": 1.5,
@@ -2653,7 +2754,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 20.4,
+    "artificial_analysis_intelligence_index": 13.9,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2665,10 +2766,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 80.17,
-    "median_time_to_first_token_seconds": 1.14,
-    "median_time_to_first_answer_token_seconds": 1.14,
-    "median_end_to_end_response_time_seconds": 7.38
+    "median_output_tokens_per_second": 76.72,
+    "median_time_to_first_token_seconds": 1.34,
+    "median_time_to_first_answer_token_seconds": 1.34,
+    "median_end_to_end_response_time_seconds": 7.85
    }
   },
   {
@@ -2681,14 +2782,14 @@
     "name": "Anthropic"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 61.5,
+    "artificial_analysis_intelligence_index": 52,
     "artificial_analysis_coding_index": 76.5,
-    "artificial_analysis_agentic_index": 56.1
+    "artificial_analysis_agentic_index": 52.9
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 1974.35,
+    "total_cost": 3016.1,
     "cost_per_task": {
-     "total_cost": 1.2268
+     "total_cost": 2.4436
     }
    },
    "pricing": {
@@ -2698,10 +2799,10 @@
     "price_1m_cache_write_tokens": 6.25
    },
    "performance": {
-    "median_output_tokens_per_second": 50.15,
-    "median_time_to_first_token_seconds": 16.73,
-    "median_time_to_first_answer_token_seconds": 16.73,
-    "median_end_to_end_response_time_seconds": 26.7
+    "median_output_tokens_per_second": 54.56,
+    "median_time_to_first_token_seconds": 19.49,
+    "median_time_to_first_answer_token_seconds": 19.49,
+    "median_end_to_end_response_time_seconds": 28.66
    }
   },
   {
@@ -2714,16 +2815,11 @@
     "name": "Mistral"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 11.2,
+    "artificial_analysis_intelligence_index": 5.5,
     "artificial_analysis_coding_index": 14.4,
-    "artificial_analysis_agentic_index": 2.2
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 119.2,
-    "cost_per_task": {
-     "total_cost": 0.1584
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.2,
     "price_1m_output_tokens": 0.2,
@@ -2731,10 +2827,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 102.78,
-    "median_time_to_first_token_seconds": 0.84,
-    "median_time_to_first_answer_token_seconds": 0.84,
-    "median_end_to_end_response_time_seconds": 5.7
+    "median_output_tokens_per_second": 87.91,
+    "median_time_to_first_token_seconds": 0.96,
+    "median_time_to_first_answer_token_seconds": 0.96,
+    "median_end_to_end_response_time_seconds": 6.65
    }
   },
   {
@@ -2747,7 +2843,7 @@
     "name": "LG AI Research"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 22.5,
+    "artificial_analysis_intelligence_index": 15.8,
     "artificial_analysis_coding_index": 32.1,
     "artificial_analysis_agentic_index": null
    },
@@ -2775,7 +2871,7 @@
     "name": "Meta"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 3.9,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2803,7 +2899,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 13.1,
+    "artificial_analysis_intelligence_index": 7.3,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2831,16 +2927,11 @@
     "name": "Thinking Machines"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 41.2,
+    "artificial_analysis_intelligence_index": 32.3,
     "artificial_analysis_coding_index": 52.9,
-    "artificial_analysis_agentic_index": 31.9
+    "artificial_analysis_agentic_index": 25.1
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 192.52,
-    "cost_per_task": {
-     "total_cost": 0.0735
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.3,
     "price_1m_output_tokens": 1.2,
@@ -2848,10 +2939,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 44.89,
-    "median_time_to_first_token_seconds": 2.66,
-    "median_time_to_first_answer_token_seconds": 47.21,
-    "median_end_to_end_response_time_seconds": 58.35
+    "median_output_tokens_per_second": 111.52,
+    "median_time_to_first_token_seconds": 2.53,
+    "median_time_to_first_answer_token_seconds": 20.47,
+    "median_end_to_end_response_time_seconds": 24.95
    }
   },
   {
@@ -2864,16 +2955,11 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 9.6,
+    "artificial_analysis_intelligence_index": 4.1,
     "artificial_analysis_coding_index": 11.1,
-    "artificial_analysis_agentic_index": 1.2
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 36.67,
-    "cost_per_task": {
-     "total_cost": 0.0349
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.1,
     "price_1m_output_tokens": 0.4,
@@ -2881,10 +2967,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 147.77,
-    "median_time_to_first_token_seconds": 0.66,
-    "median_time_to_first_answer_token_seconds": 0.66,
-    "median_end_to_end_response_time_seconds": 4.04
+    "median_output_tokens_per_second": 118.65,
+    "median_time_to_first_token_seconds": 0.71,
+    "median_time_to_first_answer_token_seconds": 0.71,
+    "median_end_to_end_response_time_seconds": 4.92
    }
   },
   {
@@ -2897,7 +2983,7 @@
     "name": "NVIDIA"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 7.4,
+    "artificial_analysis_intelligence_index": 2.1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2909,10 +2995,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 33.05,
-    "median_time_to_first_token_seconds": 12.1,
-    "median_time_to_first_answer_token_seconds": 12.1,
-    "median_end_to_end_response_time_seconds": 27.23
+    "median_output_tokens_per_second": 16.83,
+    "median_time_to_first_token_seconds": 15.6,
+    "median_time_to_first_answer_token_seconds": 15.6,
+    "median_end_to_end_response_time_seconds": 45.31
    }
   },
   {
@@ -2925,7 +3011,7 @@
     "name": "Meta"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 7.4,
+    "artificial_analysis_intelligence_index": 2,
     "artificial_analysis_coding_index": 5.4,
     "artificial_analysis_agentic_index": null
    },
@@ -2937,10 +3023,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 141.47,
-    "median_time_to_first_token_seconds": 0.8,
-    "median_time_to_first_answer_token_seconds": 0.8,
-    "median_end_to_end_response_time_seconds": 4.34
+    "median_output_tokens_per_second": 140.17,
+    "median_time_to_first_token_seconds": 0.83,
+    "median_time_to_first_answer_token_seconds": 0.83,
+    "median_end_to_end_response_time_seconds": 4.4
    }
   },
   {
@@ -2953,7 +3039,7 @@
     "name": "Liquid AI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 2.3,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -2972,6 +3058,34 @@
    }
   },
   {
+   "id": "744fa3c1-42a7-4995-b138-fb6be11f463c",
+   "name": "Gemini 3.8 Flash (medium)",
+   "slug": "gemini-3-8-flash-medium",
+   "release_date": "2026-09-02",
+   "model_creator": {
+    "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "name": "Google"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 46.8,
+    "artificial_analysis_coding_index": 74.1,
+    "artificial_analysis_agentic_index": null
+   },
+   "artificial_analysis_intelligence_index_cost": null,
+   "pricing": {
+    "price_1m_input_tokens": 0.75,
+    "price_1m_output_tokens": 3.75,
+    "price_1m_cache_hit_tokens": 0.07,
+    "price_1m_cache_write_tokens": 0.75
+   },
+   "performance": {
+    "median_output_tokens_per_second": null,
+    "median_time_to_first_token_seconds": null,
+    "median_time_to_first_answer_token_seconds": null,
+    "median_end_to_end_response_time_seconds": null
+   }
+  },
+  {
    "id": "755d7281-2ed8-48c7-808f-709ec4cbfb71",
    "name": "Gemma 4 E2B (Non-reasoning)",
    "slug": "gemma-4-e2b-non-reasoning",
@@ -2981,7 +3095,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 6.2,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3009,16 +3123,11 @@
     "name": "DeepSeek"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 15.2,
+    "artificial_analysis_intelligence_index": 9.2,
     "artificial_analysis_coding_index": 21.2,
-    "artificial_analysis_agentic_index": 1.6
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 35.16,
-    "cost_per_task": {
-     "total_cost": 0.0484
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.27,
     "price_1m_output_tokens": 1.12,
@@ -3042,14 +3151,14 @@
     "name": "Cohere"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 2.6,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
    "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
-    "price_1m_input_tokens": 3,
-    "price_1m_output_tokens": 15,
+    "price_1m_input_tokens": null,
+    "price_1m_output_tokens": null,
     "price_1m_cache_hit_tokens": null,
     "price_1m_cache_write_tokens": null
    },
@@ -3070,7 +3179,7 @@
     "name": "Sarvam"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 6.4,
+    "artificial_analysis_intelligence_index": 1.1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3098,7 +3207,7 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 5.7,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3126,7 +3235,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 7.7,
+    "artificial_analysis_intelligence_index": 2.3,
     "artificial_analysis_coding_index": 21.5,
     "artificial_analysis_agentic_index": null
    },
@@ -3139,9 +3248,9 @@
    },
    "performance": {
     "median_output_tokens_per_second": 32.75,
-    "median_time_to_first_token_seconds": 3.13,
-    "median_time_to_first_answer_token_seconds": 3.13,
-    "median_end_to_end_response_time_seconds": 18.4
+    "median_time_to_first_token_seconds": 3.01,
+    "median_time_to_first_answer_token_seconds": 3.01,
+    "median_end_to_end_response_time_seconds": 18.28
    }
   },
   {
@@ -3154,7 +3263,7 @@
     "name": "Amazon"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 11.8,
+    "artificial_analysis_intelligence_index": 6,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3166,10 +3275,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 163.22,
-    "median_time_to_first_token_seconds": 1.11,
-    "median_time_to_first_answer_token_seconds": 1.11,
-    "median_end_to_end_response_time_seconds": 4.17
+    "median_output_tokens_per_second": 153.18,
+    "median_time_to_first_token_seconds": 1.09,
+    "median_time_to_first_answer_token_seconds": 1.09,
+    "median_end_to_end_response_time_seconds": 4.35
    }
   },
   {
@@ -3182,16 +3291,11 @@
     "name": "NVIDIA"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 14.5,
+    "artificial_analysis_intelligence_index": 8.6,
     "artificial_analysis_coding_index": 14.4,
-    "artificial_analysis_agentic_index": 2
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 39.36,
-    "cost_per_task": {
-     "total_cost": 0.0249
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.05,
     "price_1m_output_tokens": 0.2,
@@ -3199,10 +3303,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 290.25,
-    "median_time_to_first_token_seconds": 1.15,
-    "median_time_to_first_answer_token_seconds": 8.04,
-    "median_end_to_end_response_time_seconds": 9.77
+    "median_output_tokens_per_second": 158.5,
+    "median_time_to_first_token_seconds": 1.27,
+    "median_time_to_first_answer_token_seconds": 13.89,
+    "median_end_to_end_response_time_seconds": 17.04
    }
   },
   {
@@ -3215,16 +3319,11 @@
     "name": "DeepSeek"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 51.5,
+    "artificial_analysis_intelligence_index": 41.5,
     "artificial_analysis_coding_index": 65,
-    "artificial_analysis_agentic_index": 52.9
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 235.89,
-    "cost_per_task": {
-     "total_cost": 0.1164
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.44,
     "price_1m_output_tokens": 1.32,
@@ -3232,10 +3331,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 108.66,
-    "median_time_to_first_token_seconds": 1.13,
-    "median_time_to_first_answer_token_seconds": 19.54,
-    "median_end_to_end_response_time_seconds": 24.14
+    "median_output_tokens_per_second": 120.13,
+    "median_time_to_first_token_seconds": 1.08,
+    "median_time_to_first_answer_token_seconds": 17.73,
+    "median_end_to_end_response_time_seconds": 21.89
    }
   },
   {
@@ -3248,7 +3347,7 @@
     "name": "DeepSeek"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 2.6,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3276,7 +3375,7 @@
     "name": "OpenBMB"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 11.9,
+    "artificial_analysis_intelligence_index": 6.2,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3304,7 +3403,7 @@
     "name": "Anthropic"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 11.8,
+    "artificial_analysis_intelligence_index": 6,
     "artificial_analysis_coding_index": 19.5,
     "artificial_analysis_agentic_index": null
    },
@@ -3332,14 +3431,14 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 51.6,
+    "artificial_analysis_intelligence_index": 40.3,
     "artificial_analysis_coding_index": 69.2,
-    "artificial_analysis_agentic_index": 40.5
+    "artificial_analysis_agentic_index": 30.3
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 412.03,
+    "total_cost": 508.75,
     "cost_per_task": {
-     "total_cost": 0.3442
+     "total_cost": 0.3563
     }
    },
    "pricing": {
@@ -3349,10 +3448,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 166.3,
-    "median_time_to_first_token_seconds": 16.22,
-    "median_time_to_first_answer_token_seconds": 16.22,
-    "median_end_to_end_response_time_seconds": 19.23
+    "median_output_tokens_per_second": 214.88,
+    "median_time_to_first_token_seconds": 15.82,
+    "median_time_to_first_answer_token_seconds": 15.82,
+    "median_end_to_end_response_time_seconds": 18.14
    }
   },
   {
@@ -3365,7 +3464,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 27.9,
+    "artificial_analysis_intelligence_index": 20.8,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3377,10 +3476,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 170.71,
-    "median_time_to_first_token_seconds": 0.86,
-    "median_time_to_first_answer_token_seconds": 0.86,
-    "median_end_to_end_response_time_seconds": 3.79
+    "median_output_tokens_per_second": 199.81,
+    "median_time_to_first_token_seconds": 0.94,
+    "median_time_to_first_answer_token_seconds": 0.94,
+    "median_end_to_end_response_time_seconds": 3.44
    }
   },
   {
@@ -3393,7 +3492,7 @@
     "name": "AI21 Labs"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 5,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3421,14 +3520,14 @@
     "name": "SpaceXAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 55.8,
+    "artificial_analysis_intelligence_index": 45.5,
     "artificial_analysis_coding_index": 72.4,
-    "artificial_analysis_agentic_index": 48.9
+    "artificial_analysis_agentic_index": 42.4
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 628.65,
+    "total_cost": 759.01,
     "cost_per_task": {
-     "total_cost": 0.4256
+     "total_cost": 0.4342
     }
    },
    "pricing": {
@@ -3438,10 +3537,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 51.09,
-    "median_time_to_first_token_seconds": 14.51,
-    "median_time_to_first_answer_token_seconds": 14.51,
-    "median_end_to_end_response_time_seconds": 24.3
+    "median_output_tokens_per_second": 57.57,
+    "median_time_to_first_token_seconds": 8.57,
+    "median_time_to_first_answer_token_seconds": 8.57,
+    "median_end_to_end_response_time_seconds": 17.25
    }
   },
   {
@@ -3454,7 +3553,7 @@
     "name": "Mistral"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 6.2,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3482,7 +3581,7 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 24.5,
+    "artificial_analysis_intelligence_index": 17.6,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3494,10 +3593,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 42.03,
-    "median_time_to_first_token_seconds": 2.54,
-    "median_time_to_first_answer_token_seconds": 2.54,
-    "median_end_to_end_response_time_seconds": 14.44
+    "median_output_tokens_per_second": 47.59,
+    "median_time_to_first_token_seconds": 2.36,
+    "median_time_to_first_answer_token_seconds": 2.36,
+    "median_end_to_end_response_time_seconds": 12.86
    }
   },
   {
@@ -3510,7 +3609,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 8.6,
+    "artificial_analysis_intelligence_index": 3.2,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3538,7 +3637,7 @@
     "name": "Mistral"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 4.3,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3550,10 +3649,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 151.3,
-    "median_time_to_first_token_seconds": 0.81,
-    "median_time_to_first_answer_token_seconds": 0.81,
-    "median_end_to_end_response_time_seconds": 4.11
+    "median_output_tokens_per_second": 141.09,
+    "median_time_to_first_token_seconds": 0.72,
+    "median_time_to_first_answer_token_seconds": 0.72,
+    "median_end_to_end_response_time_seconds": 4.27
    }
   },
   {
@@ -3566,16 +3665,11 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 41.9,
+    "artificial_analysis_intelligence_index": 32.9,
     "artificial_analysis_coding_index": 65.1,
-    "artificial_analysis_agentic_index": 36
+    "artificial_analysis_agentic_index": 29.5
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 181.24,
-    "cost_per_task": {
-     "total_cost": 0.18
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 4,
     "price_1m_output_tokens": 20,
@@ -3583,10 +3677,10 @@
     "price_1m_cache_write_tokens": 5
    },
    "performance": {
-    "median_output_tokens_per_second": 75.01,
-    "median_time_to_first_token_seconds": 1.05,
-    "median_time_to_first_answer_token_seconds": 1.05,
-    "median_end_to_end_response_time_seconds": 7.72
+    "median_output_tokens_per_second": 67.06,
+    "median_time_to_first_token_seconds": 0.95,
+    "median_time_to_first_answer_token_seconds": 0.95,
+    "median_end_to_end_response_time_seconds": 8.41
    }
   },
   {
@@ -3599,7 +3693,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 38.7,
+    "artificial_analysis_intelligence_index": 30.7,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3611,10 +3705,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 180.72,
-    "median_time_to_first_token_seconds": 5.86,
-    "median_time_to_first_answer_token_seconds": 5.86,
-    "median_end_to_end_response_time_seconds": 8.63
+    "median_output_tokens_per_second": 205.3,
+    "median_time_to_first_token_seconds": 6.15,
+    "median_time_to_first_answer_token_seconds": 6.15,
+    "median_end_to_end_response_time_seconds": 8.58
    }
   },
   {
@@ -3627,7 +3721,7 @@
     "name": "Nanbeige"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 11,
+    "artificial_analysis_intelligence_index": 5.3,
     "artificial_analysis_coding_index": 9.6,
     "artificial_analysis_agentic_index": null
    },
@@ -3655,16 +3749,11 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 42.9,
+    "artificial_analysis_intelligence_index": 33.8,
     "artificial_analysis_coding_index": 58.2,
-    "artificial_analysis_agentic_index": 43.7
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 302.62,
-    "cost_per_task": {
-     "total_cost": 0.2649
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.5,
     "price_1m_output_tokens": 3,
@@ -3672,10 +3761,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 51.65,
-    "median_time_to_first_token_seconds": 3.99,
-    "median_time_to_first_answer_token_seconds": 42.71,
-    "median_end_to_end_response_time_seconds": 52.39
+    "median_output_tokens_per_second": 52.21,
+    "median_time_to_first_token_seconds": 3.93,
+    "median_time_to_first_answer_token_seconds": 42.24,
+    "median_end_to_end_response_time_seconds": 51.81
    }
   },
   {
@@ -3688,9 +3777,9 @@
     "name": "Upstage"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 37.4,
-    "artificial_analysis_coding_index": 44.7,
-    "artificial_analysis_agentic_index": 27.8
+    "artificial_analysis_intelligence_index": 29,
+    "artificial_analysis_coding_index": 45,
+    "artificial_analysis_agentic_index": null
    },
    "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
@@ -3716,9 +3805,9 @@
     "name": "InclusionAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 24.5,
+    "artificial_analysis_intelligence_index": 15.7,
     "artificial_analysis_coding_index": 26.5,
-    "artificial_analysis_agentic_index": 16
+    "artificial_analysis_agentic_index": 7.1
    },
    "artificial_analysis_intelligence_index_cost": {
     "total_cost": 0,
@@ -3733,10 +3822,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 167.99,
-    "median_time_to_first_token_seconds": 2.61,
-    "median_time_to_first_answer_token_seconds": 14.51,
-    "median_end_to_end_response_time_seconds": 17.49
+    "median_output_tokens_per_second": 155.17,
+    "median_time_to_first_token_seconds": 2.51,
+    "median_time_to_first_answer_token_seconds": 15.4,
+    "median_end_to_end_response_time_seconds": 18.62
    }
   },
   {
@@ -3749,7 +3838,7 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 8.9,
+    "artificial_analysis_intelligence_index": 3.4,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3761,10 +3850,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 150.19,
-    "median_time_to_first_token_seconds": 1.89,
-    "median_time_to_first_answer_token_seconds": 1.89,
-    "median_end_to_end_response_time_seconds": 5.21
+    "median_output_tokens_per_second": 141.31,
+    "median_time_to_first_token_seconds": 2.05,
+    "median_time_to_first_answer_token_seconds": 2.05,
+    "median_end_to_end_response_time_seconds": 5.59
    }
   },
   {
@@ -3777,7 +3866,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 31.9,
+    "artificial_analysis_intelligence_index": 24.4,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3789,10 +3878,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 78.94,
-    "median_time_to_first_token_seconds": 6.97,
-    "median_time_to_first_answer_token_seconds": 6.97,
-    "median_end_to_end_response_time_seconds": 13.31
+    "median_output_tokens_per_second": 80.59,
+    "median_time_to_first_token_seconds": 9.33,
+    "median_time_to_first_answer_token_seconds": 9.33,
+    "median_end_to_end_response_time_seconds": 15.53
    }
   },
   {
@@ -3805,16 +3894,11 @@
     "name": "Celeris"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 12.4,
+    "artificial_analysis_intelligence_index": 6.3,
     "artificial_analysis_coding_index": 14.4,
-    "artificial_analysis_agentic_index": 2.4
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 156.79,
-    "cost_per_task": {
-     "total_cost": 0.2582
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.2,
     "price_1m_output_tokens": 0.7,
@@ -3822,10 +3906,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 1593.95,
-    "median_time_to_first_token_seconds": 0.62,
-    "median_time_to_first_answer_token_seconds": 0.62,
-    "median_end_to_end_response_time_seconds": 0.93
+    "median_output_tokens_per_second": 1530.4,
+    "median_time_to_first_token_seconds": 0.59,
+    "median_time_to_first_answer_token_seconds": 0.59,
+    "median_end_to_end_response_time_seconds": 0.91
    }
   },
   {
@@ -3838,7 +3922,7 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 32.5,
+    "artificial_analysis_intelligence_index": 25,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3922,14 +4006,14 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 50.1,
+    "artificial_analysis_intelligence_index": 41.3,
     "artificial_analysis_coding_index": 67.1,
-    "artificial_analysis_agentic_index": 43.5
+    "artificial_analysis_agentic_index": 37.8
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 405.59,
+    "total_cost": 515.72,
     "cost_per_task": {
-     "total_cost": 0.2276
+     "total_cost": 0.2979
     }
    },
    "pricing": {
@@ -3939,10 +4023,10 @@
     "price_1m_cache_write_tokens": 2.5
    },
    "performance": {
-    "median_output_tokens_per_second": 106.38,
-    "median_time_to_first_token_seconds": 2.13,
-    "median_time_to_first_answer_token_seconds": 2.13,
-    "median_end_to_end_response_time_seconds": 6.83
+    "median_output_tokens_per_second": 86.65,
+    "median_time_to_first_token_seconds": 4.83,
+    "median_time_to_first_answer_token_seconds": 4.83,
+    "median_end_to_end_response_time_seconds": 10.6
    }
   },
   {
@@ -3955,7 +4039,7 @@
     "name": "Z AI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 27.1,
+    "artificial_analysis_intelligence_index": 20.1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -3967,10 +4051,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 97.77,
-    "median_time_to_first_token_seconds": 1.28,
-    "median_time_to_first_answer_token_seconds": 1.28,
-    "median_end_to_end_response_time_seconds": 6.39
+    "median_output_tokens_per_second": 97.5,
+    "median_time_to_first_token_seconds": 1.43,
+    "median_time_to_first_answer_token_seconds": 1.43,
+    "median_end_to_end_response_time_seconds": 6.56
    }
   },
   {
@@ -3983,9 +4067,9 @@
     "name": "SK Telecom"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 35,
+    "artificial_analysis_intelligence_index": 26.8,
     "artificial_analysis_coding_index": 38.8,
-    "artificial_analysis_agentic_index": 25.7
+    "artificial_analysis_agentic_index": null
    },
    "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
@@ -4011,7 +4095,7 @@
     "name": "LG AI Research"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 2.4,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4067,7 +4151,7 @@
     "name": "Nous Research"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 8.8,
+    "artificial_analysis_intelligence_index": 3.4,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4079,10 +4163,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 39.71,
-    "median_time_to_first_token_seconds": 2.46,
-    "median_time_to_first_answer_token_seconds": 52.83,
-    "median_end_to_end_response_time_seconds": 65.42
+    "median_output_tokens_per_second": 41.84,
+    "median_time_to_first_token_seconds": 2.47,
+    "median_time_to_first_answer_token_seconds": 50.28,
+    "median_end_to_end_response_time_seconds": 62.23
    }
   },
   {
@@ -4095,7 +4179,7 @@
     "name": "Xiaomi"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 25.1,
+    "artificial_analysis_intelligence_index": 18.3,
     "artificial_analysis_coding_index": 49.8,
     "artificial_analysis_agentic_index": null
    },
@@ -4123,7 +4207,7 @@
     "name": "IBM"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 6.4,
+    "artificial_analysis_intelligence_index": 1.1,
     "artificial_analysis_coding_index": 9.5,
     "artificial_analysis_agentic_index": null
    },
@@ -4135,10 +4219,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 110.8,
-    "median_time_to_first_token_seconds": 0.75,
-    "median_time_to_first_answer_token_seconds": 0.75,
-    "median_end_to_end_response_time_seconds": 5.26
+    "median_output_tokens_per_second": 114.64,
+    "median_time_to_first_token_seconds": 0.8,
+    "median_time_to_first_answer_token_seconds": 0.8,
+    "median_end_to_end_response_time_seconds": 5.16
    }
   },
   {
@@ -4151,14 +4235,14 @@
     "name": "DeepSeek"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 53.2,
+    "artificial_analysis_intelligence_index": 42.1,
     "artificial_analysis_coding_index": 68.8,
-    "artificial_analysis_agentic_index": 49.6
+    "artificial_analysis_agentic_index": 42.5
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 616.95,
+    "total_cost": 706.75,
     "cost_per_task": {
-     "total_cost": 0.2653
+     "total_cost": 0.3328
     }
    },
    "pricing": {
@@ -4168,10 +4252,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 54.07,
-    "median_time_to_first_token_seconds": 1.65,
-    "median_time_to_first_answer_token_seconds": 38.64,
-    "median_end_to_end_response_time_seconds": 47.89
+    "median_output_tokens_per_second": 65.92,
+    "median_time_to_first_token_seconds": 1.7,
+    "median_time_to_first_answer_token_seconds": 32.04,
+    "median_end_to_end_response_time_seconds": 39.63
    }
   },
   {
@@ -4184,7 +4268,7 @@
     "name": "Anthropic"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 1.7,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": 7.8,
     "artificial_analysis_agentic_index": null
    },
@@ -4212,7 +4296,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 15.2,
+    "artificial_analysis_intelligence_index": 9.2,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4240,7 +4324,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 26.1,
+    "artificial_analysis_intelligence_index": 19.1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4252,10 +4336,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 162.19,
-    "median_time_to_first_token_seconds": 21.64,
-    "median_time_to_first_answer_token_seconds": 21.64,
-    "median_end_to_end_response_time_seconds": 24.73
+    "median_output_tokens_per_second": 136.92,
+    "median_time_to_first_token_seconds": 22.85,
+    "median_time_to_first_answer_token_seconds": 22.85,
+    "median_end_to_end_response_time_seconds": 26.5
    }
   },
   {
@@ -4268,7 +4352,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 38.9,
+    "artificial_analysis_intelligence_index": 30.9,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4296,9 +4380,9 @@
     "name": "Mistral"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 18,
+    "artificial_analysis_intelligence_index": 11.8,
     "artificial_analysis_coding_index": 21.3,
-    "artificial_analysis_agentic_index": 1.9
+    "artificial_analysis_agentic_index": null
    },
    "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
@@ -4324,16 +4408,11 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 32.1,
+    "artificial_analysis_intelligence_index": 26.2,
     "artificial_analysis_coding_index": 41.9,
-    "artificial_analysis_agentic_index": 21.6
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 505.33,
-    "cost_per_task": {
-     "total_cost": 0.2944
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.38,
     "price_1m_output_tokens": 2.25,
@@ -4341,10 +4420,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 121.91,
-    "median_time_to_first_token_seconds": 2.04,
-    "median_time_to_first_answer_token_seconds": 46.29,
-    "median_end_to_end_response_time_seconds": 50.39
+    "median_output_tokens_per_second": 128.67,
+    "median_time_to_first_token_seconds": 2.03,
+    "median_time_to_first_answer_token_seconds": 43.96,
+    "median_end_to_end_response_time_seconds": 47.85
    }
   },
   {
@@ -4357,14 +4436,14 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 50.1,
+    "artificial_analysis_intelligence_index": 41.6,
     "artificial_analysis_coding_index": 68.6,
-    "artificial_analysis_agentic_index": 44.4
+    "artificial_analysis_agentic_index": 39.7
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 96.36,
+    "total_cost": 119.26,
     "cost_per_task": {
-     "total_cost": 0.0328
+     "total_cost": 0.0574
     }
    },
    "pricing": {
@@ -4374,10 +4453,10 @@
     "price_1m_cache_write_tokens": 0.25
    },
    "performance": {
-    "median_output_tokens_per_second": 126.5,
-    "median_time_to_first_token_seconds": 59.6,
-    "median_time_to_first_answer_token_seconds": 59.6,
-    "median_end_to_end_response_time_seconds": 63.55
+    "median_output_tokens_per_second": 116.87,
+    "median_time_to_first_token_seconds": 65.08,
+    "median_time_to_first_answer_token_seconds": 65.08,
+    "median_end_to_end_response_time_seconds": 69.36
    }
   },
   {
@@ -4390,7 +4469,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 19.1,
+    "artificial_analysis_intelligence_index": 12.7,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4418,7 +4497,7 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 9.1,
+    "artificial_analysis_intelligence_index": 3.6,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4446,7 +4525,7 @@
     "name": "InclusionAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 9.6,
+    "artificial_analysis_intelligence_index": 4.1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4458,10 +4537,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 54.65,
-    "median_time_to_first_token_seconds": 2.66,
-    "median_time_to_first_answer_token_seconds": 2.66,
-    "median_end_to_end_response_time_seconds": 11.8
+    "median_output_tokens_per_second": 4.79,
+    "median_time_to_first_token_seconds": 2.67,
+    "median_time_to_first_answer_token_seconds": 2.67,
+    "median_end_to_end_response_time_seconds": 107.08
    }
   },
   {
@@ -4474,7 +4553,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 30.8,
+    "artificial_analysis_intelligence_index": 23.5,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4486,10 +4565,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 185.6,
-    "median_time_to_first_token_seconds": 3.26,
-    "median_time_to_first_answer_token_seconds": 3.26,
-    "median_end_to_end_response_time_seconds": 5.95
+    "median_output_tokens_per_second": 153.23,
+    "median_time_to_first_token_seconds": 5.09,
+    "median_time_to_first_answer_token_seconds": 5.09,
+    "median_end_to_end_response_time_seconds": 8.35
    }
   },
   {
@@ -4530,16 +4609,11 @@
     "name": "DeepSeek"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 39,
+    "artificial_analysis_intelligence_index": 30.4,
     "artificial_analysis_coding_index": 52,
-    "artificial_analysis_agentic_index": 30.3
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 59.86,
-    "cost_per_task": {
-     "total_cost": 0.0529
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.13,
     "price_1m_output_tokens": 0.28,
@@ -4563,7 +4637,7 @@
     "name": "DeepSeek"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 6.4,
+    "artificial_analysis_intelligence_index": 1.1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4591,7 +4665,7 @@
     "name": "Anthropic"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 31.7,
+    "artificial_analysis_intelligence_index": 24.3,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4610,6 +4684,39 @@
    }
   },
   {
+   "id": "8a999846-4c1d-4ce7-a8b7-1310a7166fd7",
+   "name": "Gemini 3.8 Flash (high)",
+   "slug": "gemini-3-8-flash",
+   "release_date": "2026-09-02",
+   "model_creator": {
+    "id": "faddc6d9-2c14-445f-9b28-56726f59c793",
+    "name": "Google"
+   },
+   "evaluations": {
+    "artificial_analysis_intelligence_index": 47.1,
+    "artificial_analysis_coding_index": 76.3,
+    "artificial_analysis_agentic_index": 41.2
+   },
+   "artificial_analysis_intelligence_index_cost": {
+    "total_cost": 1077.95,
+    "cost_per_task": {
+     "total_cost": 0.738
+    }
+   },
+   "pricing": {
+    "price_1m_input_tokens": 0.75,
+    "price_1m_output_tokens": 3.75,
+    "price_1m_cache_hit_tokens": 0.07,
+    "price_1m_cache_write_tokens": 0.75
+   },
+   "performance": {
+    "median_output_tokens_per_second": null,
+    "median_time_to_first_token_seconds": null,
+    "median_time_to_first_answer_token_seconds": null,
+    "median_end_to_end_response_time_seconds": null
+   }
+  },
+  {
    "id": "8afc250d-b538-45a2-812a-4605f4ffd87e",
    "name": "GPT-5.6 Sol (high)",
    "slug": "gpt-5-6-sol-high",
@@ -4619,14 +4726,14 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 57.3,
+    "artificial_analysis_intelligence_index": 48.3,
     "artificial_analysis_coding_index": 77.2,
-    "artificial_analysis_agentic_index": 50.6
+    "artificial_analysis_agentic_index": 44.9
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 699.68,
+    "total_cost": 952.64,
     "cost_per_task": {
-     "total_cost": 0.4269
+     "total_cost": 0.6145
     }
    },
    "pricing": {
@@ -4636,10 +4743,10 @@
     "price_1m_cache_write_tokens": 5
    },
    "performance": {
-    "median_output_tokens_per_second": 78.01,
-    "median_time_to_first_token_seconds": 9.92,
-    "median_time_to_first_answer_token_seconds": 9.92,
-    "median_end_to_end_response_time_seconds": 16.33
+    "median_output_tokens_per_second": 73.19,
+    "median_time_to_first_token_seconds": 13.81,
+    "median_time_to_first_answer_token_seconds": 13.81,
+    "median_end_to_end_response_time_seconds": 20.64
    }
   },
   {
@@ -4680,7 +4787,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 9.4,
+    "artificial_analysis_intelligence_index": 3.9,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4692,10 +4799,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 96.68,
-    "median_time_to_first_token_seconds": 1.19,
-    "median_time_to_first_answer_token_seconds": 1.19,
-    "median_end_to_end_response_time_seconds": 6.36
+    "median_output_tokens_per_second": 90.53,
+    "median_time_to_first_token_seconds": 1.2,
+    "median_time_to_first_answer_token_seconds": 1.2,
+    "median_end_to_end_response_time_seconds": 6.72
    }
   },
   {
@@ -4708,16 +4815,11 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 37.7,
+    "artificial_analysis_intelligence_index": 29,
     "artificial_analysis_coding_index": 53.7,
-    "artificial_analysis_agentic_index": 27.5
+    "artificial_analysis_agentic_index": 20.1
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 667.18,
-    "cost_per_task": {
-     "total_cost": 0.2918
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.6,
     "price_1m_output_tokens": 3.6,
@@ -4725,10 +4827,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 54.74,
-    "median_time_to_first_token_seconds": 3.75,
-    "median_time_to_first_answer_token_seconds": 107.45,
-    "median_end_to_end_response_time_seconds": 116.58
+    "median_output_tokens_per_second": 54.99,
+    "median_time_to_first_token_seconds": 3.78,
+    "median_time_to_first_answer_token_seconds": 107,
+    "median_end_to_end_response_time_seconds": 116.09
    }
   },
   {
@@ -4741,7 +4843,7 @@
     "name": "NVIDIA"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 15,
+    "artificial_analysis_intelligence_index": 9,
     "artificial_analysis_coding_index": 13.8,
     "artificial_analysis_agentic_index": null
    },
@@ -4753,10 +4855,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 324.36,
-    "median_time_to_first_token_seconds": 1.01,
-    "median_time_to_first_answer_token_seconds": 7.18,
-    "median_end_to_end_response_time_seconds": 8.72
+    "median_output_tokens_per_second": 328.33,
+    "median_time_to_first_token_seconds": 1.11,
+    "median_time_to_first_answer_token_seconds": 7.21,
+    "median_end_to_end_response_time_seconds": 8.73
    }
   },
   {
@@ -4769,7 +4871,7 @@
     "name": "Tencent"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 34.4,
+    "artificial_analysis_intelligence_index": 26.8,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4797,16 +4899,11 @@
     "name": "Kimi"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 43,
+    "artificial_analysis_intelligence_index": 33.9,
     "artificial_analysis_coding_index": 60.8,
-    "artificial_analysis_agentic_index": 30.3
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 544.58,
-    "cost_per_task": {
-     "total_cost": 0.222
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.95,
     "price_1m_output_tokens": 4,
@@ -4814,10 +4911,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 45.44,
-    "median_time_to_first_token_seconds": 2.86,
-    "median_time_to_first_answer_token_seconds": 51.91,
-    "median_end_to_end_response_time_seconds": 62.91
+    "median_output_tokens_per_second": 45.45,
+    "median_time_to_first_token_seconds": 2.93,
+    "median_time_to_first_answer_token_seconds": 51.97,
+    "median_end_to_end_response_time_seconds": 62.97
    }
   },
   {
@@ -4830,7 +4927,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 2.7,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4858,22 +4955,22 @@
     "name": "Sapiens AI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 39.7,
+    "artificial_analysis_intelligence_index": 31.2,
     "artificial_analysis_coding_index": 58.8,
-    "artificial_analysis_agentic_index": 25.4
+    "artificial_analysis_agentic_index": null
    },
    "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.45,
     "price_1m_output_tokens": 0.9,
-    "price_1m_cache_hit_tokens": 0,
+    "price_1m_cache_hit_tokens": 0.01,
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 152.47,
-    "median_time_to_first_token_seconds": 3.28,
-    "median_time_to_first_answer_token_seconds": 16.4,
-    "median_end_to_end_response_time_seconds": 19.68
+    "median_output_tokens_per_second": 199.72,
+    "median_time_to_first_token_seconds": 2.78,
+    "median_time_to_first_answer_token_seconds": 12.79,
+    "median_end_to_end_response_time_seconds": 15.29
    }
   },
   {
@@ -4886,14 +4983,14 @@
     "name": "Alibaba"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 57.7,
+    "artificial_analysis_intelligence_index": 46.7,
     "artificial_analysis_coding_index": 71.9,
-    "artificial_analysis_agentic_index": 57.1
+    "artificial_analysis_agentic_index": 50.7
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 1395.05,
+    "total_cost": 1779.87,
     "cost_per_task": {
-     "total_cost": 0.8071
+     "total_cost": 1.0977
     }
    },
    "pricing": {
@@ -4903,10 +5000,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 38.65,
-    "median_time_to_first_token_seconds": 2.76,
-    "median_time_to_first_answer_token_seconds": 54.51,
-    "median_end_to_end_response_time_seconds": 67.44
+    "median_output_tokens_per_second": 40.14,
+    "median_time_to_first_token_seconds": 2.53,
+    "median_time_to_first_answer_token_seconds": 52.36,
+    "median_end_to_end_response_time_seconds": 64.82
    }
   },
   {
@@ -4919,7 +5016,7 @@
     "name": "Upstage"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 12.5,
+    "artificial_analysis_intelligence_index": 6.7,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4947,7 +5044,7 @@
     "name": "OpenAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 19.2,
+    "artificial_analysis_intelligence_index": 12.9,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -4959,10 +5056,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 173.4,
-    "median_time_to_first_token_seconds": 35.43,
-    "median_time_to_first_answer_token_seconds": 35.43,
-    "median_end_to_end_response_time_seconds": 38.31
+    "median_output_tokens_per_second": 162.68,
+    "median_time_to_first_token_seconds": 47.5,
+    "median_time_to_first_answer_token_seconds": 47.5,
+    "median_end_to_end_response_time_seconds": 50.57
    }
   },
   {
@@ -4975,7 +5072,7 @@
     "name": "DeepSeek"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 4.7,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -5003,7 +5100,7 @@
     "name": "Allen Institute for AI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 2.4,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -5031,7 +5128,7 @@
     "name": "China Mobile"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 39.9,
+    "artificial_analysis_intelligence_index": 31.8,
     "artificial_analysis_coding_index": 52.4,
     "artificial_analysis_agentic_index": null
    },
@@ -5059,16 +5156,11 @@
     "name": "SpaceXAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 25,
+    "artificial_analysis_intelligence_index": 17.5,
     "artificial_analysis_coding_index": 35.2,
-    "artificial_analysis_agentic_index": 23
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 200.93,
-    "cost_per_task": {
-     "total_cost": 0.2947
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 1.25,
     "price_1m_output_tokens": 2.5,
@@ -5076,10 +5168,10 @@
     "price_1m_cache_write_tokens": 1.25
    },
    "performance": {
-    "median_output_tokens_per_second": 102.41,
-    "median_time_to_first_token_seconds": 0.74,
-    "median_time_to_first_answer_token_seconds": 0.74,
-    "median_end_to_end_response_time_seconds": 5.63
+    "median_output_tokens_per_second": 105.09,
+    "median_time_to_first_token_seconds": 0.76,
+    "median_time_to_first_answer_token_seconds": 0.76,
+    "median_end_to_end_response_time_seconds": 5.52
    }
   },
   {
@@ -5092,16 +5184,11 @@
     "name": "Anthropic"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 37.4,
+    "artificial_analysis_intelligence_index": 29,
     "artificial_analysis_coding_index": 52.1,
-    "artificial_analysis_agentic_index": 26.4
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 1036.95,
-    "cost_per_task": {
-     "total_cost": 0.4643
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 3,
     "price_1m_output_tokens": 15,
@@ -5109,10 +5196,10 @@
     "price_1m_cache_write_tokens": 3.75
    },
    "performance": {
-    "median_output_tokens_per_second": 41.93,
-    "median_time_to_first_token_seconds": 10.83,
-    "median_time_to_first_answer_token_seconds": 10.83,
-    "median_end_to_end_response_time_seconds": 22.76
+    "median_output_tokens_per_second": 46.08,
+    "median_time_to_first_token_seconds": 13.74,
+    "median_time_to_first_answer_token_seconds": 13.74,
+    "median_end_to_end_response_time_seconds": 24.59
    }
   },
   {
@@ -5125,7 +5212,7 @@
     "name": "Anthropic"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 29.9,
+    "artificial_analysis_intelligence_index": 22.7,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -5137,10 +5224,10 @@
     "price_1m_cache_write_tokens": 3.75
    },
    "performance": {
-    "median_output_tokens_per_second": 39.34,
-    "median_time_to_first_token_seconds": 1.29,
-    "median_time_to_first_answer_token_seconds": 1.29,
-    "median_end_to_end_response_time_seconds": 14
+    "median_output_tokens_per_second": 39.81,
+    "median_time_to_first_token_seconds": 1.54,
+    "median_time_to_first_answer_token_seconds": 1.54,
+    "median_end_to_end_response_time_seconds": 14.1
    }
   },
   {
@@ -5153,7 +5240,7 @@
     "name": "IBM"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 4.4,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": 4.7,
     "artificial_analysis_agentic_index": null
    },
@@ -5181,9 +5268,9 @@
     "name": "InclusionAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 14.2,
+    "artificial_analysis_intelligence_index": 7.9,
     "artificial_analysis_coding_index": 25.3,
-    "artificial_analysis_agentic_index": 2.3
+    "artificial_analysis_agentic_index": null
    },
    "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
@@ -5209,16 +5296,11 @@
     "name": "Meta"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 14.5,
+    "artificial_analysis_intelligence_index": 8.5,
     "artificial_analysis_coding_index": 16.3,
-    "artificial_analysis_agentic_index": 1.2
+    "artificial_analysis_agentic_index": 0.6
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 35.03,
-    "cost_per_task": {
-     "total_cost": 0.0346
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.26,
     "price_1m_output_tokens": 0.91,
@@ -5226,10 +5308,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 98.04,
-    "median_time_to_first_token_seconds": 0.83,
-    "median_time_to_first_answer_token_seconds": 0.83,
-    "median_end_to_end_response_time_seconds": 5.93
+    "median_output_tokens_per_second": 82.14,
+    "median_time_to_first_token_seconds": 0.91,
+    "median_time_to_first_answer_token_seconds": 0.91,
+    "median_end_to_end_response_time_seconds": 7
    }
   },
   {
@@ -5242,7 +5324,7 @@
     "name": "AI21 Labs"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 4.7,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -5270,7 +5352,7 @@
     "name": "Z AI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 36.3,
+    "artificial_analysis_intelligence_index": 28.5,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -5282,10 +5364,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 52.75,
-    "median_time_to_first_token_seconds": 1.76,
-    "median_time_to_first_answer_token_seconds": 1.76,
-    "median_end_to_end_response_time_seconds": 11.24
+    "median_output_tokens_per_second": 48.25,
+    "median_time_to_first_token_seconds": 1.84,
+    "median_time_to_first_answer_token_seconds": 1.84,
+    "median_end_to_end_response_time_seconds": 12.2
    }
   },
   {
@@ -5298,7 +5380,7 @@
     "name": "Google"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 5.2,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -5326,7 +5408,7 @@
     "name": "Z AI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 23.4,
+    "artificial_analysis_intelligence_index": 16.7,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -5338,10 +5420,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 64.25,
-    "median_time_to_first_token_seconds": 2.67,
-    "median_time_to_first_answer_token_seconds": 2.67,
-    "median_end_to_end_response_time_seconds": 10.46
+    "median_output_tokens_per_second": 69.16,
+    "median_time_to_first_token_seconds": 2.65,
+    "median_time_to_first_answer_token_seconds": 2.65,
+    "median_end_to_end_response_time_seconds": 9.88
    }
   },
   {
@@ -5354,16 +5436,11 @@
     "name": "SpaceXAI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 37.9,
+    "artificial_analysis_intelligence_index": 29.3,
     "artificial_analysis_coding_index": 42.2,
-    "artificial_analysis_agentic_index": 24.2
+    "artificial_analysis_agentic_index": 17.3
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 287.64,
-    "cost_per_task": {
-     "total_cost": 0.1454
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 1.25,
     "price_1m_output_tokens": 2.5,
@@ -5371,10 +5448,10 @@
     "price_1m_cache_write_tokens": 1.25
    },
    "performance": {
-    "median_output_tokens_per_second": 121.05,
-    "median_time_to_first_token_seconds": 15.04,
-    "median_time_to_first_answer_token_seconds": 15.04,
-    "median_end_to_end_response_time_seconds": 19.17
+    "median_output_tokens_per_second": 141.27,
+    "median_time_to_first_token_seconds": 19,
+    "median_time_to_first_answer_token_seconds": 19,
+    "median_end_to_end_response_time_seconds": 22.54
    }
   },
   {
@@ -5387,7 +5464,7 @@
     "name": "Allen Institute for AI"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 6.2,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -5415,7 +5492,7 @@
     "name": "Xiaomi"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 35.9,
+    "artificial_analysis_intelligence_index": 28.1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -5443,16 +5520,11 @@
     "name": "Mistral"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 9,
+    "artificial_analysis_intelligence_index": 3.5,
     "artificial_analysis_coding_index": 9.7,
-    "artificial_analysis_agentic_index": 1.2
+    "artificial_analysis_agentic_index": null
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 114.06,
-    "cost_per_task": {
-     "total_cost": 0.1846
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.15,
     "price_1m_output_tokens": 0.15,
@@ -5460,10 +5532,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 130.69,
-    "median_time_to_first_token_seconds": 0.75,
-    "median_time_to_first_answer_token_seconds": 0.75,
-    "median_end_to_end_response_time_seconds": 4.58
+    "median_output_tokens_per_second": 96.08,
+    "median_time_to_first_token_seconds": 0.72,
+    "median_time_to_first_answer_token_seconds": 0.72,
+    "median_end_to_end_response_time_seconds": 5.92
    }
   },
   {
@@ -5476,7 +5548,7 @@
     "name": "Meta"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 9.3,
+    "artificial_analysis_intelligence_index": 3.7,
     "artificial_analysis_coding_index": 11.9,
     "artificial_analysis_agentic_index": null
    },
@@ -5488,10 +5560,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 88.24,
-    "median_time_to_first_token_seconds": 1.65,
-    "median_time_to_first_answer_token_seconds": 1.65,
-    "median_end_to_end_response_time_seconds": 7.31
+    "median_output_tokens_per_second": 86.95,
+    "median_time_to_first_token_seconds": 1.69,
+    "median_time_to_first_answer_token_seconds": 1.69,
+    "median_end_to_end_response_time_seconds": 7.44
    }
   },
   {
@@ -5504,7 +5576,7 @@
     "name": "NVIDIA"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 17.8,
+    "artificial_analysis_intelligence_index": 11.5,
     "artificial_analysis_coding_index": 25.3,
     "artificial_analysis_agentic_index": null
    },
@@ -5532,7 +5604,7 @@
     "name": "Perplexity"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 6,
+    "artificial_analysis_intelligence_index": 1,
     "artificial_analysis_coding_index": null,
     "artificial_analysis_agentic_index": null
    },
@@ -5560,16 +5632,11 @@
     "name": "Anthropic"
    },
    "evaluations": {
-    "artificial_analysis_intelligence_index": 57.3,
+    "artificial_analysis_intelligence_index": 46.4,
     "artificial_analysis_coding_index": 74.3,
-    "artificial_analysis_agentic_index": 49.4
+    "artificial_analysis_agentic_index": 42.8
    },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 3752.32,
-    "cost_per_task": {
-     "total_cost": 2.0315
-    }
-   },
+   "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 5,
     "price_1m_output_tokens": 25,
@@ -5577,10 +5644,10 @@
     "price_1m_cache_write_tokens": 6.25
    },
    "performance": {
-    "median_output_tokens_per_second": 57.16,
-    "median_time_to_first_token_seconds": 31.15,
-    "median_time_to_first_answer_token_seconds": 31.15,
-    "median_end_to_end_response_time_seconds": 39.9
+    "median_output_tokens_per_second": 61.96,
+    "median_time_to_first_token_seconds": 42.38,
+    "median_time_to_first_answer_token_seconds": 42.38,
+    "median_end_to_end_response_time_seconds": 50.45
    }
   },
   {
@@ -5605,277 +5672,10 @@
     "price_1m_cache_write_tokens": 2.5
    },
    "performance": {
-    "median_output_tokens_per_second": 62.83,
-    "median_time_to_first_token_seconds": 28.78,
-    "median_time_to_first_answer_token_seconds": 28.78,
-    "median_end_to_end_response_time_seconds": 36.73
-   }
-  },
-  {
-   "id": "9ac3908c-9eb2-44db-8c01-3ec7da6fc2ae",
-   "name": "Qwen3.8-Flash-Next",
-   "slug": "qwen3-8-flash-next",
-   "release_date": "2026-08-26",
-   "model_creator": {
-    "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-    "name": "Alibaba"
-   },
-   "evaluations": {
-    "artificial_analysis_intelligence_index": 55.8,
-    "artificial_analysis_coding_index": 73.1,
-    "artificial_analysis_agentic_index": 56.4
-   },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 158.13,
-    "cost_per_task": {
-     "total_cost": 0.097
-    }
-   },
-   "pricing": {
-    "price_1m_input_tokens": 0.15,
-    "price_1m_output_tokens": 0.47,
-    "price_1m_cache_hit_tokens": 0.02,
-    "price_1m_cache_write_tokens": null
-   },
-   "performance": {
-    "median_output_tokens_per_second": 88.57,
-    "median_time_to_first_token_seconds": 2.57,
-    "median_time_to_first_answer_token_seconds": 25.15,
-    "median_end_to_end_response_time_seconds": 30.8
-   }
-  },
-  {
-   "id": "9b97a35e-6ac7-44d9-91c6-422fa678963e",
-   "name": "GPT-5.6 Terra (Non-reasoning)",
-   "slug": "gpt-5-6-terra-non-reasoning",
-   "release_date": "2026-07-09",
-   "model_creator": {
-    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-    "name": "OpenAI"
-   },
-   "evaluations": {
-    "artificial_analysis_intelligence_index": 34.6,
-    "artificial_analysis_coding_index": 52.3,
-    "artificial_analysis_agentic_index": 30.1
-   },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 98.52,
-    "cost_per_task": {
-     "total_cost": 0.1025
-    }
-   },
-   "pricing": {
-    "price_1m_input_tokens": 2,
-    "price_1m_output_tokens": 12,
-    "price_1m_cache_hit_tokens": 0.2,
-    "price_1m_cache_write_tokens": 2.5
-   },
-   "performance": {
-    "median_output_tokens_per_second": 98.22,
-    "median_time_to_first_token_seconds": 0.8,
-    "median_time_to_first_answer_token_seconds": 0.8,
-    "median_end_to_end_response_time_seconds": 5.89
-   }
-  },
-  {
-   "id": "9ca246a7-cf13-42c9-9182-5b5ad6b79026",
-   "name": "MiniMax M1 80k",
-   "slug": "minimax-m1-80k",
-   "release_date": "2025-06-17",
-   "model_creator": {
-    "id": "a31a9071-6144-4dbb-92dc-2e02d653ecea",
-    "name": "MiniMax"
-   },
-   "evaluations": {
-    "artificial_analysis_intelligence_index": 17.9,
-    "artificial_analysis_coding_index": null,
-    "artificial_analysis_agentic_index": null
-   },
-   "artificial_analysis_intelligence_index_cost": null,
-   "pricing": {
-    "price_1m_input_tokens": 0.55,
-    "price_1m_output_tokens": 2.2,
-    "price_1m_cache_hit_tokens": null,
-    "price_1m_cache_write_tokens": null
-   },
-   "performance": {
-    "median_output_tokens_per_second": null,
-    "median_time_to_first_token_seconds": null,
-    "median_time_to_first_answer_token_seconds": null,
-    "median_end_to_end_response_time_seconds": null
-   }
-  },
-  {
-   "id": "9ca71ac4-41c8-42c0-87dd-5704a9e5b94d",
-   "name": "Llama 3.2 Instruct 90B (Vision)",
-   "slug": "llama-3-2-instruct-90b-vision",
-   "release_date": "2024-09-25",
-   "model_creator": {
-    "id": "e1694725-0192-4e54-b1b8-c97e816c6cbe",
-    "name": "Meta"
-   },
-   "evaluations": {
-    "artificial_analysis_intelligence_index": 6,
-    "artificial_analysis_coding_index": null,
-    "artificial_analysis_agentic_index": null
-   },
-   "artificial_analysis_intelligence_index_cost": null,
-   "pricing": {
-    "price_1m_input_tokens": null,
-    "price_1m_output_tokens": null,
-    "price_1m_cache_hit_tokens": null,
-    "price_1m_cache_write_tokens": null
-   },
-   "performance": {
-    "median_output_tokens_per_second": null,
-    "median_time_to_first_token_seconds": null,
-    "median_time_to_first_answer_token_seconds": null,
-    "median_end_to_end_response_time_seconds": null
-   }
-  },
-  {
-   "id": "9cc377dc-67ae-4042-bafc-0466b5f05089",
-   "name": "K-EXAONE (Non-reasoning)",
-   "slug": "k-exaone-non-reasoning",
-   "release_date": "2025-12-31",
-   "model_creator": {
-    "id": "45157c16-fcbb-4110-b20f-7bca754b6554",
-    "name": "LG AI Research"
-   },
-   "evaluations": {
-    "artificial_analysis_intelligence_index": 16.9,
-    "artificial_analysis_coding_index": null,
-    "artificial_analysis_agentic_index": null
-   },
-   "artificial_analysis_intelligence_index_cost": null,
-   "pricing": {
-    "price_1m_input_tokens": null,
-    "price_1m_output_tokens": null,
-    "price_1m_cache_hit_tokens": null,
-    "price_1m_cache_write_tokens": null
-   },
-   "performance": {
-    "median_output_tokens_per_second": null,
-    "median_time_to_first_token_seconds": null,
-    "median_time_to_first_answer_token_seconds": null,
-    "median_end_to_end_response_time_seconds": null
-   }
-  },
-  {
-   "id": "9dba61f5-78ee-4190-8d1d-8e7063ffd386",
-   "name": "Qwen3 8B (Reasoning)",
-   "slug": "qwen3-8b-instruct-reasoning",
-   "release_date": "2025-04-28",
-   "model_creator": {
-    "id": "d874d370-74d3-4fa0-ba00-5272f92f946b",
-    "name": "Alibaba"
-   },
-   "evaluations": {
-    "artificial_analysis_intelligence_index": 8.3,
-    "artificial_analysis_coding_index": 9,
-    "artificial_analysis_agentic_index": 1.6
-   },
-   "artificial_analysis_intelligence_index_cost": null,
-   "pricing": {
-    "price_1m_input_tokens": 0.18,
-    "price_1m_output_tokens": 2.1,
-    "price_1m_cache_hit_tokens": null,
-    "price_1m_cache_write_tokens": null
-   },
-   "performance": {
-    "median_output_tokens_per_second": 39.79,
-    "median_time_to_first_token_seconds": 3.81,
-    "median_time_to_first_answer_token_seconds": 54.08,
-    "median_end_to_end_response_time_seconds": 66.65
-   }
-  },
-  {
-   "id": "9e141c0d-fc82-4e07-bb2e-fe0003bc030b",
-   "name": "Claude 2.1",
-   "slug": "claude-21",
-   "release_date": "2023-11-21",
-   "model_creator": {
-    "id": "f0aa413f-e8ae-4fcd-9c48-0e049f4f3128",
-    "name": "Anthropic"
-   },
-   "evaluations": {
-    "artificial_analysis_intelligence_index": 3.5,
-    "artificial_analysis_coding_index": 14,
-    "artificial_analysis_agentic_index": null
-   },
-   "artificial_analysis_intelligence_index_cost": null,
-   "pricing": {
-    "price_1m_input_tokens": null,
-    "price_1m_output_tokens": null,
-    "price_1m_cache_hit_tokens": null,
-    "price_1m_cache_write_tokens": null
-   },
-   "performance": {
-    "median_output_tokens_per_second": null,
-    "median_time_to_first_token_seconds": null,
-    "median_time_to_first_answer_token_seconds": null,
-    "median_end_to_end_response_time_seconds": null
-   }
-  },
-  {
-   "id": "9e30696f-16fa-4b4f-ba53-161895a85fed",
-   "name": "GPT-5.6 Terra (xhigh)",
-   "slug": "gpt-5-6-terra-xhigh",
-   "release_date": "2026-07-09",
-   "model_creator": {
-    "id": "e67e56e3-15cd-43db-b679-da4660a69f41",
-    "name": "OpenAI"
-   },
-   "evaluations": {
-    "artificial_analysis_intelligence_index": 52.8,
-    "artificial_analysis_coding_index": 70.6,
-    "artificial_analysis_agentic_index": 46.5
-   },
-   "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 604.17,
-    "cost_per_task": {
-     "total_cost": 0.3182
-    }
-   },
-   "pricing": {
-    "price_1m_input_tokens": 2,
-    "price_1m_output_tokens": 12,
-    "price_1m_cache_hit_tokens": 0.2,
-    "price_1m_cache_write_tokens": 2.5
-   },
-   "performance": {
-    "median_output_tokens_per_second": 104.22,
-    "median_time_to_first_token_seconds": 15.71,
-    "median_time_to_first_answer_token_seconds": 15.71,
-    "median_end_to_end_response_time_seconds": 20.51
-   }
-  },
-  {
-   "id": "9eae4ec4-61b8-48bc-9843-3edd506ae933",
-   "name": "Devstral Small (Jul '25)",
-   "slug": "devstral-small",
-   "release_date": "2025-07-10",
-   "model_creator": {
-    "id": "b5c0639a-cc9c-443b-a07e-bae6b7088933",
-    "name": "Mistral"
-   },
-   "evaluations": {
-    "artificial_analysis_intelligence_index": 9.1,
-    "artificial_analysis_coding_index": null,
-    "artificial_analysis_agentic_index": null
-   },
-   "artificial_analysis_intelligence_index_cost": null,
-   "pricing": {
-    "price_1m_input_tokens": null,
-    "price_1m_output_tokens": null,
-    "price_1m_cache_hit_tokens": null,
-    "price_1m_cache_write_tokens": null
-   },
-   "performance": {
-    "median_output_tokens_per_second": null,
-    "median_time_to_first_token_seconds": null,
-    "median_time_to_first_answer_token_seconds": null,
-    "median_end_to_end_response_time_seconds": null
+    "median_output_tokens_per_second": 83.75,
+    "median_time_to_first_token_seconds": 31.8,
+    "median_time_to_first_answer_token_seconds": 31.8,
+    "median_end_to_end_response_time_seconds": 37.77
    }
   }
  ]
