@@ -1,0 +1,101 @@
+rank,name,fed,rating
+1,"Fischer, Robert James",USA,2760
+2,"Spassky, Boris V.",URS,2690
+3,"Korchnoi, Viktor",URS,2670
+4,"Larsen, Bent",DEN,2660
+5,"Petrosian, Tigran",URS,2640
+6,"Polugaevsky, Lev",URS,2640
+7,"Botvinnik, Mikhail",URS,2630
+8,"Portisch, Lajos",HUN,2630
+9,"Smyslov, Vassily",URS,2620
+10,"Tal, Mikhail N.",URS,2620
+11,"Geller, Efim P.",URS,2615
+12,"Keres, Paul",URS,2615
+13,"Hort, Vlastimil",CSR,2605
+14,"Stein, Leonid",URS,2605
+15,"Gligoric, Svetozar",YUG,2600
+16,"Taimanov, Mark E.",URS,2600
+17,"Bronstein, David I.",URS,2590
+18,"Huebner, Robert",GER,2590
+19,"Gipslis, Aivars",URS,2580
+20,"Krogius, Nikolai V.",URS,2575
+21,"Balashov, Yuri S.",URS,2570
+22,"Olafsson, Fridrik",ISL,2570
+23,"Panno, Oscar",ARG,2570
+24,"Savon, Vladimir A.",URS,2570
+25,"Uhlmann, Wolfgang",GDR,2570
+26,"Vasiukov, Evgeni",URS,2570
+27,"Tukmakov, Vladimir B.",URS,2565
+28,"Boleslavsky, Isaak",URS,2560
+29,"Ivkov, Borislav",YUG,2560
+30,"Kuzmin, Gennadi P.",URS,2560
+31,"Suetin, Alexey S.",URS,2560
+32,"Averbakh, Yuri L.",URS,2550
+33,"Evans, Larry M.",USA,2550
+34,"Kavalek, Lubomir",USA,2550
+35,"Kholmov, Ratmir D.",URS,2550
+36,"Reshevsky, Samuel H.",USA,2550
+37,"Schmid, Lothar",GER,2550
+38,"Unzicker, Wolfgang",GER,2545
+39,"Darga, Klaus",GER,2540
+40,"Furman, Semyen A.",URS,2540
+41,"Gurgenidze, Bukhuti",URS,2540
+42,"Karpov, Anatoly",URS,2540
+43,"Liberzon, Vladimir M.",URS,2540
+44,"Lutikov, Anatoly S.",URS,2540
+45,"Mecking, Henrique",BRA,2540
+46,"Osnos, Viatcheslav",URS,2540
+47,"Gheorghiu, Florin",ROM,2530
+48,"Matulovic, Milan",YUG,2530
+49,"Najdorf, Miguel",ARG,2530
+50,"Parma, Bruno",YUG,2530
+51,"Podgaets, Mikhail",URS,2530
+52,"Sanguinetti, Raul",ARG,2530
+53,"Zaitsev, Alexander",URS,2530
+54,"Szabo, Laszlo",HUN,2525
+55,"Benko, Pal C.",USA,2520
+56,"Gufeld, Eduard",URS,2520
+57,"Lombardy, William J.",USA,2520
+58,"Matanovic, Aleksandar",YUG,2520
+59,"Shamkovich, Leonid",URS,2520
+60,"Zaitsev, Igor A.",URS,2520
+61,"Pfleger, Helmut",GER,2515
+62,"Smejkal, Jan",CSR,2515
+63,"Andersson, Ulf",SWE,2510
+64,"Antoshin, Vladimir S.",URS,2510
+65,"Bagirov, Vladimir",URS,2510
+66,"Byrne, Robert E.",USA,2510
+67,"Filip, Miroslav",CSR,2510
+68,"Kotov, Alexander",URS,2510
+69,"Lein, Anatoly",URS,2510
+70,"Ljubojevic, Ljubomir",YUG,2510
+71,"Markland, Peter R.",ENG,2510
+72,"Ozsvath, Andras",HUN,2510
+73,"Pachman, Ludek",CSR,2510
+74,"Planinc, Albin",YUG,2510
+75,"Pomar Salamanca, Arturo",ESP,2510
+76,"Vaganian, Rafael A.",URS,2510
+77,"Bolbochan, Julio",ARG,2500
+78,"Browne, Walter S.",AUS,2500
+79,"Donner, Jan-Hein",NED,2500
+80,"Kupreichik, Viktor D.",URS,2500
+81,"Sigurjonsson, Gudmundur",ISL,2500
+82,"Nei, Iivo",URS,2495
+83,"Addison, Wiliam G.",USA,2490
+84,"Barcza, Gedeon",HUN,2490
+85,"Bilek, Istvan",HUN,2490
+86,"Ciric, Dragoljub M.",YUG,2490
+87,"Damjanovic, Mato",YUG,2490
+88,"Hamann, Svend",DEN,2490
+89,"Karaklajic, Nikola",YUG,2490
+90,"Kurajica, Bojan",YUG,2490
+91,"Minic, Dragoljub",YUG,2490
+92,"Nikolaevsky, Yuri V.",URS,2490
+93,"Sakharov, Yuri N.",URS,2490
+94,"Tringov, Georgi P.",BUL,2490
+95,"Velimirovic, Dragoljub",YUG,2490
+96,"Bobotsov, Milko G.",BUL,2485
+97,"Forintos, Gyozo V.",HUN,2485
+98,"Lengyel, Levente",HUN,2485
+99,"Radulov, Ivan",BUL,2485
+100,"Csom, Istvan",HUN,2480

@@ -1,0 +1,101 @@
+rank,name,fed,rating
+1,"Kasparov, Garry",URS,2760
+2,"Karpov, Anatoly",URS,2725
+3,"Short, Nigel D.",ENG,2665
+4,"Beliavsky, Alexander G.",URS,2655
+5,"Speelman, Jonathan S.",ENG,2645
+6,"Timman, Jan H.",NED,2640
+7,"Portisch, Lajos",HUN,2635
+8,"Gurevich, Mikhail",URS,2630
+9,"Ribli, Zoltan",HUN,2630
+10,"Andersson, Ulf",SWE,2625
+11,"Ivanchuk, Vassily",URS,2625
+12,"Nunn, John D. M.",ENG,2625
+13,"Salov, Valery",URS,2625
+14,"Hjartarson, Johann",ISL,2620
+15,"Yusupov, Artur",URS,2615
+16,"Nikolic, Predrag",YUG,2610
+17,"Seirawan, Yasser",USA,2610
+18,"Tal, Mikhail N.",URS,2610
+19,"Chandler, Murray G.",ENG,2605
+20,"Huebner, Robert",GER,2600
+21,"Sax, Gyula",HUN,2600
+22,"Sokolov, Andrei",URS,2600
+23,"Agdestein, Simen",NOR,2595
+24,"Georgiev, Kiril",BUL,2595
+25,"Hort, Vlastimil",GER,2595
+26,"Kortschnoj, Viktor",SUI,2595
+27,"Vaganian, Rafael A.",URS,2595
+28,"Ftacnik, Lubomir",CSR,2590
+29,"Gulko, Boris F.",USA,2590
+30,"Ljubojevic, Ljubomir",YUG,2590
+31,"Polugaevsky, Lev",URS,2590
+32,"Tukmakov, Vladimir B.",URS,2590
+33,"Gelfand, Boris",URS,2585
+34,"Ehlvest, Jaan",URS,2580
+35,"Spraggett, Kevin",CAN,2575
+36,"Sokolov, Ivan",YUG,2570
+37,"Chernin, Alexander",URS,2565
+38,"Damljanovic, Branko",YUG,2565
+39,"Kavalek, Lubomir",USA,2565
+40,"Rohde, Michael A.",USA,2565
+41,"Vyzmanavin, Alexey",URS,2565
+42,"Bareev, Evgeny",URS,2560
+43,"Benjamin, Joel",USA,2560
+44,"De Firmian, Nick E.",USA,2560
+45,"Eingorn, Vereslav S.",URS,2560
+46,"Larsen, Bent",DEN,2560
+47,"Psakhis, Lev",URS,2560
+48,"Spassky, Boris V.",FRA,2560
+49,"Anand, Viswanathan",IND,2555
+50,"Chiburdanidze, Maia",URS,2555
+51,"Pinter, Jozsef",HUN,2555
+52,"Torre, Eugenio",PHI,2555
+53,"Christiansen, Larry M.",USA,2550
+54,"Dolmatov, Sergey",URS,2550
+55,"Greenfeld, Alon",ISR,2550
+56,"Kharitonov, Andrei V.",URS,2550
+57,"Kotronias, Vasilios",GRE,2550
+58,"Nogueiras, Jesus",CUB,2550
+59,"Rodriguez, Amador",CUB,2550
+60,"Romanishin, Oleg M.",URS,2550
+61,"Smagin, Sergey",URS,2550
+62,"Smyslov, Vassily",URS,2550
+63,"Dlugy, Maxim",USA,2545
+64,"Gavrikov, Viktor",URS,2545
+65,"Kudrin, Sergey",USA,2545
+66,"Morovic Fernandez, Ivan",CHI,2545
+67,"Murey, Jacob",FRA,2545
+68,"Azmaiparashvili, Zurab",URS,2540
+69,"Balashov, Yuri S.",URS,2540
+70,"Campora, Daniel H.",ARG,2540
+71,"Csom, Istvan",HUN,2540
+72,"Dorfman, Josif D.",URS,2540
+73,"Ivanovic, Bozidar",YUG,2540
+74,"Lputian, Smbat G.",URS,2540
+75,"Sosonko, Gennadi",NED,2540
+76,"Van der Wiel, John T. H.",NED,2540
+77,"Velimirovic, Dragoljub",YUG,2540
+78,"Vladimirov, Evgeny",URS,2540
+79,"Arnason, Jon L.",ISL,2535
+80,"Borges Mateos, Juan",CUB,2535
+81,"Granda Zuniga, Julio E.",PER,2535
+82,"Kaidanov, Grigory S.",URS,2535
+83,"Razuvaev, Yuri S.",URS,2535
+84,"Rogers, Ian",AUS,2535
+85,"Suba, Mihai",ROM,2535
+86,"Goldin, Alexander",URS,2530
+87,"Khalifman, Alexander",URS,2530
+88,"Lerner, Konstantin Z.",URS,2530
+89,"Lobron, Eric",GER,2530
+90,"Milos, Gilberto",BRA,2530
+91,"Petursson, Margeir",ISL,2530
+92,"Pigusov, Evgeny",URS,2530
+93,"Popovic, Petar",YUG,2530
+94,"Vaiser, Anatoly V.",URS,2530
+95,"Adianto, Utut",INA,2525
+96,"Alburt, Lev O.",USA,2525
+97,"Dautov, Rustem",URS,2525
+98,"Dzindzichashvili, Roman",USA,2525
+99,"Garcia Gonzales, Guillermo",CUB,2525
+100,"Hodgson, Julian M.",ENG,2525

@@ -1,0 +1,101 @@
+rank,name,fed,rating
+1,"Chernin, Alexander",URS,2375
+2,"Gunawan, Ronny",INA,2375
+3,"Meetei, A. B.",IND,2340
+4,"Vukovic, Ivo",YUG,2340
+5,"Damljanovic, Branko",YUG,2335
+6,"Kusnadi, Herman",INA,2335
+7,"Monnard, Laurent",FRA,2330
+8,"Acosta, Alejandro",COL,2325
+9,"Iskandar, Arif",INA,2325
+10,"Greenfeld, Alon",ISR,2315
+11,"Pilarte, Rene",NCA,2310
+12,"Karolyi, Tibor jr",HUN,2300
+13,"Veljkovic, Milic",YUG,2300
+14,"Vallifuoco, Giovanni",ITA,2295
+15,"De La Garza, Arturo",MEX,2290
+16,"Pacis, Adrian",PHI,2290
+17,"Wong, Meng-Kong",SIN,2290
+18,"Bass, Leonid",USA,2285
+19,"Cusi, Ronald",PHI,2285
+20,"Choleva, Zdenek",CSR,2280
+21,"Gransky, Michael",ISR,2280
+22,"Koh, Kum-Hong",SIN,2280
+23,"Mirkovic, Slobodan",YUG,2280
+24,"Rakowiecki, Tomasz",POL,2280
+25,"Voboril, Pavel",CSR,2280
+26,"Bernal, Eduardo",PHI,2275
+27,"Hegde, Ravi Gopal",IND,2275
+28,"Janak, Jaroslav",CSR,2275
+29,"De Boer, Gert-Jan",NED,2270
+30,"Kiedrowicz, Jan",POL,2270
+31,"Mateo, Ramon",DOM,2270
+32,"Cardon, Helmut",NED,2265
+33,"De Lange, Job",NED,2265
+34,"Douven, Rudy C.",NED,2265
+35,"Lao, Elias",PHI,2265
+36,"Mendoza, Rafael",COL,2265
+37,"Schellhorn, Wolfgang",GER,2265
+38,"Schiller, Eric",USA,2265
+39,"Dimovski, Nikola",YUG,2260
+40,"Kiss, Attila",HUN,2260
+41,"Kjelstrup-Olsen, Arthur",NOR,2260
+42,"Krason, Jozef",POL,2260
+43,"Ondi, Gyula",HUN,2260
+44,"Pergericht, Daniel",BEL,2260
+45,"Votruba, Pavel",CSR,2260
+46,"Beitar, Hanni",SYR,2255
+47,"Braun, Leslie",USA,2255
+48,"Brito, Luizmar J.",BRA,2255
+49,"Doery, Jeno",HUN,2255
+50,"Golubovic, Zoran",YUG,2255
+51,"Bordell Rosell, Roman",ESP,2250
+52,"Finlayson, Shaun",ENG,2250
+53,"Mohanty, Pabitra M.",IND,2250
+54,"Perkovic, Marinko",YUG,2250
+55,"Sinprayoon, Pricha",THA,2250
+56,"Barbeau, Sylvain",CAN,2245
+57,"Gauglitz, Gernot",GDR,2245
+58,"Goh, Cheng-Hong",SIN,2245
+59,"Kubik, Jan",POL,2245
+60,"Loikkainen, Ilmari",FIN,2245
+61,"Marcinkowski, Kazimierz",POL,2245
+62,"Ramayrat, Cris",PHI,2245
+63,"Sequeira, Joao F. A.",POR,2245
+64,"Tokaji-Nagy, Gyorgy",HUN,2245
+65,"Van der Linde, Meindert",NED,2245
+66,"Vasovski, Nikola",YUG,2245
+67,"Georgiou, Iraklis",GRE,2240
+68,"Lindblom, Steinar",NOR,2240
+69,"Litvinchuk, John",USA,2240
+70,"Micayabas, Marlo",PHI,2240
+71,"Perez, Andres",MEX,2240
+72,"Skiadopoulos, Nikolaos",GRE,2240
+73,"Boudre, Jean-Pierre",FRA,2235
+74,"Carlier, Bruno",NED,2235
+75,"Fecht, Hans-Peter",GER,2235
+76,"Kapu, Jeno",HUN,2235
+77,"Motwani, Paul",SCO,2235
+78,"Sekelj, Geza",YUG,2235
+79,"Tempone, Marcelo",ARG,2235
+80,"Zachowski, Robert",USA,2235
+81,"Balicki, Cezary",POL,2230
+82,"Faulbaum, Gunter",GER,2230
+83,"Garma, Chito",PHI,2230
+84,"Gieruszynski, Jerzy",POL,2230
+85,"Jalal, A. Ali",IRQ,2230
+86,"Kapetanovic, Armin",YUG,2230
+87,"Laco, Giuseppe",ITA,2230
+88,"Liao, Yuan Eu",DOM,2230
+89,"Ruiz, Alciguel",COL,2230
+90,"Zieher, Hartmut",GER,2230
+91,"Drasko, Milan",YUG,2225
+92,"Kostic, Milutin B.",YUG,2225
+93,"Lubienski, Tadeusz",POL,2225
+94,"Reznicek, Jan",CSR,2225
+95,"Ruefenacht, Matthias",SUI,2225
+96,"Stamatopoulos, Ioannis",GRE,2225
+97,"Untoro, Toha",INA,2225
+98,"Chia, Chee-Seng",SIN,2220
+99,"Hasan, Younus",BAN,2220
+100,"Lorenz, Gerd",GDR,2220

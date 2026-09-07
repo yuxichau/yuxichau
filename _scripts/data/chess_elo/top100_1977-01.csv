@@ -1,0 +1,101 @@
+rank,name,fed,rating
+1,"Karpov, Anatoly",URS,2690
+2,"Korchnoi, Viktor",URS,2645
+3,"Petrosian, Tigran",URS,2645
+4,"Mecking, Henrique",BRA,2635
+5,"Portisch, Lajos",HUN,2625
+6,"Hort, Vlastimil",CSR,2620
+7,"Polugaevsky, Lev",URS,2620
+8,"Tal, Mikhail N.",URS,2620
+9,"Larsen, Bent",DEN,2615
+10,"Ljubojevic, Ljubomir",YUG,2615
+11,"Spassky, Boris V.",URS,2610
+12,"Huebner, Robert",GER,2600
+13,"Ribli, Zoltan",HUN,2595
+14,"Romanishin, Oleg M.",URS,2595
+15,"Smyslov, Vassily",URS,2595
+16,"Geller, Efim P.",URS,2590
+17,"Timman, Jan H.",NED,2590
+18,"Tseshkovsky, Vitaly",URS,2590
+19,"Gulko, Boris F.",URS,2585
+20,"Byrne, Robert E.",USA,2580
+21,"Smejkal, Jan",CSR,2575
+22,"Gufeld, Eduard",URS,2570
+23,"Andersson, Ulf",SWE,2565
+24,"Balashov, Yuri S.",URS,2565
+25,"Gligoric, Svetozar",YUG,2565
+26,"Sax, Gyula",HUN,2565
+27,"Vasiukov, Evgeni",URS,2565
+28,"Bronstein, David I.",URS,2560
+29,"Olafsson, Fridrik",ISL,2560
+30,"Beliavsky, Alexander G.",URS,2555
+31,"Evans, Larry M.",USA,2555
+32,"Kholmov, Ratmir D.",URS,2555
+33,"Miles, Anthony J.",ENG,2555
+34,"Quinteros, Miguel A.",ARG,2555
+35,"Uhlmann, Wolfgang",GDR,2555
+36,"Kuzmin, Gennadi P.",URS,2550
+37,"Liberzon, Vladimir M.",ISR,2550
+38,"Panno, Oscar",ARG,2550
+39,"Torre, Eugenio",PHI,2550
+40,"Browne, Walter S.",USA,2545
+41,"Gheorghiu, Florin",ROM,2545
+42,"Kavalek, Lubomir",USA,2545
+43,"Krogius, Nikolai V.",URS,2545
+44,"Vaganian, Rafael A.",URS,2545
+45,"Lutikov, Anatoly S.",URS,2540
+46,"Pfleger, Helmut",GER,2540
+47,"Savon, Vladimir A.",URS,2540
+48,"Tukmakov, Vladimir B.",URS,2540
+49,"Csom, Istvan",HUN,2535
+50,"Dzindzichashvili, Roman",ISR,2535
+51,"Furman, Semyen A.",URS,2535
+52,"Gipslis, Aivars",URS,2535
+53,"Malich, Burkhard",GDR,2535
+54,"Adorjan, Andras",HUN,2530
+55,"Kurajica, Bojan",YUG,2530
+56,"Lombardy, William J.",USA,2530
+57,"Parma, Bruno",YUG,2530
+58,"Sosonko, Gennadi",NED,2530
+59,"Szabo, Laszlo",HUN,2530
+60,"Taimanov, Mark E.",URS,2530
+61,"Dvoretzky, Mark",URS,2525
+62,"Hulak, Krunoslav",YUG,2525
+63,"Lein, Anatoly",---,2525
+64,"Najdorf, Miguel",ARG,2525
+65,"Suetin, Alexey S.",URS,2525
+66,"Unzicker, Wolfgang",GER,2525
+67,"Velimirovic, Dragoljub",YUG,2525
+68,"Averbakh, Yuri L.",URS,2520
+69,"Chekhov, Valery A.",URS,2520
+70,"Rogoff, Kenneth S.",USA,2520
+71,"Schmid, Lothar",GER,2520
+72,"Sigurjonsson, Gudmundur",ISL,2520
+73,"Sveshnikov, Evgeny",URS,2520
+74,"Karasev, Vladimir I.",URS,2515
+75,"Makarichev, Sergey",URS,2515
+76,"Darga, Klaus",GER,2510
+77,"Gurgenidze, Bukhuti",URS,2510
+78,"Ivkov, Borislav",YUG,2510
+79,"Keene, Raymond D.",ENG,2510
+80,"Matulovic, Milan",YUG,2510
+81,"Ney, Iivo",URS,2510
+82,"Rashkovsky, Nukhim N.",URS,2510
+83,"Razuvaev, Yuri S.",URS,2510
+84,"Alburt, Lev O.",URS,2505
+85,"Matanovic, Aleksandar",YUG,2505
+86,"Sanguinetti, Raul",ARG,2505
+87,"Timoshchenko, Gennadi A.",URS,2505
+88,"Farago, Ivan",HUN,2500
+89,"Filip, Miroslav",CSR,2500
+90,"Knaak, Rainer",GDR,2500
+91,"Knezevic, Milorad",YUG,2500
+92,"Kotov, Alexander",URS,2500
+93,"Radulov, Ivan",BUL,2500
+94,"Kovacevic, Vladimir",YUG,2495
+95,"Rajkovic, Dusan",YUG,2495
+96,"Tarjan, James E.",USA,2495
+97,"Tringov, Georgi P.",BUL,2495
+98,"Vadasz, Laszlo",HUN,2495
+99,"Vogt, Lothar",GDR,2495
+100,"Vukic, Milan",YUG,2495
