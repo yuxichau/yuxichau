@@ -17,3 +17,4 @@ Good resources I've found and keep coming back to, for my own reference and for 
 ## Computer engineering
 
 - [CPU.land](https://cpu.land) - A tutorial that walks through how computers actually run, CPU first, and is clear enough for anyone without a computing background who got pulled into engineering.
+- [Human Atlas](https://github.com/ashemag/human-atlas) - An open-source 3D anatomy explorer with 2,234 selectable meshes, 15 anatomical systems, search across 3,432 named concepts, and exploded views. Try the [live demo](https://human-atlas-seven.vercel.app).
