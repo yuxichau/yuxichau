@@ -13,9 +13,11 @@ A running list of things I build in my spare time. Each project gets a page with
   <a href="/projects/llm-model-analysis/"><img src="/assets/images/projects/llm-intelligence-cost.png" alt="LLM Intelligence vs Cost scatter chart" style="border:1px solid #d0d7de; border-radius:8px; max-width:100%;"></a>
 </figure>
 
-I spend my working life picking LLMs for production workloads, and the gap between benchmark rank and real-world cost is bigger than most model cards admit. This page takes the top 50 models in the [Artificial Analysis](https://artificialanalysis.ai) Intelligence Index (v4.1) and plots intelligence against the actual cost per task, with filters for lab, reasoning mode, effort level, and a minimum intelligence cutoff.
+I spend my working life picking LLMs for production workloads, and the gap between benchmark rank and real-world cost is bigger than most model cards admit. This page takes the top 50 models in the [Artificial Analysis](https://artificialanalysis.ai) Intelligence Index (v4.2) and plots intelligence against the actual cost per task, with filters for lab, reasoning mode, effort level, and a minimum intelligence cutoff.
 
 **What I'm exploring:** frontier labs price reasoning effort at wildly different rates for similar scores. The scatter makes the value outliers obvious, and the best-value card on the page does the arithmetic for you.
+
+Metrics change rapidly. Models used to work around the metrics, but once they can work around them, the metrics need to work around the models. That is my proxy, or gut feeling, for why each new index deserves a fresh look.
 
 [Open the dashboard →](/projects/llm-model-analysis/)
 

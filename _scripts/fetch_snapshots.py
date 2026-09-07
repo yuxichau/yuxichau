@@ -8,7 +8,7 @@ pipeline is offline-reproducible once the snapshots are in the repo.
 
 API:  base  https://artificialanalysis.ai/api/v2
       auth  x-api-key header (NOT Authorization: Bearer)
-      free  GET /language/models/free?tier=free&intelligence_index_version=4.1&page=N
+      free  GET /language/models/free?tier=free&intelligence_index_version=4.2&page=N
       free tier quota: 100 requests / 24h (fixed window)
 
 Requires the ARTIFICIAL_ANALYSIS_API env var. Docs: https://artificialanalysis.ai/data-api/docs
@@ -25,7 +25,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 SNAP_DIR = SCRIPT_DIR / "data" / "snapshots"
 BASE = "https://artificialanalysis.ai/api/v2/language/models/free"
 TIER = "free"
-VERSION = "4.1"
+VERSION = "4.2"
 MAX_PAGES = 8  # safety cap; pagination drives the real loop
 
 

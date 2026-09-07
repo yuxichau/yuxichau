@@ -19,7 +19,7 @@ generate_llm_dashboard.py <-- snapshots + _scripts/vendor/chart.umd.js
   quota 100 req/24h) and stores the raw pages in the repo. Needs
   `ARTIFICIAL_ANALYSIS_API`.
 - **`generate_llm_dashboard.py`** — offline, deterministic: takes the top 50
-  models by Intelligence Index v4.1 from the vendored snapshots, inlines the
+  models by Intelligence Index v4.2 from the vendored snapshots, inlines the
   vendored Chart.js bundle (v4.4.1) and the data into the page. No API calls.
 - **`refresh_dashboard.sh`** — the one-command entry point: fetch → generate →
   commit → push → trigger the Cloudflare Pages build (via `deploy.sh`).
