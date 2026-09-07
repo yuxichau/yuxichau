@@ -1,0 +1,101 @@
+rank,name,fed,rating
+1,"Carlsen, Magnus",NOR,2837
+2,"Aronian, Levon",ARM,2816
+3,"Kasparov, Garry",RUS,2812
+4,"Kramnik, Vladimir",RUS,2797
+5,"Radjabov, Teimour",AZE,2788
+6,"Karjakin, Sergey",RUS,2785
+7,"Anand, Viswanathan",IND,2780
+8,"Nakamura, Hikaru",USA,2778
+9,"Caruana, Fabiano",ITA,2773
+10,"Morozevich, Alexander",RUS,2770
+11,"Ivanchuk, Vassily",UKR,2769
+12,"Grischuk, Alexander",RUS,2763
+13,"Topalov, Veselin",BUL,2752
+14,"Svidler, Peter",RUS,2749
+15,"Kamsky, Gata",USA,2746
+16,"Gelfand, Boris",ISR,2738
+17,"Gashimov, Vugar",AZE,2737
+18,"Leko, Peter",HUN,2737
+19,"Bologan, Viktor",MDA,2734
+20,"Ponomariov, Ruslan",UKR,2734
+21,"Jobava, Baadur",GEO,2730
+22,"Tomashevsky, Evgeny",RUS,2730
+23,"Mamedyarov, Shakhriyar",AZE,2729
+24,"Wang, Hao",CHN,2726
+25,"Dominguez Perez, Leinier",CUB,2725
+26,"Adams, Michael",ENG,2722
+27,"Jakovenko, Dmitry",RUS,2722
+28,"Wojtaszek, Radoslaw",POL,2717
+29,"Andreikin, Dmitry",RUS,2715
+30,"Fressinet, Laurent",FRA,2714
+31,"Almasi, Zoltan",HUN,2713
+32,"Bacrot, Etienne",FRA,2713
+33,"McShane, Luke J",ENG,2713
+34,"Naiditsch, Arkadij",GER,2712
+35,"Riazantsev, Alexander",RUS,2712
+36,"Bruzon Batista, Lazaro",CUB,2711
+37,"Giri, Anish",NED,2711
+38,"Volokitin, Andrei",UKR,2709
+39,"Malakhov, Vladimir",RUS,2708
+40,"Sasikiran, Krishnan",IND,2707
+41,"Moiseenko, Alexander",UKR,2706
+42,"Shirov, Alexei",LAT,2706
+43,"Vitiugov, Nikita",RUS,2705
+44,"Nepomniachtchi, Ian",RUS,2704
+45,"Movsesian, Sergei",ARM,2698
+46,"Polgar, Judit",HUN,2698
+47,"Short, Nigel D",ENG,2698
+48,"Vallejo Pons, Francisco",ESP,2697
+49,"Sokolov, Ivan",NED,2696
+50,"Ding, Liren",CHN,2695
+51,"Efimenko, Zahar",UKR,2694
+52,"Eljanov, Pavel",UKR,2693
+53,"Le, Quang Liem",VIE,2693
+54,"Rublevsky, Sergei",RUS,2693
+55,"Sargissian, Gabriel",ARM,2693
+56,"Areshchenko, Alexander",UKR,2691
+57,"Navara, David",CZE,2691
+58,"Van Wely, Loek",NED,2691
+59,"Akopian, Vladimir",ARM,2687
+60,"Sutovsky, Emil",ISR,2687
+61,"Kryvoruchko, Yuriy",UKR,2686
+62,"Vachier-Lagrave, Maxime",FRA,2686
+63,"Berkes, Ferenc",HUN,2685
+64,"Harikrishna, P.",IND,2685
+65,"Wang, Yue",CHN,2685
+66,"Kasimdzhanov, Rustam",UZB,2684
+67,"Inarkiev, Ernesto",RUS,2683
+68,"Korobov, Anton",UKR,2683
+69,"Laznicka, Viktor",CZE,2683
+70,"Bauer, Christian",FRA,2682
+71,"Georgiev, Kiril",BUL,2682
+72,"Cheparinov, Ivan",BUL,2681
+73,"Dreev, Aleksey",RUS,2677
+74,"Grachev, Boris",RUS,2675
+75,"Gyimesi, Zoltan",HUN,2674
+76,"Tiviakov, Sergei",NED,2674
+77,"Alekseev, Evgeny",RUS,2673
+78,"Ni, Hua",CHN,2671
+79,"Zvjaginsev, Vadim",RUS,2671
+80,"Bu, Xiangzhi",CHN,2670
+81,"Ragger, Markus",AUT,2670
+82,"Balogh, Csaba",HUN,2668
+83,"Zhigalko, Sergei",BLR,2667
+84,"Onischuk, Alexander",USA,2666
+85,"Li, Chao b",CHN,2665
+86,"Najer, Evgeniy",RUS,2664
+87,"Negi, Parimarjan",IND,2664
+88,"Bareev, Evgeny",RUS,2663
+89,"Gharamian, Tigran",FRA,2663
+90,"Matlakov, Maxim",RUS,2663
+91,"Nielsen, Peter Heine",DEN,2662
+92,"Petrosian, Tigran L.",ARM,2661
+93,"Mchedlishvili, Mikheil",GEO,2659
+94,"Gareev, Timur",USA,2658
+95,"Lautier, Joel",FRA,2658
+96,"Motylev, Alexander",RUS,2658
+97,"Khenkin, Igor",GER,2656
+98,"Bartel, Mateusz",POL,2654
+99,"Fridman, Daniel",GER,2653
+100,"Granda Zuniga, Julio E",PER,2653

@@ -1,0 +1,101 @@
+rank,name,fed,rating
+1,"Carlsen, Magnus",NOR,2853
+2,"Kramnik, Vladimir",RUS,2817
+3,"Caruana, Fabiano",USA,2813
+4,"Kasparov, Garry",RUS,2812
+5,"Vachier-Lagrave, Maxime",FRA,2811
+6,"Aronian, Levon",ARM,2795
+7,"So, Wesley",USA,2794
+8,"Nakamura, Hikaru",USA,2787
+9,"Anand, Viswanathan",IND,2776
+10,"Karjakin, Sergey",RUS,2772
+11,"Ding, Liren",CHN,2764
+12,"Harikrishna, P.",IND,2762
+13,"Mamedyarov, Shakhriyar",AZE,2762
+14,"Topalov, Veselin",BUL,2760
+15,"Giri, Anish",NED,2756
+16,"Grischuk, Alexander",RUS,2752
+17,"Nepomniachtchi, Ian",RUS,2749
+18,"Wojtaszek, Radoslaw",POL,2746
+19,"Adams, Michael",ENG,2745
+20,"Svidler, Peter",RUS,2745
+21,"Gelfand, Boris",ISR,2743
+22,"Eljanov, Pavel",UKR,2741
+23,"Navara, David",CZE,2737
+24,"Andreikin, Dmitry",RUS,2736
+25,"Dominguez Perez, Leinier",CUB,2736
+26,"Inarkiev, Ernesto",RUS,2732
+27,"Rapport, Richard",HUN,2729
+28,"Li, Chao b",CHN,2728
+29,"Tomashevsky, Evgeny",RUS,2724
+30,"Le, Quang Liem",VIE,2723
+31,"Wang, Yue",CHN,2723
+32,"Ivanchuk, Vassily",UKR,2722
+33,"Vitiugov, Nikita",RUS,2721
+34,"Yu, Yangyi",CHN,2721
+35,"Jakovenko, Dmitry",RUS,2714
+36,"Vallejo Pons, Francisco",ESP,2711
+37,"Radjabov, Teimour",AZE,2710
+38,"Leko, Peter",HUN,2709
+39,"Ponomariov, Ruslan",UKR,2709
+40,"Wei, Yi",CHN,2706
+41,"Almasi, Zoltan",HUN,2702
+42,"Kryvoruchko, Yuriy",UKR,2701
+43,"Wang, Hao",CHN,2701
+44,"Ragger, Markus",AUT,2700
+45,"Bu, Xiangzhi",CHN,2698
+46,"Jobava, Baadur",GEO,2698
+47,"Safarli, Eltaj",AZE,2694
+48,"Malakhov, Vladimir",RUS,2693
+49,"Bacrot, Etienne",FRA,2692
+50,"Kasimdzhanov, Rustam",UZB,2691
+51,"Matlakov, Maxim",RUS,2691
+52,"Adhiban, B.",IND,2689
+53,"Rublevsky, Sergei",RUS,2689
+54,"Korobov, Anton",UKR,2687
+55,"Nisipeanu, Liviu-Dieter",GER,2687
+56,"Rodshtein, Maxim",ISR,2687
+57,"Vidit, Santosh Gujrathi",IND,2686
+58,"Smirin, Ilia",ISR,2685
+59,"Naiditsch, Arkadij",AZE,2684
+60,"Morozevich, Alexander",RUS,2683
+61,"Shankland, Samuel L",USA,2679
+62,"Shirov, Alexei",LAT,2679
+63,"Duda, Jan-Krzysztof",POL,2678
+64,"Mamedov, Rauf",AZE,2678
+65,"Cheparinov, Ivan",BUL,2677
+66,"Movsesian, Sergei",ARM,2677
+67,"Najer, Evgeniy",RUS,2677
+68,"Volokitin, Andrei",UKR,2677
+69,"Fressinet, Laurent",FRA,2676
+70,"Akopian, Vladimir",ARM,2675
+71,"Areshchenko, Alexander",UKR,2675
+72,"Polgar, Judit",HUN,2675
+73,"Gyimesi, Zoltan",HUN,2674
+74,"Zvjaginsev, Vadim",RUS,2673
+75,"Ganguly, Surya Shekhar",IND,2672
+76,"Negi, Parimarjan",IND,2670
+77,"Robson, Ray",USA,2670
+78,"Sadler, Matthew D",ENG,2670
+79,"Sargissian, Gabriel",ARM,2670
+80,"Short, Nigel D",ENG,2670
+81,"Zhigalko, Sergei",BLR,2669
+82,"Onischuk, Alexander",USA,2668
+83,"Van Wely, Loek",NED,2667
+84,"Bareev, Evgeny",CAN,2666
+85,"Saric, Ivan",CRO,2666
+86,"Fedoseev, Vladimir",RUS,2665
+87,"Piorun, Kacper",POL,2665
+88,"Kovalenko, Igor",LAT,2664
+89,"Artemiev, Vladislav",RUS,2663
+90,"Motylev, Alexander",RUS,2663
+91,"Rakhmanov, Aleksandr",RUS,2662
+92,"Dreev, Aleksey",RUS,2660
+93,"Ipatov, Alexander",TUR,2660
+94,"Sjugirov, Sanan",RUS,2660
+95,"Tkachiev, Vladislav",FRA,2660
+96,"Ni, Hua",CHN,2659
+97,"Iturrizaga Bonelli, Eduardo",VEN,2658
+98,"Lautier, Joel",FRA,2658
+99,"Amin, Bassem",EGY,2655
+100,"McShane, Luke J",ENG,2655

@@ -1,0 +1,101 @@
+rank,name,fed,rating
+1,"Kasparov, Garry",RUS,2812
+2,"Anand, Viswanathan",IND,2803
+3,"Kramnik, Vladimir",RUS,2788
+4,"Morozevich, Alexander",RUS,2774
+5,"Topalov, Veselin",BUL,2767
+6,"Carlsen, Magnus",NOR,2765
+7,"Aronian, Levon",ARM,2763
+8,"Mamedyarov, Shakhriyar",AZE,2752
+9,"Radjabov, Teimour",AZE,2751
+10,"Svidler, Peter",RUS,2746
+11,"Leko, Peter",HUN,2741
+12,"Ivanchuk, Vassily",UKR,2740
+13,"Shirov, Alexei",ESP,2740
+14,"Karjakin, Sergey",UKR,2732
+15,"Adams, Michael",ENG,2729
+16,"Kamsky, Gata",USA,2726
+17,"Gelfand, Boris",ISR,2723
+18,"Ponomariov, Ruslan",UKR,2719
+19,"Grischuk, Alexander",RUS,2716
+20,"Alekseev, Evgeny",RUS,2711
+21,"Jakovenko, Dmitry",RUS,2711
+22,"Polgar, Judit",HUN,2709
+23,"Bu, Xiangzhi",CHN,2708
+24,"Bacrot, Etienne",FRA,2705
+25,"Ni, Hua",CHN,2704
+26,"Cheparinov, Ivan",BUL,2696
+27,"Dominguez Perez, Leinier",CUB,2695
+28,"Movsesian, Sergei",SVK,2695
+29,"Rublevsky, Sergei",RUS,2695
+30,"Milov, Vadim",SUI,2690
+31,"Sokolov, Ivan",NED,2690
+32,"Malakhov, Vladimir",RUS,2689
+33,"Wang, Yue",CHN,2689
+34,"Eljanov, Pavel",UKR,2687
+35,"Nakamura, Hikaru",USA,2686
+36,"Inarkiev, Ernesto",RUS,2684
+37,"Nisipeanu, Liviu-Dieter",ROU,2684
+38,"Vallejo Pons, Francisco",ESP,2684
+39,"Volokitin, Andrei",UKR,2684
+40,"Wang, Hao",CHN,2684
+41,"Kasimdzhanov, Rustam",UZB,2681
+42,"Gashimov, Vugar",AZE,2679
+43,"Harikrishna, P.",IND,2679
+44,"Sasikiran, Krishnan",IND,2679
+45,"Bareev, Evgeny",RUS,2677
+46,"Van Wely, Loek",NED,2677
+47,"Almasi, Zoltan",HUN,2674
+48,"Nikolic, Predrag",BIH,2674
+49,"Zvjaginsev, Vadim",RUS,2674
+50,"Akopian, Vladimir",ARM,2673
+51,"Navara, David",CZE,2672
+52,"Fedorchuk, Sergey A.",UKR,2671
+53,"Motylev, Alexander",RUS,2666
+54,"Bologan, Viktor",MDA,2665
+55,"Georgiev, Kiril",BUL,2665
+56,"Onischuk, Alexander",USA,2664
+57,"Timofeev, Artyom",RUS,2664
+58,"Efimenko, Zahar",UKR,2660
+59,"Short, Nigel D",ENG,2660
+60,"Roiz, Michael",ISR,2659
+61,"Jobava, Baadur",GEO,2658
+62,"Tomashevsky, Evgeny",RUS,2658
+63,"Dreev, Alexey",RUS,2657
+64,"Lautier, Joel",FRA,2657
+65,"Tkachiev, Vladislav",FRA,2657
+66,"Fressinet, Laurent",FRA,2656
+67,"Karpov, Anatoly",RUS,2655
+68,"Korneev, Oleg",RUS,2651
+69,"Predojevic, Borki",BIH,2651
+70,"Areshchenko, Alexander",UKR,2650
+71,"Moiseenko, Alexander",UKR,2650
+72,"Ivanisevic, Ivan",SRB,2649
+73,"Postny, Evgeny",ISR,2649
+74,"Sakaev, Konstantin",RUS,2649
+75,"Baklan, Vladimir",UKR,2647
+76,"Afromeev, Vladimir",RUS,2646
+77,"Salov, Valery",RUS,2644
+78,"Socko, Bartosz",POL,2644
+79,"Sargissian, Gabriel",ARM,2643
+80,"Miroshnichenko, Evgenij",UKR,2642
+81,"Beliavsky, Alexander G",SLO,2641
+82,"Fridman, Daniel",GER,2640
+83,"Zhang, Pengxiang",CHN,2640
+84,"Delchev, Aleksander",BUL,2639
+85,"Riazantsev, Alexander",RUS,2638
+86,"Mchedlishvili, Mikheil",GEO,2635
+87,"Tiviakov, Sergei",NED,2635
+88,"Nepomniachtchi, Ian",RUS,2634
+89,"Landa, Konstantin",RUS,2633
+90,"Shabalov, Alexander",USA,2633
+91,"Volkov, Sergey",RUS,2633
+92,"Avrukh, Boris",ISR,2632
+93,"Vachier-Lagrave, Maxime",FRA,2632
+94,"Seirawan, Yasser",USA,2630
+95,"Smirin, Ilia",ISR,2630
+96,"Solak, Dragan",SRB,2630
+97,"Sutovsky, Emil",ISR,2630
+98,"Nielsen, Peter Heine",DEN,2629
+99,"Sadvakasov, Darmen",KAZ,2629
+100,"Tregubov, Pavel V.",RUS,2629
