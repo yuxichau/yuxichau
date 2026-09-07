@@ -1,0 +1,101 @@
+rank,name,fed,rating
+1,"Sahil, Tickoo",IND,38
+2,"Ju, Wenjun",CHN,36
+3,"Barbosa, Oliver",PHI,33
+4,"Laylo, Darwin",PHI,33
+5,"Paragua, Mark",PHI,33
+6,"Bitoon, Richard",PHI,32
+7,"Gomez, John Paul",PHI,32
+8,"Lenderman, Aleksandr",USA,31
+9,"Vargas Rodriguez, Wilver",CUB,31
+10,"Martin Del Campo C., Jorge",MEX,30
+11,"Pavlov, Maxim",UKR,30
+12,Kaushik Shubham,IND,29
+13,"Chandra, Akshat",USA,28
+14,"Florescu, Codrut-Constantin",ROU,28
+15,"Kojima, Shinya",JPN,28
+16,"Rezende, Guilherme Vilela",BRA,28
+17,Rishabh Nishad,IND,28
+18,"Sean, Winshand Cuhendi",INA,28
+19,"To, Nhat Minh",HUN,28
+20,Dony K V,IND,27
+21,"Gerzhoy, Leonid",CAN,27
+22,"Kumar, S.",IND,27
+23,"Lyell, Mark",ENG,27
+24,"Martynov, Pavel",RUS,27
+25,"Reis, Renan do Carmo",BRA,27
+26,"Shabalov, Alexander",USA,27
+27,"Szlenka, Attila",HUN,27
+28,"Jacobsen, Mikkel Manosri",DEN,26
+29,"Kalabukhov, Bogdan",RUS,26
+30,Mukesh Sharma,IND,26
+31,"Panjwani, Raja",CAN,26
+32,"Sa, Kannan",IND,26
+33,"Sorensen, Dick",DEN,26
+34,"Varezhkin, Viktor",RUS,26
+35,"Caruana, Fabiano",ITA,25
+36,"Kosteniuk, Alexandra",RUS,25
+37,"Kukov, Velislav",BUL,25
+38,Ravi K,IND,25
+39,Shatrughan Kaushik,IND,25
+40,"Wang, Hao",CHN,25
+41,"Wei, Yi",CHN,25
+42,"Yudkevich, Mikhail",RUS,25
+43,"Zhang, Xiaowen",CHN,25
+44,"Zubarev, Alexander",RUS,25
+45,Biju Sebastian T,IND,24
+46,"Gerasimov, Aleksander",RUS,24
+47,"Gruz, Janos",HUN,24
+48,"Gunina, Valentina",RUS,24
+49,"Hossain, Enamul",BAN,24
+50,Kalyanaraghavan.V.S,IND,24
+51,"M Tulasi Ram, Kumar",IND,24
+52,Rajan Sood,IND,24
+53,"Senas Peon, Pablo",ESP,24
+54,"Torre, Eugenio",PHI,24
+55,"Bartuszek, Andras",HUN,23
+56,"Bilguun, Sumiya",MGL,23
+57,"Chiang, Sarah",USA,23
+58,Isha Sharma,IND,23
+59,"Kjartansson, Gudmundur",ISL,23
+60,"Li, Ruifeng",USA,23
+61,Raahul V S,IND,23
+62,"Rozentalis, Eduardas",LTU,23
+63,"Rudakov, Aleksandr",RUS,23
+64,"Salgado Segui, Roberto",CUB,23
+65,"Senador, Emmanuel",PHI,23
+66,"Shajakhmetov, Linat",RUS,23
+67,"Silva, Luis Neves Da",POR,23
+68,"Sudhir,Kumar",IND,23
+69,Vinu Raj,IND,23
+70,"Adhiban, B.",IND,22
+71,"Baltazar Pineda, Rafael",MEX,22
+72,"Bekker-Jensen, Simon",DEN,22
+73,"Belmont Hernandez, Andres",MEX,22
+74,"Castillo Castelan, Miguel Angel",MEX,22
+75,"Chakravarthi Reddy, M",IND,22
+76,"Cortes Orihuela, Javier",CHI,22
+77,"Das, Sayantan",IND,22
+78,"Drazic, Sinisa",SRB,22
+79,G. Harish,IND,22
+80,"Gagare, Shardul",IND,22
+81,"Gonzalez Salto, Roberto de Jesus",MEX,22
+82,"Guseva, Marina",RUS,22
+83,"Hasan, Mehdi",BAN,22
+84,"Himanshu, Sharma",IND,22
+85,"Jimenez Espinoza, Cesar",MEX,22
+86,"Juhasz, Bela",HUN,22
+87,"Karthikeyan, Murali",IND,22
+88,"Kavinda, Akhila",SRI,22
+89,"Koneru, Humpy",IND,22
+90,"Krishna Teja, N",IND,22
+91,"Makwana, Ashvin K",IND,22
+92,"Mohammed, Zozek Salah Mohammed",IRQ,22
+93,"Moreyra Tinoco, Maximo",MEX,22
+94,"Nakhbayeva, Guliskhan",KAZ,22
+95,"Percivaldi, Martin",DEN,22
+96,"Priyadharshan, K.",IND,22
+97,"Saravana, Krishnan P.",IND,22
+98,"Sargsyan, Anna M.",ARM,22
+99,Sasivardhan A,IND,22
+100,"Secheres, Adrian-Simion",ROU,22

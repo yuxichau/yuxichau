@@ -37,6 +37,14 @@ The Rating and Valuation Department has published a territory-wide rental index 
 
 ---
 
+## Chess FIDE Elo Explorer
+
+<a href="/projects/chess-elo/">Open the chess FIDE Elo dashboard →</a>
+
+Monthly FIDE top-100 lists from 2001 onward, with raw ratings, a peer-calibrated view based on each list's top-100 average, and the top 20 observed peaks. The page labels its community mirrors clearly, keeps the FIDE series separate from Chessmetrics, and states the 1971–2000 data gap.
+
+---
+
 ## Sumo Elo History (All Divisions)
 
 <figure style="margin:0 0 1rem;">

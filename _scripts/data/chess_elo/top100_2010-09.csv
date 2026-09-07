@@ -1,0 +1,101 @@
+rank,name,fed,rating
+1,"Carlsen, Magnus",NOR,2826
+2,"Kasparov, Garry",RUS,2812
+3,"Topalov, Veselin",BUL,2803
+4,"Anand, Viswanathan",IND,2800
+5,"Aronian, Levon",ARM,2783
+6,"Kramnik, Vladimir",RUS,2780
+7,"Eljanov, Pavel",UKR,2761
+8,"Grischuk, Alexander",RUS,2760
+9,"Mamedyarov, Shakhriyar",AZE,2756
+10,"Ivanchuk, Vassily",UKR,2754
+11,"Gelfand, Boris",ISR,2751
+12,"Ponomariov, Ruslan",UKR,2749
+13,"Shirov, Alexei",ESP,2749
+14,"Radjabov, Teimour",AZE,2748
+15,"Karjakin, Sergey",RUS,2747
+16,"Nakamura, Hikaru",USA,2733
+17,"Wang, Yue",CHN,2732
+18,"Svidler, Peter",RUS,2731
+19,"Adams, Michael",ENG,2728
+20,"Jakovenko, Dmitry",RUS,2726
+21,"Malakhov, Vladimir",RUS,2725
+22,"Leko, Peter",HUN,2724
+23,"Wang, Hao",CHN,2724
+24,"Movsesian, Sergei",SVK,2723
+25,"Navara, David",CZE,2722
+26,"Vachier-Lagrave, Maxime",FRA,2721
+27,"Gashimov, Vugar",AZE,2719
+28,"Fressinet, Laurent",FRA,2718
+29,"Bacrot, Etienne",FRA,2716
+30,"Dominguez Perez, Leinier",CUB,2716
+31,"Wojtaszek, Radoslaw",POL,2711
+32,"Jobava, Baadur",GEO,2710
+33,"Vitiugov, Nikita",RUS,2709
+34,"Almasi, Zoltan",HUN,2707
+35,"Nepomniachtchi, Ian",RUS,2706
+36,"Kamsky, Gata",USA,2705
+37,"Tomashevsky, Evgeny",RUS,2701
+38,"Caruana, Fabiano",ITA,2700
+39,"Morozevich, Alexander",RUS,2700
+40,"Vallejo Pons, Francisco",ESP,2697
+41,"Bu, Xiangzhi",CHN,2695
+42,"Le, Quang Liem",VIE,2694
+43,"Motylev, Alexander",RUS,2694
+44,"Akopian, Vladimir",ARM,2691
+45,"Alekseev, Evgeny",RUS,2691
+46,"Bologan, Viktor",MDA,2690
+47,"Laznicka, Viktor",CZE,2690
+48,"Short, Nigel D",ENG,2690
+49,"Timofeev, Artyom",RUS,2690
+50,"Onischuk, Alexander",USA,2688
+51,"Riazantsev, Alexander",RUS,2686
+52,"Georgiev, Kiril",BUL,2685
+53,"Kasimdzhanov, Rustam",UZB,2685
+54,"Efimenko, Zahar",UKR,2683
+55,"Nisipeanu, Liviu-Dieter",ROU,2683
+56,"Rublevsky, Sergei",RUS,2683
+57,"Polgar, Judit",HUN,2682
+58,"Sasikiran, Krishnan",IND,2681
+59,"Bruzon Batista, Lazaro",CUB,2679
+60,"Van Wely, Loek",NED,2679
+61,"Berkes, Ferenc",HUN,2678
+62,"Giri, Anish",NED,2677
+63,"Miroshnichenko, Evgenij",UKR,2677
+64,"Sargissian, Gabriel",ARM,2677
+65,"Naiditsch, Arkadij",GER,2674
+66,"Fedorchuk, Sergey A.",UKR,2671
+67,"Inarkiev, Ernesto",RUS,2671
+68,"Korobov, Anton",UKR,2670
+69,"Nielsen, Peter Heine",DEN,2670
+70,"Andreikin, Dmitry",RUS,2669
+71,"Smeets, Jan",NED,2669
+72,"Grachev, Boris",RUS,2668
+73,"So, Wesley",PHI,2668
+74,"Sutovsky, Emil",ISR,2665
+75,"Areshchenko, Alexander",UKR,2664
+76,"Zvjaginsev, Vadim",RUS,2664
+77,"Bareev, Evgeny",RUS,2663
+78,"Cheparinov, Ivan",BUL,2661
+79,"Volokitin, Andrei",UKR,2661
+80,"Mamedov, Rauf",AZE,2660
+81,"Zhou, Jianchao",CHN,2660
+82,"Kurnosov, Igor",RUS,2659
+83,"Meier, Georg",GER,2659
+84,"Gharamian, Tigran",FRA,2658
+85,"Lautier, Joel",FRA,2658
+86,"Moiseenko, Alexander",UKR,2658
+87,"McShane, Luke J",ENG,2657
+88,"Najer, Evgeniy",RUS,2657
+89,"Smirin, Ilia",ISR,2657
+90,"Socko, Bartosz",POL,2657
+91,"Kobalia, Mikhail",RUS,2656
+92,"Khismatullin, Denis",RUS,2654
+93,"Macieja, Bartlomiej",POL,2651
+94,"Ganguly, Surya Shekhar",IND,2650
+95,"Dreev, Alexey",RUS,2649
+96,"Feller, Sebastien",FRA,2649
+97,"Aleksandrov, Aleksej",BLR,2647
+98,"Afromeev, Vladimir",RUS,2646
+99,"Gustafsson, Jan",GER,2646
+100,"Fridman, Daniel",GER,2645

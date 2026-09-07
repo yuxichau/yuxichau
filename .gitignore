@@ -44,5 +44,9 @@ vendor/
 # docs - internal documentation
 docs/
 
+# Generated/intermediate data
+_scripts/data/chess_elo/raw/
+_scripts/__pycache__/
+
 # Cloudflare
 .wrangler/

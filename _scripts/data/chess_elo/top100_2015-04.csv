@@ -1,0 +1,101 @@
+rank,name,fed,rating
+1,"Karas, Marek",SVK,44
+2,"Sienczewski, Zbigniew",POL,42
+3,"Gromovs, Sergejs",ITA,41
+4,"Jablonicky, Frantisek",SVK,40
+5,"Sahidi, Samir",SVK,40
+6,"Macko, Miroslav",SVK,38
+7,"Hrnciar, Roman",SVK,37
+8,"Sturc, Gustav",SVK,37
+9,"Jablonicky, Martin",SVK,36
+10,"Goga, Frantisek",SVK,35
+11,"Kostouros, Alexandros",GRE,35
+12,"Sobek, Michal",SVK,35
+13,"Hracek, Zbynek",CZE,34
+14,"Kollar, Vladimir",SVK,34
+15,"Kerdik, Adam",SVK,33
+16,"Michalik, Peter",SVK,33
+17,"Takacs, Laszlo",SVK,33
+18,"Jurcik, Marian",SVK,32
+19,"Kucera, Michal",SVK,32
+20,"Patrinos, Ilias",GRE,32
+21,"Certek, Pavel",SVK,31
+22,"Kusiak, Matej",SVK,31
+23,"Milcova, Zuzana",SVK,31
+24,"Mraz, Ondrej",SVK,31
+25,"Pechac, Jergus",SVK,31
+26,"Stremavicius, Titas",LTU,31
+27,"Zvarik, Martin",SVK,31
+28,"Druska, Juraj",SVK,30
+29,"Istona, Martin",SVK,30
+30,"Lopez de Turiso, Jose Angel",ESP,30
+31,"Palider, Pavol",SVK,30
+32,"Stohl, Igor",SVK,30
+33,"Sustek, Vladimir",SVK,30
+34,"Szollos, Ondrej",SVK,30
+35,"Vazelakis, Dimitrios",GRE,30
+36,"Anairousis, Panag",GRE,29
+37,"Cuellar Gutierrez, Raul",ESP,29
+38,"Galbavy, Dusan",SVK,29
+39,"Gamback, Bjorn",SWE,29
+40,"Garaj, Ivan",SVK,29
+41,"Molnar, Viliam",SVK,29
+42,"Navara, David",CZE,29
+43,"Pericka, Tomas",SVK,29
+44,"Sosovicka, Jakub",SVK,29
+45,"Szucs, Vladimir",SVK,29
+46,"Zagrapan, Pavol",SVK,29
+47,"Brunovsky, Peter",SVK,28
+48,"Gao, Rui",CHN,28
+49,"Grover, Sahaj",IND,28
+50,"Jurcak, Marian",SVK,28
+51,"Kacprzak, Karol",POL,28
+52,"Kukucka, Matej",SVK,28
+53,"Liu, Xiangyi",SIN,28
+54,"Ni, Shiqun",CHN,28
+55,"Petran, Peter",SVK,28
+56,"Sequera Paolini, Jose Rafael",VEN,28
+57,"Slaby, Jozef",SVK,28
+58,"Tin, Jingyao",SIN,28
+59,"Vadila, Ondrej",SVK,28
+60,"Wang, Yiye",CHN,28
+61,"Bakalar, Jan",SVK,27
+62,"Balogh, Peter",SVK,27
+63,"Dmitrenko, Viktor",UKR,27
+64,"Fiori, Hector",ARG,27
+65,"Ftacnik, Lubomir",SVK,27
+66,"Haring, Filip",SVK,27
+67,"Hros, Roman",SVK,27
+68,"Kalmar, Tamas",SVK,27
+69,"Kleman, Miroslav",SVK,27
+70,"Klemanic, Emil",SVK,27
+71,"Liptak, Tomas",SVK,27
+72,"Mackovic, Miroslav",SVK,27
+73,"Magat, Jozef",SVK,27
+74,"Mandak, Miroslav",SVK,27
+75,"Maslik, Miroslav",SVK,27
+76,"Nemeckay, Rastislav",SVK,27
+77,"Perez Ponsa, Federico",ARG,27
+78,"Pichot, Alan",ARG,27
+79,"Rottenwohrer Suarez, Juan",ESP,27
+80,Selvakumar C B,IND,27
+81,"Svana, Peter",SVK,27
+82,"Tahbaz, Arash",IRI,27
+83,"Tsyhanchuk, Stanislav",BLR,27
+84,"Ulehla, Jakub",SVK,27
+85,"Vul, Arkadi Eremeevich",RUS,27
+86,"Adamciak, Tomas",SVK,26
+87,"Chovanec, Vladimir",SVK,26
+88,"Gafarov, Damir",RUS,26
+89,"Gasimov, Parviz",AZE,26
+90,"Grandelius, Nils",SWE,26
+91,"Kavon, Rastislav",SVK,26
+92,"Krammer, Peter",SVK,26
+93,"Kriebel, Tadeas",CZE,26
+94,"Macko, Michal",SVK,26
+95,"Macko, Peter",SVK,26
+96,"Matejov, Jaroslav",SVK,26
+97,"Mikulasek, Viktor",SVK,26
+98,"Morera Rodriguez, Ignacio",ESP,26
+99,"Rausis, Igors",CZE,26
+100,"Romcovici, Victor",MDA,26
