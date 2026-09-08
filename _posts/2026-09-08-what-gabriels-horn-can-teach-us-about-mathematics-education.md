@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "What Gabriel's Horn Can Teach Us About Mathematics Education"
-date: 2026-09-08 04:20:00 -0000
+date: 2026-09-08 02:10:00 -0000
 tags: [Work]
 author: Yu Xi Chau
 ---
