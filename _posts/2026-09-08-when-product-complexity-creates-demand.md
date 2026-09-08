@@ -2,7 +2,7 @@
 layout: single
 title: "When Product Complexity Creates Demand"
 date: 2026-09-08 04:00:00 -0000
-tags: [Business, Strategy]
+tags: [Economics]
 author: Yu Xi Chau
 ---
 
@@ -16,6 +16,6 @@ That is a delicate balance. Unexplained complexity is just bad design. A product
 
 This matters especially for millennials and younger customers, who often want products to carry some social value beyond convenience. They may want to show taste, competence, curiosity, or commitment. A product with nothing to learn may be easy to buy, but it can also be easy to forget.
 
-The lesson is not that companies should make their products confusing. It is that they should distinguish harmful friction from meaningful depth. The first should be removed. The second can be a source of demand.
+The point is to distinguish harmful friction from meaningful depth. The first should be removed. The second can be a source of demand.
 
-[The source essay on Nike's direct-to-consumer strategy](https://summarised-essays.pages.dev/blog/2026/09/08/nikes-direct-to-consumer-strategy-and-the-cost-of-losing-product-culture/) makes this tension especially clear.
+[Reuters' report on Nike's direct-to-consumer strategy](https://www.reuters.com/business/retail-consumer/nike-misses-quarterly-revenue-expectations-choppy-demand-its-sneakers-2024-06-27) describes the pressure on the business.

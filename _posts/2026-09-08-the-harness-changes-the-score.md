@@ -12,7 +12,7 @@ When GPT-5.6 Sol was first tested on ARC-AGI-3, it scored 7.8 percent, while GPT
 
 The model had not changed. The harness had preserved more of its reasoning and managed the growing context differently. The model could remember what it had learned instead of being repeatedly asked to reconstruct the game from scratch.
 
-This sounds like an implementation detail, but it is not. It shows that model evaluation is increasingly affected by the harness around the model. Prompting, tool interfaces, context management, API settings, retries, and truncation can all contribute to the final result.
+This may look like an implementation detail. It shows that model evaluation is increasingly affected by the harness around the model. Prompting, tool interfaces, context management, API settings, retries, and truncation can all contribute to the final result.
 
 I wrote earlier that [the agent harness is part of the model](https://yuxichau.com/posts/the-agent-harness-is-part-of-the-model/). The ARC-AGI-3 result is a concrete example. If a pipeline component contributes to accuracy, it deserves a metric of its own. Model quality is one metric. Harness quality should be another.
 

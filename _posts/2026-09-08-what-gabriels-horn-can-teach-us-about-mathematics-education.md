@@ -2,7 +2,7 @@
 layout: single
 title: "What Gabriel's Horn Can Teach Us About Mathematics Education"
 date: 2026-09-08 04:20:00 -0000
-tags: [Education, Mathematics]
+tags: [Work]
 author: Yu Xi Chau
 ---
 
@@ -22,4 +22,4 @@ For stronger students, one or two hours of this kind of pattern-recognition prac
 
 Mathematics education should leave more room for that kind of work. A paradox such as Gabriel's horn is valuable not because it is a clever fact, but because it invites the student to ask what else might be possible.
 
-[The original note on Gabriel's horn](https://summarised-essays.pages.dev/blog/2026/09/08/gabriels-horn-finite-volume-infinite-surface-area/) gives the mathematical starting point.
+[A mathematical reference on Gabriel's horn](https://mathworld.wolfram.com/GabrielsHorn.html) gives the formal construction.
