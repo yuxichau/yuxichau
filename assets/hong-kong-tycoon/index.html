@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Establish a trading house in 1852 Hong Kong. Trade cargo, develop the harbour, and build a legacy in this free, offline seasonal strategy game.">
+  <title>Hong Kong Tycoon — A Merchant’s Chronicle</title>
+  <style>:root {
+  color-scheme: light dark;
+  --paper: #f1ebde;
+  --surface: #faf6ed;
+  --subtle: #e8e1d2;
+  --ink: #292e29;
+  --muted: #656a60;
+  --line: #cfc7b5;
+  --green: #264c3f;
+  --green-soft: #e0e8dd;
+  --gold: #9a6a2a;
+  --red: #a53d2e;
+  --red-soft: #f3e1d8;
+  --white: #fff9ed;
+  --shadow: #292e2918;
+  --backdrop: #17291ed1;
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 14px; line-height: 1.55; }
+button, input, select { font: inherit; }
+button { cursor: pointer; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); color: var(--ink); padding: .55rem .85rem; transition: background .15s, border-color .15s; }
+button:hover:not(:disabled) { background: var(--subtle); border-color: var(--muted); }
+button:disabled { cursor: not-allowed; opacity: .45; }
+button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+input, select { min-inline-size: 0; max-inline-size: 100%; background: var(--surface); color: var(--ink); border: 1px solid var(--line); border-radius: 3px; padding: .6rem .7rem; }
+input[type=number] { font-variant-numeric: tabular-nums; }
+input[type=checkbox] { accent-color: var(--green); inline-size: 16px; block-size: 16px; }
+h1, h2, h3, h4, p { margin-block-start: 0; }
+h2, h3, h4 { font-family: var(--serif); font-weight: 500; line-height: 1.2; }
+h2 { font-size: 1.85rem; margin-block-end: .5rem; }
+h3 { font-size: 1.35rem; margin-block-end: .5rem; }
+h4 { font-size: 1.12rem; }
+p { margin-block-end: .8rem; }
+small, .small { font-size: .78rem; }
+.muted { color: var(--muted); }
+.positive { color: var(--green); }
+.negative { color: var(--red); }
+.mono, .money { font-variant-numeric: tabular-nums; }
+.eyebrow { font-size: .66rem; text-transform: uppercase; letter-spacing: .17em; font-weight: 700; color: var(--muted); margin-block-end: .4rem; }
+.primary { background: var(--green); border-color: var(--green); color: var(--white); }
+.primary:hover:not(:disabled) { background: var(--ink); color: var(--white); }
+.danger { color: var(--red); border-color: var(--red); }
+.text-button { padding: .2rem 0; border: 0; background: transparent; color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
+.skip-link { position: fixed; inset-block-start: -100px; inset-inline-start: 1rem; background: var(--surface); padding: 1rem; z-index: 10; color: var(--ink); }
+.skip-link:focus { inset-block-start: 1rem; }
+.masthead { max-inline-size: 1380px; margin-inline: auto; padding: 1.15rem 2.5rem 0; }
+.edition { display: flex; justify-content: space-between; gap: 1rem; border-block-end: 1px solid var(--ink); padding-block-end: .6rem; font-family: var(--serif); font-size: .8rem; font-style: italic; color: var(--muted); }
+.brand-row { display: flex; align-items: center; justify-content: space-between; padding-block: 1.45rem 1.1rem; }
+h1 { font-family: var(--serif); font-size: clamp(2.4rem, 4.8vw, 4.5rem); font-weight: 500; letter-spacing: -.055em; line-height: 1; margin: 0; }
+h1 em { color: var(--green); font-weight: 400; }
+.seal { color: var(--red); border: 2px solid var(--red); padding: .3rem .65rem; transform: rotate(-5deg); font-family: var(--serif); font-size: 1.5rem; line-height: 1.15; text-align: center; }
+.seal small { font-size: .7rem; letter-spacing: .12em; }
+.masthead-bottom { border-block-start: 3px double var(--ink); border-block-end: 1px solid var(--line); padding-block: .55rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+#house-name { font-family: var(--serif); font-style: italic; overflow-wrap: anywhere; }
+.utilities { display: flex; gap: 1rem; flex-shrink: 0; }
+.utilities button { font-size: .72rem; padding: 0; border: 0; background: none; color: var(--muted); }
+.utilities button:hover { text-decoration: underline; }
+.game-layout { display: grid; grid-template-columns: 245px minmax(0, 1fr); gap: 2rem; max-inline-size: 1380px; margin-inline: auto; padding: 1.75rem 2.5rem 3rem; align-items: start; }
+.ledger { position: sticky; inset-block-start: 1.5rem; padding-inline-end: 1.8rem; border-inline-end: 1px solid var(--line); }
+.season { font-family: var(--serif); font-size: 1.7rem; margin-block-end: .25rem; }
+.campaign-progress { display: flex; gap: 3px; margin-block: .8rem 1.4rem; }
+.campaign-progress span { background: var(--line); block-size: 4px; flex: 1; }
+.campaign-progress span.filled { background: var(--green); }
+.cash-value { font-family: var(--serif); font-size: 2.15rem; line-height: 1.2; }
+.ledger-section { padding-block: 1rem; border-block-end: 1px solid var(--line); }
+.ledger-section:first-child { padding-block-start: 0; }
+.ledger-row { display: flex; justify-content: space-between; gap: .8rem; font-size: .8rem; margin-block: .45rem; }
+.ledger-row strong { font-weight: 600; white-space: nowrap; }
+.reserve { background: var(--green-soft); padding: .7rem; margin-block-start: .8rem; }
+.reserve.warning { background: var(--red-soft); }
+.reserve p { margin: 0; font-size: .72rem; }
+.meter { block-size: 5px; inline-size: 100%; border: 0; display: block; margin-block: .55rem; background: var(--line); }
+.meter::-webkit-progress-bar { background: var(--line); }
+.meter::-webkit-progress-value { background: var(--green); }
+.meter::-moz-progress-bar { background: var(--green); }
+.turn-controls { margin-block-start: 1.3rem; }
+.end-season { inline-size: 100%; display: flex; align-items: center; justify-content: space-between; gap: .8rem; padding: .85rem; font-size: .85rem; }
+.save-status { color: var(--muted); font-size: .66rem; text-align: center; margin-block: .7rem 0; }
+.bulletin { border: 1px solid var(--line); background: var(--surface); padding: 1rem 1.2rem; margin-block-end: 1.4rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1.3rem; position: relative; }
+.bulletin h2 { font-size: 1.1rem; font-style: italic; }
+.bulletin p { font-family: var(--serif); font-size: .95rem; margin: 0; }
+.weather { border-inline-start: 1px solid var(--line); padding-inline-start: 1.2rem; min-inline-size: 130px; align-self: center; }
+.weather strong { font-family: var(--serif); display: block; font-size: 1.1rem; font-weight: 500; }
+.weather small { color: var(--muted); }
+.tabs { display: flex; gap: 1.4rem; border-block-end: 1px solid var(--line); margin-block-end: 1.4rem; overflow-x: auto; }
+.tabs button { flex-shrink: 0; border: 0; background: transparent; border-radius: 0; border-block-end: 3px solid transparent; padding: .45rem 0 .75rem; color: var(--muted); font-size: .82rem; }
+.tabs button[aria-current] { color: var(--green); border-block-end-color: var(--green); font-weight: 700; }
+.section-heading { display: flex; justify-content: space-between; align-items: start; gap: 1rem; margin-block-end: 1.25rem; }
+.section-heading p { color: var(--muted); font-size: .83rem; margin: 0; }
+.badge { display: inline-block; border: 1px solid var(--line); padding: .15rem .45rem; font-size: .65rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); white-space: nowrap; }
+.badge.risk { color: var(--red); border-color: var(--red); }
+.check-label { display: flex; gap: .45rem; align-items: center; font-size: .75rem; white-space: nowrap; }
+.commodity-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.commodity { background: var(--surface); border: 1px solid var(--line); padding: 1.1rem; }
+.commodity-header { display: flex; justify-content: space-between; align-items: start; gap: .7rem; }
+.commodity h3 { font-size: 1.7rem; margin-block-end: .15rem; }
+.commodity .description { color: var(--muted); font-size: .75rem; min-block-size: 2.5rem; margin-block: .5rem .8rem; }
+.spark { inline-size: 100%; block-size: 37px; display: block; margin-block: .5rem .7rem; overflow: visible; color: var(--green); }
+.spark polyline { fill: none; stroke: currentColor; stroke-width: 1.6; vector-effect: non-scaling-stroke; }
+.spark line { stroke: var(--line); stroke-dasharray: 3 3; }
+.price-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.price-row span { display: block; font-size: .66rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+.price-row strong { font-family: var(--serif); font-size: 1.45rem; font-weight: 500; }
+.stock-row { display: flex; justify-content: space-between; gap: .5rem; padding-block: .6rem; margin-block: .5rem; border-block: 1px solid var(--line); font-size: .73rem; }
+.trade-input { display: flex; gap: .4rem; align-items: center; }
+.trade-input label { color: var(--muted); font-size: .75rem; }
+.trade-input input { inline-size: 5rem; padding: .4rem .5rem; flex: 1; }
+.trade-input button { font-size: .72rem; padding: .45rem .6rem; }
+.trade-buttons { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; margin-block-start: .6rem; }
+.trade-buttons button { font-size: .77rem; }
+.quote { font-size: .69rem; color: var(--muted); margin-block: .6rem 0; min-block-size: 2.2em; }
+.note { font-size: .76rem; color: var(--muted); margin-block: 1rem; }
+.notice { background: var(--green-soft); padding: 1.1rem 1.2rem; border: 1px solid var(--line); margin-block-end: 1.25rem; }
+.notice h3 { margin-block-end: .4rem; }
+.notice p { font-size: .84rem; }
+.notice.warning { background: var(--red-soft); border-color: var(--red); }
+.notice .actions { margin-block-start: .8rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .55rem; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1rem; }
+.card { padding: 1.2rem; border: 1px solid var(--line); background: var(--surface); }
+.card > p { font-size: .81rem; color: var(--muted); }
+.card .cost { font-family: var(--serif); font-size: 1.7rem; margin-block: .65rem; }
+.card .detail { display: flex; justify-content: space-between; gap: .7rem; font-size: .76rem; margin-block: .5rem; }
+.subheading { margin-block: 1.8rem 1rem; padding-block-end: .6rem; border-block-end: 1px solid var(--line); }
+.upgrade-list { display: grid; gap: .5rem; margin-block-start: 1rem; }
+.upgrade-list button { display: flex; justify-content: space-between; gap: .5rem; font-size: .76rem; text-align: start; }
+.installed { color: var(--green); font-size: .74rem; padding-block: .2rem; }
+.contract-benefit { color: var(--green); background: var(--green-soft); font-size: .76rem; padding: .55rem; margin-block: .8rem; }
+.bank { display: grid; grid-template-columns: 1fr 1fr; gap: 1.3rem; }
+.bank label { display: block; font-size: .78rem; margin-block-end: .4rem; }
+.bank input { inline-size: 100%; margin-block-end: .7rem; }
+.requirements { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+.requirement { background: var(--surface); border: 1px solid var(--line); padding: .8rem 1rem; }
+.requirement .detail { display: flex; justify-content: space-between; gap: .6rem; font-size: .78rem; }
+.requirement strong { white-space: nowrap; }
+.event { margin-block-start: 1.2rem; border-inline-start: 3px solid var(--gold); }
+.chronicle { list-style: none; padding: 0; margin: 0; }
+.chronicle li { display: grid; grid-template-columns: 100px 1fr; gap: 1rem; border-block-end: 1px solid var(--line); padding-block: .8rem; font-size: .82rem; }
+.chronicle time { font-size: .72rem; color: var(--muted); }
+.chronicle p { margin: 0; }
+.report-summary { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; margin-block: 1.2rem; }
+.report-summary > div { padding: .8rem; background: var(--subtle); }
+.report-summary strong { font-size: 1.3rem; font-family: var(--serif); font-weight: 500; display: block; }
+.report-list { padding-inline-start: 1.2rem; }
+.report-list li { padding-block: .25rem; font-size: .85rem; }
+.footer { border-block-start: 1px solid var(--line); padding: 1rem 2.5rem; display: flex; justify-content: space-between; gap: 1rem; max-inline-size: 1380px; margin-inline: auto; font-size: .7rem; color: var(--muted); }
+.footer span:first-child { font-family: var(--serif); font-style: italic; }
+.toast { position: fixed; inset-block-end: 1.2rem; inset-inline-start: 50%; transform: translateX(-50%); background: var(--ink); color: var(--paper); padding: .8rem 1.2rem; border-radius: 4px; box-shadow: 0 4px 20px var(--shadow); max-inline-size: min(90vw, 550px); inline-size: max-content; z-index: 20; opacity: 0; pointer-events: none; transition: opacity .2s; font-size: .83rem; }
+.toast.visible { opacity: 1; }
+dialog { background: var(--surface); color: var(--ink); border: 1px solid var(--line); padding: 0; inline-size: min(640px, calc(100vw - 2rem)); max-block-size: calc(100dvh - 3rem); border-radius: 4px; box-shadow: 0 20px 80px var(--shadow); }
+dialog::backdrop { background: var(--backdrop); }
+#modal-body { padding: 2rem; }
+.modal-header { display: flex; justify-content: space-between; align-items: start; gap: 1rem; margin-block-end: 1rem; }
+.modal-header button { border: 0; font-size: 1.25rem; line-height: 1; padding: .2rem .5rem; }
+.modal-header h2 { margin: 0; }
+.modal-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: .5rem; margin-block-start: 1.5rem; }
+.intro-art { inline-size: 100%; block-size: 105px; margin-block: .6rem 1.1rem; color: var(--green); }
+.intro-art .line-art { fill: none; stroke: currentColor; stroke-width: 1.3; }
+.intro-art .solid-art { fill: currentColor; opacity: .13; }
+.new-form { display: grid; gap: .85rem; }
+.new-form label { display: grid; gap: .3rem; font-size: .8rem; }
+.guide-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.guide-grid h3 { font-size: 1.1rem; }
+.guide-grid p { font-size: .83rem; color: var(--muted); }
+details { border-block-end: 1px solid var(--line); padding-block: .8rem; }
+summary { cursor: pointer; font-family: var(--serif); font-size: 1.1rem; }
+details p, details li { font-size: .82rem; margin-block-start: .7rem; }
+.ending { padding: 1.5rem; border: 3px double var(--green); text-align: center; background: var(--surface); margin-block-end: 1.5rem; }
+.ending h2 { font-size: 2.2rem; }
+.ending .actions { justify-content: center; }
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #202721; --surface: #283029; --subtle: #343d32; --ink: #efe8d9; --muted: #b3b7a6; --line: #4d5749; --green: #a4c6a9; --green-soft: #334334; --gold: #d7b67a; --red: #ef9b83; --red-soft: #49342d; --white: #202721; --shadow: #00000030; --backdrop: #101911dc; }
+}
+@media (max-width: 1050px) {
+  .masthead { padding-inline: 1.5rem; }
+  .game-layout { padding-inline: 1.5rem; grid-template-columns: 215px minmax(0, 1fr); gap: 1.3rem; }
+  .ledger { padding-inline-end: 1.2rem; }
+  .tabs { gap: 1rem; }
+  .section-heading { flex-wrap: wrap; }
+}
+@media (max-width: 760px) {
+  .masthead { padding: .8rem 1rem 0; }
+  .brand-row { padding-block: 1.1rem; }
+  .edition { font-size: .67rem; }
+  .brand-row .eyebrow { font-size: .55rem; }
+  .seal { font-size: 1.2rem; }
+  .masthead-bottom { flex-wrap: wrap; gap: .55rem; }
+  .utilities { gap: .95rem; }
+  .game-layout { display: block; padding: 1rem; }
+  .ledger { position: static; border-inline-end: 0; padding-inline-end: 0; margin-block-end: 1.2rem; }
+  #ledger { display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+  .ledger-section { padding-block: .6rem; }
+  .ledger-section:first-child { padding-block-start: .6rem; }
+  .season { font-size: 1.4rem; }
+  .cash-value { font-size: 1.7rem; }
+  .campaign-progress { margin-block: .6rem; }
+  .turn-controls { display: flex; align-items: center; gap: 1rem; margin-block-start: .8rem; }
+  .end-season { inline-size: auto; flex: 1; }
+  .save-status { flex: 1; margin: 0; text-align: start; }
+  .bulletin { padding: .85rem; gap: .8rem; }
+  .weather { min-inline-size: 100px; padding-inline-start: .8rem; }
+  .weather strong { font-size: .95rem; }
+  .bulletin p { font-size: .85rem; }
+  .footer { padding: 1rem; flex-wrap: wrap; }
+}
+@media (max-width: 480px) {
+  .commodity-grid, .requirements, .bank, .guide-grid { grid-template-columns: 1fr; }
+  .commodity .description { min-block-size: 0; }
+  .bulletin { grid-template-columns: 1fr; }
+  .weather { border-inline-start: 0; padding-inline-start: 0; border-block-start: 1px solid var(--line); padding-block-start: .5rem; display: flex; align-items: center; gap: .7rem; }
+  .weather .eyebrow { margin: 0; }
+  .tabs { gap: 1.05rem; }
+  .tabs button { font-size: .76rem; }
+  #modal-body { padding: 1.25rem; }
+  .chronicle li { grid-template-columns: 76px 1fr; gap: .65rem; }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the trading desk</a>
+  <header class="masthead">
+    <div class="edition"><span>Victoria Harbour · Est. 1852</span><span>A merchant’s chronicle</span></div>
+    <div class="brand-row"><div><p class="eyebrow">Commerce · Enterprise · Influence</p><h1>Hong Kong <em>Tycoon</em></h1></div><div class="seal" aria-hidden="true">香港<br><small>1852</small></div></div>
+    <div class="masthead-bottom"><span id="house-name">Victoria Trading Company</span><div class="utilities"><button type="button" data-ui="guide">How to play</button><button type="button" data-ui="export">Export save</button><button type="button" data-ui="import">Import</button><button type="button" data-ui="new">New house</button></div></div>
+  </header>
+  <div class="game-layout">
+    <aside class="ledger" aria-label="House ledger">
+      <div id="ledger"></div>
+      <div class="turn-controls"><button class="primary end-season" type="button" data-ui="end">Close the season <span aria-hidden="true">→</span></button><p id="save-status" class="save-status">Progress is saved on this device.</p></div>
+    </aside>
+    <main id="main" tabindex="-1">
+      <div id="alerts"></div>
+      <section id="bulletin" class="bulletin" aria-label="Harbour bulletin"></section>
+      <nav class="tabs" aria-label="Trading house departments">
+        <button type="button" data-tab="exchange" aria-current="page">Exchange</button>
+        <button type="button" data-tab="estate">Estate</button>
+        <button type="button" data-tab="works">Public works</button>
+        <button type="button" data-tab="standing">Standing</button>
+        <button type="button" data-tab="ledger">Chronicle</button>
+      </nav>
+      <div id="panel"></div>
+    </main>
+  </div>
+  <footer class="footer"><span>A fortune is earned. A legacy is built.</span><span>Alternate-history strategy · 72 seasons · Entirely offline</span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-body"></div></dialog>
+  <input id="import-file" type="file" accept=".json,application/json" hidden>
+  <noscript><p class="notice">Hong Kong Tycoon needs JavaScript enabled to run its local game simulation.</p></noscript>
+  <script>/* The simulation has no DOM, clock, filesystem, or network dependencies. */
+(function (root, factory) {
+  if (typeof module === 'object' && module.exports) module.exports = factory();
+  else root.Tycoon = factory();
+})(typeof globalThis !== 'undefined' ? globalThis : this, function () {
+  'use strict';
+  const VERSION = 1;
+  const SEASONS = ['Spring', 'Summer', 'Autumn', 'Winter'];
+  const GOODS = {
+    rice: { name: 'Rice', base: 200, margin: .18, space: 1, demand: 200, spoil: .035, description: 'A staple trade. Broad demand, modest returns, and perishable stock.' },
+    tea: { name: 'Tea', base: 600, margin: .24, space: 1, demand: 95, spoil: .012, description: 'The export mainstay. Better margins, sensitive to overseas demand.' },
+    cement: { name: 'Cement', base: 160, margin: .20, space: 2, demand: 140, spoil: 0, description: 'Bulky building material. Supply public works or sell into a building boom.' },
+    opium: { name: 'Opium', base: 1800, margin: .43, space: 1, demand: 28, spoil: 0, description: 'High-value cargo. Theft, route enforcement, and lasting public distrust.' }
+  };
+  const LOCATIONS = {
+    town: { name: 'Victoria town', price: 20000, freight: .045, exposure: 1, description: 'Balanced costs and weather exposure.' },
+    waterfront: { name: 'Waterfront', price: 28000, freight: .025, exposure: 1.35, description: 'Cheaper handling; more exposed to storms.' },
+    outskirts: { name: 'Outskirts', price: 14000, freight: .075, exposure: .7, description: 'Cheaper land; expensive cartage.' }
+  };
+  const PROJECTS = {
+    wharf: { name: 'Public wharf', effect: 'handling', benefit: 'Port handling charges −8%', description: 'New landing stages shorten the journey from ship to store.' },
+    roads: { name: 'Cartage road', effect: 'cartage', benefit: 'Cartage charges −8%', description: 'A surfaced road connects the merchants’ stores to the harbour.' },
+    drainage: { name: 'Town drainage', effect: 'flood', benefit: 'Flood-related losses −8%', description: 'New drains protect cargo and reduce seasonal disruption.' },
+    water: { name: 'Public waterworks', effect: 'labour', benefit: 'House operating costs −8%', description: 'Reliable water reduces illness and interruptions to work.' },
+    market: { name: 'Market hall', effect: 'demand', benefit: 'Local market depth +8%', description: 'A covered market brings more buyers to the growing settlement.' }
+  };
+  const UPGRADES = {
+    floors: { name: 'Raised floors', price: 6000, description: 'Stored-cargo storm losses reduced by 60%.' },
+    ventilation: { name: 'Ventilation', price: 4500, description: 'Rice and tea spoilage reduced by 65%.' },
+    dry: { name: 'Dry store', price: 4500, description: 'Cement damp losses reduced by 80%.' },
+    security: { name: 'Watchmen', price: 5500, description: 'Opium theft risk reduced; $100 seasonal upkeep.' },
+    expansion: { name: 'Warehouse extension', price: 12000, description: 'Adds 120 storage spaces.' }
+  };
+  const clone = value => JSON.parse(JSON.stringify(value));
+  const clamp = (n, lo, hi) => Math.max(lo, Math.min(hi, n));
+  const round = n => Math.round(n);
+  const emptyGoods = () => Object.fromEntries(Object.keys(GOODS).map(k => [k, 0]));
+  function random(s) {
+    s.rng = (Math.imul(1664525, s.rng) + 1013904223) >>> 0;
+    return s.rng / 4294967296;
+  }
+  function seedNumber(seed) {
+    let h = 2166136261;
+    for (const ch of String(seed)) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
+    return h >>> 0;
+  }
+  function date(s) { return s.turn >= 72 ? 'Spring 1870' : `${SEASONS[s.turn % 4]} ${1852 + Math.floor(s.turn / 4)}`; }
+  function record(s, text, tone = 'neutral') {
+    s.log.unshift({ turn: s.turn, text, tone });
+    s.log = s.log.slice(0, 160);
+  }
+  function standing(s, official, trust) {
+    s.official = clamp(s.official + official, 0, 100);
+    s.trust = clamp(s.trust + trust, 0, 100);
+  }
+  function reduction(s, effect) { return Math.min(.28, s.city[effect] * .08); }
+  function capacity(s, projected = false) {
+    return s.plots.reduce((n, p) => n + (p.built || (projected && p.building) ? 180 + (p.upgrades.includes('expansion') ? 120 : 0) : 0), 0);
+  }
+  function usedSpace(s) {
+    return Object.entries(GOODS).reduce((n, [k, g]) => n + (s.stock[k] + s.incoming.filter(c => c.good === k).reduce((a, c) => a + c.qty, 0)) * g.space, 0);
+  }
+  function protection(s, upgrade) {
+    const stores = s.plots.filter(p => p.built);
+    return stores.length ? stores.filter(p => p.upgrades.includes(upgrade)).length / stores.length : 0;
+  }
+  function freight(s) {
+    const stores = s.plots.filter(p => p.built || p.building);
+    const base = stores.length ? stores.reduce((n, p) => n + LOCATIONS[p.location].freight, 0) / stores.length : .05;
+    return .015 * (1 - reduction(s, 'handling')) + base * (1 - reduction(s, 'cartage'));
+  }
+  function operating(s) {
+    const fixed = 1000 + s.plots.reduce((n, p) => n + p.price * .01 + (p.built ? 500 : 0) + (p.upgrades.includes('security') ? 100 : 0), 0) + (s.manager ? 650 : 0);
+    return round(fixed * (1 - reduction(s, 'labour')) + usedSpace(s) * 1.5 + s.debt * .025);
+  }
+  function propertyValue(s) {
+    return s.plots.reduce((n, p) => n + p.price + (p.built ? 15000 : p.building ? 10000 : 0) + p.upgrades.reduce((v, u) => v + UPGRADES[u].price, 0), 0);
+  }
+  function netWorth(s) {
+    return round(s.cash - s.debt + propertyValue(s) + Object.keys(GOODS).reduce((n, k) => n + s.stock[k] * s.prices[k], 0) + s.incoming.reduce((n, c) => n + c.value, 0) + s.contracts.reduce((n, c) => n + c.bond, 0));
+  }
+  function creditLimit(s) {
+    return round(propertyValue(s) * .45 + Object.keys(GOODS).reduce((n, k) => n + s.stock[k] * s.prices[k] * .25, 0) + (s.official >= 25 ? 10000 : 0));
+  }
+  function activeProjects(s) { return s.contracts.length + s.plots.filter(p => p.building).length; }
+  function buyQuote(s, good, qty, insured = s.insurance) {
+    return round(s.prices[good] * qty * (1 + freight(s) + (insured ? .03 : 0)));
+  }
+  function demand(s, good) { return Math.floor(GOODS[good].demand * (1 + s.turn * .012) * (1 + reduction(s, 'demand'))); }
+  function sellQuote(s, good, qty) {
+    const normal = Math.min(qty, Math.max(0, demand(s, good) - s.sold[good]));
+    return round(s.prices[good] * (1 + GOODS[good].margin) * (normal + (qty - normal) * .78));
+  }
+  function contractCost(s, c) {
+    const material = Math.min(s.stock.cement, c.cement);
+    const shortfall = c.cement - material;
+    return { cash: c.labour + buyQuote(s, 'cement', shortfall, false) * 1.12, cement: material, shortfall };
+  }
+  function commitments(s) { return operating(s) + s.contracts.reduce((n, c) => n + round(contractCost(s, c).cash), 0); }
+  function eligible(s) {
+    return s.turn >= 31 && s.official >= 75 && s.trust >= 60 && netWorth(s) >= 350000 && s.completed >= 4 && s.majorCompleted >= 2 && s.turn - s.lastOpium >= 8 && s.cash >= 0;
+  }
+  function appointment(s) {
+    return [
+      { label: 'Eight years established', current: Math.min(8, Math.floor(s.turn / 4)), target: 8, met: s.turn >= 32 },
+      { label: 'Official Standing', current: s.official, target: 75, met: s.official >= 75 },
+      { label: 'Public Trust', current: s.trust, target: 60, met: s.trust >= 60 },
+      { label: 'Net worth', current: netWorth(s), target: 350000, met: netWorth(s) >= 350000, money: true },
+      { label: 'Public contracts delivered', current: s.completed, target: 4, met: s.completed >= 4 },
+      { label: 'Major projects delivered', current: s.majorCompleted, target: 2, met: s.majorCompleted >= 2 },
+      { label: 'Seasons out of opium', current: Math.min(8, s.turn - s.lastOpium), target: 8, met: s.turn - s.lastOpium >= 8 },
+      { label: 'Consecutive qualifying seasons', current: s.qualifying, target: 4, met: s.qualifying >= 4 }
+    ];
+  }
+  function makeTender(s, type, major, index) {
+    const stages = major ? 4 : 3;
+    const cement = major ? 16 : 8;
+    const labour = major ? 11000 : 4300;
+    const estimated = stages * (labour + cement * s.prices.cement * (1 + freight(s)));
+    const reward = round(estimated * (major ? 1.22 : 1.20) / 100) * 100;
+    return { id: `${s.turn}-${index}`, type, major, stages, cement, labour, reward, bond: round(reward * .1), requirement: major ? 35 : 5, progress: 0, deadline: s.turn + stages + 1 };
+  }
+  function makeSeason(s, previousStorm = false) {
+    const season = s.turn % 4;
+    const stormChance = [.10, .30, .18, .04][season];
+    const harvest = random(s);
+    const mood = harvest < .20 ? 'Poor harvest reports are lifting rice prices.' : harvest > .80 ? 'A plentiful harvest is softening rice prices.' : 'Staple supplies are steady along the coast.';
+    s.weather = { chance: stormChance, label: ['Changeable', 'Storm season', 'Unsettled', 'Fair passage'][season] };
+    const shocks = { rice: harvest < .20 ? .16 : harvest > .80 ? -.14 : 0, tea: random(s) < .25 ? .13 : 0, cement: s.turn % 8 < 3 ? .10 : -.04, opium: s.turn >= 24 ? -.03 : .02 };
+    if (previousStorm) { shocks.rice += .08; shocks.cement += .08; }
+    for (const [k, g] of Object.entries(GOODS)) {
+      const seasonal = k === 'rice' ? [.02, .06, -.06, 0][season] : k === 'tea' ? [-.03, .01, .04, 0][season] : 0;
+      s.prices[k] = round(clamp(s.prices[k] * .57 + g.base * (1 + s.turn * .003) * (.43 + seasonal + shocks[k] + (random(s) - .5) * .14), g.base * .6, g.base * 2.1));
+      s.history[k].push(s.prices[k]);
+      s.history[k] = s.history[k].slice(-12);
+    }
+    s.news = `${mood} ${shocks.tea ? 'Overseas buyers seek more tea. ' : ''}${shocks.cement > 0 ? 'Public building demand is firm.' : 'Construction orders are quieter.'}`;
+    if (previousStorm) s.news += ' Storm disruption is putting upward pressure on rice and reconstruction materials.';
+    if (s.turn === 16) s.news += ' Regional conflict is disrupting routes; merchants are reassessing their exposure.';
+    if (s.turn === 24) s.news += ' Treaty-era changes alter the opium trade. Route enforcement risk eases, but theft and community harm remain.';
+    s.sold = emptyGoods();
+    const types = Object.keys(PROJECTS);
+    s.tenders = [0, 1, 2].map(i => makeTender(s, types[(Math.floor(s.turn / 2) + i * 2) % types.length], s.turn >= 12 && i === 2, i)).filter(c => c.stages <= 72 - s.turn);
+    s.event = s.turn > 0 && s.turn % 4 === 1 ? { kind: 'relief', resolved: false } : s.turn > 0 && s.turn % 4 === 3 ? { kind: 'workers', resolved: false } : null;
+  }
+  function newGame(seed = 'Victoria-1852', name = 'Victoria Trading Company') {
+    const s = {
+      version: VERSION, seed: String(seed).slice(0, 64), rng: seedNumber(seed), name: String(name).trim().slice(0, 60) || 'Victoria Trading Company',
+      turn: 0, cash: 100000, debt: 0, official: 5, trust: 5, stock: emptyGoods(), incoming: [], sold: emptyGoods(),
+      prices: Object.fromEntries(Object.entries(GOODS).map(([k, g]) => [k, g.base])), history: Object.fromEntries(Object.keys(GOODS).map(k => [k, []])),
+      plots: [], nextPlot: 1, contracts: [], tenders: [], completed: 0, majorCompleted: 0,
+      city: { handling: 0, cartage: 0, flood: 0, labour: 0, demand: 0 }, manager: false, insurance: true,
+      lastOpium: -8, qualifying: 0, ending: null, distress: false, report: null, log: [], event: null,
+      stats: { traded: 0, losses: 0, bestWorth: 100000, relief: 0 }
+    };
+    makeSeason(s);
+    record(s, 'You arrive in Victoria Harbour with $100,000 and the ambition to establish a trading house.');
+    return s;
+  }
+  function requireCondition(condition, message) { if (!condition) throw new Error(message); }
+  function pay(s, amount) { requireCondition(s.cash >= amount, 'There is not enough available cash.'); s.cash -= amount; }
+  function integer(n) { requireCondition(Number.isSafeInteger(n) && n > 0 && n <= 1000000, 'Enter a positive whole number.'); return n; }
+  function opiumTrade(s, qty) {
+    s.lastOpium = s.turn;
+    standing(s, 0, -Math.min(5, qty * .12));
+    s.qualifying = 0;
+  }
+  function settle(s) {
+    s.cash = round(s.cash);
+    s.distress = s.cash < 0;
+    s.official = Math.round(s.official * 10) / 10;
+    s.trust = Math.round(s.trust * 10) / 10;
+    s.stats.bestWorth = Math.max(s.stats.bestWorth, netWorth(s));
+    if (s.distress) s.qualifying = 0;
+    if (s.turn >= 72 && !s.distress && !s.ending) s.ending = 'survived';
+  }
+  function advance(s) {
+    requireCondition(!s.distress, 'Settle the overdue balance before advancing, or declare bankruptcy.');
+    const startCash = s.cash;
+    const report = { season: date(s), entries: [], expense: operating(s), storm: false, cashChange: 0 };
+    const note = text => { report.entries.push(text); record(s, text); };
+    s.cash -= report.expense;
+    const storm = random(s) < s.weather.chance;
+    report.storm = storm;
+    note(storm ? 'A coastal storm batters the shipping lanes.' : 'The harbour remains open; shipping conditions are manageable.');
+    // Paid construction completes before arrival so opening cargo has a warehouse.
+    for (const p of s.plots) if (p.building) { p.building = false; p.built = true; note(`Your warehouse in ${LOCATIONS[p.location].name} opens with 180 storage spaces.`); }
+    const stores = s.plots.filter(p => p.built);
+    const exposure = stores.length ? stores.reduce((n, p) => n + LOCATIONS[p.location].exposure, 0) / stores.length : 1;
+    for (const [k, g] of Object.entries(GOODS)) {
+      let rate = g.spoil * (1 - .65 * protection(s, 'ventilation'));
+      if (storm) rate += (k === 'cement' ? .16 * (1 - .8 * protection(s, 'dry')) : .045) * exposure * (1 - .6 * protection(s, 'floors')) * (1 - reduction(s, 'flood'));
+      const loss = Math.min(s.stock[k], Math.floor(s.stock[k] * rate + random(s)));
+      if (loss) { s.stock[k] -= loss; s.stats.losses += round(loss * s.prices[k]); note(`${loss} units of stored ${g.name.toLowerCase()} are lost to ${storm ? 'weather and deterioration' : 'deterioration'}.`); }
+    }
+    // One route roll per commodity, not per order: splitting cargo cannot evade risk.
+    const opiumHit = random(s) < (s.turn < 24 ? .16 : .09) * (1 - .35 * protection(s, 'security'));
+    for (const c of s.incoming) {
+      let loss = storm ? Math.ceil(c.qty * (.06 + random(s) * .12)) : 0;
+      if (c.good === 'opium' && opiumHit) {
+        loss = Math.min(c.qty, loss + Math.ceil(c.qty * .65));
+        standing(s, -2, -2);
+        note('An opium consignment suffers a route seizure or theft. This loss is excluded from insurance.');
+      }
+      loss = Math.min(c.qty, loss);
+      s.stock[c.good] += c.qty - loss;
+      if (loss) {
+        const value = round(c.value * loss / c.qty);
+        const compensation = c.insured && !(c.good === 'opium' && opiumHit) ? round(value * .8) : 0;
+        s.cash += compensation;
+        s.stats.losses += value - compensation;
+        note(`${GOODS[c.good].name}: ${c.qty - loss}/${c.qty} units arrive.${compensation ? ` Insurance pays $${compensation.toLocaleString('en-US')}.` : ''}`);
+      } else note(`${GOODS[c.good].name}: ${c.qty} units arrive safely.`);
+    }
+    s.incoming = [];
+    for (const c of [...s.contracts]) {
+      const cost = contractCost(s, c);
+      if (storm && random(s) < .22) note(`${PROJECTS[c.type].name}: weather delays this season’s work.`);
+      else if (s.cash < round(cost.cash)) note(`${PROJECTS[c.type].name}: work pauses because working capital is insufficient.`);
+      else {
+        s.cash -= round(cost.cash);
+        s.stock.cement -= cost.cement;
+        c.progress++;
+        const payment = c.progress === c.stages ? c.reward - Math.floor(c.reward * .20) * (c.stages - 1) : Math.floor(c.reward * .20);
+        s.cash += payment;
+        note(`${PROJECTS[c.type].name}: stage ${c.progress}/${c.stages} delivered; payment $${payment.toLocaleString('en-US')}.`);
+        if (c.progress === c.stages) {
+          s.cash += c.bond;
+          s.completed++;
+          if (c.major) s.majorCompleted++;
+          s.city[PROJECTS[c.type].effect]++;
+          standing(s, c.major ? 16 : 10, c.major ? 12 : 8);
+          s.contracts = s.contracts.filter(item => item.id !== c.id);
+          note(`${PROJECTS[c.type].name} completed. Your bond is returned and the city benefits.`);
+          continue;
+        }
+      }
+      if (s.turn >= c.deadline || s.turn === 71) {
+        s.contracts = s.contracts.filter(item => item.id !== c.id);
+        s.cash -= round(c.reward * .05);
+        standing(s, -15, -8);
+        s.qualifying = 0;
+        note(`${PROJECTS[c.type].name} defaults${s.turn === 71 ? ' at the final settlement' : ''}: bond forfeited and a 5% penalty is payable.`);
+      }
+    }
+    if (s.stock.opium > 0) { s.lastOpium = s.turn; standing(s, 0, -.5); }
+    if (s.cash >= 0 && s.plots.some(p => p.built)) {
+      // Routine reliability has a ceiling; high standing requires actual achievements.
+      if (s.official < 25) s.official = Math.min(25, s.official + .5);
+      if (s.trust < 20 && s.turn - s.lastOpium > 0) s.trust = Math.min(20, s.trust + .35);
+    }
+    s.qualifying = eligible(s) ? s.qualifying + 1 : 0;
+    s.turn++;
+    if (s.turn % 4 === 0 && s.qualifying >= 4 && s.cash >= 0) s.ending = 'governor';
+    if (s.turn > 0 && s.turn % 12 === 0 && s.turn < 72) {
+      const keys = Object.keys(s.city);
+      const effect = keys[Math.floor(random(s) * keys.length)];
+      s.city[effect]++;
+      note(`Another merchant finishes a public project. The city’s ${effect} infrastructure improves.`);
+    }
+    if (s.turn < 72 && !s.ending) makeSeason(s, storm);
+    report.cashChange = round(s.cash - startCash);
+    s.report = report;
+    settle(s);
+    if (s.distress) record(s, 'Payments exceed your cash. Liquidate stock or property, or arrange credit before continuing.', 'bad');
+    if (s.ending) record(s, s.ending === 'governor' ? 'A dispatch from London confirms your appointment as Governor of Hong Kong.' : '1870 dawns. Your trading house has endured.', 'good');
+  }
+  function act(state, action) {
+    const s = clone(state);
+    requireCondition(action && typeof action.type === 'string', 'Invalid action.');
+    requireCondition(!s.ending, 'This campaign has ended. Start a new house to play again.');
+    if (s.distress) requireCondition(['sell', 'borrow', 'liquidate', 'abandon', 'bankrupt'].includes(action.type), 'Settle your overdue balance first.');
+    switch (action.type) {
+      case 'establish': {
+        requireCondition(s.plots.length === 0, 'Your house is already established.');
+        pay(s, 35000);
+        s.plots.push({ id: s.nextPlot++, location: 'town', price: 20000, built: false, building: true, upgrades: [] });
+        record(s, 'You secure a Victoria town lease and commission your first warehouse. It will open next season.', 'good');
+        break;
+      }
+      case 'buy': {
+        requireCondition(Object.hasOwn(GOODS, action.good), 'Unknown commodity.');
+        const qty = integer(action.qty);
+        requireCondition(usedSpace(s) + qty * GOODS[action.good].space <= capacity(s, true), 'There is not enough warehouse space, including incoming cargo.');
+        const cost = buyQuote(s, action.good, qty);
+        pay(s, cost);
+        const existing = s.incoming.find(c => c.good === action.good && c.insured === s.insurance);
+        if (existing) { existing.qty += qty; existing.value += s.prices[action.good] * qty; }
+        else s.incoming.push({ good: action.good, qty, value: s.prices[action.good] * qty, insured: s.insurance });
+        if (action.good === 'opium') opiumTrade(s, qty);
+        s.stats.traded += cost;
+        record(s, `Ordered ${qty} ${GOODS[action.good].name.toLowerCase()} for $${cost.toLocaleString('en-US')}; arrival next season.`);
+        break;
+      }
+      case 'sell': {
+        requireCondition(Object.hasOwn(GOODS, action.good), 'Unknown commodity.');
+        const qty = integer(action.qty);
+        requireCondition(s.stock[action.good] >= qty, 'You do not hold that much saleable stock.');
+        const amount = sellQuote(s, action.good, qty);
+        s.stock[action.good] -= qty;
+        s.sold[action.good] += qty;
+        s.cash += amount;
+        if (action.good === 'opium') opiumTrade(s, qty);
+        s.stats.traded += amount;
+        record(s, `Sold ${qty} ${GOODS[action.good].name.toLowerCase()} for $${amount.toLocaleString('en-US')}.`);
+        break;
+      }
+      case 'land': {
+        requireCondition(Object.hasOwn(LOCATIONS, action.location), 'Unknown location.');
+        requireCondition(s.plots.length < 6, 'The house can hold at most six plots.');
+        const price = round(LOCATIONS[action.location].price * (1 + s.turn * .007));
+        pay(s, price);
+        s.plots.push({ id: s.nextPlot++, location: action.location, price, built: false, building: false, upgrades: [] });
+        record(s, `Purchased a lease in ${LOCATIONS[action.location].name}.`);
+        break;
+      }
+      case 'build': {
+        const p = s.plots.find(p => p.id === action.id);
+        requireCondition(p && !p.built && !p.building, 'Select an empty plot.');
+        requireCondition(activeProjects(s) < (s.manager ? 2 : 1), 'All project supervision slots are occupied.');
+        pay(s, 15000); p.building = true;
+        record(s, 'Warehouse commissioned. It opens next season.'); break;
+      }
+      case 'upgrade': {
+        const p = s.plots.find(p => p.id === action.id);
+        requireCondition(p && p.built && Object.hasOwn(UPGRADES, action.upgrade), 'Select a built warehouse and a valid improvement.');
+        requireCondition(!p.upgrades.includes(action.upgrade), 'That improvement is already installed.');
+        pay(s, UPGRADES[action.upgrade].price); p.upgrades.push(action.upgrade);
+        record(s, `${UPGRADES[action.upgrade].name} installed in warehouse ${p.id}.`); break;
+      }
+      case 'liquidate': {
+        const p = s.plots.find(p => p.id === action.id);
+        requireCondition(p, 'Plot not found.');
+        const remaining = clone(s); remaining.plots = remaining.plots.filter(item => item.id !== p.id);
+        requireCondition(usedSpace(s) <= capacity(remaining, true), 'Sell enough stock first; remaining warehouses must hold all cargo.');
+        const amount = round((p.price + (p.built ? 15000 : p.building ? 10000 : 0) + p.upgrades.reduce((n, u) => n + UPGRADES[u].price, 0)) * .65);
+        s.plots = remaining.plots; s.cash += amount;
+        record(s, `Property ${p.id} liquidated for $${amount.toLocaleString('en-US')} (65% of book value).`); break;
+      }
+      case 'contract': {
+        const c = s.tenders.find(c => c.id === action.id);
+        requireCondition(c && !s.contracts.some(item => item.id === c.id), 'This tender is no longer available.');
+        requireCondition(s.plots.some(p => p.built), 'Open a warehouse before tendering for public work.');
+        requireCondition(s.official >= c.requirement, `This tender requires ${c.requirement} Official Standing.`);
+        requireCondition(activeProjects(s) < (s.manager ? 2 : 1), 'All project supervision slots are occupied.');
+        pay(s, c.bond); s.contracts.push(clone(c)); s.tenders = s.tenders.filter(item => item.id !== c.id);
+        record(s, `${PROJECTS[c.type].name} awarded. Performance bond posted.`); break;
+      }
+      case 'abandon': {
+        const c = s.contracts.find(c => c.id === action.id);
+        requireCondition(c, 'Contract not found.');
+        s.contracts = s.contracts.filter(item => item.id !== c.id);
+        s.cash -= round(c.reward * .05); standing(s, -15, -8); s.qualifying = 0;
+        record(s, 'Contract abandoned. Your bond is forfeited and a 5% penalty is payable.', 'bad'); break;
+      }
+      case 'borrow': {
+        const amount = integer(action.amount);
+        requireCondition(s.debt + amount <= creditLimit(s), 'This loan exceeds your secured credit limit.');
+        s.cash += amount; s.debt += amount; record(s, `Borrowed $${amount.toLocaleString('en-US')} at 2.5% seasonal interest.`); break;
+      }
+      case 'repay': {
+        const amount = integer(action.amount); requireCondition(amount <= s.debt, 'That exceeds the outstanding debt.');
+        pay(s, amount); s.debt -= amount; record(s, `Repaid $${amount.toLocaleString('en-US')} of principal.`); break;
+      }
+      case 'insurance': s.insurance = Boolean(action.enabled); break;
+      case 'manager':
+        requireCondition(!s.manager, 'A superintendent is already employed.');
+        pay(s, 3000); s.manager = true; record(s, 'Superintendent hired: two project slots, $650 additional seasonal salary.'); break;
+      case 'event': {
+        requireCondition(s.event && !s.event.resolved, 'There is no outstanding seasonal decision.');
+        requireCondition(['help', 'decline'].includes(action.choice), 'Choose a valid response.');
+        if (action.choice === 'help' && s.event.kind === 'relief') {
+          requireCondition(s.stock.rice >= 20, 'The relief committee needs 20 units of rice already in store.');
+          s.stock.rice -= 20; s.cash += round(20 * s.prices.rice * 1.03);
+          const gain = Math.max(1, 6 - s.stats.relief * .5); s.stats.relief++;
+          standing(s, 2, gain); record(s, 'You supply the relief committee at a restrained price. Residents remember your assistance.', 'good');
+        } else if (action.choice === 'help') {
+          pay(s, 1800); standing(s, 1, s.trust < 50 ? 3 : 1);
+          record(s, 'You fund a workers’ clinic and paid recovery time.', 'good');
+        } else record(s, 'You decline the seasonal appeal and preserve working capital.');
+        s.event.resolved = true; break;
+      }
+      case 'end': advance(s); break;
+      case 'bankrupt':
+        requireCondition(s.distress, 'Bankruptcy is available only when an obligation is overdue.');
+        s.ending = 'bankrupt'; record(s, 'Unable to settle its obligations, the house enters bankruptcy.', 'bad'); break;
+      default: throw new Error('Unknown action.');
+    }
+    settle(s);
+    return s;
+  }
+  // Saves are untrusted input. Validate nested structures before any rendering or simulation.
+  function validateSave(input) {
+    requireCondition(input && typeof input === 'object' && input.version === VERSION, 'Unsupported save version.');
+    const s = clone(input);
+    const num = (v, lo, hi, whole = false) => typeof v === 'number' && Number.isFinite(v) && v >= lo && v <= hi && (!whole || Number.isInteger(v));
+    const text = (v, max) => typeof v === 'string' && v.length <= max;
+    const bool = v => typeof v === 'boolean';
+    const check = (v, message = 'Invalid or damaged save file.') => requireCondition(v, message);
+    check(text(s.name, 60) && text(s.seed, 64) && num(s.rng, 0, 4294967295, true));
+    check(num(s.turn, 0, 72, true) && num(s.cash, -1e9, 1e12, true) && num(s.debt, 0, 1e12, true));
+    for (const k of ['official', 'trust']) check(num(s[k], 0, 100));
+    for (const k of ['completed', 'majorCompleted', 'qualifying']) check(num(s[k], 0, 200, true));
+    check(s.majorCompleted <= s.completed && num(s.lastOpium, -8, s.turn, true) && num(s.nextPlot, 1, 1000, true));
+    check(bool(s.manager) && bool(s.insurance) && bool(s.distress) && [null, 'governor', 'survived', 'bankrupt'].includes(s.ending));
+    check(s.distress === (s.cash < 0));
+    for (const key of ['stock', 'sold', 'prices', 'history']) check(s[key] && typeof s[key] === 'object');
+    for (const k of Object.keys(GOODS)) {
+      check(num(s.stock[k], 0, 1000000, true) && num(s.sold[k], 0, 1000000, true) && num(s.prices[k], 1, 1000000, true));
+      check(Array.isArray(s.history[k]) && s.history[k].length <= 12 && s.history[k].every(v => num(v, 1, 1000000, true)));
+    }
+    check(Array.isArray(s.incoming) && s.incoming.length <= 8);
+    check(s.incoming.every(c => c && Object.hasOwn(GOODS, c.good) && num(c.qty, 1, 1000000, true) && num(c.value, 1, 1e12) && bool(c.insured)));
+    check(Array.isArray(s.plots) && s.plots.length <= 6);
+    for (const p of s.plots) check(p && num(p.id, 1, s.nextPlot - 1, true) && Object.hasOwn(LOCATIONS, p.location) && num(p.price, 1, 1e9) && bool(p.built) && bool(p.building) && !(p.built && p.building) && Array.isArray(p.upgrades) && p.upgrades.length <= 5 && p.upgrades.every(u => Object.hasOwn(UPGRADES, u)) && new Set(p.upgrades).size === p.upgrades.length);
+    check(new Set(s.plots.map(p => p.id)).size === s.plots.length);
+    const validContract = c => c && text(c.id, 30) && Object.hasOwn(PROJECTS, c.type) && bool(c.major) && num(c.stages, 3, 4, true) && num(c.progress, 0, c.stages - 1, true) && num(c.cement, 1, 1000, true) && num(c.labour, 1, 1e7, true) && num(c.reward, 1, 1e9, true) && num(c.bond, 0, 1e9, true) && num(c.requirement, 0, 100) && num(c.deadline, 0, 80, true);
+    check(Array.isArray(s.contracts) && s.contracts.length <= 2 && s.contracts.every(validContract));
+    check(Array.isArray(s.tenders) && s.tenders.length <= 3 && s.tenders.every(validContract));
+    check(new Set([...s.contracts, ...s.tenders].map(c => c.id)).size === s.contracts.length + s.tenders.length);
+    check(s.city && Object.keys(PROJECTS).every(k => num(s.city[PROJECTS[k].effect], 0, 200, true)));
+    check(s.weather && num(s.weather.chance, 0, 1) && text(s.weather.label, 80) && text(s.news, 2000));
+    check(s.event === null || (s.event && ['relief', 'workers'].includes(s.event.kind) && bool(s.event.resolved)));
+    check(s.stats && ['traded', 'losses', 'bestWorth', 'relief'].every(k => num(s.stats[k], 0, 1e15)));
+    check(Array.isArray(s.log) && s.log.length <= 160 && s.log.every(l => l && num(l.turn, 0, 72, true) && text(l.text, 2000) && ['neutral', 'good', 'bad'].includes(l.tone)));
+    check(s.report === null || (s.report && text(s.report.season, 80) && Array.isArray(s.report.entries) && s.report.entries.length <= 100 && s.report.entries.every(e => text(e, 2000)) && num(s.report.expense, 0, 1e12) && bool(s.report.storm) && num(s.report.cashChange, -1e12, 1e12)));
+    check(usedSpace(s) <= capacity(s, true) && activeProjects(s) <= (s.manager ? 2 : 1));
+    check(s.turn < 72 || Boolean(s.ending) || s.distress);
+    return s;
+  }
+  function serialize(s) { return JSON.stringify(validateSave(s), null, 2); }
+  function deserialize(text) {
+    requireCondition(typeof text === 'string' && text.length <= 1000000, 'Save file is too large.');
+    try { return validateSave(JSON.parse(text)); } catch (error) { throw new Error(`Cannot load save: ${error.message}`); }
+  }
+  return { VERSION, GOODS, LOCATIONS, PROJECTS, UPGRADES, SEASONS, newGame, act, date, capacity, usedSpace, operating, commitments, propertyValue, netWorth, creditLimit, buyQuote, sellQuote, demand, contractCost, activeProjects, appointment, reduction, serialize, deserialize, validateSave };
+});
+</script>
+  <script>(function () {
+  'use strict';
+  const E = window.Tycoon;
+  const SAVE_KEY = 'hong-kong-tycoon-save-v1';
+  const $ = selector => document.querySelector(selector);
+  const esc = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const money = n => `${n < 0 ? '−' : ''}$${Math.abs(Math.round(n)).toLocaleString('en-US')}`;
+  const signed = n => `${n >= 0 ? '+' : '−'}$${Math.abs(Math.round(n)).toLocaleString('en-US')}`;
+  const disabled = condition => condition ? ' disabled' : '';
+  let state = E.newGame();
+  let tab = 'exchange';
+  let storageMessage = 'Progress is saved on this device.';
+  let toastTimer;
+  let recovered = false;
+  let saveBlocked = false;
+  const quantities = { rice: 20, tea: 20, cement: 20, opium: 5 };
+  let confirmAction = null;
+  let focusBeforeModal = null;
+
+  try {
+    const saved = localStorage.getItem(SAVE_KEY);
+    if (saved) { state = E.deserialize(saved); recovered = true; }
+  } catch (error) {
+    storageMessage = 'Save unavailable. Export your game to keep it.';
+    saveBlocked = true;
+    // Do not overwrite a damaged existing save until the player explicitly starts/imports.
+  }
+
+  function save() {
+    if (saveBlocked) return;
+    try { localStorage.setItem(SAVE_KEY, E.serialize(state)); storageMessage = 'Autosaved · stored on this device'; }
+    catch { storageMessage = 'Autosave unavailable · use Export save'; }
+  }
+  function toast(message) {
+    clearTimeout(toastTimer);
+    $('#toast').textContent = message;
+    $('#toast').classList.add('visible');
+    toastTimer = setTimeout(() => $('#toast').classList.remove('visible'), 4200);
+  }
+  function modal(title, body, actions = '') {
+    const dialog = $('#modal');
+    if (!dialog.open) focusBeforeModal = document.activeElement;
+    $('#modal-body').innerHTML = `<div class="modal-header"><h2 id="modal-title">${esc(title)}</h2><button type="button" data-ui="close" aria-label="Close dialog">×</button></div>${body}${actions ? `<div class="modal-actions">${actions}</div>` : ''}`;
+    if (!dialog.open) dialog.showModal();
+  }
+  function closeModal() {
+    $('#modal').close();
+    confirmAction = null;
+    if (focusBeforeModal?.isConnected) focusBeforeModal.focus();
+  }
+  function confirm(title, body, action, label = 'Confirm') {
+    confirmAction = action;
+    modal(title, body, `<button type="button" data-ui="close">Cancel</button><button type="button" class="primary" data-ui="confirm">${esc(label)}</button>`);
+  }
+  function dispatch(action, message) {
+    try {
+      state = E.act(state, action);
+      save(); render();
+      if (message) toast(message);
+      if (action.type === 'end') showReport();
+      return true;
+    } catch (error) { toast(error.message); return false; }
+  }
+  function progress(value, max, label) { return `<progress class="meter" max="${max}" value="${Math.max(0, Math.min(max, value))}" aria-label="${esc(label)}"></progress>`; }
+  function ledgerRow(label, value, cls = '') { return `<div class="ledger-row"><span>${label}</span><strong class="${cls}">${value}</strong></div>`; }
+  function renderLedger() {
+    const obligations = E.commitments(state);
+    const reserve = state.cash - obligations;
+    const pending = state.incoming.reduce((n, c) => n + c.qty, 0);
+    $('#ledger').innerHTML = `
+      <div class="ledger-section"><p class="eyebrow">The house ledger</p><div class="season">${E.date(state)}</div><span class="small muted">${state.turn >= 72 ? 'The campaign is complete' : `Season ${state.turn + 1} of 72`}</span><div class="campaign-progress" aria-hidden="true">${Array.from({ length: 18 }, (_, i) => `<span class="${i < Math.ceil(state.turn / 4) ? 'filled' : ''}"></span>`).join('')}</div><p class="eyebrow">Available cash</p><div class="cash-value money ${state.cash < 0 ? 'negative' : ''}">${money(state.cash)}</div></div>
+      <div class="ledger-section">${ledgerRow('Net worth', money(E.netWorth(state)))}${ledgerRow('Debt', money(state.debt))}${ledgerRow('Seasonal expenses', money(E.operating(state)))}${ledgerRow('Works cash needed', money(obligations - E.operating(state)))}<div class="reserve ${reserve < 0 ? 'warning' : ''}"><p>After upcoming commitments</p><strong class="money ${reserve < 0 ? 'negative' : 'positive'}">${money(reserve)}</strong></div><button type="button" class="text-button small" data-ui="bank">Arrange credit →</button></div>
+      <div class="ledger-section">${ledgerRow('Official Standing', `${state.official.toFixed(1)} / 100`)}${progress(state.official, 100, 'Official Standing')}${ledgerRow('Public Trust', `${state.trust.toFixed(1)} / 100`)}${progress(state.trust, 100, 'Public Trust')}</div>
+      <div class="ledger-section">${ledgerRow('Warehouse space', `${E.usedSpace(state)} / ${E.capacity(state, true)}`)}${progress(E.usedSpace(state), Math.max(1, E.capacity(state, true)), 'Warehouse space in use')}${ledgerRow('Incoming cargo', `${pending} units`)}${ledgerRow('Project supervision', `${E.activeProjects(state)} / ${state.manager ? 2 : 1}`)}</div>`;
+    const end = $('[data-ui="end"]');
+    end.disabled = Boolean(state.ending || state.distress);
+    end.innerHTML = state.ending ? 'Campaign concluded' : state.distress ? 'Settle overdue balance' : 'Close the season <span aria-hidden="true">→</span>';
+    $('#save-status').textContent = storageMessage;
+    $('#house-name').textContent = state.name;
+  }
+  function endingMarkup() {
+    const title = state.ending === 'governor' ? 'His Excellency, the Governor' : state.ending === 'bankrupt' ? 'The House Falls Silent' : 'The House Endures';
+    const legacy = state.trust >= 60 ? 'a respected civic merchant' : state.turn - state.lastOpium < 8 ? 'a prosperous but contested opium trader' : E.propertyValue(state) >= 150000 ? 'a harbour property baron' : E.netWorth(state) >= 250000 ? 'an established merchant of Victoria' : 'a determined survivor';
+    const story = state.ending === 'governor' ? `A dispatch from London confirms your appointment. Through commerce, public works, and sustained public confidence, ${esc(state.name)} has changed the harbour. You leave the counting house for Government House.` : state.ending === 'bankrupt' ? `The creditors gather, the warehouse doors close, and the final ledger of ${esc(state.name)} is signed. Your ambition outpaced your working capital.` : `As 1870 dawns, ${esc(state.name)} is still trading. You are remembered as ${legacy}. The harbour you first entered eighteen years ago is a different place.`;
+    return `<section class="ending"><p class="eyebrow">${state.ending === 'governor' ? 'The appointment' : 'Your final chapter'}</p><h2>${title}</h2><p>${story}</p><p class="small muted">Final net worth ${money(E.netWorth(state))} · ${state.completed} public contracts · Public Trust ${state.trust.toFixed(1)}</p><div class="actions"><button type="button" data-ui="new" class="primary">Establish another house</button><button type="button" data-ui="export">Keep this chronicle</button></div></section>`;
+  }
+  function renderAlerts() {
+    $('#alerts').innerHTML = state.ending ? endingMarkup() : state.distress ? `<section class="notice warning"><p class="eyebrow">Creditors at the door</p><h3>${money(-state.cash)} is overdue</h3><p>Your house still has time to raise the money. Sell stored cargo, arrange secured credit, or liquidate a property on the Estate page.</p><div class="actions"><button type="button" data-ui="bank">Visit the bank</button><button type="button" data-ui="bankrupt" class="danger">Declare bankruptcy</button></div></section>` : '';
+  }
+  function renderBulletin() {
+    $('#bulletin').innerHTML = `<div><p class="eyebrow">The Harbour Gazette</p><h2>Intelligence from the waterfront</h2><p>${esc(state.news)}</p></div><div class="weather"><span class="eyebrow">${state.ending ? 'Last outlook' : 'This season'}</span><strong>${esc(state.weather.label)}</strong><small>${Math.round(state.weather.chance * 100)}% storm risk</small></div>`;
+  }
+  function spark(good) {
+    const values = state.history[good];
+    const lo = Math.min(...values) * .95, hi = Math.max(...values) * 1.05;
+    const points = (values.length === 1 ? [values[0], values[0]] : values).map((v, i, all) => `${i / (all.length - 1) * 260},${32 - (v - lo) / (hi - lo) * 27}`).join(' ');
+    return `<svg class="spark" viewBox="0 0 260 37" preserveAspectRatio="none" role="img" aria-label="${esc(E.GOODS[good].name)} supplier prices over ${values.length} seasons"><title>${values.map(money).join(', ')}</title><line x1="0" y1="35" x2="260" y2="35"></line><polyline points="${points}"></polyline></svg>`;
+  }
+  function eventMarkup() {
+    if (!state.event || state.event.resolved || state.ending) return '';
+    const relief = state.event.kind === 'relief';
+    return `<section class="card event"><p class="eyebrow">A seasonal decision</p><h3>${relief ? 'An appeal from the relief committee' : 'The men behind the ledgers'}</h3><p>${relief ? 'Local families face an uncertain food supply. The committee asks for 20 units of rice at 3% above today’s supplier price. A smaller margin can earn lasting goodwill.' : 'Dockworkers request a clinic fund and paid recovery time. Contribute $1,800 to support their families and improve public confidence in your house.'}</p><div class="actions"><button type="button" data-action="event" data-choice="help"${disabled(state.distress || (relief ? state.stock.rice < 20 : state.cash < 1800))}>${relief ? `Supply 20 rice · receive ${money(state.prices.rice * 20 * 1.03)}` : 'Contribute $1,800'}</button><button type="button" data-action="event" data-choice="decline"${disabled(state.distress)}>Preserve working capital</button></div></section>`;
+  }
+  function exchange() {
+    const opening = state.plots.length === 0 && state.turn === 0 ? `<section class="notice"><p class="eyebrow">Your first foothold</p><h3>A place on the harbour</h3><p>Secure a Victoria town lease and commission a warehouse for <strong>$35,000</strong>. Your 180-space store opens next season, in time for cargo you order today.</p><div class="actions"><button type="button" data-action="establish" class="primary">Establish the house · $35,000</button><button type="button" data-tab="estate">Choose my own location</button></div></section>` : '';
+    return `${opening}<div class="section-heading"><div><p class="eyebrow">The trading exchange</p><h2>Cargo & opportunity</h2><p>Order today. Receive next season. Sell what is already in store.</p></div><label class="check-label"><input type="checkbox" id="insurance"${state.insurance ? ' checked' : ''}${disabled(state.ending || state.distress)}>Insure new cargo · 3%</label></div><div class="commodity-grid">${Object.entries(E.GOODS).map(([k, g]) => {
+      const incoming = state.incoming.filter(c => c.good === k).reduce((n, c) => n + c.qty, 0);
+      const depth = Math.max(0, E.demand(state, k) - state.sold[k]);
+      return `<article class="commodity"><div class="commodity-header"><div><h3>${g.name}</h3><span class="small muted">${g.space} space${g.space === 1 ? '' : 's'} per unit</span></div><span class="badge ${k === 'opium' ? 'risk' : ''}">${{ rice: 'Staple', tea: 'Export', cement: 'Building', opium: 'High risk' }[k]}</span></div><p class="description">${g.description}</p>${spark(k)}<div class="price-row"><div><span>Buy · all-in / unit</span><strong>${money(E.buyQuote(state, k, 1))}</strong></div><div><span>Sell / unit${depth ? '' : ' · excess'}</span><strong>${money(E.sellQuote(state, k, 1))}</strong></div></div><div class="stock-row"><span>In store <strong>${state.stock[k]}</strong></span><span>At sea <strong>${incoming}</strong></span><span>Buyers <strong>${depth}</strong></span></div><div class="trade-input"><label for="qty-${k}">Units</label><input id="qty-${k}" data-qty="${k}" type="number" inputmode="numeric" min="1" max="1000000" step="1" value="${quantities[k]}"><button type="button" data-ui="max-buy" data-good="${k}" title="Fill available space while reserving upcoming commitments">Budget max</button><button type="button" data-ui="all" data-good="${k}">All held</button></div><div class="trade-buttons"><button type="button" class="primary" data-trade="buy" data-good="${k}"${disabled(state.ending || state.distress)}>Order cargo</button><button type="button" data-trade="sell" data-good="${k}"${disabled(state.ending || !state.stock[k])}>Sell stock</button></div><p class="quote" id="quote-${k}"></p></article>`;
+    }).join('')}</div><p class="note">Buy prices include freight and selected insurance. Quotes stay fixed throughout the season. Sales beyond remaining market depth earn 22% less. Charts show recent supplier prices. Insurance covers 80% of insured cargo’s purchase value lost to weather; opium route losses are excluded.</p>${eventMarkup()}`;
+  }
+  function estate() {
+    return `<div class="section-heading"><div><p class="eyebrow">Land & stores</p><h2>A foothold in Victoria</h2><p>Land is a long lease. Each warehouse takes one season and a supervision slot to build.</p></div><span class="badge">${state.plots.length} / 6 plots</span></div><div class="cards">${Object.entries(E.LOCATIONS).map(([k, loc]) => `<article class="card"><h3>${loc.name}</h3><p>${loc.description}</p><div class="cost">${money(loc.price * (1 + state.turn * .007))}</div><p>Lease only · 1% of purchase price in seasonal ground rent. Warehouse construction costs an additional $15,000.</p><button type="button" data-action="land" data-location="${k}"${disabled(state.ending || state.distress || state.plots.length >= 6 || state.cash < Math.round(loc.price * (1 + state.turn * .007)))}>Acquire lease</button></article>`).join('')}</div><h3 class="subheading">Your properties</h3>${state.plots.length ? `<div class="cards">${state.plots.map(p => `<article class="card"><p class="eyebrow">Property No. ${p.id}</p><h3>${E.LOCATIONS[p.location].name}</h3><p>${p.built ? `Warehouse · ${180 + (p.upgrades.includes('expansion') ? 120 : 0)} spaces` : p.building ? 'Under construction · opens next season' : 'Undeveloped lease'}</p>${!p.built && !p.building ? `<button type="button" data-action="build" data-id="${p.id}"${disabled(state.ending || state.distress || state.cash < 15000 || E.activeProjects(state) >= (state.manager ? 2 : 1))}>Build warehouse · $15,000</button>` : ''}${p.built ? `<div class="upgrade-list">${Object.entries(E.UPGRADES).map(([k, u]) => p.upgrades.includes(k) ? `<span class="installed">✓ ${u.name}</span>` : `<button type="button" data-action="upgrade" data-id="${p.id}" data-upgrade="${k}" title="${u.description}"${disabled(state.ending || state.distress || state.cash < u.price)}><span>${u.name}</span><span>${money(u.price)}</span></button>`).join('')}</div><details><summary>Improvement benefits</summary>${Object.values(E.UPGRADES).map(u => `<p><strong>${u.name}:</strong> ${u.description}</p>`).join('')}<p>Protection is averaged across your built warehouses.</p></details>` : ''}<p class="note">Forced sale returns 65% of property book value.</p><button type="button" class="text-button small" data-ui="liquidate" data-id="${p.id}"${disabled(state.ending)}>Liquidate this property</button></article>`).join('')}</div>` : '<p class="muted">Your house has not acquired any land yet.</p>'}<h3 class="subheading">The superintendent’s office</h3><div class="card"><h3>${state.manager ? 'A capable second pair of hands' : 'Make room for bigger ambitions'}</h3><p>${state.manager ? 'Your superintendent oversees a second project. Salary: $650 per season.' : 'Hire a superintendent for $3,000 and $650 each season. The house can supervise two construction projects or public contracts at once.'}</p>${!state.manager ? `<button type="button" data-action="manager"${disabled(state.ending || state.distress || state.cash < 3000)}>Hire superintendent · $3,000</button>` : ''}</div>`;
+  }
+  function tenderCard(c, active) {
+    const cost = E.contractCost(state, c);
+    return `<article class="card"><div class="commodity-header"><p class="eyebrow">${active ? 'In progress' : 'Government tender'}</p><span class="badge">${c.major ? 'Major' : 'Local'}</span></div><h3>${E.PROJECTS[c.type].name}</h3><p>${E.PROJECTS[c.type].description}</p><div class="detail"><span>Total government payment</span><strong>${money(c.reward)}</strong></div><div class="detail"><span>Performance bond</span><strong>${money(c.bond)}</strong></div><div class="detail"><span>Work per season</span><strong>${c.cement} cement + ${money(c.labour)}</strong></div><div class="detail"><span>Next stage cash needed</span><strong>${money(cost.cash)}</strong></div><div class="detail"><span>${active ? 'Stages completed' : 'Expected duration'}</span><strong>${active ? `${c.progress} / ${c.stages}` : `${c.stages} seasons`}</strong></div><div class="detail"><span>Complete by</span><strong>${E.date({ turn: c.deadline })}</strong></div>${active ? progress(c.progress, c.stages, 'Contract progress') : `<div class="detail"><span>Official Standing required</span><strong>${c.requirement}</strong></div>`}<div class="contract-benefit">${E.PROJECTS[c.type].benefit}</div><p class="small muted">${active ? 'Each unfinished stage pays 20% of the contract total. The final stage pays the balance and returns your bond.' : `Delivery earns +${c.major ? 16 : 10} Official Standing and +${c.major ? 12 : 8} Public Trust.`}</p>${active ? `<button type="button" class="text-button small" data-ui="abandon" data-id="${esc(c.id)}"${disabled(state.ending)}>Abandon contract</button>` : `<button type="button" data-ui="contract" data-id="${esc(c.id)}"${disabled(state.ending || state.distress || state.official < c.requirement || state.cash < c.bond || !state.plots.some(p => p.built) || E.activeProjects(state) >= (state.manager ? 2 : 1))}>Post bond & accept</button>`}</article>`;
+  }
+  function works() {
+    return `<div class="section-heading"><div><p class="eyebrow">The public works office</p><h2>Build a city. Earn its confidence.</h2><p>Fixed-price contracts reward delivery. Keep enough cash to fund each stage before payment.</p></div><span class="badge">${E.activeProjects(state)} / ${state.manager ? 2 : 1} slots</span></div>${state.contracts.length ? `<h3 class="subheading">Under your supervision</h3><div class="cards">${state.contracts.map(c => tenderCard(c, true)).join('')}</div>` : ''}<h3 class="subheading">Open tenders</h3><div class="cards">${state.tenders.map(c => tenderCard(c, false)).join('')}</div><p class="note">Missing cement is bought automatically at a 12% spot premium plus freight. Cargo arriving this season can supply the work. Storms and insufficient cash can delay stages; contracts include two buffer seasons. Default or abandonment forfeits the bond, costs an additional 5% penalty, and damages your standing. Major tenders begin in 1855.</p><h3 class="subheading">A changing harbour</h3><div class="cards">${Object.values(E.PROJECTS).map(p => `<div class="card"><h4>${p.name}</h4><div class="cost">${Math.round(E.reduction(state, p.effect) * 100)}%</div><p>${p.effect === 'demand' ? 'Greater market depth' : p.effect === 'flood' ? 'Lower stored-cargo flood losses' : p.effect === 'labour' ? 'Lower fixed operating costs' : `Lower ${p.effect} charges`} · ${state.city[p.effect]} improvements</p></div>`).join('')}</div><p class="note">Each improvement contributes 8%, capped at 28% per category. Other merchant houses occasionally complete projects too.</p>`;
+  }
+  function standingPanel() {
+    return `<div class="section-heading"><div><p class="eyebrow">Commerce & public life</p><h2>The road to Government House</h2><p>Wealth opens doors. A sustained record earns the appointment.</p></div></div><div class="notice"><h3>An alternate-history ambition</h3><p>Become Governor by satisfying every requirement for four consecutive seasons. Appointments are reviewed at the end of each year. Reliable everyday business builds only a modest baseline; public works and civic service carry you further.</p></div><div class="requirements">${E.appointment(state).map(r => `<div class="requirement"><div class="detail"><span>${r.met ? '✓ ' : ''}${r.label}</span><strong>${r.money ? money(r.current) : Math.round(r.current * 10) / 10} / ${r.money ? money(r.target) : r.target}</strong></div>${progress(r.current, r.target, r.label)}</div>`).join('')}</div><h3 class="subheading">Two kinds of confidence</h3><div class="cards"><div class="card"><h3>Official Standing</h3><p>Complete contracts, meet financial obligations, and assist public supply. Everyday reliability rises only to 25. Failed contracts and opium route incidents damage your record.</p></div><div class="card"><h3>Public Trust</h3><p>Deliver useful works, supply food relief, and support workers. Routine fair dealing rises only to 20. Opium commerce damages trust; holding it also postpones your eight-season transition out of the trade.</p></div></div>${eventMarkup()}<p class="note">Hong Kong Tycoon is alternate history. The appointment path is a game rule. Opium’s colonial legality varied by route and period; official approval did not remove its community harms. Dollar values and public-project terms are balance abstractions.</p>`;
+  }
+  function chronicle() {
+    return `<div class="section-heading"><div><p class="eyebrow">The merchant’s chronicle</p><h2>A record of the house</h2><p>The latest 160 entries, preserved in your save file.</p></div>${state.report ? '<button type="button" data-ui="report">Last seasonal report</button>' : ''}</div><div class="report-summary"><div><span class="eyebrow">Highest net worth</span><strong>${money(state.stats.bestWorth)}</strong></div><div><span class="eyebrow">Unrecovered cargo losses</span><strong>${money(state.stats.losses)}</strong></div></div><ol class="chronicle">${state.log.map(l => `<li><time>${E.date({ turn: l.turn })}</time><p class="${l.tone === 'bad' ? 'negative' : l.tone === 'good' ? 'positive' : ''}">${esc(l.text)}</p></li>`).join('')}</ol>`;
+  }
+  function updateQuotes() {
+    if (tab !== 'exchange') return;
+    for (const k of Object.keys(E.GOODS)) {
+      const node = $(`#quote-${k}`);
+      if (!node) continue;
+      const qty = quantities[k];
+      const valid = Number.isSafeInteger(qty) && qty > 0 && qty <= 1000000;
+      node.textContent = valid ? `Order ${money(E.buyQuote(state, k, qty))} · Sale ${money(E.sellQuote(state, k, qty))}${qty > state.stock[k] ? ' (not enough held)' : ''}` : 'Enter a positive whole number of units.';
+      const buy = $(`[data-trade="buy"][data-good="${k}"]`);
+      const sell = $(`[data-trade="sell"][data-good="${k}"]`);
+      buy.disabled = Boolean(!valid || state.ending || state.distress || E.buyQuote(state, k, qty) > state.cash || E.usedSpace(state) + qty * E.GOODS[k].space > E.capacity(state, true));
+      sell.disabled = Boolean(!valid || state.ending || qty > state.stock[k]);
+    }
+  }
+  function render() {
+    renderLedger(); renderAlerts(); renderBulletin();
+    for (const button of document.querySelectorAll('.tabs [data-tab]')) {
+      if (button.dataset.tab === tab) button.setAttribute('aria-current', 'page');
+      else button.removeAttribute('aria-current');
+    }
+    $('#panel').innerHTML = ({ exchange, estate, works, standing: standingPanel, ledger: chronicle })[tab]();
+    updateQuotes();
+  }
+  function showReport() {
+    if (!state.report) return;
+    const r = state.report;
+    modal(`${r.season} · Closing report`, `${state.ending ? `<p class="eyebrow">${state.ending === 'governor' ? 'Your appointment is confirmed' : 'The campaign has concluded'}</p>` : ''}<div class="report-summary"><div><span class="eyebrow">Operating expenses</span><strong>${money(r.expense)}</strong></div><div><span class="eyebrow">Cash movement at close</span><strong class="${r.cashChange >= 0 ? 'positive' : 'negative'}">${signed(r.cashChange)}</strong></div></div><ul class="report-list">${r.entries.map(t => `<li>${esc(t)}</li>`).join('')}</ul><p class="note">Cash movement covers seasonal resolution, excluding orders and sales you made earlier. It is not a profit figure.</p>${state.distress ? `<p class="negative">${money(-state.cash)} remains overdue. Raise cash before continuing.</p>` : ''}`, '<button type="button" class="primary" data-ui="close">Return to the house</button>');
+  }
+  function bank() {
+    const room = Math.max(0, E.creditLimit(state) - state.debt);
+    modal('The merchant’s bank', `<p class="muted">Secured credit is backed by 45% of property book value and 25% of stored cargo value. Official Standing of 25 unlocks an extra $10,000.</p><div class="report-summary"><div><span class="eyebrow">Available credit</span><strong>${money(room)}</strong></div><div><span class="eyebrow">Outstanding debt</span><strong>${money(state.debt)}</strong></div></div><p class="note">Interest: 2.5% each season, included in operating expenses. The credit limit governs new borrowing; falling collateral does not trigger an automatic margin call.</p><div class="bank"><div><label for="borrow-amount">New loan amount</label><input id="borrow-amount" type="number" min="1" step="1" value="${Math.max(1, Math.min(10000, room))}"><button type="button" data-ui="borrow"${disabled(state.ending || room < 1)}>Borrow</button></div><div><label for="repay-amount">Principal to repay</label><input id="repay-amount" type="number" min="1" step="1" value="${Math.max(1, Math.min(10000, state.debt, state.cash))}"><button type="button" data-ui="repay"${disabled(state.ending || state.distress || state.debt < 1)}>Repay</button></div></div>`);
+  }
+  function newHouse(first = false) {
+    modal(first ? 'Your ship has arrived.' : 'Establish a new trading house', `<svg class="intro-art" viewBox="0 0 520 105" role="img" aria-label="A sailing vessel enters Victoria Harbour"><path class="solid-art" d="M0 80 55 55 98 70 155 28 203 61 255 41 318 77 386 54 435 70 490 45 520 69V100H0Z"></path><path class="line-art" d="M0 90H520M0 96H160M280 99H520M80 85 60 72H218L202 85ZM145 12V72M145 15 96 63H145ZM152 26 187 63H152ZM99 22V69M96 27 76 62H96ZM245 80V60H264V80M275 80V53H304V80M322 80V64H351V80M365 80V46H392V80M416 80V59H454V80"></path></svg><p>Spring 1852. You land in Hong Kong with <strong>$100,000</strong>, a name to make, and eighteen years to leave your mark.</p><p class="muted small">Trade rice, tea, cement, and opium. Build your stores and the city around them. Become Governor, endure to 1870, or lose the house to your creditors.</p><form id="new-form" class="new-form"><label>Name of your trading house<input id="new-name" name="house" maxlength="60" value="Victoria Trading Company" required autocomplete="off"></label><label>Campaign seed <span class="muted">Same seed + same decisions = same history</span><input id="new-seed" name="seed" maxlength="64" value="${first ? 'Victoria-1852' : `Harbour-${Math.floor(Math.random() * 100000)}`}" required autocomplete="off"></label>${!first || saveBlocked ? '<p class="small negative">Starting a new house replaces the autosave on this device. Export the current campaign first if you wish to keep it.</p>' : ''}<button type="submit" class="primary">Sign the founding papers</button></form><p class="note">No account, installation, or connection required. Autosaves stay in this browser; export a save to move between devices.</p>`);
+  }
+  function guide() {
+    modal('The merchant’s handbook', `<div class="guide-grid"><div><h3>1. Establish your house</h3><p>Start with a $35,000 lease-and-warehouse package, or choose a location on the Estate page. Your warehouse opens next season.</p></div><div><h3>2. Keep cash in reserve</h3><p>Try 50 tea and 30 rice for your first shipment. Keep $20,000–$25,000 for expenses and surprises. “Budget max” reserves current commitments only.</p></div><div><h3>3. Trade across seasons</h3><p>New orders cannot be sold immediately. Close the season to receive cargo, then sell or hold it. Supplier prices change each season; sell margins differ by commodity.</p></div><div><h3>4. Build a legacy</h3><p>Use trade profits to fund public works. Meet all Standing-page requirements for four seasons and pass the annual review to become Governor.</p></div></div><details><summary>Weather, storage & opium</summary><p>Storm risk is 10% in Spring, 30% in Summer, 18% in Autumn, and 4% in Winter. Weather can damage stored and incoming cargo. Rice and tea deteriorate in store; cement is vulnerable to damp. Improvements protect stored goods.</p><p>Opium route incidents affect 65% of the shipment, plus any weather losses. Base incident risk is 16% before 1858 and 9% afterward, reduced by watchmen. Opium purchases and sales lower Public Trust, and holding it postpones appointment eligibility.</p></details><details><summary>Contracts & working capital</summary><p>Post a bond, then fund labour and cement before receiving milestone payments. Missing cement is bought automatically at a premium; keep stock to avoid that premium. Smaller contracts take three stages and major contracts take four. One manager can supervise one active project, or two with a superintendent.</p><p>Work pauses if you cannot fund it. Two buffer seasons allow for delays. Default forfeits the bond, adds a 5% penalty, and removes 15 Official Standing and 8 Public Trust.</p></details><details><summary>Debt & bankruptcy</summary><p>Debt charges 2.5% seasonal interest. A negative cash balance means an obligation is overdue. You can sell goods, borrow within your limit, or liquidate property at 65% of book value. Choose bankruptcy only when you cannot rescue the house.</p></details><details><summary>Endings & save files</summary><p>The campaign runs from Spring 1852 through Winter 1869. All final obligations resolve before survival is awarded as 1870 begins. Governor appointment requires eight years, $350,000 net worth, 75 Official Standing, 60 Public Trust, four completed contracts including two major projects, eight seasons out of opium, and four consecutive qualifying seasons.</p><p>Every decision is autosaved when browser storage is available. Export and import JSON saves to back up or transfer a campaign. Local saves are editable; this is a single-player game without a competitive leaderboard.</p></details><p class="note">This is an alternate-history game, not an economic reconstruction. Prices use abstract silver dollars. Colonial office and public welfare are represented as separate measures of reputation.</p>`, '<button type="button" class="primary" data-ui="close">Back to business</button>');
+  }
+  function exportSave() {
+    try {
+      const blob = new Blob([E.serialize(state)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = `hong-kong-tycoon-${state.turn}-${state.seed.replace(/[^a-z0-9-]/gi, '-').slice(0, 30)}.json`;
+      document.body.append(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      toast('Save exported. Keep this file to restore your house.');
+    } catch (error) { toast(error.message); }
+  }
+  document.addEventListener('click', event => {
+    const button = event.target.closest('button');
+    if (!button || button.disabled) return;
+    const d = button.dataset;
+    if (d.tab) {
+      tab = d.tab; render();
+      $(`.tabs [data-tab="${tab}"]`).focus();
+    } else if (d.trade) {
+      const qty = quantities[d.good];
+      if (d.good === 'opium' && d.trade === 'buy') confirm('An opium consignment', `<p>Order ${qty} units for <strong>${money(E.buyQuote(state, 'opium', qty))}</strong>?</p><p class="muted">This trade lowers Public Trust, exposes the cargo to uninsured route losses, and restarts the eight-season transition required for appointment.</p>`, () => dispatch({ type: 'buy', good: d.good, qty }, 'Order entered in the ledger.'), 'Place order');
+      else dispatch({ type: d.trade, good: d.good, qty }, d.trade === 'buy' ? 'Order entered. Cargo arrives next season.' : 'Sale completed. Cash is in the ledger.');
+    } else if (d.action) {
+      const action = { type: d.action };
+      if (d.id) action.id = Number(d.id);
+      if (d.location) action.location = d.location;
+      if (d.upgrade) action.upgrade = d.upgrade;
+      if (d.choice) action.choice = d.choice;
+      dispatch(action, 'The house ledger has been updated.');
+    } else if (d.ui) {
+      switch (d.ui) {
+        case 'close': closeModal(); break;
+        case 'confirm': { const run = confirmAction; closeModal(); if (run) run(); break; }
+        case 'guide': guide(); break;
+        case 'new': newHouse(); break;
+        case 'export': exportSave(); break;
+        case 'import': $('#import-file').click(); break;
+        case 'bank': bank(); break;
+        case 'report': showReport(); break;
+        case 'borrow': case 'repay': {
+          const amount = Number($(`#${d.ui}-amount`).value);
+          if (dispatch({ type: d.ui, amount }, 'Bank transaction completed.')) bank();
+          break;
+        }
+        case 'max-buy': {
+          const budget = Math.max(0, state.cash - E.commitments(state));
+          const free = Math.floor((E.capacity(state, true) - E.usedSpace(state)) / E.GOODS[d.good].space);
+          let qty = Math.max(0, Math.min(free, Math.floor(budget / E.buyQuote(state, d.good, 1))));
+          while (qty > 0 && E.buyQuote(state, d.good, qty) > budget) qty--;
+          quantities[d.good] = qty; $(`#qty-${d.good}`).value = qty; updateQuotes(); break;
+        }
+        case 'all': quantities[d.good] = state.stock[d.good]; $(`#qty-${d.good}`).value = quantities[d.good]; updateQuotes(); break;
+        case 'contract': {
+          const c = state.tenders.find(c => c.id === d.id);
+          confirm('Accept the government tender?', `<p><strong>${E.PROJECTS[c.type].name}</strong> requires a ${money(c.bond)} bond now and approximately ${money(E.contractCost(state, c).cash)} in cash for its next stage.</p><p class="muted">The house pays costs before receiving each milestone payment. Keep a buffer for rising cement prices and weather delays.</p>`, () => dispatch({ type: 'contract', id: d.id }, 'Contract awarded. Work begins at season close.'), 'Post performance bond'); break;
+        }
+        case 'abandon': confirm('Abandon this public work?', '<p>Your bond will be forfeited, a 5% contract penalty becomes payable, and Official Standing and Public Trust will fall.</p>', () => dispatch({ type: 'abandon', id: d.id }), 'Abandon contract'); break;
+        case 'liquidate': confirm('Liquidate this property?', '<p>The property and its improvements will be sold at 65% of book value. Remaining warehouses must have room for all stored and incoming cargo.</p>', () => dispatch({ type: 'liquidate', id: Number(d.id) }), 'Sell property'); break;
+        case 'bankrupt': confirm('Close the house for good?', '<p>This ends your campaign in bankruptcy. You can still return to the ledger to sell assets or arrange credit.</p>', () => dispatch({ type: 'bankrupt' }), 'Declare bankruptcy'); break;
+        case 'end': {
+          const reserve = state.cash - E.commitments(state);
+          const next = E.date({ turn: state.turn + 1 });
+          confirm(`Close ${E.date(state)}?`, `<p>Pay <strong>${money(E.operating(state))}</strong> in house expenses, resolve cargo arrivals and public works, and advance to <strong>${next}</strong>.</p><div class="reserve ${reserve < 0 ? 'warning' : ''}"><p>Cash after estimated commitments, before cargo claims and project payments</p><strong>${money(reserve)}</strong></div>${reserve < 0 ? '<p class="negative small">You may face an overdue balance or paused contract. Consider selling stock or borrowing first.</p>' : ''}${state.event && !state.event.resolved ? '<p class="note">An unanswered seasonal appeal will expire.</p>' : ''}`, () => dispatch({ type: 'end' }), 'Close the season'); break;
+        }
+      }
+    }
+  });
+  document.addEventListener('input', event => {
+    if (event.target.dataset.qty) { quantities[event.target.dataset.qty] = Number(event.target.value); updateQuotes(); }
+  });
+  document.addEventListener('change', event => {
+    if (event.target.id === 'insurance') dispatch({ type: 'insurance', enabled: event.target.checked });
+  });
+  document.addEventListener('submit', event => {
+    if (event.target.id !== 'new-form') return;
+    event.preventDefault();
+    state = E.newGame($('#new-seed').value, $('#new-name').value);
+    saveBlocked = false;
+    tab = 'exchange'; save(); closeModal(); render();
+    toast('Your founding papers are signed. Welcome to Victoria Harbour.');
+  });
+  $('#import-file').addEventListener('change', async event => {
+    const file = event.target.files[0];
+    event.target.value = '';
+    if (!file) return;
+    try {
+      if (file.size > 1000000) throw new Error('Save file is too large.');
+      const imported = E.deserialize(await file.text());
+      confirm('Restore this trading house?', `<p>Load <strong>${esc(imported.name)}</strong> in ${E.date(imported)} with ${money(imported.cash)} cash?</p><p class="muted">This replaces the current autosave. Export your current house first if you want to keep both.</p>`, () => {
+        state = imported; saveBlocked = false; tab = 'exchange'; save(); render(); toast('Trading house restored.');
+      }, 'Restore save');
+    } catch (error) { toast(error.message); }
+  });
+  $('#modal').addEventListener('cancel', () => { confirmAction = null; });
+  render();
+  if (!recovered) newHouse(true);
+})();
+</script>
+</body>
+</html>
