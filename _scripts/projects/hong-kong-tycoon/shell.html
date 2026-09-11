@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Establish a trading house in 1852 Hong Kong. Trade cargo, develop the harbour, and build a legacy in this free, offline seasonal strategy game.">
+  <title>Hong Kong Tycoon — A Merchant’s Chronicle</title>
+  <style>/* STYLES */</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to the trading desk</a>
+  <header class="masthead">
+    <div class="edition"><span>Victoria Harbour · Est. 1852</span><span>A merchant’s chronicle</span></div>
+    <div class="brand-row"><div><p class="eyebrow">Commerce · Enterprise · Influence</p><h1>Hong Kong <em>Tycoon</em></h1></div><div class="seal" aria-hidden="true">香港<br><small>1852</small></div></div>
+    <div class="masthead-bottom"><span id="house-name">Victoria Trading Company</span><div class="utilities"><button type="button" data-ui="guide">How to play</button><button type="button" data-ui="export">Export save</button><button type="button" data-ui="import">Import</button><button type="button" data-ui="new">New house</button></div></div>
+  </header>
+  <div class="game-layout">
+    <aside class="ledger" aria-label="House ledger">
+      <div id="ledger"></div>
+      <div class="turn-controls"><button class="primary end-season" type="button" data-ui="end">Close the season <span aria-hidden="true">→</span></button><p id="save-status" class="save-status">Progress is saved on this device.</p></div>
+    </aside>
+    <main id="main" tabindex="-1">
+      <div id="alerts"></div>
+      <section id="bulletin" class="bulletin" aria-label="Harbour bulletin"></section>
+      <nav class="tabs" aria-label="Trading house departments">
+        <button type="button" data-tab="exchange" aria-current="page">Exchange</button>
+        <button type="button" data-tab="estate">Estate</button>
+        <button type="button" data-tab="works">Public works</button>
+        <button type="button" data-tab="standing">Standing</button>
+        <button type="button" data-tab="ledger">Chronicle</button>
+      </nav>
+      <div id="panel"></div>
+    </main>
+  </div>
+  <footer class="footer"><span>A fortune is earned. A legacy is built.</span><span>Alternate-history strategy · 72 seasons · Entirely offline</span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="modal" aria-labelledby="modal-title"><div id="modal-body"></div></dialog>
+  <input id="import-file" type="file" accept=".json,application/json" hidden>
+  <noscript><p class="notice">Hong Kong Tycoon needs JavaScript enabled to run its local game simulation.</p></noscript>
+  <script>/* ENGINE */</script>
+  <script>/* INTERFACE */</script>
+</body>
+</html>

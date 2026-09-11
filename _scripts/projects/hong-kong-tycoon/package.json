@@ -1,0 +1,12 @@
+{
+  "name": "hong-kong-tycoon",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An offline, seasonal trading-house game, 1852–1870.",
+  "scripts": {
+    "build": "node build.cjs",
+    "test": "node --test test/*.test.cjs",
+    "balance": "node test/balance.cjs",
+    "serve": "python3 -m http.server 1852 --bind 127.0.0.1"
+  }
+}

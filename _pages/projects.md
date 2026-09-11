@@ -23,6 +23,14 @@ Metrics change rapidly. Models used to work around the metrics, but once they ca
 
 ---
 
+## Hong Kong Tycoon
+
+An offline trading game set in Hong Kong in 1852. Establish a trading house, manage cargo and credit, build public works, and pursue appointment as Governor before 1870. The game runs entirely in your browser, with no account, server, or network connection required.
+
+[Play Hong Kong Tycoon →](/projects/hong-kong-tycoon/)
+
+---
+
 ## Hong Kong Rental Index Explorer
 
 <figure style="margin:0 0 1rem;">
