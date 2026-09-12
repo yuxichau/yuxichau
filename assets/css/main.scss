@@ -2,7 +2,7 @@
 ---
 @import "minimal-mistakes";
 
-:root { --sj-bg:#f7f4ec; --sj-paper:#fffefa; --sj-ink:#222d27; --sj-muted:#5c6864; --sj-green:#2c5c46; --sj-vermilion:#a64c32; --sj-soft:#e7eee5; --sj-line:#d5dbd3; }
+:root { --sj-bg:#f5f4ef; --sj-paper:#fffefa; --sj-ink:#202d2b; --sj-muted:#5c6864; --sj-green:#235a47; --sj-vermilion:#8d4c2d; --sj-soft:#e7eee5; --sj-line:#d5dbd3; }
 html, body { background:var(--sj-bg); color:var(--sj-ink); }
 body { font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; font-size:16px; line-height:1.65; }
 .masthead { border-bottom:1px solid var(--sj-line); background:var(--sj-bg); }
@@ -67,5 +67,7 @@ a:focus, button:focus, input:focus { outline:3px solid rgba(44,92,70,.45); outli
 .greedy-nav__toggle { min-width:44px; min-height:44px; }
 .greedy-nav .hidden-links a { min-height:44px; display:flex; align-items:center; }
 .greedy-nav .hidden-links.is-open { display:block; visibility:visible; opacity:1; }
+body.layout--home .page__footer { display:none; }
+body.layout--home .initial-content { background:var(--sj-bg); }
 @media (max-width:1050px) { .masthead__inner-wrap,.sj-home { padding-left:26px; padding-right:26px; } .sj-hero { gap:35px; } }
 @media (max-width:760px) { .masthead__inner-wrap,.sj-home { padding-left:18px; padding-right:18px; } .sj-hero { padding:35px 0 27px; grid-template-columns:1fr; gap:25px; } .sj-home h1 { font-size:46px; letter-spacing:-2px; } .sj-intro { font-size:16px; } .sj-hero-aside { padding-left:17px; } .sj-writing-grid,.sj-project-grid { grid-template-columns:1fr; } .sj-section-head { display:block; } .sj-section-head>p { margin-top:14px; } .sj-card-lead h3 { font-size:27px; } .sj-post-list li { grid-template-columns:1fr; gap:3px; } .sj-post-list span { display:none; } .sj-home-footer { flex-wrap:wrap; } .sj-home-footer p { flex-basis:100%; } .sj-about { padding:35px 18px 55px; } .sj-about-intro { grid-template-columns:1fr; gap:28px; } .sj-about-portrait { grid-row:1; max-width:180px; } .sj-about h1 { font-size:52px; } .sj-about-lede { font-size:18px; } .sj-about-body { padding-top:32px; font-size:16px; } }
