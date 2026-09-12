@@ -4,38 +4,43 @@ layout: default
 <div class="sj-home">
   <section class="sj-hero" aria-labelledby="home-title">
     <div class="sj-hero-copy">
-      <p class="sj-kicker">Systems Journal</p>
-      <h1 id="home-title">Making sense of systems that matter.</h1>
-      <p class="sj-intro">I write about AI, economics, governance, and the people who build systems around them. My work looks for the incentives, infrastructure, and everyday decisions that turn new technology into something useful.</p>
-      <p class="sj-links"><a class="sj-button" href="{{ '/posts/' | relative_url }}">Read the writing</a> <a href="{{ '/projects/' | relative_url }}">Explore the projects&nbsp;→</a></p>
+      <p class="sj-kicker">AI, governance &amp; the systems around us</p>
+      <h1 id="home-title">Making sense of<br class="sj-desktop-break"> systems that matter.</h1>
+      <p class="sj-intro">I build AI systems in Hong Kong and write about what makes them useful, reliable, and worth trusting.</p>
+      <p class="sj-links"><a class="sj-button" href="{{ '/posts/' | relative_url }}">Read selected writing&nbsp;↗</a> <a href="{{ '/projects/' | relative_url }}">Explore projects&nbsp;→</a></p>
     </div>
-    <div class="sj-portrait"><img src="{{ '/assets/images/bio-photo-20260912.png' | relative_url }}" alt="Yu Xi Chau" width="520" height="520"></div>
+    <aside class="sj-hero-aside">
+      <span class="sj-status">A SYSTEMS JOURNAL</span>
+      <p>Essays, notes, and working projects on AI, economics, governance, and the people who build systems around them.</p>
+      <p class="sj-aside-meta">Writing from Hong Kong<br><a href="{{ '/about/' | relative_url }}">More about Yu Xi Chau&nbsp;→</a></p>
+    </aside>
   </section>
 
   <section class="sj-section" aria-labelledby="selected-writing">
-    <div class="sj-section-head"><p class="sj-kicker">Selected writing</p><h2 id="selected-writing">Ideas worth staying with</h2></div>
+    <div class="sj-section-head"><div><p class="sj-kicker">Selected writing</p><h2 id="selected-writing">Ideas worth staying with</h2></div><p>From the journal / 01</p></div>
     <div class="sj-writing-grid">
       {% assign selected_paths = '_posts/2026-08-24-the-flour-mill-problem.md,_posts/2026-08-26-trust-by-default-is-a-cost-problem.md,_posts/2026-08-22-the-dilemma-of-b2b-software.md' | split: ',' %}
       {% for wanted in selected_paths %}{% for post in site.posts %}{% if post.path == wanted %}
-      <article class="sj-card"><p class="sj-meta">{{ post.date | date: "%B %-d, %Y" }}</p><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.excerpt | strip_html | truncate: 150 }}</p><a class="sj-read" href="{{ post.url | relative_url }}">Read essay&nbsp;→</a></article>
+      <article class="sj-card{% if forloop.first %} sj-card-lead{% endif %}"><p class="sj-meta">{{ post.tags | first }} / Essay</p><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3><p>{{ post.excerpt | strip_html | truncate: 170 }}</p><p class="sj-card-meta">{{ post.date | date: "%-d %b %Y" }} · <a href="{{ post.url | relative_url }}">Read essay&nbsp;→</a></p></article>
       {% endif %}{% endfor %}{% endfor %}
     </div>
     <p class="sj-more"><a href="{{ '/posts/' | relative_url }}">All writing&nbsp;→</a></p>
   </section>
 
   <section class="sj-section" aria-labelledby="featured-projects">
-    <div class="sj-section-head"><p class="sj-kicker">Featured projects</p><h2 id="featured-projects">Ideas made tangible</h2></div>
+    <div class="sj-section-head"><div><p class="sj-kicker">Working projects</p><h2 id="featured-projects">Ideas made tangible</h2></div><p>Tools, data, and experiments</p></div>
     <div class="sj-project-grid">
-      <article class="sj-project"><img src="{{ '/assets/images/projects/llm-intelligence-cost.png' | relative_url }}" alt="LLM intelligence versus cost chart"><div><p class="sj-meta">Data analysis</p><h3><a href="{{ '/projects/llm-model-analysis/' | relative_url }}">LLM Model Analysis</a></h3><p>A practical view of intelligence, cost, and the trade-offs behind choosing a model for real work.</p><a class="sj-read" href="{{ '/projects/llm-model-analysis/' | relative_url }}">Open project&nbsp;→</a></div></article>
-      <article class="sj-project"><img src="{{ '/assets/images/projects/sumo-elo.png' | relative_url }}" alt="Sumo Elo explorer chart"><div><p class="sj-meta">Historical data</p><h3><a href="{{ '/projects/sumo-elo/' | relative_url }}">Sumo Elo Explorer</a></h3><p>Every honbasho bout replayed through an Elo engine, making strength across eras explorable.</p><a class="sj-read" href="{{ '/projects/sumo-elo/' | relative_url }}">Open project&nbsp;→</a></div></article>
+      <article class="sj-project"><img src="{{ '/assets/images/projects/llm-intelligence-cost.png' | relative_url }}" alt="LLM intelligence versus cost chart"><div><p class="sj-meta">AI systems / Data analysis</p><h3><a href="{{ '/projects/llm-model-analysis/' | relative_url }}">LLM Intelligence vs Cost</a></h3><p>Compare the price of intelligence across the models people actually use.</p><a class="sj-read" href="{{ '/projects/llm-model-analysis/' | relative_url }}">Open dashboard&nbsp;→</a></div></article>
+      <article class="sj-project"><img src="{{ '/assets/images/projects/sumo-elo.png' | relative_url }}" alt="Sumo Elo explorer chart"><div><p class="sj-meta">History / Data analysis</p><h3><a href="{{ '/projects/sumo-elo/' | relative_url }}">Sumo Elo Explorer</a></h3><p>Every honbasho bout replayed through an Elo engine, making strength across eras explorable.</p><a class="sj-read" href="{{ '/projects/sumo-elo/' | relative_url }}">Open project&nbsp;→</a></div></article>
     </div>
+    <p class="sj-more"><a href="{{ '/projects/' | relative_url }}">All projects&nbsp;→</a></p>
   </section>
 
   <section class="sj-section sj-recent" aria-labelledby="recent-writing">
-    <div class="sj-section-head"><p class="sj-kicker">The latest notes</p><h2 id="recent-writing">Recent writing</h2></div>
-    <ol class="sj-post-list">{% for post in site.posts limit: 6 %}<li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time><a href="{{ post.url | relative_url }}">{{ post.title }}</a><span>{{ post.tags | first }}</span></li>{% endfor %}</ol>
+    <div class="sj-section-head"><div><p class="sj-kicker">The latest notes</p><h2 id="recent-writing">Recent writing</h2></div><p>From the journal / 02</p></div>
+    <ol class="sj-post-list">{% for post in site.posts limit: 6 %}<li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time><a href="{{ post.url | relative_url }}">{{ post.title }}</a><span>{{ post.tags | first }}</span></li>{% endfor %}</ol>
     <p class="sj-more"><a href="{{ '/posts/' | relative_url }}">See all writing&nbsp;→</a></p>
   </section>
 
-  <footer class="sj-home-footer"><p>Follow the work</p><a href="{{ '/feed.xml' | relative_url }}">RSS</a><a href="https://github.com/yuxichau">GitHub</a><a href="https://www.linkedin.com/in/yuxichau/">LinkedIn</a><a href="{{ '/about/' | relative_url }}">About</a></footer>
+  <footer class="sj-home-footer"><p>Writing from Hong Kong</p><a href="{{ '/feed.xml' | relative_url }}">RSS ↗</a><a href="https://github.com/yuxichau">GitHub ↗</a><a href="https://www.linkedin.com/in/yuxichau/">LinkedIn ↗</a><a href="{{ '/about/' | relative_url }}">About →</a></footer>
 </div>
