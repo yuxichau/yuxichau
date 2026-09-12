@@ -6,7 +6,6 @@ tags: [AI, Technology]
 author: Yu Xi Chau
 ---
 
-# The 300B Sweet Spot
 
 Z.ai served [GLM-5.3-Flash on Chinese chips](https://x.com/Zai_org/status/2092616204787626030) this week and claims per-token cost on par with Nvidia, after a 3x serving improvement. But perhaps the most important point is the sentence I keep re-reading: a GLM-5.3-powered infrastructure agent helped write the kernels and debug the serving stack, so the model improved the system that serves it. This is actually not a novel idea, as OpenAI and (I believe) DeepSeek did this before as well. What surprised me is that it is able to do so given its size.
 

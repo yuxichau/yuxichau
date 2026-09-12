@@ -6,7 +6,6 @@ tags: [Governance]
 author: Yu Xi Chau
 ---
 
-# Doctrine of Proactive Governance
 
 Everyone who works in a financial institution has an opinion about governance, and most of them are cynical ones. If you come from a security background, governance is the wall that keeps bad things from happening. If you come from development, governance is the wall that keeps you from shipping. I have done a lot of governance work over the years, and I want to argue for a third view, one that is less cynical and, I think, more useful: proactive governance.
 

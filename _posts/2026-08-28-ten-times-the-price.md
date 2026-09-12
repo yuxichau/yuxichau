@@ -6,7 +6,6 @@ tags: [AI, Economics]
 author: Yu Xi Chau
 ---
 
-# Ten Times the Price
 
 I gave my wife her own Hermes agent and set the default model to DeepSeek V4 Flash, one of the cheapest models you can run. She came back with a series of things she had built, some of which I did not know that model was capable of.
 

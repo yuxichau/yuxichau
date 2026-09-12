@@ -195,7 +195,7 @@ permalink: /projects/llm-model-analysis/
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
   color: var(--text); line-height: 1.5;
 }
-#llm-dash .dash-header h1 { font-size: 1.8rem; margin: 0 0 .2rem; }
+#llm-dash .dash-header h2 { font-size: 1.8rem; margin: 0 0 .2rem; }
 #llm-dash .dash-sub { color: var(--muted); margin: 0 0 1rem; font-size: .95rem; }
 #llm-dash .dash-sub a { color: var(--accent); }
 #llm-dash .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .75rem; margin-bottom: 1.25rem; }
@@ -252,7 +252,7 @@ permalink: /projects/llm-model-analysis/
 </style>
 
 <div class="dash-header">
-  <h1>LLM Intelligence vs Cost</h1>
+  <h2>LLM Intelligence vs Cost</h2>
   <p class="dash-sub">Top 50 models by Artificial Analysis Intelligence Index (v4.2), plotted against the cost to complete one intelligence-index task. Data pulled __PULLED__ from <a href="https://artificialanalysis.ai" target="_blank" rel="noopener">artificialanalysis.ai</a>. This is a snapshot, not a live benchmark.</p>
 </div>
 

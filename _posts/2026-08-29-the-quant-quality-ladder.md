@@ -6,7 +6,6 @@ tags: [AI, Technology]
 author: Yu Xi Chau
 ---
 
-# The Quant Quality Ladder
 
 Someone ran the experiment I keep hoping to see. [@superalesha](https://x.com/superalesha/status/2093074966476713987) spent 1,351 hours of rented Blackwell time on the same model, [Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B), in nine versions: the BF16 reference plus eight quantized checkpoints from vLLM and llama.cpp, tested across 300 frozen tasks and 17,555 generations with reasoning turned up to maximum, about 91.4M reasoning tokens in total. The bill came to roughly $100 of GPU rental. This is the kind of benchmark people usually replace with a guess, and he went and ran it properly.
 

@@ -6,7 +6,6 @@ tags: [AI, Technology]
 author: Yu Xi Chau
 ---
 
-# The Efficiency Commons
 
 Tencent compressed [Hy4-preview](https://github.com/Tencent-Hunyuan/Hy4-preview), its open-weights 770B model, from 1.5TB to about 200GiB of GGUF, over seven times smaller. The scheme, [MIX-STQ1_0](https://x.com/TencentHunyuan/status/2093572224342954019), lets calibration data pick each layer's bit width: tolerant layers drop to 1.31 bits as sparse ternary, sensitive ones keep 2.06, and the benchmarks barely move. The result runs in llama.cpp, on hardware that could never hold a terabyte and a half of weights.
 

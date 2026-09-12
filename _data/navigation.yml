@@ -1,13 +1,9 @@
 main:
-  - title: "Home"
-    url: /
+  - title: "Writing"
+    url: /posts/
   - title: "Projects"
     url: /projects/
-  - title: "Tags"
-    url: /tags/
-  - title: "Posts"
-    url: /posts/
-  - title: "Resources"
+  - title: "Library"
     url: /resources/
   - title: "About"
     url: /about/
