@@ -6,7 +6,14 @@ tags: [Work]
 author: Yu Xi Chau
 ---
 
-I recently shared the paradox of Gabriel's horn with my daughter. It is a nice mathematical object because the underlying idea is not especially difficult. The radius shrinks like 1/x, while the area involved in the surface calculation shrinks like 1/x². One can therefore get a shape with finite volume but infinite surface area.
+I recently shared the paradox of Gabriel's horn with my daughter. It is a nice mathematical object because the underlying idea is not especially difficult. The radius shrinks like 1/x. The volume is built from circular slices, whose areas shrink like 1/x², while the surface strips shrink only roughly like 1/x. One can therefore get a shape with finite volume but infinite surface area.
+
+<figure>
+  <img src="{{ "/assets/images/20260912-gabriels-horn.svg" | relative_url }}" alt="Blue wireframe illustration of Gabriel's horn, with a chart showing volume approaching pi while surface area continues to grow as the cutoff increases" />
+  <figcaption>Gabriel's horn is the surface of revolution r = 1/x. For a finite cutoff R, the volume approaches π while the surface area grows like 2π log R. The drawing is a finite window onto the rule, not a physical comparison.</figcaption>
+</figure>
+
+The famous paint idea follows from the same distinction. In the idealised mathematics, a finite amount of paint could fill the horn because its volume is finite. But painting the outside with any fixed positive thickness would require paint over an infinite surface area. That is a strange statement about limits in a mathematical model, not a claim that a real object, real paint, and real manufacturing process could be compared on those terms.
 
 At a distance, this is probably high-school mathematics. The interesting part is not only deriving the result. It is what a student can do after understanding it.
 

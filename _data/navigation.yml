@@ -5,5 +5,7 @@ main:
     url: /projects/
   - title: "Library"
     url: /resources/
+  - title: "Pro-bono"
+    url: /pro-bono/
   - title: "About"
     url: /about/

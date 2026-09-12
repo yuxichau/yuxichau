@@ -7,7 +7,9 @@ classes: wide
 
 A running list of things I build in my spare time. Each project gets a page with the actual working artifact, not just a description, so you can poke at the results yourself.
 
-## LLM Model Analysis
+## Dashboards
+
+### LLM Model Analysis
 
 <figure style="margin:0 0 1rem;">
   <a href="/projects/llm-model-analysis/"><img src="/assets/images/projects/llm-intelligence-cost.png" alt="LLM Intelligence vs Cost scatter chart" style="border:1px solid #d0d7de; border-radius:8px; max-width:100%;"></a>
@@ -23,15 +25,7 @@ Metrics change rapidly. Models used to work around the metrics, but once they ca
 
 ---
 
-## Hong Kong Tycoon
-
-An offline trading game set in Hong Kong in 1852. Establish a trading house, manage cargo and credit, build public works, and pursue appointment as Governor before 1870. The game runs entirely in your browser, with no account, server, or network connection required.
-
-[Play Hong Kong Tycoon →](/projects/hong-kong-tycoon/)
-
----
-
-## Hong Kong Rental Index Explorer
+### Hong Kong Rental Index Explorer
 
 <figure style="margin:0 0 1rem;">
   <a href="/projects/hk-rent-index/"><img src="/assets/images/projects/hk-rent-index.png" alt="Hong Kong private domestic rental index chart, 1979 to 2026" style="border:1px solid #d0d7de; border-radius:8px; max-width:100%;"></a>
@@ -45,7 +39,9 @@ The Rating and Valuation Department has published a territory-wide rental index 
 
 ---
 
-## Chess FIDE Elo Explorer
+## Elo everything
+
+### Chess FIDE Elo Explorer
 
 <a href="/projects/chess-elo/">Open the chess FIDE Elo dashboard →</a>
 
@@ -53,7 +49,7 @@ Historical FIDE top-100 lists from 2001 onward, with raw ratings, a peer-calibra
 
 ---
 
-## Sumo Elo History (All Divisions)
+### Sumo Elo History (All Divisions)
 
 <figure style="margin:0 0 1rem;">
   <a href="/projects/sumo-elo/"><img src="/assets/images/projects/sumo-elo.png" alt="Sumo Elo explorer with Hakuho, Terunofuji, Aonishiki and Kotozakura curves" style="border:1px solid #d0d7de; border-radius:8px; max-width:100%;"></a>
@@ -69,7 +65,19 @@ Every honbasho bout from March 1958 to July 2026 replayed through an Elo engine,
 
 ---
 
-## Explosive Condensation
+## Games
+
+### Hong Kong Tycoon
+
+An offline trading game set in Hong Kong in 1852. Establish a trading house, manage cargo and credit, build public works, and pursue appointment as Governor before 1870. The game runs entirely in your browser, with no account, server, or network connection required.
+
+[Play Hong Kong Tycoon →](/projects/hong-kong-tycoon/)
+
+---
+
+## Academic
+
+### Explosive Condensation
 
 An interactive ring demo of a mass-transport model I studied in my academic days. Particles perform a biased random walk where the jump rate to a neighbour depends on the mass already there; with strong enough nonlinearity (β ≥ 1) a condensate forms explosively — and on this demo page you can watch it happen in real time. The paper (arXiv:1508.07516) dates from 2015; I include it here mostly as a nostalgic snapshot from before my industry pivot.
 
