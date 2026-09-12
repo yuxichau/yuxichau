@@ -22,7 +22,7 @@ a:focus, button:focus, input:focus { outline:3px solid rgba(44,92,70,.45); outli
 .sj-home h1 { font-size:clamp(43px,5.6vw,76px); line-height:1.02; letter-spacing:-3px; max-width:800px; margin:16px 0 22px; }
 .sj-intro { max-width:600px; color:var(--sj-muted); font-size:18px; line-height:1.6; }
 .sj-links { display:flex; flex-wrap:wrap; align-items:center; gap:22px; margin:26px 0 0; }
-.sj-button { display:inline-block; background:var(--sj-green); color:#fff; padding:10px 14px; border-radius:4px; text-decoration:none; }
+.sj-links .sj-button { display:inline-block; background:var(--sj-green); color:var(--sj-soft); padding:10px 14px; border-radius:4px; text-decoration:none; }
 .sj-button:hover,.sj-button:focus { background:#214936; color:#fff; }
 .sj-hero-aside { border-left:1px solid var(--sj-line); padding:6px 0 6px 28px; }
 .sj-hero-aside p { max-width:360px; color:var(--sj-muted); font-size:15px; margin:10px 0 15px; }

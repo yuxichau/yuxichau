@@ -14,6 +14,7 @@ Regenerate after the VM pipeline updates the dataset:
 
 import os
 import re
+import json
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "_scripts", "data", "sumo_elo_data.js")
@@ -24,6 +25,16 @@ ASSET = os.path.join(ROOT, "assets", "js", "sumo-elo-data.js")
 # ---- read vendored pieces ----
 with open(DATA, encoding="utf-8") as fh:
     data_js = fh.read()
+# Normalize the optional Japanese-name column and fix the dominant Hakuho ID.
+_, payload = data_js.split("=", 1)
+data_obj = json.loads(payload.rstrip(" ;\n"))
+for row in data_obj.get("rikishi", []):
+    if len(row) < 5:
+        row.append("")
+    if row[0] == 3081:
+        row[4] = "白鵬"
+missing_japanese = sum(not row[4] for row in data_obj.get("rikishi", []))
+data_js = "window.SUMO_DATA = " + json.dumps(data_obj, ensure_ascii=False, separators=(",", ":")) + ";\n"
 with open(CHART, encoding="utf-8") as fh:
     chart_js = fh.read()
 # strip sourceMappingURL trailer (map isn't served; avoids console 404)
@@ -47,7 +58,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 <body>
 <div id="sep-app">
 <style>
-#sep-app { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif; color:#1f2328; line-height:1.5; }
+#sep-app { font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; color:var(--sj-ink,#202d2b); line-height:1.5; }
 #sep-app .sub { color:#57606a; margin:0 0 .9rem; font-size:.95rem; }
 #sep-app h1.sep { margin-top:0; font-size:1.5rem; letter-spacing:-.3px; }
 #sep-app .kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(155px,1fr)); gap:.7rem; margin-bottom:1.1rem; }
@@ -83,6 +94,11 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 #sep-app .view-tabs { display:flex; gap:.4rem; margin-bottom:.7rem; }
 #sep-app .view-tab { font-size:.82rem; padding:.35rem .8rem; border:1px solid #d0d7de; background:#fff; color:#57606a; border-radius:6px; cursor:pointer; }
 #sep-app .view-tab.active { background:#0969da; border-color:#0969da; color:#fff; }
+#sep-app .matchup-grid { display:grid; grid-template-columns:1fr 1fr; gap:.8rem; }
+#sep-app .matchup-card, #sep-app .matchup-result { background:#fff; border:1px solid #d0d7de; border-radius:8px; padding:.8rem; }
+#sep-app .matchup-card h3 { margin:0 0 .4rem; font-size:.9rem; }
+#sep-app .matchup-result { margin-top:.8rem; }
+@media(max-width:700px){ #sep-app .matchup-grid{grid-template-columns:1fr;} }
 #sep-app .div-filter { display:flex; flex-wrap:wrap; gap:.5rem .8rem; align-items:center; margin-bottom:.6rem; font-size:.85rem; }
 #sep-app .div-filter label { color:#57606a; display:inline-flex; align-items:center; gap:4px; cursor:pointer; }
 #sep-app .tbl-wrap { max-height:460px; overflow:auto; border:1px solid #d0d7de; border-radius:6px; background:#fff; }
@@ -109,6 +125,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   <div class="view-tabs" role="tablist" aria-label="Rating view">
     <button class="view-tab active" data-view="raw" role="tab" aria-selected="true">Raw Elo</button>
     <button class="view-tab" data-view="calibrated" role="tab" aria-selected="false">Calibrated Elo</button>
+    <button class="view-tab" data-view="matchup" role="tab" aria-selected="false">Matchup</button>
   </div>
   <div class="controls">
     <div class="searchbox">
@@ -124,6 +141,14 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   <div class="chart-wrap"><canvas id="sep-chart"></canvas></div>
   <div class="chart-lines"><span class="label">Chart lines</span><span class="chips" id="sep-chips"></span></div>
   <div class="chart-note" id="sep-note"></div>
+  <div id="sep-matchup" hidden>
+    <div class="matchup-grid">
+      <div class="matchup-card"><h3>Rikishi A</h3><select class="sel" id="sep-match-a"></select></div>
+      <div class="matchup-card"><h3>Rikishi B</h3><select class="sel" id="sep-match-b"></select></div>
+    </div>
+    <div class="controls" style="margin-top:.8rem"><span class="ctl-label">As of basho</span><select class="sel" id="sep-match-date"></select></div>
+    <div class="matchup-result" id="sep-match-result"></div>
+  </div>
 </div>
 
 <div class="panel">
@@ -312,6 +337,30 @@ function ratingAt(id, idx){
   return best;
 }
 function calibratedAt(id, idx){ const at=ratingAt(id,idx); return at ? [calibratedValue(at[0], at[2]),at[1],at[2]] : null; }
+function expected(ra, rb){ return 1/(1+Math.pow(10,(rb-ra)/400)); }
+const matchA=$("sep-match-a"), matchB=$("sep-match-b"), matchDate=$("sep-match-date"), matchResult=$("sep-match-result");
+function fillMatchup(){
+  const options=rikishi.slice().sort((a,b)=>displayName(a).localeCompare(displayName(b)));
+  [matchA,matchB].forEach((sel,n)=>{ options.forEach(r=>sel.add(new Option(displayName(r),r[0]))); sel.value=String([3081,45][n]); });
+  refreshMatchDates();
+}
+function refreshMatchDates(){
+  const old=matchDate.value, sa=series[matchA.value]||[], sb=series[matchB.value]||[];
+  const activeA=new Set(), activeB=new Set();
+  for(let i=0;i+2<sa.length;i+=3) activeA.add(sa[i]);
+  for(let i=0;i+2<sb.length;i+=3) activeB.add(sb[i]);
+  matchDate.innerHTML="";
+  bashos.forEach((b,i)=>{ if(activeA.has(i)&&activeB.has(i)) matchDate.add(new Option(b,i)); });
+  if([...matchDate.options].some(o=>o.value===old)) matchDate.value=old;
+  else if(matchDate.options.length) matchDate.value=matchDate.options[matchDate.options.length-1].value;
+}
+function renderMatchup(){
+  const a=ro(+matchA.value), b=ro(+matchB.value), idx=+matchDate.value;
+  const ra=ratingAt(a[0],idx), rb=ratingAt(b[0],idx);
+  if(!ra || !rb){ matchResult.textContent="Both rikishi must have an Elo rating by the selected basho."; return; }
+  const pa=expected(ra[0],rb[0]);
+  matchResult.innerHTML=`<strong>${displayName(a)}</strong>: ${Math.round(ra[0])} Elo &nbsp; vs &nbsp; <strong>${displayName(b)}</strong>: ${Math.round(rb[0])} Elo<br><span class="muted">Expected win probability: ${Math.round(pa*100)}% for ${displayName(a)} · ${Math.round((1-pa)*100)}% for ${displayName(b)} (as of ${bashos[idx]})</span>`;
+}
 function renderLb(){
   const rows = [];
   for (const r of rikishi){
@@ -347,7 +396,9 @@ function renderCalibratedLb(){
 
 document.querySelectorAll("#sep-app .view-tab").forEach(b=>b.addEventListener("click",()=>{
   view=b.dataset.view; document.querySelectorAll("#sep-app .view-tab").forEach(x=>{x.classList.toggle("active",x===b);x.setAttribute("aria-selected",x===b?"true":"false")}); renderChart(); renderLb();
+  $("sep-matchup").hidden=view!=="matchup"; $("sep-q").parentElement.parentElement.hidden=view==="matchup"; $("sep-chart").parentElement.hidden=view==="matchup"; $("sep-chips").parentElement.hidden=view==="matchup"; $("sep-note").hidden=view==="matchup"; if(view==="matchup") renderMatchup();
 }));
+matchA.addEventListener("change",()=>{refreshMatchDates();renderMatchup()}); matchB.addEventListener("change",()=>{refreshMatchDates();renderMatchup()}); matchDate.addEventListener("change",renderMatchup);
 
 function setWindow(f,t){
   fromIdx=f; toIdx=t; fromSel.value=String(f); toSel.value=String(t);
@@ -370,10 +421,12 @@ document.querySelectorAll("#sep-app .preset").forEach(b=>{
   kpi("Rikishi rated", rikishi.length.toLocaleString());
   kpi("Bouts replayed", "748,204");
   kpi("All-time #1", `${best[1]} <small>${best[3]}</small>`);
+  kpi("Japanese names", `${(rikishi.length-missing_japanese).toLocaleString()} <small>of ${rikishi.length.toLocaleString()} · ${missing_japanese.toLocaleString()} missing</small>`);
   // Stable IDs avoid selecting the older Hakuho (ID 2090) by name.
   [3081,45,8850,20].forEach(id=>{ if (ro(id)) addRikishi(id); });
   renderLb();
   renderCalibratedLb();
+  fillMatchup(); renderMatchup();
 })();
 })();
 </script>

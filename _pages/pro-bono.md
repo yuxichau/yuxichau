@@ -4,9 +4,9 @@ title: Pro-bono consulting
 permalink: /pro-bono/
 ---
 
-I offer free consulting to Hong Kong non-profits, subject to availability. The aim is practical help with technology and operations, not a sales process.
+I offer free consulting to Hong Kong non-profits, subject to availability. I can help with practical technology and operations questions.
 
-## Areas where I can help
+## How I can help
 
 - **Technology-stack review** — an outside look at architecture, tools, technical debt, and priorities.
 - **Process operationalisation** — turning a useful idea or policy into a repeatable process that people can run.
