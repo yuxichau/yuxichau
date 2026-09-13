@@ -1,29 +1,25 @@
 ---
 layout: single
-title: Work with Me
-seo_title: Work with Yu Xi Chau | AI systems and governance
+title: Collaboration
+seo_title: Collaboration | Yu Xi Chau
 permalink: /work-with-me/
-description: Advisory, collaboration, speaking, workshops, and pro bono work with Yu Xi Chau.
+description: Selected writing, speaking, workshops, and collaborations by Yu Xi Chau.
 ---
 
-I work on selected projects where engineering judgement, organisational context, and practical AI governance need to meet. My focus is building efficient AI systems that organisations can use, govern, and trust.
+This page records the kinds of collaboration that fit the work on this site: engineering judgement, organisational context, and practical AI governance meeting around a concrete question.
 
-This page is for potential advisory, speaking, and workshop clients. Employers and executive recruiters can find my background on [LinkedIn](https://www.linkedin.com/in/yuxichau/), while insurance and financial-services leaders will find the most relevant context in the sections below. General technology and AI readers can start with the [topic pages](/topics/).
+## Areas of focus
 
-## Advisory and collaboration
-
-I can help teams think through:
+The work sits around:
 
 - AI system architecture, model and tool choices, and production readiness
 - Generative AI applications, RAG, agentic workflows, and MLOps
 - Practical AI governance, guardrails, and operating processes
 - Product, vendor, and implementation decisions
 
-This is a starting point for a conversation, not a fixed service catalogue. Scope, availability, and any conflicts are considered before work begins.
-
 ## Speaking and workshops
 
-I am available for selected talks and practical workshops on:
+Occasional talks and practical workshops cover:
 
 - Building useful AI systems in complex organisations
 - AI governance that supports delivery rather than blocking it
@@ -34,8 +30,8 @@ I am available for selected talks and practical workshops on:
 
 I offer free consulting to Hong Kong non-profits, subject to availability. I can help with technology-stack reviews, process operationalisation, AI training, and product or vendor evaluation. [See the pro bono details →](/pro-bono/)
 
-## Get in touch
+## Background
 
-For current professional background, please see [LinkedIn](https://www.linkedin.com/in/yuxichau/). To start a conversation, send a LinkedIn message with a short description of your organisation, the problem you are working on, and the kind of help you are looking for.
+For current professional background, see [LinkedIn](https://www.linkedin.com/in/yuxichau/). The site itself is primarily a record of writing, projects, and working ideas.
 
-<p class="sj-disclaimer">The views expressed on this site are my own and do not represent FWD Insurance or any other employer. Any engagement is subject to availability, appropriate approvals, and conflict checks.</p>
+<p class="sj-disclaimer">The views expressed on this site are my own and do not represent FWD Insurance or any other employer. Any engagement is subject to appropriate approvals and conflict checks.</p>

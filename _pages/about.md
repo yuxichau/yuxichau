@@ -21,14 +21,14 @@ permalink: /about/
     <h2>Background</h2>
     <p>I've been working with data and AI for over a decade, back when there weren't many data scientists in Hong Kong. My PhD is in Applied Mathematics (Complexity Science). It taught me to think about complex systems, which turns out to be useful when you are trying to make AI behave in a real organisation.</p>
     <p>I've worked across insurance, real estate, retail, CRM, and gaming. The industries change, but the hard part stays the same: building systems that are reliable enough to trust, governable enough to defend, and useful enough to keep.</p>
-    <h2>Who I work for</h2>
-    <ul><li><strong>Employers and executive recruiters:</strong> durable AI systems, governance, and delivery experience.</li><li><strong>Insurance and financial-services leaders:</strong> practical application in complex, regulated organisations.</li><li><strong>Technology and AI readers:</strong> working notes on models, engineering, tools, and the systems around them.</li><li><strong>Advisory, speaking, and workshop clients:</strong> selected collaboration focused on a concrete problem.</li></ul>
+    <h2>Where the work sits</h2>
+    <ul><li><strong>For organisations:</strong> practical application in complex, regulated environments.</li><li><strong>For practitioners:</strong> engineering, governance, and delivery experience.</li><li><strong>For technology and AI readers:</strong> working notes on models, tools, and the systems around them.</li><li><strong>For collaborators:</strong> occasional writing, speaking, workshops, and projects focused on a concrete question.</li></ul>
     <h2>What I do</h2>
     <ul><li>Build and deploy efficient GenAI applications</li><li>Design practical AI governance and guardrails</li><li>Make systems ready for production and keep them maintainable</li><li>Help teams understand where AI creates value and where it needs restraint</li></ul>
     <p>I'm also into MLOps. In a previous role I built an MLOps platform on Azure ML and Jenkins to standardise how models are deployed.</p>
     <h2>What you'll find here</h2>
     <p>Writing and projects are organised around <a href="{{ '/topics/ai-systems/' | relative_url }}">AI systems</a>, <a href="{{ '/topics/ai-governance/' | relative_url }}">AI governance</a>, and <a href="{{ '/topics/ai-application/' | relative_url }}">AI application</a>. You will also find personal projects in history, mathematics, and data. They are secondary to the professional focus, but they show the curiosity and interests behind it.</p>
-    <p class="sj-about-links"><a href="https://www.linkedin.com/in/yuxichau/">LinkedIn ↗</a><a href="https://github.com/yuxichau">GitHub ↗</a><a href="{{ '/work-with-me/' | relative_url }}">Work with me →</a><a href="{{ '/feed.xml' | relative_url }}">RSS ↗</a></p>
+    <p class="sj-about-links"><a href="https://www.linkedin.com/in/yuxichau/">LinkedIn ↗</a><a href="https://github.com/yuxichau">GitHub ↗</a><a href="{{ '/feed.xml' | relative_url }}">RSS ↗</a></p>
     <p class="sj-about-updated">Last updated: {{ 'now' | date: "%B %Y" }}</p>
   </div>
 </div>
