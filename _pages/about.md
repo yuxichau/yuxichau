@@ -21,6 +21,8 @@ permalink: /about/
     <h2>Background</h2>
     <p>I've been working with data and AI for over a decade, back when there weren't many data scientists in Hong Kong. My PhD is in Applied Mathematics (Complexity Science). It taught me to think about complex systems, which turns out to be useful when you are trying to make AI behave in a real organisation.</p>
     <p>I've worked across insurance, real estate, retail, CRM, and gaming. The industries change, but the hard part stays the same: building systems that are reliable enough to trust, governable enough to defend, and useful enough to keep.</p>
+    <h2>Who I work for</h2>
+    <ul><li><strong>Employers and executive recruiters:</strong> durable AI systems, governance, and delivery experience.</li><li><strong>Insurance and financial-services leaders:</strong> practical application in complex, regulated organisations.</li><li><strong>Technology and AI readers:</strong> working notes on models, engineering, tools, and the systems around them.</li><li><strong>Advisory, speaking, and workshop clients:</strong> selected collaboration focused on a concrete problem.</li></ul>
     <h2>What I do</h2>
     <ul><li>Build and deploy efficient GenAI applications</li><li>Design practical AI governance and guardrails</li><li>Make systems ready for production and keep them maintainable</li><li>Help teams understand where AI creates value and where it needs restraint</li></ul>
     <p>I'm also into MLOps. In a previous role I built an MLOps platform on Azure ML and Jenkins to standardise how models are deployed.</p>

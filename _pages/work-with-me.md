@@ -8,6 +8,8 @@ description: Advisory, collaboration, speaking, workshops, and pro bono work wit
 
 I work on selected projects where engineering judgement, organisational context, and practical AI governance need to meet. My focus is building efficient AI systems that organisations can use, govern, and trust.
 
+This page is for potential advisory, speaking, and workshop clients. Employers and executive recruiters can find my background on [LinkedIn](https://www.linkedin.com/in/yuxichau/), while insurance and financial-services leaders will find the most relevant context in the sections below. General technology and AI readers can start with the [topic pages](/topics/).
+
 ## Advisory and collaboration
 
 I can help teams think through:
