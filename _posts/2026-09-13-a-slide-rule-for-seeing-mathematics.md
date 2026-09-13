@@ -6,7 +6,7 @@ tags: [Work, Projects]
 author: Yu Xi Chau
 ---
 
-A few years ago, I wrote about [what Gabriel's horn can teach us about mathematics education](https://yuxichau.com/posts/what-gabriels-horn-can-teach-us-about-mathematics-education/). That post began with a strange mathematical object whose volume is finite even though its surface area is infinite.
+Last week, I wrote about [what Gabriel's horn can teach us about mathematics education](https://yuxichau.com/posts/what-gabriels-horn-can-teach-us-about-mathematics-education/). That post began with a strange mathematical object whose volume is finite even though its surface area is infinite.
 
 I was reminded of another mathematical idea from when I was younger. I was already reasonably comfortable with mathematics, but a friend once remarked that he found logarithms amazing. The logarithm keeps increasing as its input increases, yet its rate of increase keeps falling. It becomes flatter and flatter, but never reaches a finite upper limit.
 
