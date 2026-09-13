@@ -1,22 +1,20 @@
 ---
 layout: home
 title: "Systems Journal"
-seo_title: "Yu Xi Chau | Systems Journal"
-description: "Essays and working projects about AI, economics, governance, and the systems that shape useful technology."
+seo_title: "Yu Xi Chau | AI systems, governance and application"
+description: "Yu-Xi Chau builds efficient AI systems that organizations can use, govern and trust. Writing about AI systems, governance, and application."
 author:
   name: "Yu Xi Chau"
 ---
 
-Hey, I'm **Yu-Xi Chau**. I work as a Generative AI Lead at FWD Insurance, building GenAI applications and setting up AI governance. I was one of the early data scientists in Hong Kong, and my PhD in Applied Mathematics (Complexity Science) still shapes how I think about complex systems.
+Yu-Xi Chau builds efficient AI systems that organizations can use, govern and trust. He works across AI systems, AI governance, and the practical application of AI in complex organizations.
 
-I've worked across insurance, real estate, retail, CRM, and gaming. The industries change, but the hard part stays the same: making AI systems reliable enough to trust, and getting them to actually deliver something useful.
+His current professional work is at FWD Insurance. For current employment history and professional background, see [LinkedIn](https://www.linkedin.com/in/yuxichau/).
 
-On this site I write about AI systems, MLOps, and whatever else I'm exploring. I've been working on integrating the **Zettelkasten method** into my note-taking. Outside of tech I'm a history nerd who reads a lot about the Ming Dynasty and Hong Kong history.
+The site brings together engineering notes, governance thinking, applied AI work, and a few personal projects that show the interests behind the work.
 
 <a class="btn" href="/posts/" style="color:#222831;background:#eeeeee;border:1px solid #393e46;">Read selected writing ↗</a>
 
-## Pro-bono consulting
+## Work with me
 
-I offer free consulting to Hong Kong non-profits, subject to availability. I can help with technology-stack reviews, process operationalisation, AI training, and product or vendor evaluation.
-
-If this could help your organisation, [send me a message on LinkedIn](https://www.linkedin.com/in/yuxichau/) with a short description of the organisation and the challenge you are working on.
+I am available for selected advisory and collaboration work, speaking and workshops, and pro bono support for Hong Kong non-profits. [See what I can help with →](/work-with-me/)

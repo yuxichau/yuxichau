@@ -1,11 +1,11 @@
 main:
   - title: "Writing"
     url: /posts/
+  - title: "Topics"
+    url: /topics/
   - title: "Projects"
     url: /projects/
-  - title: "Library"
-    url: /resources/
-  - title: "Pro-bono"
-    url: /pro-bono/
+  - title: "Work with Me"
+    url: /work-with-me/
   - title: "About"
     url: /about/

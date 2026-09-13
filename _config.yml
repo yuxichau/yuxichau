@@ -15,7 +15,7 @@ minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon"
 author:
   name: "Yu Xi Chau"
   avatar: "/assets/images/bio-photo-20260912.png" # Optional
-  bio: "Data Scientist and Generative AI Lead. I build GenAI applications and set up AI governance at FWD Insurance."
+  bio: "I build efficient AI systems that organizations can use, govern and trust."
   location: "Hong Kong"
   links:
     - label: "LinkedIn"
