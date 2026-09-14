@@ -4,6 +4,7 @@ title: "The Harness Changes the Score"
 date: 2026-09-08 02:00:00 -0000
 tags: [AI, Technology]
 author: Yu Xi Chau
+description: "Why an AI evaluation result depends on the harness around the model: tools, prompts, context, and the workflow that produces the score."
 ---
 
 Two things surprised me about [GPT-6 Astra](https://openai.com/index/gpt-6-astra/). The first was the headline result on ARC-AGI-3, where OpenAI says Astra reached 99.9 percent. The second was the explanation of how an earlier model's result changed when the evaluation setup changed.

@@ -4,6 +4,7 @@ title: "The Dilemma of B2B Software in the Agent-First Age"
 date: "2026-08-22 03:04:20 -0000"
 tags: [Economics, Technology, AI]
 author: Yu Xi Chau
+description: "The strategic dilemma facing B2B software as products need to serve human users and AI agents at the same time."
 ---
 
 I read a post by Paul Graham on X a while back. It was mostly about something else, but somewhere in the middle he made a one-sentence statement about the future of software: it would be agent-first. He did not elaborate. I cannot find the post now, and I would not swear to his exact wording, but the sentence has stayed with me. The more I think about it, the more it looks like the future of the whole software industry.

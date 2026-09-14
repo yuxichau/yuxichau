@@ -4,6 +4,7 @@ title: "A Model Gateway Made Provider Switching Much Easier"
 date: 2026-09-13 10:00:00 -0000
 tags: [AI, Technology, Economics]
 author: Yu Xi Chau
+description: "A practical model gateway architecture for provider switching, routing, budgets, secrets, and usage attribution in AI applications."
 ---
 
 At a mid-size company, AIOps starts with a reasonable stack and can quickly turn into a cupboard full of model credentials.

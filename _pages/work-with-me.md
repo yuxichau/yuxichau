@@ -6,7 +6,7 @@ permalink: /work-with-me/
 description: Selected writing, speaking, workshops, and collaborations by Yu Xi Chau.
 ---
 
-This page records the kinds of collaboration that fit the work on this site: engineering judgement, organisational context, and practical AI governance meeting around a concrete question.
+This page records the kinds of collaboration that fit the work on this site. The three routes are advisory and collaboration, speaking and workshops, and selected pro bono work: engineering judgement, organisational context, and practical AI governance meeting around a concrete question.
 
 ## Areas of focus
 
@@ -29,6 +29,10 @@ Occasional talks and practical workshops cover:
 ## Pro bono work
 
 I offer free consulting to Hong Kong non-profits, subject to availability. I can help with technology-stack reviews, process operationalisation, AI training, and product or vendor evaluation. [See the pro bono details →](/pro-bono/)
+
+## Selected evidence
+
+For concise examples of purpose, data, method, limitations, and lessons, see the [selected case studies](/case-studies/). For current professional history, use [LinkedIn](https://www.linkedin.com/in/yuxichau/).
 
 ## Background
 

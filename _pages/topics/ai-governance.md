@@ -12,8 +12,16 @@ The emphasis is practical: governance should help teams deliver responsibly, not
 
 ## Start here
 
-- [Doctrine of Proactive Governance](/posts/doctrine-of-proactive-governance/)
-- [Trust by Default Is a Cost Problem](/posts/trust-by-default-is-a-cost-problem/)
-- [The Harness Changes the Score](/posts/the-harness-changes-the-score/)
+- [Doctrine of Proactive Governance](/posts/doctrine-of-proactive-governance/) — why governance can be a lever for influence and delivery rather than a brake.
+- [Trust by Default Is a Cost Problem](/posts/trust-by-default-is-a-cost-problem/) — how unexamined trust creates operational and financial exposure.
+- [The Harness Changes the Score](/posts/the-harness-changes-the-score/) — why controls need to cover the whole system around a model.
+- [The model has to stay up](/posts/the-model-has-to-stay-up/) — reliability, ownership, and service expectations as governance concerns.
 
-[Browse all writing →](/posts/)
+## Questions this hub will answer
+
+- What does useful AI governance look like in a regulated organisation?
+- How can guardrails support delivery instead of producing paperwork?
+- Who owns an AI system when models, tools, and data change independently?
+- Which controls should be tested continuously after launch?
+
+[Browse all writing →](/posts/) · [See the AI systems hub →](/topics/ai-systems/) · [See the AI application hub →](/topics/ai-application/)

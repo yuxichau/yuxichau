@@ -4,6 +4,7 @@ title: "The Flour Mill Problem: Why 'Good Enough' AI Changes Everything"
 date: 2026-08-24 10:00:00 -0000
 tags: [AI, Economics]
 author: Yu Xi Chau
+description: "Why cheaper, good-enough AI can expand adoption and change the economics of applications in real organisations."
 ---
 
 On August 20, a model called Ox Alpha appeared on OpenRouter with no company name, no press release, and no logo. Just a stealth label and a price tag of zero. For roughly one week, anyone could send it a million tokens of text, images, or video, and pay nothing.

@@ -12,7 +12,7 @@ layout: default
     <aside class="sj-hero-aside">
       <span class="sj-status">A SYSTEMS JOURNAL</span>
       <p>Notes and working projects from Yu-Xi Chau, an AI leader based in Hong Kong.</p>
-      <p class="sj-aside-meta">Current professional context: FWD Insurance<br><a href="https://www.linkedin.com/in/yuxichau/">See current background on LinkedIn&nbsp;→</a></p>
+      <p class="sj-aside-meta"><a href="{{ '/case-studies/' | relative_url }}">Selected case studies&nbsp;→</a><br>Current professional context: FWD Insurance<br><a href="https://www.linkedin.com/in/yuxichau/">See current background on LinkedIn&nbsp;→</a></p>
     </aside>
   </section>
 
@@ -60,6 +60,8 @@ layout: default
     <ol class="sj-post-list">{% for post in site.posts limit: 6 %}<li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time><a href="{{ post.url | relative_url }}">{{ post.title }}</a><span>{{ post.tags | first }}</span></li>{% endfor %}</ol>
     <p class="sj-more"><a href="{{ '/posts/' | relative_url }}">See all writing&nbsp;→</a></p>
   </section>
+
+  <p class="sj-home-measurement"><a href="{{ '/topics/measurement/' | relative_url }}">SEO measurement checklist&nbsp;→</a></p>
 
   <footer class="sj-home-footer"><p>Writing from Hong Kong · Views are personal and do not represent FWD Insurance or any other employer.</p><a href="{{ '/feed.xml' | relative_url }}">RSS ↗</a><a href="https://github.com/yuxichau">GitHub ↗</a><a href="https://www.linkedin.com/in/yuxichau/">LinkedIn ↗</a><a href="{{ '/about/' | relative_url }}">About →</a></footer>
 </div>

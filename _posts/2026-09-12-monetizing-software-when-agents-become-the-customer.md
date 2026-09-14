@@ -4,6 +4,7 @@ title: "Monetizing Software When Agents Become the Customer"
 date: 2026-09-12 09:00:00 -0000
 tags: [Economics, Technology, AI]
 author: Yu Xi Chau
+description: "How software businesses can think about pricing, APIs, and distribution when AI agents become direct users of their products."
 ---
 
 I wrote earlier that software companies should expose themselves to agents or risk being bypassed, and that API usage was the natural replacement for per-seat pricing. I still believe the direction is right. I was too quick about the timing and about where the durable value sits.

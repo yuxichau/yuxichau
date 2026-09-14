@@ -12,9 +12,17 @@ It includes production readiness, model evaluation, MLOps, agent harnesses, cost
 
 ## Start here
 
-- [The agent harness is part of the model](/posts/the-agent-harness-is-part-of-the-model/)
-- [The Harness Changes the Score](/posts/the-harness-changes-the-score/)
-- [A layman's look at hyperspectral denoising](/posts/a-laymans-look-at-hyperspectral-denoising/)
-- [Blender Is Becoming a General-Purpose Canvas for Coding Agents](/posts/blender-general-purpose-canvas/)
+- [The agent harness is part of the model](/posts/the-agent-harness-is-part-of-the-model/) — why tools, prompts, evaluation, and runtime shape the system's actual capability.
+- [The Harness Changes the Score](/posts/the-harness-changes-the-score/) — how the surrounding workflow changes what a model can achieve.
+- [A Model Gateway Made Provider Switching Much Easier](/posts/the-model-gateway/) — the case for a control layer between applications and model providers.
+- [The model has to stay up](/posts/the-model-has-to-stay-up/) — reliability is part of the product, not an operational afterthought.
+- [Blender Is Becoming a General-Purpose Canvas for Coding Agents](/posts/blender-general-purpose-canvas/) — what an application API makes possible for an agent.
 
-[Browse all writing →](/posts/)
+## Questions this hub will answer
+
+- How should a team evaluate an AI system beyond a model benchmark?
+- What belongs in an agent harness, and what belongs in the model?
+- When does a model gateway justify its operational cost?
+- How can teams measure reliability, latency, and cost in production?
+
+[Browse all writing →](/posts/) · [See the AI governance hub →](/topics/ai-governance/) · [See the AI application hub →](/topics/ai-application/)

@@ -4,6 +4,7 @@ title: "Trust by Default Is a Cost Problem"
 date: "2026-08-26 22:00:00 -0000"
 tags: [AI, Technology]
 author: Yu Xi Chau
+description: "Why treating AI systems as trustworthy by default creates hidden operational, financial, and governance costs."
 ---
 
 One night YC quietly gave its AI agent full access to the production database. The agent became 10x more useful. That experiment, told in the Lightcone episode [Inside YC's AI Playbook](https://www.youtube.com/watch?v=B246K_G7mHU) with Pete Koomen, convinced them that trust-by-default is the only way to get serious work out of agents.

@@ -4,6 +4,7 @@ title: "The agent harness is part of the model"
 date: 2026-09-07 02:10:00 -0000
 tags: [AI, Technology]
 author: Yu Xi Chau
+description: "The agent harness is part of an AI system's capability because tools, context, and feedback shape what the model can actually do."
 ---
 
 We need metrics for the [agent harness](https://arxiv.org/abs/2607.06906) as well as for the models it wraps. Metrics already exist for parameterisable end-to-end processes, so if the harness is integral to the result, it deserves equal prominence.

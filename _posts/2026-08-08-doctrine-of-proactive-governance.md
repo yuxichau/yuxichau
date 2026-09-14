@@ -4,6 +4,7 @@ title: "Doctrine of Proactive Governance"
 date: 2026-08-08 10:00:00 -0000
 tags: [Governance]
 author: Yu Xi Chau
+description: "A practical case for proactive AI governance as a way to manage risk, build trust, and help organisations make better decisions sooner."
 ---
 
 
