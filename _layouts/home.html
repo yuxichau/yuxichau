@@ -16,27 +16,8 @@ layout: default
     </aside>
   </section>
 
-  <section class="sj-section" aria-labelledby="audiences">
-    <div class="sj-section-head"><div><p class="sj-kicker">For readers and practitioners</p><h2 id="audiences">Different questions, one systems view</h2></div><p>Four ways in</p></div>
-    <div class="sj-pillar-grid">
-      <article class="sj-pillar"><p class="sj-meta">01 / For organisations</p><h3>Build useful AI systems</h3><p>Practical thinking about complex organisations, risk, operating models, and production-ready applications.</p></article>
-      <article class="sj-pillar"><p class="sj-meta">02 / For practitioners</p><h3>Make systems governable</h3><p>Engineering notes on models, tools, workflows, guardrails, and the decisions behind reliable delivery.</p></article>
-      <article class="sj-pillar"><p class="sj-meta">03 / For technology and AI readers</p><h3>Follow the working ideas</h3><p>Essays and projects about models, tools, economics, engineering, and the systems around them.</p></article>
-      <article class="sj-pillar"><p class="sj-meta">04 / For collaborators</p><h3>Explore selected work</h3><p>Occasional writing, speaking, workshops, and collaborations shaped around a concrete question.</p></article>
-    </div>
-  </section>
-
-  <section class="sj-section" aria-labelledby="pillars">
-    <div class="sj-section-head"><div><p class="sj-kicker">Areas of work</p><h2 id="pillars">Three connected questions</h2></div><p>Engineering first</p></div>
-    <div class="sj-pillar-grid">
-      <article class="sj-pillar"><p class="sj-meta">01 / AI systems</p><h3><a href="{{ '/topics/ai-systems/' | relative_url }}">Build useful systems</a></h3><p>How models, data, tools, and workflows become reliable products rather than impressive demonstrations.</p></article>
-      <article class="sj-pillar"><p class="sj-meta">02 / AI governance</p><h3><a href="{{ '/topics/ai-governance/' | relative_url }}">Make them governable</a></h3><p>How organisations set guardrails, make decisions, and keep AI accountable as it enters real work.</p></article>
-      <article class="sj-pillar"><p class="sj-meta">03 / AI application</p><h3><a href="{{ '/topics/ai-application/' | relative_url }}">Put them to work</a></h3><p>Where AI creates value in complex organisations, and where human judgement still matters most.</p></article>
-    </div>
-  </section>
-
   <section class="sj-section" aria-labelledby="selected-writing">
-    <div class="sj-section-head"><div><p class="sj-kicker">Selected writing</p><h2 id="selected-writing">Ideas worth staying with</h2></div><p>From the journal / 01</p></div>
+    <div class="sj-section-head"><div><p class="sj-kicker">Selected writing</p><h2 id="selected-writing">Writing for the decisions around AI</h2></div><p>From the journal / 01</p></div>
     <div class="sj-writing-grid">
       {% assign selected_paths = '_posts/2026-08-24-the-flour-mill-problem.md,_posts/2026-08-26-trust-by-default-is-a-cost-problem.md,_posts/2026-08-22-the-dilemma-of-b2b-software.md' | split: ',' %}
       {% for wanted in selected_paths %}{% for post in site.posts %}{% if post.path == wanted %}
@@ -47,12 +28,31 @@ layout: default
   </section>
 
   <section class="sj-section" aria-labelledby="featured-projects">
-    <div class="sj-section-head"><div><p class="sj-kicker">Selected projects</p><h2 id="featured-projects">Ideas made tangible</h2></div><p>Professional and personal experiments</p></div>
+    <div class="sj-section-head"><div><p class="sj-kicker">Selected work</p><h2 id="featured-projects">Projects you can explore</h2></div><p>Working systems and experiments</p></div>
     <div class="sj-project-grid">
       <article class="sj-project"><img src="{{ '/assets/images/projects/llm-intelligence-cost.png' | relative_url }}" alt="LLM intelligence versus cost chart"><div><p class="sj-meta">AI systems / Data analysis</p><h3><a href="{{ '/projects/llm-model-analysis/' | relative_url }}">LLM Intelligence vs Cost</a></h3><p>Compare the price of intelligence across the models people actually use.</p><a class="sj-read" href="{{ '/projects/llm-model-analysis/' | relative_url }}">Open dashboard&nbsp;→</a></div></article>
       <article class="sj-project sj-project-secondary"><img src="{{ '/assets/images/projects/sumo-elo.png' | relative_url }}" alt="Sumo Elo explorer chart"><div><p class="sj-meta">Personal / Data analysis</p><h3><a href="{{ '/projects/sumo-elo/' | relative_url }}">Sumo Elo Explorer</a></h3><p>A personal data project that makes strength across sumo eras explorable.</p><a class="sj-read" href="{{ '/projects/sumo-elo/' | relative_url }}">Open project&nbsp;→</a></div></article>
     </div>
     <p class="sj-more"><a href="{{ '/projects/' | relative_url }}">All projects&nbsp;→</a></p>
+  </section>
+
+  <section class="sj-section" aria-labelledby="common-thread">
+    <div class="sj-section-head"><div><p class="sj-kicker">The common thread</p><h2 id="common-thread">The work follows three practical questions</h2></div><p>Explanation, not navigation</p></div>
+    <p class="sj-thread-intro">The writing and projects share one concern: making AI useful in the settings where people must also understand, govern, and live with its consequences.</p>
+    <div class="sj-pillar-grid">
+      <article class="sj-pillar"><p class="sj-meta">01 / AI systems</p><h3><a href="{{ '/topics/ai-systems/' | relative_url }}">Build useful systems</a></h3><p>How models, data, tools, and workflows become reliable products rather than impressive demonstrations.</p></article>
+      <article class="sj-pillar"><p class="sj-meta">02 / AI governance</p><h3><a href="{{ '/topics/ai-governance/' | relative_url }}">Make them governable</a></h3><p>How organisations set guardrails, make decisions, and keep AI accountable as it enters real work.</p></article>
+      <article class="sj-pillar"><p class="sj-meta">03 / AI application</p><h3><a href="{{ '/topics/ai-application/' | relative_url }}">Put them to work</a></h3><p>Where AI creates value in complex organisations, and where human judgement still matters most.</p></article>
+    </div>
+  </section>
+
+  <section class="sj-section sj-browse" aria-labelledby="browse">
+    <div class="sj-section-head"><div><p class="sj-kicker">Browse the site</p><h2 id="browse">Choose a route</h2></div><p>Start with what you need</p></div>
+    <nav class="sj-route-grid" aria-label="Site sections">
+      <a href="{{ '/posts/' | relative_url }}"><span class="sj-meta">Writing</span><strong>Read the essays&nbsp;→</strong></a>
+      <a href="{{ '/projects/' | relative_url }}"><span class="sj-meta">Projects</span><strong>Explore the work&nbsp;→</strong></a>
+      <a href="{{ '/about/' | relative_url }}"><span class="sj-meta">About</span><strong>Meet the person behind it&nbsp;→</strong></a>
+    </nav>
   </section>
 
   <section class="sj-section sj-recent" aria-labelledby="recent-writing">
