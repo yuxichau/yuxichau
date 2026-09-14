@@ -7,6 +7,14 @@ classes: wide
 
 A running list of things I build. The professional projects show how I work with AI systems and data; the personal projects in history, mathematics, and games are secondary, but they show the curiosity and interests behind the work. Each project gets a page with the actual working artifact, not just a description, so you can poke at the results yourself.
 
+## Blender Viewer
+
+I have been playing with Blender for a while too. Inspired by Simon Willison's experiments with coding agents and Blender, I asked my agent to create a small, dependency-free viewer for Blender-exported OBJ files. It runs locally in the browser, with orbit and zoom controls and no upload step.
+
+[Open the Blender viewer →](/projects/blender-viewer/)
+
+---
+
 ## Dashboards
 
 ### LLM Model Analysis

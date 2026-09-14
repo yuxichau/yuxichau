@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blender viewer</title>
+<style>
+:root{color-scheme:dark;font:15px/1.45 system-ui,sans-serif;background:#17191d;color:#e8ebef}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;background:radial-gradient(circle at 50% 20%,#30343d,#141518 70%)}main{width:min(1100px,100%);padding:1rem}.toolbar{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap;margin-bottom:.75rem}.toolbar h1{font-size:1rem;font-weight:600;margin:0 auto 0 0}.toolbar label,.toolbar button{border:1px solid #535964;border-radius:5px;background:#252931;color:inherit;padding:.45rem .7rem;cursor:pointer}.toolbar input{display:none}.toolbar button:hover,.toolbar label:hover{background:#343945}.hint{color:#aeb4bf;font-size:.85rem;margin:.5rem 0}.stage{position:relative;aspect-ratio:16/10;border:1px solid #4a4f59;border-radius:8px;overflow:hidden;background:#20242b;box-shadow:0 20px 70px #0008}.stage canvas{display:block;width:100%;height:100%;touch-action:none}.status{position:absolute;left:.8rem;bottom:.65rem;color:#b9c0cc;background:#111820b8;padding:.25rem .45rem;border-radius:4px;font-size:.8rem}.help{color:#9da5b1;font-size:.8rem;margin:.7rem 0 0}.help kbd{border:1px solid #59616e;border-radius:3px;padding:.1rem .3rem;color:#e4e8ed}
+</style>
+</head>
+<body>
+<main>
+  <div class="toolbar"><h1>Blender viewer</h1><label for="model-file">Open an OBJ model</label><input id="model-file" type="file" accept=".obj,text/plain"><button id="reset" type="button">Reset view</button></div>
+  <p class="hint">A small, dependency-free viewer for inspecting a Blender-exported OBJ file in the browser.</p>
+  <div class="stage"><canvas id="scene" aria-label="Interactive 3D scene"></canvas><div class="status" id="status">Demo scene · drag to orbit</div></div>
+  <p class="help"><kbd>Drag</kbd> orbit · <kbd>Wheel</kbd> zoom · <kbd>Open an OBJ model</kbd> load a local export. Files stay in your browser.</p>
+</main>
+<script>
+(() => {
+  'use strict';
+  const canvas = document.querySelector('#scene'), ctx = canvas.getContext('2d');
+  const status = document.querySelector('#status');
+  const view = {yaw:-.65,pitch:-.34,distance:6,drag:false,x:0,y:0};
+  let model = null;
+  const demo = {vertices:[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]], faces:[[0,1,2,3],[4,7,6,5],[0,4,5,1],[3,2,6,7],[1,5,6,2],[0,3,7,4]]};
+  const edges=[[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];
+  function resize(){const r=canvas.getBoundingClientRect(),d=devicePixelRatio||1;canvas.width=r.width*d;canvas.height=r.height*d;ctx.setTransform(d,0,0,d,0,0);draw();}
+  function rotate(p){const [x,y,z]=p,cy=Math.cos(view.yaw),sy=Math.sin(view.yaw),cp=Math.cos(view.pitch),sp=Math.sin(view.pitch);const a=x*cy-z*sy,b=x*sy+z*cy;return [a,b*cp-y*sp,b*sp+y*cp];}
+  function project(p){const q=rotate(p),scale=Math.min(canvas.clientWidth,canvas.clientHeight)*.64/(q[2]+view.distance);return [canvas.clientWidth/2+q[0]*scale,canvas.clientHeight/2-q[1]*scale,q[2]];}
+  function draw(){if(!ctx)return;const w=canvas.clientWidth,h=canvas.clientHeight;ctx.clearRect(0,0,w,h);const grad=ctx.createLinearGradient(0,0,0,h);grad.addColorStop(0,'#2d333d');grad.addColorStop(1,'#15181d');ctx.fillStyle=grad;ctx.fillRect(0,0,w,h);const scene=model||demo, pts=scene.vertices.map(project);
+    const sceneEdges=model?[...new Set(scene.faces.flatMap(face=>face.map((a,i)=>[a,face[(i+1)%face.length]].sort((x,y)=>x-y).join(':'))))].map(k=>k.split(':').map(Number)):edges;
+    ctx.strokeStyle='#5d6572';ctx.lineWidth=1;ctx.beginPath();for(const [a,b] of sceneEdges){ctx.moveTo(pts[a][0],pts[a][1]);ctx.lineTo(pts[b][0],pts[b][1])}ctx.stroke();
+    if(model){ctx.fillStyle='#6486ad66';for(const face of scene.faces){ctx.beginPath();face.forEach((i,n)=>{const p=pts[i];n?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1])});ctx.closePath();ctx.fill();ctx.strokeStyle='#9ab1cc';ctx.stroke()}}
+    ctx.strokeStyle='#89919e55';ctx.beginPath();ctx.moveTo(24,h-28);ctx.lineTo(w-24,h-28);ctx.stroke();
+  }
+  function parseObj(text){const vertices=[],faces=[];for(const line of text.split(/\r?\n/)){const s=line.trim();if(s.startsWith('v ')){const p=s.split(/\s+/).slice(1,4).map(Number);if(p.length===3&&p.every(Number.isFinite))vertices.push(p)}else if(s.startsWith('f ')){const f=s.split(/\s+/).slice(1).map(x=>Number(x.split('/')[0])).filter(Number.isFinite).map(i=>i<0?vertices.length+i:i-1);if(f.length>=3&&f.every(i=>i>=0&&i<vertices.length))faces.push(f)}}if(!vertices.length||!faces.length)throw new Error('No vertices and faces found');return {vertices,faces};}
+  canvas.addEventListener('pointerdown',e=>{view.drag=true;view.x=e.clientX;view.y=e.clientY;canvas.setPointerCapture(e.pointerId)});
+  canvas.addEventListener('pointermove',e=>{if(!view.drag)return;view.yaw+=(e.clientX-view.x)*.01;view.pitch=Math.max(-1.45,Math.min(1.45,view.pitch+(e.clientY-view.y)*.01));view.x=e.clientX;view.y=e.clientY;draw()});
+  canvas.addEventListener('pointerup',()=>{view.drag=false});
+  canvas.addEventListener('wheel',e=>{e.preventDefault();view.distance=Math.max(2.2,Math.min(14,view.distance+e.deltaY*.008));draw()},{passive:false});
+  document.querySelector('#reset').addEventListener('click',()=>{view.yaw=-.65;view.pitch=-.34;view.distance=6;model=null;status.textContent='Demo scene · drag to orbit';draw()});
+  document.querySelector('#model-file').addEventListener('change',e=>{const file=e.target.files[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{try{model=parseObj(reader.result);status.textContent=`${file.name} · ${model.vertices.length} vertices · drag to orbit`;draw()}catch(err){status.textContent=err.message}};reader.readAsText(file)});
+  addEventListener('resize',resize);resize();
+})();
+</script>
+</body>
+</html>
