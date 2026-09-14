@@ -1,38 +1,46 @@
 ---
 layout: single
-title: "The Model Gateway Made My Life 10 Times Easier"
+title: "A Model Gateway Made Provider Switching Much Easier"
 date: 2026-09-13 10:00:00 -0000
 tags: [AI, Technology, Economics]
 author: Yu Xi Chau
 ---
 
-At a mid-size company, AIOps starts with a reasonable stack and ends with a cupboard full of model credentials.
+At a mid-size company, AIOps starts with a reasonable stack and can quickly turn into a cupboard full of model credentials.
 
-One team uses OpenAI. Another uses Anthropic. A third runs an open-weight model for data that cannot leave the network. A fourth adds a specialist model for incident summaries. Every application carries its own provider code, retry logic, token counter, rate limit, and API key. Then a model changes price or becomes unavailable, and somebody has to find every place that knows about it.
+One team uses OpenAI. Another uses Anthropic. A third runs an open-weight model for data that cannot leave the network. A fourth adds a specialist model for incident summaries. Each application ends up carrying its own provider code, retry logic, token counter, rate limit, and API key.
 
-I have watched this happen. Switching models should be a configuration change. In practice it becomes a small migration project. Token management fragments across applications, environments, and teams. Cost attribution becomes an educated guess. A useful AIOps service starts to resemble a collection of unrelated integrations.
+Then a model changes price or becomes unavailable, and somebody has to find every place that knows about it.
 
-The model count keeps rising because the jobs are different. A cheap fast model handles classification and routine tickets. A stronger model handles an ambiguous incident. A local model handles sensitive logs. A vision model reads a screenshot. The best model depends on the request, the budget, the data, and the state of the provider that day.
+I have watched this happen. Switching models should be a configuration change. In practice, it becomes a small migration project. Token management fragments across applications and teams. Cost attribution becomes an educated guess. A useful AIOps service starts to resemble a collection of unrelated integrations.
 
-This is where a model gateway earns its keep. Applications call one internal endpoint. The gateway chooses the provider and model, records usage, applies policy, and returns a common response shape. The application owns the task. The gateway owns the traffic.
+The model count keeps rising because the jobs are different. A cheap, fast model handles classification and routine tickets. A stronger model handles an ambiguous incident. A local model handles sensitive logs. A vision model reads a screenshot. The right choice depends on the request, the budget, the data, and the provider's condition that day.
 
-That division gives engineers a few useful controls:
+A model gateway puts a control layer in front of those providers. Applications call one internal endpoint. The gateway applies routing and policy, records usage, and returns a common response format. The application owns the task. The gateway owns the model traffic.
 
-* **Routing and load balancing.** Send routine requests to a cheaper model, send difficult requests to a stronger one, and spread traffic across compatible providers. A provider outage becomes a routing event rather than an application rewrite.
-* **Thresholds.** Set a monthly spend limit, a per-team token budget, a request rate, or a maximum context size. The gateway can reject, queue, downgrade, or redirect a request when it crosses the policy.
-* **Metering.** Attribute input tokens, output tokens, latency, errors, and model choices to an application or team. Finance gets a bill it can inspect. Engineers can see which workflow is expensive.
-* **Key management.** Applications receive one internal credential. Provider keys stay in the gateway's secret store, with rotation and access control in one place. AWS Secrets Manager currently charges $0.40 per secret per month plus $0.05 per 10,000 API calls, so a small set of provider keys costs very little compared with the time spent chasing leaked or expired credentials. [AWS Secrets Manager pricing](https://aws.amazon.com/secrets-manager/pricing)
+That creates several useful controls.
 
-The cost of hosting the gateway can also be surprisingly small. Consider a deliberately modest EKS example in US East (Northern Virginia): one EKS cluster at $0.10 per hour, plus two Linux t3.medium worker nodes at $0.0418 per hour each. At 730 hours, that is $73.00 for the control plane and about $61.03 for the nodes, or roughly $134 per month. Add two Secrets Manager secrets and the total is about $135 per month before load balancers, storage, network transfer, observability, and support.
+- Routine requests can go to a cheaper model while difficult requests go to a stronger one. Traffic can also be distributed across compatible providers. With health checks and compatible fallbacks, an outage can become a routing change rather than an application rewrite.
+- Teams can set monthly spend limits, per-team token budgets, request rates, and maximum context sizes. The gateway can reject, queue, downgrade, or redirect requests when they cross a policy.
+- Input tokens, output tokens, latency, errors, and model choices can be attributed to an application or team. Finance gets a bill it can inspect, and engineers can see which workflow is expensive.
+- Applications can use one internal credential while provider keys remain in the gateway's secret store. Rotation and access control stay in one place.
 
-Those figures come from AWS's [EKS pricing](https://aws.amazon.com/eks/pricing), the [t3 instance pricing table](https://aws.amazon.com/ec2/instance-types/t3), and [Secrets Manager pricing](https://aws.amazon.com/secrets-manager/pricing). This is a hosting illustration for the gateway service. The model inference bill sits elsewhere. A production design needs more capacity, high availability, and a proper failure plan.
+AWS Secrets Manager currently charges $0.40 per secret per month plus $0.05 per 10,000 API calls. A small set of provider keys therefore costs little compared with the time spent dealing with leaked or expired credentials. [AWS Secrets Manager pricing](https://aws.amazon.com/secrets-manager/pricing)
 
-For a mid-size engineering team, $135 a month is less interesting than the hours it removes. One place to change a model. One place to inspect spend. One place to rotate keys. One place to add a fallback. The gateway paid for itself the first time I avoided a week of scattered integration work. My life is 10 times easier when model switching is a routing rule instead of a codebase search.
+The gateway itself does not have to be expensive. Consider a deliberately modest EKS example in US East (Northern Virginia): one EKS cluster at $0.10 per hour and two Linux t3.medium worker nodes at $0.0418 per hour each.
 
-There is a related category that causes some confusion. An LLM gateway is an operating layer for traffic that a company already sends. It provides routing, policy, credentials, observability, and sometimes caching or request transformation. The company can connect it to hosted APIs, local deployments, or both.
+At 730 hours, the control plane costs $73.00. The worker nodes cost about $61.03. Two Secrets Manager secrets add $0.80, bringing the example to about $135 per month before load balancers, storage, network transfer, observability, support, and the extra capacity needed for a production failure plan.
 
-An inference marketplace is a supply and discovery layer. It brings together models, providers, prices, capacity, and sometimes a single billing relationship. A developer chooses among available inference products, while the marketplace handles the commercial and operational connection.
+Those figures come from AWS's [EKS pricing](https://aws.amazon.com/eks/pricing), [t3 instance pricing](https://aws.amazon.com/ec2/instance-types/t3), and [Secrets Manager pricing](https://aws.amazon.com/secrets-manager/pricing). This is an illustration of the gateway's hosting cost. The model inference bill sits elsewhere.
 
-The two products are converging. A marketplace needs gateway features to route requests and enforce budgets. A gateway can expose a catalogue of providers and models that looks like a marketplace. The boundary will remain useful for describing the buyer's problem, even as the products share more plumbing.
+For a mid-size engineering team, the more interesting saving is engineering time. I get one place to change a model, inspect spend, rotate keys, and add a fallback. The first time this avoids a week of scattered integration work, the infrastructure cost becomes a secondary concern.
 
-I expect the gateway to become ordinary infrastructure for companies that run several AI workloads. The model will keep changing. The layer that controls access to models will become the stable part.
+There is a related category that causes confusion.
+
+An LLM gateway is an operating layer for traffic a company already sends. It provides routing, policy, credentials, observability, and sometimes caching or request transformation. It can connect to hosted APIs, local deployments, or both.
+
+An inference marketplace is a supply and discovery layer. It brings together models, providers, prices, capacity, and sometimes a single billing relationship. A developer chooses among available inference products while the marketplace handles the commercial and operational connection.
+
+The categories are starting to overlap. A marketplace needs routing and budget controls. A gateway can expose a catalogue of providers and models. The distinction still helps describe the buyer's problem: one product controls traffic that the company already owns, while the other helps the company find and buy inference capacity.
+
+I expect model gateways to become ordinary infrastructure for companies running several AI workloads. The models will change often. The routing and policy layer gives engineers somewhere stable to manage that change.
