@@ -1,19 +1,72 @@
-<!-- Systems Journal metadata and navigation enhancements -->
+<!-- Systems Journal metadata, structured data, and navigation enhancements -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/images/favicon.svg' | relative_url }}">
-<meta property="og:image" content="{{ '/assets/images/bio-photo-20260912.png' | absolute_url }}">
+{% assign page_description = page.description | default: site.description %}
+{% assign page_title = page.seo_title | default: page.title | default: site.title %}
+{% assign page_image = page.header.overlay_image | default: '/assets/images/bio-photo-20260912.png' %}
+<meta property="og:image" content="{{ page_image | absolute_url }}">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{
-  "@context":"https://schema.org",
-  "@type":"Person",
-  "name":"Yu Xi Chau",
-  "url":"https://yuxichau.com/about/",
-  "image":"https://yuxichau.com/assets/images/bio-photo-20260912.png",
-  "sameAs":["https://github.com/yuxichau","https://www.linkedin.com/in/yuxichau/"]
-}</script>
+{% if page.url contains '/tags/' %}<meta name="robots" content="noindex,follow">{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}/about/#person",
+      "name": "Yu Xi Chau",
+      "url": "{{ site.url }}/about/",
+      "image": "{{ '/assets/images/bio-photo-20260912.png' | absolute_url }}",
+      "sameAs": ["https://github.com/yuxichau", "https://www.linkedin.com/in/yuxichau/"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "publisher": {"@id": "{{ site.url }}/about/#person"}
+    },
+    {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}#webpage",
+      "url": "{{ page.url | absolute_url }}",
+      "name": {{ page_title | jsonify }},
+      "description": {{ page_description | jsonify }},
+      "isPartOf": {"@id": "{{ site.url }}/#website"},
+      "about": {"@id": "{{ site.url }}/about/#person"}
+    }{% if page.date and page.layout == 'single' and page.collection == 'posts' %},
+    {
+      "@type": "BlogPosting",
+      "@id": "{{ page.url | absolute_url }}#article",
+      "url": "{{ page.url | absolute_url }}",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page_description | jsonify }},
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+      "author": {"@id": "{{ site.url }}/about/#person"},
+      "publisher": {"@id": "{{ site.url }}/about/#person"},
+      "mainEntityOfPage": {"@id": "{{ page.url | absolute_url }}#webpage"}{% if page.tags and page.tags != empty %},
+      "articleSection": {{ page.tags | first | jsonify }}{% endif %}
+    }{% endif %}
+  ]
+}
+</script>
+{% if page.url != '/' and page.url != '' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"{{ site.url }}/"},
+    {"@type":"ListItem","position":2,"name":{{ page_title | jsonify }},"item":"{{ page.url | absolute_url }}"}
+  ]
+}
+</script>
+{% endif %}
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.querySelector('.greedy-nav__toggle');

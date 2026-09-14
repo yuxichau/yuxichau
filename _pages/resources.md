@@ -2,6 +2,7 @@
 layout: single
 title: Resources
 permalink: /resources/
+description: "A curated list of useful AI, computer engineering, and interactive technical resources."
 ---
 
 Good resources I've found and keep coming back to, for my own reference and for anyone who finds them useful.
