@@ -1,35 +1,51 @@
 ---
 layout: single
-title: Future AI writing ideas
-seo_title: Future AI writing ideas | Yu Xi Chau
+title: Ideas
+seo_title: Ideas | Topics | Yu Xi Chau
 permalink: /topics/future-ideas/
-description: A working backlog of practical AI questions for leaders, practitioners, and financial-services organisations.
+description: A working list of topics I may develop into writing, projects, and experiments.
 ---
 
-This is a working backlog, not a promise that every idea will become an article. Each question is deliberately specific enough to serve a reader who is making a real decision.
+This is a working list of things I want to think about, explain, or build. Some may become articles, some may become projects, and some may stay as questions until I find a useful way into them.
 
 ## AI systems
 
-- What should an AI system evaluation measure after the model benchmark?
-- When does a model gateway pay for itself?
-- How should teams budget for AI latency, tokens, and fallbacks?
-- What belongs in an agent harness before a workflow reaches production?
-- How can a small team monitor an AI system without building a full platform?
+- **Guardrail services:** What guardrails actually do in production, where they belong in a system, and how teams should evaluate them.
+- **From DeepSeek 4 to 4.1:** What changes between model releases, and which improvements matter in real work rather than benchmark tables.
+- **SDK everything:** The case for an agent-first approach to enterprise architecture, where software is increasingly exposed through tools and SDKs rather than only human-facing screens.
+- **PII scrubbing:** A practical review of approaches to detecting and removing personal data before it reaches a model or leaves an organisation.
+- **Voicebots and low-latency systems:** The engineering trade-offs behind conversations that feel immediate, including streaming, interruption, turn-taking, and cost.
+- **LLMs versus specialised machine learning:** Where language models are replacing conventional task-specific models, and where a smaller specialist model still makes more sense.
+- **Small language models in organisations:** How SLMs can support privacy, cost control, latency, and local workflows without becoming an excuse to ignore capability requirements.
 
 ## AI governance
 
-- What should an AI governance review ask before a pilot becomes a product?
-- How can risk teams review agentic workflows without slowing delivery to a halt?
-- Which AI controls need a named owner after launch?
-- What evidence should a regulated organisation retain for a changing model?
-- How do you distinguish useful human oversight from approval theatre?
+I want to develop a series called **AI governance for...**, with each piece written for a different group that has to make AI safe and useful.
+
+- **AI governance for developers:** What governance means in practice, why risk is often misunderstood, and how engineers can build controls into the system.
+- **AI governance for second lines:** How risk, compliance, and technical teams can work together without turning governance into a paperwork exercise.
+- **Policy as code:** Which organisational rules can be expressed as tests, permissions, gates, or automated checks, and which still require judgement.
+- **Local models in AI governance:** What changes when a model runs inside the organisation, and what new risks remain even when data does not leave the network.
+- **Automating AI governance:** Where evidence collection, control testing, and monitoring can be automated, and where a human decision still matters.
+- **Agentic governance:** How governance needs to change when systems can plan, use tools, and take actions over time.
 
 ## AI application in organisations and financial services
 
-- Which financial-services workflows are good candidates for retrieval-augmented generation?
-- How should an organisation choose between automation, assistance, and search?
-- What does a safe first AI workflow look like for a non-technical business team?
-- How should leaders measure whether an AI application improves a process?
-- What changes when a vendor's AI feature becomes part of a regulated workflow?
+- **A modern office worker's AI workflow:** A non-work-specific account of how a person might use AI across research, writing, meetings, administration, and follow-up.
+- **AI coding transformation:** How an organisation can help developers use agents well, while preserving review, security, and ownership of the code.
+- **PM coding transformation:** What happens when product managers can use agents to explore ideas, inspect data, and build working prototypes themselves.
+- **Measuring success:** How to tell whether AI has improved an organisation, rather than merely increased activity or reduced a visible unit cost.
+- **Choosing enterprise AI tools:** A practical framework for comparing models, agents, platforms, data controls, integration effort, and the cost of changing direction later.
 
-[Return to the AI systems hub →](/topics/ai-systems/) · [AI governance →](/topics/ai-governance/) · [AI application →](/topics/ai-application/)
+## Projects
+
+These are playful projects, but they also test skills that transfer to more serious settings. Building them is a way to explore how AI changes research, software, analysis, and explanation.
+
+- **Elo everything:** Expand the Elo project beyond sumo to curling, Go, football teams, and other domains where rankings can reveal something about competition.
+- **A slide-rule book for education:** Write an accessible book that uses slide rules to teach estimation, logarithms, scale, and the feel of mathematical relationships.
+- **Translate the Hong Kong Tycoon page:** Make the project accessible to a wider audience while preserving the local history and context behind it.
+- **A Qin logistics game:** Build a game set before Qin's second war against Chu, in which the player manages logistics for the Qin army and encounters the ranking system, mobilisation process, and bureaucratic machinery that made the campaign possible.
+
+[Browse the AI systems hub →](/topics/ai-systems/) · [AI governance →](/topics/ai-governance/) · [AI application →](/topics/ai-application/)
+
+Views expressed here are personal and do not represent FWD Insurance or any other employer.
