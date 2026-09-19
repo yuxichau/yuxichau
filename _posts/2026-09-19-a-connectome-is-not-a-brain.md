@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "A Connectome Is Not a Brain"
-date: 2026-09-19 11:30:00 -0000
+date: 2026-09-19 09:00:00 -0000
 tags: [AI, Technology]
 author: Yu Xi Chau
 ---
