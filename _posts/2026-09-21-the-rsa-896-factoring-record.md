@@ -2,6 +2,7 @@
 layout: single
 title: "The RSA-896 factoring record is impressive, but the panic is misplaced"
 date: 2026-09-21 05:00:00 -0000
+permalink: /posts/rsa-896-factoring-record/
 tags: [AI, Technology]
 author: Yu Xi Chau
 ---
