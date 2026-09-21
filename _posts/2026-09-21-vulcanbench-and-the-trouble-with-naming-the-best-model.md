@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "VulcanBench and the trouble with naming the best model"
-date: 2026-09-21 12:30:00 -0000
+date: 2026-09-21 05:30:00 -0000
 tags: [AI, Technology]
 author: Yu Xi Chau
 ---
