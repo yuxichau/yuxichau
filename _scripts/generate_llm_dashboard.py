@@ -2,10 +2,10 @@
 """Generate the LLM Intelligence vs Cost dashboard page for yuxichau.com.
 
 Reads the Artificial Analysis free-tier API snapshots (saved in this repo under
-_scripts/data/snapshots/aa_p*.json), takes the top 50 models by Intelligence
+_scripts/data/snapshots/aa_p*.json), takes the top 200 models by Intelligence
 Index (v4.3), and writes:
   - _pages/llm-model-analysis.html   (the dashboard page, embedded data)
-  - _scripts/data/aa_top50_raw.json  (top-50 raw snapshot for audit)
+  - _scripts/data/aa_top200_raw.json  (top-200 raw snapshot for audit)
 
 All inputs are repo-relative, so the pipeline runs from any checkout:
   generate:    python3 _scripts/generate_llm_dashboard.py
@@ -21,9 +21,10 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO = SCRIPT_DIR.parent
-SNAPS = [SCRIPT_DIR / "data" / "snapshots" / f"aa_p{i}.json" for i in range(1, 5)]
+SNAPS = [SCRIPT_DIR / "data" / "snapshots" / f"aa_p{i}.json" for i in range(1, 3)]
 PAGE = REPO / "_pages/llm-model-analysis.html"
-RAW = SCRIPT_DIR / "data" / "aa_top50_raw.json"
+TOP_N = 200
+RAW = SCRIPT_DIR / "data" / "aa_top200_raw.json"
 CHARTJS = SCRIPT_DIR / "vendor" / "chart.umd.js"  # v4.4.1, inlined for self-containment
 PULLED_MARKER = SCRIPT_DIR / "data" / "snapshots" / "pulled_at.txt"
 
@@ -127,7 +128,7 @@ def main():
     def ii(m):
         return (m.get("evaluations") or {}).get("artificial_analysis_intelligence_index")
     with_ii = [m for m in models if ii(m) is not None]
-    top = sorted(with_ii, key=lambda m: -ii(m))[:50]
+    top = sorted(with_ii, key=lambda m: -ii(m))[:TOP_N]
 
     rows = []
     for rank, m in enumerate(top, 1):
@@ -159,7 +160,7 @@ def main():
     with open(RAW, "w") as f:
         json.dump({"pulled_at": datetime.now(timezone.utc).isoformat(),
                    "intelligence_index_version": "4.3",
-                   "top_50": [m for m in top]}, f, indent=1)
+                   "top_200": [m for m in top]}, f, indent=1)
 
     data_json = json.dumps(rows)
     pulled = pulled_date()
@@ -253,7 +254,7 @@ permalink: /projects/llm-model-analysis/
 
 <div class="dash-header">
   <h2>LLM Intelligence vs Cost</h2>
-  <p class="dash-sub">Top 50 models by Artificial Analysis Intelligence Index (v4.3), plotted against the cost to complete one intelligence-index task. Data pulled __PULLED__ from <a href="https://artificialanalysis.ai" target="_blank" rel="noopener">artificialanalysis.ai</a>. This is a snapshot, not a live benchmark.</p>
+  <p class="dash-sub">Top 200 models by Artificial Analysis Intelligence Index (v4.3), plotted against the cost to complete one intelligence-index task. Data pulled __PULLED__ from <a href="https://artificialanalysis.ai" target="_blank" rel="noopener">artificialanalysis.ai</a>. This is a snapshot, not a live benchmark.</p>
 </div>
 
 <div class="kpis" id="kpis"></div>

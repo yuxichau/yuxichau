@@ -17,7 +17,7 @@ echo "==> Regenerating dashboard page"
 python3 _scripts/generate_llm_dashboard.py
 
 git add _pages/llm-model-analysis.html \
-        _scripts/data/aa_top50_raw.json \
+        _scripts/data/aa_top200_raw.json \
         _scripts/data/snapshots/aa_p*.json \
         _scripts/data/snapshots/pulled_at.txt
 

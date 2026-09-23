@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Fetch the Artificial Analysis free-tier snapshot into _scripts/data/snapshots/.
 
-Calls the free language-models endpoint (200 models/page) and saves the raw
-pages as aa_p1..pN.json plus pulled_at.txt (fetch timestamp marker). The
-generator (_scripts/generate_llm_dashboard.py) reads these files, so the whole
-pipeline is offline-reproducible once the snapshots are in the repo.
+Calls the free language-models endpoint (200 models/page) and saves the first
+2 pages as aa_p1.json and aa_p2.json plus pulled_at.txt (fetch timestamp
+marker). Two pages safely cover the top 200 scored models, so a refresh uses 2
+API requests rather than downloading every page. The generator reads the
+snapshots offline.
 
 API:  base  https://artificialanalysis.ai/api/v2
       auth  x-api-key header (NOT Authorization: Bearer)
@@ -26,7 +27,7 @@ SNAP_DIR = SCRIPT_DIR / "data" / "snapshots"
 BASE = "https://artificialanalysis.ai/api/v2/language/models/free"
 TIER = "free"
 VERSION = "4.3"
-MAX_PAGES = 8  # safety cap; pagination drives the real loop
+MAX_PAGES = 2  # two 200-model pages safely cover the top 200 scored models
 
 
 def main() -> int:
