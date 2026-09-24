@@ -14,7 +14,7 @@ I am less convinced by the stronger claim. Jev does not appear to use an autoreg
 I started with tests that should not require much interpretation. A fair six-sided die gives each face a probability of 16.67 percent. A fair coin gives heads and tails 50 percent each. I asked Jev for its probabilities repeatedly, rather than asking software to sample the die or coin. It assigned a mean probability of **90.01 percent to face 1** and **93.23 percent to heads**.
 
 <figure>
-  <img src="/assets/images/20260923-jev-chance-comparison.svg" alt="Bar chart showing Jev assigning 90.01 percent to face 1 of a die and 93.23 percent to heads of a coin, far above their fair references." />
+  <img src="/assets/images/20260923-jev-chance-comparison-v2.svg" alt="Bar chart showing Jev assigning 90.01 percent to face 1 of a die and 93.23 percent to heads of a coin, far above their fair references." />
   <figcaption>Jev's reported probabilities from 100 calls. The dashed lines show the fair references.</figcaption>
 </figure>
 
@@ -25,7 +25,7 @@ This also compares badly with the autoregressive models discussed in the literat
 The social tests were more surprising. I used 100 strong software-engineering resumes, ten named cultural-group conditions, a no-name control, and three draws per condition, for 3,300 requests. Jev chose "hire" every time. The probabilities for named conditions stayed between 93.19 and 94.85 percent. Removing the name dropped the mean to 73.79 percent. That is a large anonymity effect, but the named-group differences themselves were small.
 
 <figure>
-  <img src="/assets/images/20260923-jev-hiring-comparison.svg" alt="Bar chart showing similar high hiring probabilities for named conditions and a much lower probability when the name is omitted." />
+  <img src="/assets/images/20260923-jev-hiring-comparison-v2.svg" alt="Bar chart showing similar high hiring probabilities for named conditions and a much lower probability when the name is omitted." />
   <figcaption>The no-name condition changed the probability much more than the named-group conditions did.</figcaption>
 </figure>
 
