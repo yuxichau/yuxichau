@@ -1,0 +1,45 @@
+---
+layout: single
+title: "Measuring Bias in Jev"
+permalink: /projects/measuring-bias-in-jev/
+classes: wide
+author_profile: false
+description: "An interactive audit of Jev, the Type Safe model, from fair chance to hiring, political trust, and moral judgments."
+---
+
+<div class="jev-project-intro">
+  <p class="page__meta">AI systems · Measurement · Interactive research note</p>
+  <h1>Measuring Bias in Jev</h1>
+  <p>An interactive audit of the Type Safe Jev model, testing what changes when the model makes a probabilistic, hiring, political, or moral judgment.</p>
+  <p><a href="/assets/projects/measuring-bias-in-jev/index.html" target="_blank" rel="noopener">Open the report in a new tab ↗</a></p>
+</div>
+
+<iframe id="jev-report" src="/assets/projects/measuring-bias-in-jev/index.html" title="Measuring Bias in Jev interactive report" style="display:block;width:100%;min-height:1200px;border:1px solid #d5dbd3;background:#f5f4ef"></iframe>
+
+<script>
+(() => {
+  const frame = document.getElementById('jev-report');
+  const resize = () => {
+    try {
+      const doc = frame.contentDocument;
+      frame.style.height = `${Math.max(1200, doc.documentElement.scrollHeight)}px`;
+    } catch (_) {
+      /* Keep the accessible minimum height if the artifact is unavailable. */
+    }
+  };
+  frame.addEventListener('load', () => {
+    resize();
+    try {
+      new ResizeObserver(resize).observe(frame.contentDocument.documentElement);
+    } catch (_) {}
+  });
+  window.addEventListener('resize', resize);
+})();
+</script>
+
+<style>
+.jev-project-intro { max-width: 780px; margin: 0 auto 2rem; }
+.jev-project-intro h1 { margin-top: .35rem; }
+.jev-project-intro p { font-size: 1.05rem; }
+#jev-report { margin-inline: auto; }
+</style>

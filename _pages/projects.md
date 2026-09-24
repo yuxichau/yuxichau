@@ -80,4 +80,12 @@ An interactive ring demo of a mass-transport model I studied in my academic days
 
 ---
 
+## Measuring Bias in Jev
+
+An interactive audit of the Type Safe Jev model, testing departures from known chance, matched hiring comparisons, sponsor-label judgments, and moral evaluations. The report keeps the reference visible and states where the evidence stops.
+
+[Read the Measuring Bias in Jev report →](/projects/measuring-bias-in-jev/)
+
+---
+
 *More projects coming. I'm also working on a private essay-summarisation pipeline and a church worship site, and will document them here as they stabilise.*
