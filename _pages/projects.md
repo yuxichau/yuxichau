@@ -32,6 +32,12 @@ An interactive comparison of leading language models, plotting intelligence agai
 
 [Open the LLM Model Analysis dashboard →](/projects/llm-model-analysis/)
 
+### OpenCode Go Frontier Analysis
+
+A model frontier for OpenCode Go, translating Artificial Analysis cost-per-task figures into an estimated percentage of each model's monthly Go allowance, using OpenCode's published token prices and observed request patterns.
+
+[Open the OpenCode Go Frontier Analysis →](/projects/opencode-go-frontier-analysis/)
+
 ---
 
 ### Hong Kong Rental Index Explorer
