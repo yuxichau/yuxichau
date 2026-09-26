@@ -1,5 +1,5 @@
 {
-  "pulled_at": "2026-09-26T08:13:06.168563+00:00",
+  "pulled_at": "2026-09-26T08:37:23.818266+00:00",
   "aa_index_version": "4.3",
   "rows": [
     {
@@ -55,6 +55,24 @@
       "go_quota": 60,
       "go_proxy_cost": 0.0078142,
       "usage_pct": 0.013024
+    },
+    {
+      "model": "GPT 5.6 Luna",
+      "aa_name": "GPT-5.6 Luna (max)",
+      "creator": "OpenAI",
+      "ii": 37.3,
+      "aa_task_cost": 0.1783,
+      "aa_input_price": 0.2,
+      "aa_output_price": 1.2,
+      "go_input_tokens": 1000,
+      "go_cached_tokens": 50000,
+      "go_output_tokens": 220,
+      "go_input_price": 0.2,
+      "go_cached_price": 0.02,
+      "go_output_price": 1.2,
+      "go_quota": 15,
+      "go_proxy_cost": 0.00058007,
+      "usage_pct": 0.003867
     },
     {
       "model": "Kimi K3",
@@ -217,6 +235,42 @@
       "go_quota": 60,
       "go_proxy_cost": 0.00019165,
       "usage_pct": 0.000319
+    },
+    {
+      "model": "MiniMax M3",
+      "aa_name": "MiniMax-M3",
+      "creator": "MiniMax",
+      "ii": 29.2,
+      "aa_task_cost": 0.5076,
+      "aa_input_price": 0.3,
+      "aa_output_price": 1.2,
+      "go_input_tokens": 510,
+      "go_cached_tokens": 56000,
+      "go_output_tokens": 190,
+      "go_input_price": 0.3,
+      "go_cached_price": 0.06,
+      "go_output_price": 1.2,
+      "go_quota": 60,
+      "go_proxy_cost": 0.00361701,
+      "usage_pct": 0.006028
+    },
+    {
+      "model": "MiniMax M2.7",
+      "aa_name": "MiniMax-M2.7",
+      "creator": "MiniMax",
+      "ii": 22.8,
+      "aa_task_cost": 0.1017,
+      "aa_input_price": 0.3,
+      "aa_output_price": 1.2,
+      "go_input_tokens": 300,
+      "go_cached_tokens": 55000,
+      "go_output_tokens": 125,
+      "go_input_price": 0.3,
+      "go_cached_price": 0.06,
+      "go_output_price": 1.2,
+      "go_quota": 60,
+      "go_proxy_cost": 0.00068575,
+      "usage_pct": 0.001143
     },
     {
       "model": "Hy3",

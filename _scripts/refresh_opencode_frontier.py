@@ -8,20 +8,20 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "_scripts/data/opencode_go_frontier.json"
 IDS = {
     "Grok 4.5":"794f69b5-cede-482b-b1cc-d769478497cd", "GLM-5.2":"f7a4ea75-e548-4069-80d4-9be8bc7c009b",
-    "GLM-5.1":"5aa1c578-af76-4b91-8699-cdd43582b3af", "Kimi K3":"f7d2fc3e-1f7b-405f-818c-07952a4af78f",
+    "GLM-5.1":"5aa1c578-af76-4b91-8699-cdd43582b3af", "GPT 5.6 Luna":"426d24c8-49ae-482a-b4a8-20f1c53f21c1", "Kimi K3":"f7d2fc3e-1f7b-405f-818c-07952a4af78f",
     "Kimi K2.7 Code":"8d0cb231-7303-452c-9923-a9620b948475", "Kimi K2.6":"0de67206-4d36-4d10-b8f6-cf37fa747a03",
     "MiMo-V2.5-Pro":"00f1248e-78e3-4230-8dc8-5e13ba8645e2", "Qwen3.8 Max":"b112af07-3bd5-4647-b09f-b23204361bb2",
     "Qwen3.7 Max":"69534bed-2ffd-4235-832b-e20a810333ab", "Qwen3.7 Plus":"a87fce42-eea3-4e45-a96d-fe057814f371",
-    "DeepSeek V4 Pro":"83173329-c09a-41f1-a028-a282a5f908d7", "DeepSeek V4 Flash":"dbe7c625-3100-4463-b479-a228c41f75dd",
+    "DeepSeek V4 Pro":"83173329-c09a-41f1-a028-a282a5f908d7", "DeepSeek V4 Flash":"dbe7c625-3100-4463-b479-a228c41f75dd", "MiniMax M3":"277f939a-985b-4b37-859d-b3eabc7c0b26", "MiniMax M2.7":"4bbceacb-cf47-464b-b60f-e1d1fe016d67",
     "Hy3":"b23e6c69-96e5-44c9-8f58-4b42e0c399d5",
 }
 # OpenCode's published observed request pattern and Go price table.
 GO = {
-"Grok 4.5":(1100,71500,220,2,6,.30,15), "GLM-5.2":(700,52000,150,1.4,4.4,.26,60), "GLM-5.1":(700,52000,150,1.4,4.4,.26,60),
+"Grok 4.5":(1100,71500,220,2,6,.30,15), "GLM-5.2":(700,52000,150,1.4,4.4,.26,60), "GLM-5.1":(700,52000,150,1.4,4.4,.26,60), "GPT 5.6 Luna":(1000,50000,220,.20,1.20,.02,15),
 "Kimi K3":(1050,76500,300,3,15,.30,15), "Kimi K2.7 Code":(870,55000,200,.95,4,.19,60), "Kimi K2.6":(870,55000,200,.95,4,.16,60),
 "MiMo-V2.5-Pro":(790,86000,305,.435,.87,.003625,15), "Qwen3.8 Max":(420,66000,200,2,6,.25,15),
 "Qwen3.7 Max":(420,66000,200,2.5,7.5,.50,60), "Qwen3.7 Plus":(500,57000,190,.4,1.6,.04,60),
-"DeepSeek V4 Pro":(750,82000,290,.435,.87,.003625,15), "DeepSeek V4 Flash":(790,68000,280,.14,.28,.0028,60),
+"DeepSeek V4 Pro":(750,82000,290,.435,.87,.003625,15), "DeepSeek V4 Flash":(790,68000,280,.14,.28,.0028,60), "MiniMax M3":(510,56000,190,.30,1.20,.06,60), "MiniMax M2.7":(300,55000,125,.30,1.20,.06,60),
 "Hy3":(830,71500,295,.14,.58,.035,60),
 }
 def fetch():
