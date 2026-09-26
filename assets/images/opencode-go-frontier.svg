@@ -34,13 +34,11 @@
 <line x1="100" y1="600" x2="1155" y2="600" stroke="#202d2b"/><line x1="100" y1="70" x2="100" y2="600" stroke="#202d2b"/>
 <text x="627.5" y="676" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" fill="#202d2b">Estimated share of model-specific monthly Go allowance consumed by one task (log scale)</text>
 <text x="22" y="335.0" transform="rotate(-90 22 335.0)" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="14" fill="#202d2b">Artificial Analysis Intelligence Index</text>
-<polyline points="136.27,230.89 487.37,187.36 934.15,153.29 982.76,130.57 1110.75,119.21" fill="none" stroke="#235a47" stroke-width="3" stroke-linejoin="round"/>
-<circle cx="909.22" cy="244.14" r="5" fill="#356fa8" stroke="#fffefa" stroke-width="2"><title>Grok 4.5: II 38.8, 0.0575%</title></circle>
+<polyline points="74.06,329.32 408.52,297.14 507.53,272.54 909.22,244.14 934.15,153.29 1110.75,119.21" fill="none" stroke="#235a47" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="909.22" cy="244.14" r="6" fill="#235a47" stroke="#fffefa" stroke-width="2"><title>Grok 4.5: II 38.8, 0.0575%</title></circle>
 <circle cx="667.60" cy="340.68" r="5" fill="#356fa8" stroke="#fffefa" stroke-width="2"><title>GLM-5.2: II 33.7, 0.0113%</title></circle>
 <circle cx="688.22" cy="484.54" r="5" fill="#356fa8" stroke="#fffefa" stroke-width="2"><title>GLM-5.1: II 26.1, 0.0130%</title></circle>
-<circle cx="982.76" cy="130.57" r="6" fill="#235a47" stroke="#fffefa" stroke-width="2"><title>GLM-5.3: II 44.8, 0.0943%</title></circle>
-<circle cx="487.37" cy="187.36" r="6" fill="#235a47" stroke="#fffefa" stroke-width="2"><title>GLM-5.3-Flash: II 41.8, 0.0034%</title></circle>
-<circle cx="507.53" cy="272.54" r="5" fill="#356fa8" stroke="#fffefa" stroke-width="2"><title>GPT 5.6 Luna: II 37.3, 0.0039%</title></circle>
+<circle cx="507.53" cy="272.54" r="6" fill="#235a47" stroke="#fffefa" stroke-width="2"><title>GPT 5.6 Luna: II 37.3, 0.0039%</title></circle>
 <circle cx="934.15" cy="153.29" r="6" fill="#235a47" stroke="#fffefa" stroke-width="2"><title>Kimi K3: II 43.6, 0.0680%</title></circle>
 <circle cx="581.59" cy="490.21" r="5" fill="#356fa8" stroke="#fffefa" stroke-width="2"><title>Kimi K2.7 Code: II 25.8, 0.0064%</title></circle>
 <circle cx="617.84" cy="467.50" r="5" fill="#356fa8" stroke="#fffefa" stroke-width="2"><title>Kimi K2.6: II 27.0, 0.0081%</title></circle>
@@ -48,8 +46,8 @@
 <circle cx="1110.75" cy="119.21" r="6" fill="#235a47" stroke="#fffefa" stroke-width="2"><title>Qwen3.8 Max: II 45.4, 0.2228%</title></circle>
 <circle cx="737.41" cy="420.18" r="5" fill="#356fa8" stroke="#fffefa" stroke-width="2"><title>Qwen3.7 Max: II 29.5, 0.0181%</title></circle>
 <circle cx="406.19" cy="501.57" r="5" fill="#356fa8" stroke="#fffefa" stroke-width="2"><title>Qwen3.7 Plus: II 25.2, 0.0020%</title></circle>
-<circle cx="408.52" cy="297.14" r="5" fill="#356fa8" stroke="#fffefa" stroke-width="2"><title>DeepSeek V4 Pro: II 36.0, 0.0020%</title></circle>
-<circle cx="136.27" cy="230.89" r="6" fill="#235a47" stroke="#fffefa" stroke-width="2"><title>DeepSeek V4 Flash: II 39.5, 0.0003%</title></circle>
+<circle cx="408.52" cy="297.14" r="6" fill="#235a47" stroke="#fffefa" stroke-width="2"><title>DeepSeek V4 Pro: II 36.0, 0.0020%</title></circle>
+<circle cx="74.06" cy="329.32" r="6" fill="#235a47" stroke="#fffefa" stroke-width="2"><title>DeepSeek V4 Flash: II 34.3, 0.0002%</title></circle>
 <circle cx="573.59" cy="425.86" r="5" fill="#356fa8" stroke="#fffefa" stroke-width="2"><title>MiniMax M3: II 29.2, 0.0060%</title></circle>
 <circle cx="326.17" cy="547.00" r="5" fill="#356fa8" stroke="#fffefa" stroke-width="2"><title>MiniMax M2.7: II 22.8, 0.0011%</title></circle>
 <circle cx="354.42" cy="499.68" r="5" fill="#356fa8" stroke="#fffefa" stroke-width="2"><title>Hy3: II 25.3, 0.0014%</title></circle>

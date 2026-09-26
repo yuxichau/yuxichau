@@ -18,10 +18,11 @@ The current frontier is:
 
 | Model | Intelligence Index | Estimated Go allowance used by one task |
 | --- | ---: | ---: |
-| DeepSeek V4 Flash | 39.5 | 0.0003% |
-| GLM-5.3-Flash | 41.8 | 0.0034% |
+| DeepSeek V4 Flash | 34.3 | 0.0002% |
+| DeepSeek V4 Pro | 36.0 | 0.0020% |
+| GPT 5.6 Luna | 37.3 | 0.0039% |
+| Grok 4.5 | 38.8 | 0.0575% |
 | Kimi K3 | 43.6 | 0.0680% |
-| GLM-5.3 | 44.8 | 0.0943% |
 | Qwen3.8 Max | 45.4 | 0.2228% |
 
 These figures should not be quoted as a permanent ranking. OpenCode can change its model list, prices, allowances, and request assumptions, while Artificial Analysis can change its evaluations. I will update the graph manually, so treat it as a reference for thinking about the plan, not as a live billing calculator.
