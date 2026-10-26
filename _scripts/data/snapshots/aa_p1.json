@@ -36,10 +36,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 52.23,
-    "median_time_to_first_token_seconds": 3.02,
-    "median_time_to_first_answer_token_seconds": 3.02,
-    "median_end_to_end_response_time_seconds": 12.6
+    "median_output_tokens_per_second": 68.61,
+    "median_time_to_first_token_seconds": 3.34,
+    "median_time_to_first_answer_token_seconds": 3.34,
+    "median_end_to_end_response_time_seconds": 10.62
    }
   },
   {
@@ -58,7 +58,7 @@
     "artificial_analysis_finance_and_accounting_index": 38.5,
     "artificial_analysis_strategy_and_ops_index": 37.4,
     "artificial_analysis_legal_index": 44.3,
-    "artificial_analysis_healthcare_and_medical_index": 34.4,
+    "artificial_analysis_healthcare_and_medical_index": 33.2,
     "artificial_analysis_engineering_index": 34.7,
     "artificial_analysis_economics_index": 45.6
    },
@@ -75,10 +75,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 231.21,
-    "median_time_to_first_token_seconds": 16.57,
-    "median_time_to_first_answer_token_seconds": 16.57,
-    "median_end_to_end_response_time_seconds": 18.74
+    "median_output_tokens_per_second": 194.46,
+    "median_time_to_first_token_seconds": 14,
+    "median_time_to_first_answer_token_seconds": 14,
+    "median_end_to_end_response_time_seconds": 16.57
    }
   },
   {
@@ -97,27 +97,27 @@
     "artificial_analysis_finance_and_accounting_index": 27,
     "artificial_analysis_strategy_and_ops_index": 20.2,
     "artificial_analysis_legal_index": 29.6,
-    "artificial_analysis_healthcare_and_medical_index": 25.5,
+    "artificial_analysis_healthcare_and_medical_index": 24.9,
     "artificial_analysis_engineering_index": 28.6,
     "artificial_analysis_economics_index": 40.5
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 138.26,
+    "total_cost": 231.08,
     "cost_per_task": {
-     "total_cost": 0.0541
+     "total_cost": 0.1397
     }
    },
    "pricing": {
-    "price_1m_input_tokens": 0.435,
-    "price_1m_output_tokens": 0.87,
-    "price_1m_cache_hit_tokens": 0.0036,
+    "price_1m_input_tokens": 0.4125,
+    "price_1m_output_tokens": 1.02,
+    "price_1m_cache_hit_tokens": 0.0118,
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 39.95,
-    "median_time_to_first_token_seconds": 2.25,
-    "median_time_to_first_answer_token_seconds": 52.32,
-    "median_end_to_end_response_time_seconds": 64.83
+    "median_output_tokens_per_second": 51.71,
+    "median_time_to_first_token_seconds": 1.19,
+    "median_time_to_first_answer_token_seconds": 39.86,
+    "median_end_to_end_response_time_seconds": 49.53
    }
   },
   {
@@ -170,7 +170,7 @@
     "artificial_analysis_finance_and_accounting_index": 37.8,
     "artificial_analysis_strategy_and_ops_index": 41.5,
     "artificial_analysis_legal_index": 42.2,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 37.8,
     "artificial_analysis_engineering_index": 34.9,
     "artificial_analysis_economics_index": 44.1
    },
@@ -187,10 +187,10 @@
     "price_1m_cache_write_tokens": 2.5
    },
    "performance": {
-    "median_output_tokens_per_second": 106.25,
-    "median_time_to_first_token_seconds": 1.54,
-    "median_time_to_first_answer_token_seconds": 1.54,
-    "median_end_to_end_response_time_seconds": 6.25
+    "median_output_tokens_per_second": 106.91,
+    "median_time_to_first_token_seconds": 1.44,
+    "median_time_to_first_answer_token_seconds": 1.44,
+    "median_end_to_end_response_time_seconds": 6.12
    }
   },
   {
@@ -226,10 +226,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 486.97,
-    "median_time_to_first_token_seconds": 10.16,
-    "median_time_to_first_answer_token_seconds": 10.16,
-    "median_end_to_end_response_time_seconds": 11.18
+    "median_output_tokens_per_second": 469.86,
+    "median_time_to_first_token_seconds": 5.62,
+    "median_time_to_first_answer_token_seconds": 5.62,
+    "median_end_to_end_response_time_seconds": 6.68
    }
   },
   {
@@ -260,10 +260,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 88.62,
-    "median_time_to_first_token_seconds": 2.13,
-    "median_time_to_first_answer_token_seconds": 2.13,
-    "median_end_to_end_response_time_seconds": 7.77
+    "median_output_tokens_per_second": 119.69,
+    "median_time_to_first_token_seconds": 2.06,
+    "median_time_to_first_answer_token_seconds": 2.06,
+    "median_end_to_end_response_time_seconds": 6.24
    }
   },
   {
@@ -328,10 +328,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 127.23,
-    "median_time_to_first_token_seconds": 76.86,
-    "median_time_to_first_answer_token_seconds": 76.86,
-    "median_end_to_end_response_time_seconds": 80.79
+    "median_output_tokens_per_second": 92.4,
+    "median_time_to_first_token_seconds": 128.41,
+    "median_time_to_first_answer_token_seconds": 128.41,
+    "median_end_to_end_response_time_seconds": 133.83
    }
   },
   {
@@ -362,10 +362,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 142.88,
-    "median_time_to_first_token_seconds": 2.32,
-    "median_time_to_first_answer_token_seconds": 2.32,
-    "median_end_to_end_response_time_seconds": 5.82
+    "median_output_tokens_per_second": 143.56,
+    "median_time_to_first_token_seconds": 2.3,
+    "median_time_to_first_answer_token_seconds": 2.3,
+    "median_end_to_end_response_time_seconds": 5.78
    }
   },
   {
@@ -396,10 +396,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 121.03,
-    "median_time_to_first_token_seconds": 2.22,
-    "median_time_to_first_answer_token_seconds": 2.22,
-    "median_end_to_end_response_time_seconds": 6.35
+    "median_output_tokens_per_second": 119.35,
+    "median_time_to_first_token_seconds": 2.23,
+    "median_time_to_first_answer_token_seconds": 2.23,
+    "median_end_to_end_response_time_seconds": 6.42
    }
   },
   {
@@ -430,10 +430,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 201.55,
-    "median_time_to_first_token_seconds": 0.82,
-    "median_time_to_first_answer_token_seconds": 0.82,
-    "median_end_to_end_response_time_seconds": 3.3
+    "median_output_tokens_per_second": 191.64,
+    "median_time_to_first_token_seconds": 0.84,
+    "median_time_to_first_answer_token_seconds": 0.84,
+    "median_end_to_end_response_time_seconds": 3.45
    }
   },
   {
@@ -554,7 +554,7 @@
     "artificial_analysis_finance_and_accounting_index": 41.4,
     "artificial_analysis_strategy_and_ops_index": 45.2,
     "artificial_analysis_legal_index": 43.7,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 40,
     "artificial_analysis_engineering_index": 42.4,
     "artificial_analysis_economics_index": 47.2
    },
@@ -571,10 +571,10 @@
     "price_1m_cache_write_tokens": 2.5
    },
    "performance": {
-    "median_output_tokens_per_second": 111.78,
-    "median_time_to_first_token_seconds": 1.11,
-    "median_time_to_first_answer_token_seconds": 1.11,
-    "median_end_to_end_response_time_seconds": 5.59
+    "median_output_tokens_per_second": 103.18,
+    "median_time_to_first_token_seconds": 1.23,
+    "median_time_to_first_answer_token_seconds": 1.23,
+    "median_end_to_end_response_time_seconds": 6.08
    }
   },
   {
@@ -741,10 +741,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 117.25,
-    "median_time_to_first_token_seconds": 13.08,
-    "median_time_to_first_answer_token_seconds": 13.08,
-    "median_end_to_end_response_time_seconds": 17.34
+    "median_output_tokens_per_second": 126.54,
+    "median_time_to_first_token_seconds": 7.25,
+    "median_time_to_first_answer_token_seconds": 7.25,
+    "median_end_to_end_response_time_seconds": 11.2
    }
   },
   {
@@ -763,7 +763,7 @@
     "artificial_analysis_finance_and_accounting_index": 44.3,
     "artificial_analysis_strategy_and_ops_index": 42.8,
     "artificial_analysis_legal_index": 46.8,
-    "artificial_analysis_healthcare_and_medical_index": 43.8,
+    "artificial_analysis_healthcare_and_medical_index": 40.2,
     "artificial_analysis_engineering_index": 41.6,
     "artificial_analysis_economics_index": 52.9
    },
@@ -780,10 +780,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 391.91,
-    "median_time_to_first_token_seconds": 12.53,
-    "median_time_to_first_answer_token_seconds": 17.64,
-    "median_end_to_end_response_time_seconds": 18.91
+    "median_output_tokens_per_second": 270.65,
+    "median_time_to_first_token_seconds": 11.9,
+    "median_time_to_first_answer_token_seconds": 19.29,
+    "median_end_to_end_response_time_seconds": 21.14
    }
   },
   {
@@ -802,7 +802,7 @@
     "artificial_analysis_finance_and_accounting_index": 23,
     "artificial_analysis_strategy_and_ops_index": 21.7,
     "artificial_analysis_legal_index": 24,
-    "artificial_analysis_healthcare_and_medical_index": 19.9,
+    "artificial_analysis_healthcare_and_medical_index": 21.3,
     "artificial_analysis_engineering_index": 22.7,
     "artificial_analysis_economics_index": 27.9
    },
@@ -819,10 +819,10 @@
     "price_1m_cache_write_tokens": 0.25
    },
    "performance": {
-    "median_output_tokens_per_second": 131.69,
-    "median_time_to_first_token_seconds": 1.28,
-    "median_time_to_first_answer_token_seconds": 1.28,
-    "median_end_to_end_response_time_seconds": 5.08
+    "median_output_tokens_per_second": 114.88,
+    "median_time_to_first_token_seconds": 1.58,
+    "median_time_to_first_answer_token_seconds": 1.58,
+    "median_end_to_end_response_time_seconds": 5.93
    }
   },
   {
@@ -841,7 +841,7 @@
     "artificial_analysis_finance_and_accounting_index": 48.7,
     "artificial_analysis_strategy_and_ops_index": 51.2,
     "artificial_analysis_legal_index": 53.5,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 43.8,
     "artificial_analysis_engineering_index": 48.7,
     "artificial_analysis_economics_index": 55.1
    },
@@ -858,10 +858,10 @@
     "price_1m_cache_write_tokens": 12.5
    },
    "performance": {
-    "median_output_tokens_per_second": 59.89,
-    "median_time_to_first_token_seconds": 2.03,
-    "median_time_to_first_answer_token_seconds": 2.03,
-    "median_end_to_end_response_time_seconds": 10.38
+    "median_output_tokens_per_second": 55.56,
+    "median_time_to_first_token_seconds": 1.92,
+    "median_time_to_first_answer_token_seconds": 1.92,
+    "median_end_to_end_response_time_seconds": 10.92
    }
   },
   {
@@ -880,7 +880,7 @@
     "artificial_analysis_finance_and_accounting_index": 8.7,
     "artificial_analysis_strategy_and_ops_index": 8.1,
     "artificial_analysis_legal_index": 9.7,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 9.6,
     "artificial_analysis_engineering_index": 10.7,
     "artificial_analysis_economics_index": 13.6
    },
@@ -926,10 +926,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 171.3,
-    "median_time_to_first_token_seconds": 0.78,
-    "median_time_to_first_answer_token_seconds": 0.78,
-    "median_end_to_end_response_time_seconds": 3.7
+    "median_output_tokens_per_second": 156.93,
+    "median_time_to_first_token_seconds": 0.87,
+    "median_time_to_first_answer_token_seconds": 0.87,
+    "median_end_to_end_response_time_seconds": 4.06
    }
   },
   {
@@ -982,7 +982,7 @@
     "artificial_analysis_finance_and_accounting_index": 10,
     "artificial_analysis_strategy_and_ops_index": 6.4,
     "artificial_analysis_legal_index": 11.2,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 10.2,
     "artificial_analysis_engineering_index": 13.4,
     "artificial_analysis_economics_index": 16
    },
@@ -994,10 +994,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 223.89,
-    "median_time_to_first_token_seconds": 20.5,
-    "median_time_to_first_answer_token_seconds": 20.5,
-    "median_end_to_end_response_time_seconds": 22.74
+    "median_output_tokens_per_second": 229.48,
+    "median_time_to_first_token_seconds": 13.33,
+    "median_time_to_first_answer_token_seconds": 13.33,
+    "median_end_to_end_response_time_seconds": 15.51
    }
   },
   {
@@ -1123,7 +1123,7 @@
     "artificial_analysis_finance_and_accounting_index": 38.1,
     "artificial_analysis_strategy_and_ops_index": 41.8,
     "artificial_analysis_legal_index": 41.9,
-    "artificial_analysis_healthcare_and_medical_index": 35.7,
+    "artificial_analysis_healthcare_and_medical_index": 37.3,
     "artificial_analysis_engineering_index": 34.4,
     "artificial_analysis_economics_index": 44.1
    },
@@ -1140,9 +1140,9 @@
     "price_1m_cache_write_tokens": 5
    },
    "performance": {
-    "median_output_tokens_per_second": 76.32,
-    "median_time_to_first_token_seconds": 1.84,
-    "median_time_to_first_answer_token_seconds": 1.84,
+    "median_output_tokens_per_second": 78.86,
+    "median_time_to_first_token_seconds": 2.05,
+    "median_time_to_first_answer_token_seconds": 2.05,
     "median_end_to_end_response_time_seconds": 8.39
    }
   },
@@ -1162,7 +1162,7 @@
     "artificial_analysis_finance_and_accounting_index": 53.2,
     "artificial_analysis_strategy_and_ops_index": 56,
     "artificial_analysis_legal_index": 56.8,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 49.9,
     "artificial_analysis_engineering_index": 53.2,
     "artificial_analysis_economics_index": 58.3
    },
@@ -1179,10 +1179,10 @@
     "price_1m_cache_write_tokens": 2.5
    },
    "performance": {
-    "median_output_tokens_per_second": 56.67,
-    "median_time_to_first_token_seconds": 147.47,
-    "median_time_to_first_answer_token_seconds": 147.47,
-    "median_end_to_end_response_time_seconds": 156.29
+    "median_output_tokens_per_second": 55.01,
+    "median_time_to_first_token_seconds": 115.15,
+    "median_time_to_first_answer_token_seconds": 115.15,
+    "median_end_to_end_response_time_seconds": 124.24
    }
   },
   {
@@ -1207,16 +1207,16 @@
    },
    "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
-    "price_1m_input_tokens": 0.3,
-    "price_1m_output_tokens": 1.8,
-    "price_1m_cache_hit_tokens": 0.22,
+    "price_1m_input_tokens": 0.375,
+    "price_1m_output_tokens": 1.4,
+    "price_1m_cache_hit_tokens": 0.275,
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 110.28,
-    "median_time_to_first_token_seconds": 0.95,
-    "median_time_to_first_answer_token_seconds": 0.95,
-    "median_end_to_end_response_time_seconds": 5.49
+    "median_output_tokens_per_second": 79.27,
+    "median_time_to_first_token_seconds": 1.1,
+    "median_time_to_first_answer_token_seconds": 1.1,
+    "median_end_to_end_response_time_seconds": 7.41
    }
   },
   {
@@ -1235,7 +1235,7 @@
     "artificial_analysis_finance_and_accounting_index": 23.5,
     "artificial_analysis_strategy_and_ops_index": 22.4,
     "artificial_analysis_legal_index": 30.3,
-    "artificial_analysis_healthcare_and_medical_index": 23.1,
+    "artificial_analysis_healthcare_and_medical_index": 23.6,
     "artificial_analysis_engineering_index": 24.4,
     "artificial_analysis_economics_index": 31.4
    },
@@ -1252,10 +1252,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 455.99,
-    "median_time_to_first_token_seconds": 7.41,
-    "median_time_to_first_answer_token_seconds": 7.41,
-    "median_end_to_end_response_time_seconds": 8.51
+    "median_output_tokens_per_second": 388.73,
+    "median_time_to_first_token_seconds": 8.31,
+    "median_time_to_first_answer_token_seconds": 8.31,
+    "median_end_to_end_response_time_seconds": 9.59
    }
   },
   {
@@ -1274,7 +1274,7 @@
     "artificial_analysis_finance_and_accounting_index": 45.4,
     "artificial_analysis_strategy_and_ops_index": 47.1,
     "artificial_analysis_legal_index": 46.2,
-    "artificial_analysis_healthcare_and_medical_index": 40.8,
+    "artificial_analysis_healthcare_and_medical_index": 41.1,
     "artificial_analysis_engineering_index": 45,
     "artificial_analysis_economics_index": 52.8
    },
@@ -1291,10 +1291,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 93.78,
-    "median_time_to_first_token_seconds": 2.2,
-    "median_time_to_first_answer_token_seconds": 23.53,
-    "median_end_to_end_response_time_seconds": 28.86
+    "median_output_tokens_per_second": 220.25,
+    "median_time_to_first_token_seconds": 1.18,
+    "median_time_to_first_answer_token_seconds": 10.26,
+    "median_end_to_end_response_time_seconds": 12.53
    }
   },
   {
@@ -1461,10 +1461,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 95.92,
-    "median_time_to_first_token_seconds": 1.85,
-    "median_time_to_first_answer_token_seconds": 1.85,
-    "median_end_to_end_response_time_seconds": 7.06
+    "median_output_tokens_per_second": 96.41,
+    "median_time_to_first_token_seconds": 1.86,
+    "median_time_to_first_answer_token_seconds": 1.86,
+    "median_end_to_end_response_time_seconds": 7.05
    }
   },
   {
@@ -1495,10 +1495,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 72.76,
-    "median_time_to_first_token_seconds": 1.37,
-    "median_time_to_first_answer_token_seconds": 28.86,
-    "median_end_to_end_response_time_seconds": 35.73
+    "median_output_tokens_per_second": 67.18,
+    "median_time_to_first_token_seconds": 1.32,
+    "median_time_to_first_answer_token_seconds": 31.09,
+    "median_end_to_end_response_time_seconds": 38.53
    }
   },
   {
@@ -1534,10 +1534,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 217.81,
-    "median_time_to_first_token_seconds": 0.55,
-    "median_time_to_first_answer_token_seconds": 9.73,
-    "median_end_to_end_response_time_seconds": 12.03
+    "median_output_tokens_per_second": 48.71,
+    "median_time_to_first_token_seconds": 0.72,
+    "median_time_to_first_answer_token_seconds": 41.78,
+    "median_end_to_end_response_time_seconds": 52.05
    }
   },
   {
@@ -1568,10 +1568,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 131.46,
-    "median_time_to_first_token_seconds": 17.08,
-    "median_time_to_first_answer_token_seconds": 32.29,
-    "median_end_to_end_response_time_seconds": 36.1
+    "median_output_tokens_per_second": 124.46,
+    "median_time_to_first_token_seconds": 15.22,
+    "median_time_to_first_answer_token_seconds": 31.29,
+    "median_end_to_end_response_time_seconds": 35.31
    }
   },
   {
@@ -1590,7 +1590,7 @@
     "artificial_analysis_finance_and_accounting_index": 29.5,
     "artificial_analysis_strategy_and_ops_index": 23.2,
     "artificial_analysis_legal_index": 31.4,
-    "artificial_analysis_healthcare_and_medical_index": 25.4,
+    "artificial_analysis_healthcare_and_medical_index": 24.5,
     "artificial_analysis_engineering_index": 27.7,
     "artificial_analysis_economics_index": 38.5
    },
@@ -1602,10 +1602,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 216.07,
-    "median_time_to_first_token_seconds": 1.77,
-    "median_time_to_first_answer_token_seconds": 11.02,
-    "median_end_to_end_response_time_seconds": 13.34
+    "median_output_tokens_per_second": 162.23,
+    "median_time_to_first_token_seconds": 2.1,
+    "median_time_to_first_answer_token_seconds": 14.43,
+    "median_end_to_end_response_time_seconds": 17.51
    }
   },
   {
@@ -1624,7 +1624,7 @@
     "artificial_analysis_finance_and_accounting_index": 28.3,
     "artificial_analysis_strategy_and_ops_index": 22,
     "artificial_analysis_legal_index": 29.4,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 25.4,
     "artificial_analysis_engineering_index": 30.5,
     "artificial_analysis_economics_index": 40.5
    },
@@ -1641,10 +1641,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 74.79,
-    "median_time_to_first_token_seconds": 2.82,
-    "median_time_to_first_answer_token_seconds": 62.33,
-    "median_end_to_end_response_time_seconds": 69.02
+    "median_output_tokens_per_second": 95.88,
+    "median_time_to_first_token_seconds": 2.7,
+    "median_time_to_first_answer_token_seconds": 49.13,
+    "median_end_to_end_response_time_seconds": 54.34
    }
   },
   {
@@ -1680,10 +1680,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 174.92,
-    "median_time_to_first_token_seconds": 1.07,
-    "median_time_to_first_answer_token_seconds": 14.49,
-    "median_end_to_end_response_time_seconds": 17.35
+    "median_output_tokens_per_second": 150.6,
+    "median_time_to_first_token_seconds": 1.04,
+    "median_time_to_first_answer_token_seconds": 16.63,
+    "median_end_to_end_response_time_seconds": 19.95
    }
   },
   {
@@ -1770,7 +1770,7 @@
     "artificial_analysis_finance_and_accounting_index": 19.3,
     "artificial_analysis_strategy_and_ops_index": 15.1,
     "artificial_analysis_legal_index": 20.9,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 16.2,
     "artificial_analysis_engineering_index": 21.4,
     "artificial_analysis_economics_index": 27.2
    },
@@ -1787,10 +1787,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 55.09,
-    "median_time_to_first_token_seconds": 2.24,
-    "median_time_to_first_answer_token_seconds": 60.07,
-    "median_end_to_end_response_time_seconds": 69.14
+    "median_output_tokens_per_second": 58.98,
+    "median_time_to_first_token_seconds": 2.18,
+    "median_time_to_first_answer_token_seconds": 56.2,
+    "median_end_to_end_response_time_seconds": 64.68
    }
   },
   {
@@ -1855,10 +1855,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 62.7,
-    "median_time_to_first_token_seconds": 2.82,
-    "median_time_to_first_answer_token_seconds": 2.82,
-    "median_end_to_end_response_time_seconds": 10.79
+    "median_output_tokens_per_second": 91.96,
+    "median_time_to_first_token_seconds": 2.62,
+    "median_time_to_first_answer_token_seconds": 2.62,
+    "median_end_to_end_response_time_seconds": 8.05
    }
   },
   {
@@ -1928,10 +1928,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 76.61,
-    "median_time_to_first_token_seconds": 0.88,
-    "median_time_to_first_answer_token_seconds": 26.98,
-    "median_end_to_end_response_time_seconds": 33.51
+    "median_output_tokens_per_second": 45.75,
+    "median_time_to_first_token_seconds": 0.78,
+    "median_time_to_first_answer_token_seconds": 44.49,
+    "median_end_to_end_response_time_seconds": 55.42
    }
   },
   {
@@ -1984,7 +1984,7 @@
     "artificial_analysis_finance_and_accounting_index": 40.3,
     "artificial_analysis_strategy_and_ops_index": 46.1,
     "artificial_analysis_legal_index": 37.2,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 35.6,
     "artificial_analysis_engineering_index": 37.3,
     "artificial_analysis_economics_index": 43.6
    },
@@ -2001,10 +2001,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 51.23,
-    "median_time_to_first_token_seconds": 6.38,
-    "median_time_to_first_answer_token_seconds": 45.42,
-    "median_end_to_end_response_time_seconds": 55.17
+    "median_output_tokens_per_second": 50.17,
+    "median_time_to_first_token_seconds": 3.31,
+    "median_time_to_first_answer_token_seconds": 43.18,
+    "median_end_to_end_response_time_seconds": 53.14
    }
   },
   {
@@ -2069,10 +2069,10 @@
     "price_1m_cache_write_tokens": 0.375
    },
    "performance": {
-    "median_output_tokens_per_second": 74.26,
-    "median_time_to_first_token_seconds": 1.43,
-    "median_time_to_first_answer_token_seconds": 28.36,
-    "median_end_to_end_response_time_seconds": 35.09
+    "median_output_tokens_per_second": 60.24,
+    "median_time_to_first_token_seconds": 1.64,
+    "median_time_to_first_answer_token_seconds": 34.84,
+    "median_end_to_end_response_time_seconds": 43.14
    }
   },
   {
@@ -2103,10 +2103,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 177.32,
-    "median_time_to_first_token_seconds": 0.79,
-    "median_time_to_first_answer_token_seconds": 0.79,
-    "median_end_to_end_response_time_seconds": 3.61
+    "median_output_tokens_per_second": 166.75,
+    "median_time_to_first_token_seconds": 0.96,
+    "median_time_to_first_answer_token_seconds": 0.96,
+    "median_end_to_end_response_time_seconds": 3.96
    }
   },
   {
@@ -2125,7 +2125,7 @@
     "artificial_analysis_finance_and_accounting_index": 54.3,
     "artificial_analysis_strategy_and_ops_index": 54.3,
     "artificial_analysis_legal_index": 56,
-    "artificial_analysis_healthcare_and_medical_index": 52.9,
+    "artificial_analysis_healthcare_and_medical_index": 45.7,
     "artificial_analysis_engineering_index": 52.8,
     "artificial_analysis_economics_index": 60.2
    },
@@ -2142,10 +2142,10 @@
     "price_1m_cache_write_tokens": 6.25
    },
    "performance": {
-    "median_output_tokens_per_second": 54.88,
-    "median_time_to_first_token_seconds": 26.6,
-    "median_time_to_first_answer_token_seconds": 26.6,
-    "median_end_to_end_response_time_seconds": 35.71
+    "median_output_tokens_per_second": 51.29,
+    "median_time_to_first_token_seconds": 27.75,
+    "median_time_to_first_answer_token_seconds": 27.75,
+    "median_end_to_end_response_time_seconds": 37.5
    }
   },
   {
@@ -2198,7 +2198,7 @@
     "artificial_analysis_finance_and_accounting_index": 26.1,
     "artificial_analysis_strategy_and_ops_index": 26.3,
     "artificial_analysis_legal_index": 28.3,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 24.1,
     "artificial_analysis_engineering_index": 25.3,
     "artificial_analysis_economics_index": 33.1
    },
@@ -2215,10 +2215,10 @@
     "price_1m_cache_write_tokens": 2.5
    },
    "performance": {
-    "median_output_tokens_per_second": 71.02,
-    "median_time_to_first_token_seconds": 1.11,
-    "median_time_to_first_answer_token_seconds": 1.11,
-    "median_end_to_end_response_time_seconds": 8.15
+    "median_output_tokens_per_second": 64.28,
+    "median_time_to_first_token_seconds": 1.01,
+    "median_time_to_first_answer_token_seconds": 1.01,
+    "median_end_to_end_response_time_seconds": 8.79
    }
   },
   {
@@ -2356,10 +2356,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 118.41,
-    "median_time_to_first_token_seconds": 1.65,
-    "median_time_to_first_answer_token_seconds": 18.54,
-    "median_end_to_end_response_time_seconds": 22.76
+    "median_output_tokens_per_second": null,
+    "median_time_to_first_token_seconds": null,
+    "median_time_to_first_answer_token_seconds": null,
+    "median_end_to_end_response_time_seconds": null
    }
   },
   {
@@ -2385,15 +2385,15 @@
    "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
     "price_1m_input_tokens": 0.07,
-    "price_1m_output_tokens": 0.25,
+    "price_1m_output_tokens": 0.3,
     "price_1m_cache_hit_tokens": null,
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 301.76,
-    "median_time_to_first_token_seconds": 0.73,
-    "median_time_to_first_answer_token_seconds": 7.35,
-    "median_end_to_end_response_time_seconds": 9.01
+    "median_output_tokens_per_second": 195.94,
+    "median_time_to_first_token_seconds": 0.97,
+    "median_time_to_first_answer_token_seconds": 11.18,
+    "median_end_to_end_response_time_seconds": 13.73
    }
   },
   {
@@ -2424,10 +2424,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 79.29,
-    "median_time_to_first_token_seconds": 5.62,
-    "median_time_to_first_answer_token_seconds": 30.85,
-    "median_end_to_end_response_time_seconds": 37.15
+    "median_output_tokens_per_second": 77.25,
+    "median_time_to_first_token_seconds": 5.65,
+    "median_time_to_first_answer_token_seconds": 31.54,
+    "median_end_to_end_response_time_seconds": 38.01
    }
   },
   {
@@ -2458,10 +2458,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 167.27,
-    "median_time_to_first_token_seconds": 7.38,
-    "median_time_to_first_answer_token_seconds": 7.38,
-    "median_end_to_end_response_time_seconds": 10.37
+    "median_output_tokens_per_second": 158.3,
+    "median_time_to_first_token_seconds": 7.07,
+    "median_time_to_first_answer_token_seconds": 7.07,
+    "median_end_to_end_response_time_seconds": 10.23
    }
   },
   {
@@ -2582,7 +2582,7 @@
     "artificial_analysis_finance_and_accounting_index": 42,
     "artificial_analysis_strategy_and_ops_index": 45.1,
     "artificial_analysis_legal_index": 39.9,
-    "artificial_analysis_healthcare_and_medical_index": 44.8,
+    "artificial_analysis_healthcare_and_medical_index": 38.9,
     "artificial_analysis_engineering_index": 43.8,
     "artificial_analysis_economics_index": 48.9
    },
@@ -2599,10 +2599,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 78.43,
-    "median_time_to_first_token_seconds": 2.58,
-    "median_time_to_first_answer_token_seconds": 28.08,
-    "median_end_to_end_response_time_seconds": 34.46
+    "median_output_tokens_per_second": 71.62,
+    "median_time_to_first_token_seconds": 2.84,
+    "median_time_to_first_answer_token_seconds": 30.76,
+    "median_end_to_end_response_time_seconds": 37.74
    }
   },
   {
@@ -2621,7 +2621,7 @@
     "artificial_analysis_finance_and_accounting_index": 37.2,
     "artificial_analysis_strategy_and_ops_index": 42.6,
     "artificial_analysis_legal_index": 37.2,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 35.9,
     "artificial_analysis_engineering_index": 33.7,
     "artificial_analysis_economics_index": 41.6
    },
@@ -2638,10 +2638,10 @@
     "price_1m_cache_write_tokens": 0.125
    },
    "performance": {
-    "median_output_tokens_per_second": 118.24,
-    "median_time_to_first_token_seconds": 28.88,
-    "median_time_to_first_answer_token_seconds": 28.88,
-    "median_end_to_end_response_time_seconds": 33.11
+    "median_output_tokens_per_second": 123.94,
+    "median_time_to_first_token_seconds": 20.7,
+    "median_time_to_first_answer_token_seconds": 20.7,
+    "median_end_to_end_response_time_seconds": 24.73
    }
   },
   {
@@ -2672,10 +2672,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 122.18,
-    "median_time_to_first_token_seconds": 2.74,
-    "median_time_to_first_answer_token_seconds": 19.11,
-    "median_end_to_end_response_time_seconds": 23.2
+    "median_output_tokens_per_second": 119.13,
+    "median_time_to_first_token_seconds": 1.44,
+    "median_time_to_first_answer_token_seconds": 18.23,
+    "median_end_to_end_response_time_seconds": 22.43
    }
   },
   {
@@ -2740,10 +2740,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 139.78,
-    "median_time_to_first_token_seconds": 3.24,
-    "median_time_to_first_answer_token_seconds": 17.54,
-    "median_end_to_end_response_time_seconds": 21.12
+    "median_output_tokens_per_second": 154.27,
+    "median_time_to_first_token_seconds": 3.36,
+    "median_time_to_first_answer_token_seconds": 16.32,
+    "median_end_to_end_response_time_seconds": 19.57
    }
   },
   {
@@ -2910,10 +2910,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 294.22,
-    "median_time_to_first_token_seconds": 0.3,
-    "median_time_to_first_answer_token_seconds": 0.3,
-    "median_end_to_end_response_time_seconds": 1.99
+    "median_output_tokens_per_second": 279.91,
+    "median_time_to_first_token_seconds": 0.32,
+    "median_time_to_first_answer_token_seconds": 0.32,
+    "median_end_to_end_response_time_seconds": 2.11
    }
   },
   {
@@ -2944,10 +2944,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 26.12,
-    "median_time_to_first_token_seconds": 2.47,
-    "median_time_to_first_answer_token_seconds": 2.47,
-    "median_end_to_end_response_time_seconds": 21.61
+    "median_output_tokens_per_second": 32.21,
+    "median_time_to_first_token_seconds": 2.08,
+    "median_time_to_first_answer_token_seconds": 2.08,
+    "median_end_to_end_response_time_seconds": 17.61
    }
   },
   {
@@ -2966,7 +2966,7 @@
     "artificial_analysis_finance_and_accounting_index": 9.1,
     "artificial_analysis_strategy_and_ops_index": 5.9,
     "artificial_analysis_legal_index": 9.9,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 7.9,
     "artificial_analysis_engineering_index": 13.9,
     "artificial_analysis_economics_index": 14.8
    },
@@ -2983,10 +2983,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 88.25,
-    "median_time_to_first_token_seconds": 0.46,
-    "median_time_to_first_answer_token_seconds": 23.12,
-    "median_end_to_end_response_time_seconds": 28.79
+    "median_output_tokens_per_second": 64.89,
+    "median_time_to_first_token_seconds": 0.47,
+    "median_time_to_first_answer_token_seconds": 31.29,
+    "median_end_to_end_response_time_seconds": 39
    }
   },
   {
@@ -3039,7 +3039,7 @@
     "artificial_analysis_finance_and_accounting_index": 41.5,
     "artificial_analysis_strategy_and_ops_index": 45.2,
     "artificial_analysis_legal_index": 44.7,
-    "artificial_analysis_healthcare_and_medical_index": 38.5,
+    "artificial_analysis_healthcare_and_medical_index": 40.1,
     "artificial_analysis_engineering_index": 39.9,
     "artificial_analysis_economics_index": 47.8
    },
@@ -3056,10 +3056,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 101.34,
-    "median_time_to_first_token_seconds": 50.4,
-    "median_time_to_first_answer_token_seconds": 50.4,
-    "median_end_to_end_response_time_seconds": 55.33
+    "median_output_tokens_per_second": 82.81,
+    "median_time_to_first_token_seconds": 63.44,
+    "median_time_to_first_answer_token_seconds": 63.44,
+    "median_end_to_end_response_time_seconds": 69.47
    }
   },
   {
@@ -3112,7 +3112,7 @@
     "artificial_analysis_finance_and_accounting_index": 54.4,
     "artificial_analysis_strategy_and_ops_index": 56.7,
     "artificial_analysis_legal_index": 58.2,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 51.5,
     "artificial_analysis_engineering_index": 54.7,
     "artificial_analysis_economics_index": 59.5
    },
@@ -3129,10 +3129,10 @@
     "price_1m_cache_write_tokens": 12.5
    },
    "performance": {
-    "median_output_tokens_per_second": 60.07,
-    "median_time_to_first_token_seconds": 130.43,
-    "median_time_to_first_answer_token_seconds": 130.43,
-    "median_end_to_end_response_time_seconds": 138.76
+    "median_output_tokens_per_second": 64.78,
+    "median_time_to_first_token_seconds": 161.52,
+    "median_time_to_first_answer_token_seconds": 161.52,
+    "median_end_to_end_response_time_seconds": 169.24
    }
   },
   {
@@ -3253,7 +3253,7 @@
     "artificial_analysis_finance_and_accounting_index": 37.7,
     "artificial_analysis_strategy_and_ops_index": 37.5,
     "artificial_analysis_legal_index": 37.6,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 34.1,
     "artificial_analysis_engineering_index": 39.2,
     "artificial_analysis_economics_index": 45.8
    },
@@ -3270,10 +3270,10 @@
     "price_1m_cache_write_tokens": 0.125
    },
    "performance": {
-    "median_output_tokens_per_second": 188.67,
-    "median_time_to_first_token_seconds": 24.51,
-    "median_time_to_first_answer_token_seconds": 24.51,
-    "median_end_to_end_response_time_seconds": 27.16
+    "median_output_tokens_per_second": 176.65,
+    "median_time_to_first_token_seconds": 25.55,
+    "median_time_to_first_answer_token_seconds": 25.55,
+    "median_end_to_end_response_time_seconds": 28.38
    }
   },
   {
@@ -3292,7 +3292,7 @@
     "artificial_analysis_finance_and_accounting_index": 48,
     "artificial_analysis_strategy_and_ops_index": 50.8,
     "artificial_analysis_legal_index": 50.7,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 44.3,
     "artificial_analysis_engineering_index": 42.5,
     "artificial_analysis_economics_index": 52.8
    },
@@ -3309,10 +3309,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 81.62,
-    "median_time_to_first_token_seconds": 6.01,
-    "median_time_to_first_answer_token_seconds": 6.01,
-    "median_end_to_end_response_time_seconds": 12.14
+    "median_output_tokens_per_second": 74.92,
+    "median_time_to_first_token_seconds": 4.69,
+    "median_time_to_first_answer_token_seconds": 4.69,
+    "median_end_to_end_response_time_seconds": 11.36
    }
   },
   {
@@ -3331,7 +3331,7 @@
     "artificial_analysis_finance_and_accounting_index": 43.8,
     "artificial_analysis_strategy_and_ops_index": 46.2,
     "artificial_analysis_legal_index": 47.8,
-    "artificial_analysis_healthcare_and_medical_index": 44.8,
+    "artificial_analysis_healthcare_and_medical_index": 38.8,
     "artificial_analysis_engineering_index": 42.5,
     "artificial_analysis_economics_index": 50
    },
@@ -3348,10 +3348,10 @@
     "price_1m_cache_write_tokens": 6.25
    },
    "performance": {
-    "median_output_tokens_per_second": 55.4,
-    "median_time_to_first_token_seconds": 1.72,
-    "median_time_to_first_answer_token_seconds": 1.72,
-    "median_end_to_end_response_time_seconds": 10.75
+    "median_output_tokens_per_second": 52.06,
+    "median_time_to_first_token_seconds": 1.87,
+    "median_time_to_first_answer_token_seconds": 1.87,
+    "median_end_to_end_response_time_seconds": 11.47
    }
   },
   {
@@ -3382,10 +3382,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 114.27,
-    "median_time_to_first_token_seconds": 0.68,
-    "median_time_to_first_answer_token_seconds": 0.68,
-    "median_end_to_end_response_time_seconds": 5.06
+    "median_output_tokens_per_second": 79.48,
+    "median_time_to_first_token_seconds": 1,
+    "median_time_to_first_answer_token_seconds": 1,
+    "median_end_to_end_response_time_seconds": 7.29
    }
   },
   {
@@ -3450,10 +3450,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 228.6,
-    "median_time_to_first_token_seconds": 11.71,
-    "median_time_to_first_answer_token_seconds": 11.71,
-    "median_end_to_end_response_time_seconds": 13.9
+    "median_output_tokens_per_second": 208.58,
+    "median_time_to_first_token_seconds": 14.77,
+    "median_time_to_first_answer_token_seconds": 14.77,
+    "median_end_to_end_response_time_seconds": 17.17
    }
   },
   {
@@ -3506,7 +3506,7 @@
     "artificial_analysis_finance_and_accounting_index": 16.6,
     "artificial_analysis_strategy_and_ops_index": 12.6,
     "artificial_analysis_legal_index": 17.2,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 14,
     "artificial_analysis_engineering_index": 18.7,
     "artificial_analysis_economics_index": 24.1
    },
@@ -3523,10 +3523,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 132.6,
+    "median_output_tokens_per_second": 128.43,
     "median_time_to_first_token_seconds": 2.3,
-    "median_time_to_first_answer_token_seconds": 17.38,
-    "median_end_to_end_response_time_seconds": 21.15
+    "median_time_to_first_answer_token_seconds": 17.87,
+    "median_end_to_end_response_time_seconds": 21.76
    }
   },
   {
@@ -3550,22 +3550,22 @@
     "artificial_analysis_economics_index": 33.9
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 42.61,
+    "total_cost": 61.93,
     "cost_per_task": {
-     "total_cost": 0.0191
+     "total_cost": 0.038
     }
    },
    "pricing": {
-    "price_1m_input_tokens": 0.14,
-    "price_1m_output_tokens": 0.28,
+    "price_1m_input_tokens": 0.133,
+    "price_1m_output_tokens": 0.266,
     "price_1m_cache_hit_tokens": 0.0028,
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 37.87,
-    "median_time_to_first_token_seconds": 3.44,
-    "median_time_to_first_answer_token_seconds": 56.25,
-    "median_end_to_end_response_time_seconds": 69.46
+    "median_output_tokens_per_second": 40.46,
+    "median_time_to_first_token_seconds": 1.57,
+    "median_time_to_first_answer_token_seconds": 51,
+    "median_end_to_end_response_time_seconds": 63.36
    }
   },
   {
@@ -3664,10 +3664,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 262.5,
-    "median_time_to_first_token_seconds": 0.55,
-    "median_time_to_first_answer_token_seconds": 0.55,
-    "median_end_to_end_response_time_seconds": 2.45
+    "median_output_tokens_per_second": 277.18,
+    "median_time_to_first_token_seconds": 0.7,
+    "median_time_to_first_answer_token_seconds": 0.7,
+    "median_end_to_end_response_time_seconds": 2.5
    }
   },
   {
@@ -3686,7 +3686,7 @@
     "artificial_analysis_finance_and_accounting_index": 40.4,
     "artificial_analysis_strategy_and_ops_index": 39.2,
     "artificial_analysis_legal_index": 42.3,
-    "artificial_analysis_healthcare_and_medical_index": 42.8,
+    "artificial_analysis_healthcare_and_medical_index": 35.3,
     "artificial_analysis_engineering_index": 40.2,
     "artificial_analysis_economics_index": 49.4
    },
@@ -3703,10 +3703,10 @@
     "price_1m_cache_write_tokens": 2.5
    },
    "performance": {
-    "median_output_tokens_per_second": 81.74,
-    "median_time_to_first_token_seconds": 142.35,
-    "median_time_to_first_answer_token_seconds": 142.35,
-    "median_end_to_end_response_time_seconds": 148.47
+    "median_output_tokens_per_second": 81.03,
+    "median_time_to_first_token_seconds": 198.85,
+    "median_time_to_first_answer_token_seconds": 198.85,
+    "median_end_to_end_response_time_seconds": 205.02
    }
   },
   {
@@ -3737,10 +3737,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 92.32,
-    "median_time_to_first_token_seconds": 1.55,
-    "median_time_to_first_answer_token_seconds": 1.55,
-    "median_end_to_end_response_time_seconds": 6.96
+    "median_output_tokens_per_second": 76.48,
+    "median_time_to_first_token_seconds": 1.64,
+    "median_time_to_first_answer_token_seconds": 1.64,
+    "median_end_to_end_response_time_seconds": 8.17
    }
   },
   {
@@ -3793,7 +3793,7 @@
     "artificial_analysis_finance_and_accounting_index": 6.7,
     "artificial_analysis_strategy_and_ops_index": 4.7,
     "artificial_analysis_legal_index": 8.2,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 7.1,
     "artificial_analysis_engineering_index": 10.1,
     "artificial_analysis_economics_index": 11.8
    },
@@ -3810,10 +3810,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 27.14,
-    "median_time_to_first_token_seconds": 0.99,
-    "median_time_to_first_answer_token_seconds": 0.99,
-    "median_end_to_end_response_time_seconds": 19.41
+    "median_output_tokens_per_second": 48.84,
+    "median_time_to_first_token_seconds": 0.98,
+    "median_time_to_first_answer_token_seconds": 0.98,
+    "median_end_to_end_response_time_seconds": 11.22
    }
   },
   {
@@ -3832,7 +3832,7 @@
     "artificial_analysis_finance_and_accounting_index": 46.1,
     "artificial_analysis_strategy_and_ops_index": 47.8,
     "artificial_analysis_legal_index": 44.8,
-    "artificial_analysis_healthcare_and_medical_index": 41.8,
+    "artificial_analysis_healthcare_and_medical_index": 41,
     "artificial_analysis_engineering_index": 46.9,
     "artificial_analysis_economics_index": 53.2
    },
@@ -3849,10 +3849,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 50.83,
-    "median_time_to_first_token_seconds": 4.01,
-    "median_time_to_first_answer_token_seconds": 43.36,
-    "median_end_to_end_response_time_seconds": 53.2
+    "median_output_tokens_per_second": 53.8,
+    "median_time_to_first_token_seconds": 3.13,
+    "median_time_to_first_answer_token_seconds": 40.31,
+    "median_end_to_end_response_time_seconds": 49.6
    }
   },
   {
@@ -3883,10 +3883,10 @@
     "price_1m_cache_write_tokens": 6.25
    },
    "performance": {
-    "median_output_tokens_per_second": 62.42,
-    "median_time_to_first_token_seconds": 20.93,
-    "median_time_to_first_answer_token_seconds": 20.93,
-    "median_end_to_end_response_time_seconds": 28.94
+    "median_output_tokens_per_second": 52.96,
+    "median_time_to_first_token_seconds": 13.54,
+    "median_time_to_first_answer_token_seconds": 13.54,
+    "median_end_to_end_response_time_seconds": 22.98
    }
   },
   {
@@ -3905,7 +3905,7 @@
     "artificial_analysis_finance_and_accounting_index": 46.5,
     "artificial_analysis_strategy_and_ops_index": 48.9,
     "artificial_analysis_legal_index": 49.4,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 44.4,
     "artificial_analysis_engineering_index": 43.3,
     "artificial_analysis_economics_index": 53.1
    },
@@ -3922,10 +3922,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 69.61,
-    "median_time_to_first_token_seconds": 35.05,
-    "median_time_to_first_answer_token_seconds": 35.05,
-    "median_end_to_end_response_time_seconds": 42.23
+    "median_output_tokens_per_second": 68.89,
+    "median_time_to_first_token_seconds": 25.9,
+    "median_time_to_first_answer_token_seconds": 25.9,
+    "median_end_to_end_response_time_seconds": 33.16
    }
   },
   {
@@ -3944,7 +3944,7 @@
     "artificial_analysis_finance_and_accounting_index": 47.1,
     "artificial_analysis_strategy_and_ops_index": 51.6,
     "artificial_analysis_legal_index": 48.7,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 43.6,
     "artificial_analysis_engineering_index": 48.3,
     "artificial_analysis_economics_index": 51.8
    },
@@ -3961,10 +3961,10 @@
     "price_1m_cache_write_tokens": 2.5
    },
    "performance": {
-    "median_output_tokens_per_second": 112.36,
-    "median_time_to_first_token_seconds": 10.44,
-    "median_time_to_first_answer_token_seconds": 10.44,
-    "median_end_to_end_response_time_seconds": 14.89
+    "median_output_tokens_per_second": 103.1,
+    "median_time_to_first_token_seconds": 11.22,
+    "median_time_to_first_answer_token_seconds": 11.22,
+    "median_end_to_end_response_time_seconds": 16.07
    }
   },
   {
@@ -3989,16 +3989,16 @@
    },
    "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
-    "price_1m_input_tokens": 0.125,
-    "price_1m_output_tokens": 1.15,
-    "price_1m_cache_hit_tokens": 0.12,
+    "price_1m_input_tokens": 0.1,
+    "price_1m_output_tokens": 1.1,
+    "price_1m_cache_hit_tokens": 0.09,
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 121.13,
-    "median_time_to_first_token_seconds": 0.89,
-    "median_time_to_first_answer_token_seconds": 0.89,
-    "median_end_to_end_response_time_seconds": 5.02
+    "median_output_tokens_per_second": 138.12,
+    "median_time_to_first_token_seconds": 0.75,
+    "median_time_to_first_answer_token_seconds": 0.75,
+    "median_end_to_end_response_time_seconds": 4.37
    }
   },
   {
@@ -4051,7 +4051,7 @@
     "artificial_analysis_finance_and_accounting_index": 31.8,
     "artificial_analysis_strategy_and_ops_index": 34.4,
     "artificial_analysis_legal_index": 33.8,
-    "artificial_analysis_healthcare_and_medical_index": 30.6,
+    "artificial_analysis_healthcare_and_medical_index": 32.2,
     "artificial_analysis_engineering_index": 31,
     "artificial_analysis_economics_index": 36.9
    },
@@ -4068,10 +4068,10 @@
     "price_1m_cache_write_tokens": 2.5
    },
    "performance": {
-    "median_output_tokens_per_second": 118.46,
-    "median_time_to_first_token_seconds": 1.58,
-    "median_time_to_first_answer_token_seconds": 1.58,
-    "median_end_to_end_response_time_seconds": 5.8
+    "median_output_tokens_per_second": 107.09,
+    "median_time_to_first_token_seconds": 1.46,
+    "median_time_to_first_answer_token_seconds": 1.46,
+    "median_end_to_end_response_time_seconds": 6.13
    }
   },
   {
@@ -4090,7 +4090,7 @@
     "artificial_analysis_finance_and_accounting_index": 17.3,
     "artificial_analysis_strategy_and_ops_index": 12.6,
     "artificial_analysis_legal_index": 23.7,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 15,
     "artificial_analysis_engineering_index": 18.9,
     "artificial_analysis_economics_index": 24.5
    },
@@ -4107,10 +4107,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 122.77,
-    "median_time_to_first_token_seconds": 23.25,
-    "median_time_to_first_answer_token_seconds": 23.25,
-    "median_end_to_end_response_time_seconds": 27.32
+    "median_output_tokens_per_second": 108.11,
+    "median_time_to_first_token_seconds": 23.64,
+    "median_time_to_first_answer_token_seconds": 23.64,
+    "median_end_to_end_response_time_seconds": 28.27
    }
   },
   {
@@ -4129,7 +4129,7 @@
     "artificial_analysis_finance_and_accounting_index": 51.7,
     "artificial_analysis_strategy_and_ops_index": 54.4,
     "artificial_analysis_legal_index": 54.2,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 46.7,
     "artificial_analysis_engineering_index": 46.6,
     "artificial_analysis_economics_index": 55.3
    },
@@ -4146,10 +4146,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 102.64,
-    "median_time_to_first_token_seconds": 32.43,
-    "median_time_to_first_answer_token_seconds": 32.43,
-    "median_end_to_end_response_time_seconds": 37.3
+    "median_output_tokens_per_second": 82.86,
+    "median_time_to_first_token_seconds": 32.14,
+    "median_time_to_first_answer_token_seconds": 32.14,
+    "median_end_to_end_response_time_seconds": 38.17
    }
   },
   {
@@ -4180,10 +4180,10 @@
     "price_1m_cache_write_tokens": 0.375
    },
    "performance": {
-    "median_output_tokens_per_second": 70.17,
-    "median_time_to_first_token_seconds": 1.51,
-    "median_time_to_first_answer_token_seconds": 30.01,
-    "median_end_to_end_response_time_seconds": 37.13
+    "median_output_tokens_per_second": 58.5,
+    "median_time_to_first_token_seconds": 1.67,
+    "median_time_to_first_answer_token_seconds": 35.85,
+    "median_end_to_end_response_time_seconds": 44.4
    }
   },
   {
@@ -4202,7 +4202,7 @@
     "artificial_analysis_finance_and_accounting_index": 30.1,
     "artificial_analysis_strategy_and_ops_index": 25,
     "artificial_analysis_legal_index": 31.5,
-    "artificial_analysis_healthcare_and_medical_index": 29.7,
+    "artificial_analysis_healthcare_and_medical_index": 27.8,
     "artificial_analysis_engineering_index": 31.2,
     "artificial_analysis_economics_index": 43.7
    },
@@ -4219,10 +4219,10 @@
     "price_1m_cache_write_tokens": 0.375
    },
    "performance": {
-    "median_output_tokens_per_second": 122.7,
-    "median_time_to_first_token_seconds": 0.99,
-    "median_time_to_first_answer_token_seconds": 17.29,
-    "median_end_to_end_response_time_seconds": 21.37
+    "median_output_tokens_per_second": 105.26,
+    "median_time_to_first_token_seconds": 1.3,
+    "median_time_to_first_answer_token_seconds": 20.3,
+    "median_end_to_end_response_time_seconds": 25.05
    }
   },
   {
@@ -4309,7 +4309,7 @@
     "artificial_analysis_finance_and_accounting_index": 17.2,
     "artificial_analysis_strategy_and_ops_index": 12.4,
     "artificial_analysis_legal_index": 20,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 16.9,
     "artificial_analysis_engineering_index": 20.7,
     "artificial_analysis_economics_index": 27.7
    },
@@ -4326,10 +4326,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 109.73,
-    "median_time_to_first_token_seconds": 57.79,
-    "median_time_to_first_answer_token_seconds": 57.79,
-    "median_end_to_end_response_time_seconds": 62.34
+    "median_output_tokens_per_second": 113.86,
+    "median_time_to_first_token_seconds": 62.18,
+    "median_time_to_first_answer_token_seconds": 62.18,
+    "median_end_to_end_response_time_seconds": 66.57
    }
   },
   {
@@ -4348,27 +4348,27 @@
     "artificial_analysis_finance_and_accounting_index": 12.2,
     "artificial_analysis_strategy_and_ops_index": 6.9,
     "artificial_analysis_legal_index": 15.5,
-    "artificial_analysis_healthcare_and_medical_index": 11.5,
+    "artificial_analysis_healthcare_and_medical_index": 11.7,
     "artificial_analysis_engineering_index": 18.1,
     "artificial_analysis_economics_index": 22.8
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 105.48,
+    "total_cost": 92.76,
     "cost_per_task": {
-     "total_cost": 0.0931
+     "total_cost": 0.0795
     }
    },
    "pricing": {
     "price_1m_input_tokens": 0.06,
     "price_1m_output_tokens": 0.2,
-    "price_1m_cache_hit_tokens": 0.04,
+    "price_1m_cache_hit_tokens": 0.035,
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 298.2,
-    "median_time_to_first_token_seconds": 0.54,
-    "median_time_to_first_answer_token_seconds": 7.24,
-    "median_end_to_end_response_time_seconds": 8.92
+    "median_output_tokens_per_second": 297.54,
+    "median_time_to_first_token_seconds": 0.59,
+    "median_time_to_first_answer_token_seconds": 7.31,
+    "median_end_to_end_response_time_seconds": 8.99
    }
   },
   {
@@ -4574,10 +4574,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 92.28,
-    "median_time_to_first_token_seconds": 1.48,
-    "median_time_to_first_answer_token_seconds": 23.15,
-    "median_end_to_end_response_time_seconds": 28.57
+    "median_output_tokens_per_second": 79.54,
+    "median_time_to_first_token_seconds": 1.09,
+    "median_time_to_first_answer_token_seconds": 26.23,
+    "median_end_to_end_response_time_seconds": 32.52
    }
   },
   {
@@ -4642,10 +4642,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 8.81,
-    "median_time_to_first_token_seconds": 51.04,
-    "median_time_to_first_answer_token_seconds": 51.04,
-    "median_end_to_end_response_time_seconds": 107.79
+    "median_output_tokens_per_second": 26.65,
+    "median_time_to_first_token_seconds": 15.84,
+    "median_time_to_first_answer_token_seconds": 15.84,
+    "median_end_to_end_response_time_seconds": 34.6
    }
   },
   {
@@ -4715,10 +4715,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 68.01,
-    "median_time_to_first_token_seconds": 1.64,
-    "median_time_to_first_answer_token_seconds": 31.05,
-    "median_end_to_end_response_time_seconds": 38.4
+    "median_output_tokens_per_second": 56.61,
+    "median_time_to_first_token_seconds": 2.01,
+    "median_time_to_first_answer_token_seconds": 37.34,
+    "median_end_to_end_response_time_seconds": 46.17
    }
   },
   {
@@ -4749,10 +4749,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 226.98,
-    "median_time_to_first_token_seconds": 5.97,
-    "median_time_to_first_answer_token_seconds": 5.97,
-    "median_end_to_end_response_time_seconds": 8.18
+    "median_output_tokens_per_second": 209.5,
+    "median_time_to_first_token_seconds": 4.62,
+    "median_time_to_first_answer_token_seconds": 4.62,
+    "median_end_to_end_response_time_seconds": 7
    }
   },
   {
@@ -4817,10 +4817,10 @@
     "price_1m_cache_write_tokens": 3.75
    },
    "performance": {
-    "median_output_tokens_per_second": 45.56,
-    "median_time_to_first_token_seconds": 0.93,
-    "median_time_to_first_answer_token_seconds": 0.93,
-    "median_end_to_end_response_time_seconds": 11.91
+    "median_output_tokens_per_second": 43.61,
+    "median_time_to_first_token_seconds": 1,
+    "median_time_to_first_answer_token_seconds": 1,
+    "median_end_to_end_response_time_seconds": 12.46
    }
   },
   {
@@ -4924,10 +4924,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 167.22,
-    "median_time_to_first_token_seconds": 1.11,
-    "median_time_to_first_answer_token_seconds": 1.11,
-    "median_end_to_end_response_time_seconds": 4.1
+    "median_output_tokens_per_second": 169.93,
+    "median_time_to_first_token_seconds": 1.03,
+    "median_time_to_first_answer_token_seconds": 1.03,
+    "median_end_to_end_response_time_seconds": 3.97
    }
   },
   {
@@ -4946,7 +4946,7 @@
     "artificial_analysis_finance_and_accounting_index": 10.6,
     "artificial_analysis_strategy_and_ops_index": 4.1,
     "artificial_analysis_legal_index": 15.3,
-    "artificial_analysis_healthcare_and_medical_index": 11.7,
+    "artificial_analysis_healthcare_and_medical_index": 11.9,
     "artificial_analysis_engineering_index": 18.7,
     "artificial_analysis_economics_index": 23.8
    },
@@ -4963,10 +4963,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 157.76,
-    "median_time_to_first_token_seconds": 0.5,
-    "median_time_to_first_answer_token_seconds": 13.18,
-    "median_end_to_end_response_time_seconds": 16.35
+    "median_output_tokens_per_second": 161.94,
+    "median_time_to_first_token_seconds": 0.52,
+    "median_time_to_first_answer_token_seconds": 12.87,
+    "median_end_to_end_response_time_seconds": 15.96
    }
   },
   {
@@ -4985,7 +4985,7 @@
     "artificial_analysis_finance_and_accounting_index": 55.2,
     "artificial_analysis_strategy_and_ops_index": 57.3,
     "artificial_analysis_legal_index": 58.5,
-    "artificial_analysis_healthcare_and_medical_index": 51.7,
+    "artificial_analysis_healthcare_and_medical_index": 52.7,
     "artificial_analysis_engineering_index": 54.7,
     "artificial_analysis_economics_index": 59.8
    },
@@ -5002,10 +5002,10 @@
     "price_1m_cache_write_tokens": 12.5
    },
    "performance": {
-    "median_output_tokens_per_second": 70.4,
-    "median_time_to_first_token_seconds": 249.75,
-    "median_time_to_first_answer_token_seconds": 249.75,
-    "median_end_to_end_response_time_seconds": 256.85
+    "median_output_tokens_per_second": 65.31,
+    "median_time_to_first_token_seconds": 278.25,
+    "median_time_to_first_answer_token_seconds": 278.25,
+    "median_end_to_end_response_time_seconds": 285.91
    }
   },
   {
@@ -5024,7 +5024,7 @@
     "artificial_analysis_finance_and_accounting_index": 60.7,
     "artificial_analysis_strategy_and_ops_index": 63.7,
     "artificial_analysis_legal_index": 63.3,
-    "artificial_analysis_healthcare_and_medical_index": 60.5,
+    "artificial_analysis_healthcare_and_medical_index": 54.7,
     "artificial_analysis_engineering_index": 60.4,
     "artificial_analysis_economics_index": 65.6
    },
@@ -5041,10 +5041,10 @@
     "price_1m_cache_write_tokens": 5
    },
    "performance": {
-    "median_output_tokens_per_second": 98.27,
-    "median_time_to_first_token_seconds": 514.59,
-    "median_time_to_first_answer_token_seconds": 514.59,
-    "median_end_to_end_response_time_seconds": 519.68
+    "median_output_tokens_per_second": 96.26,
+    "median_time_to_first_token_seconds": 699.71,
+    "median_time_to_first_answer_token_seconds": 699.71,
+    "median_end_to_end_response_time_seconds": 704.9
    }
   },
   {
@@ -5109,10 +5109,10 @@
     "price_1m_cache_write_tokens": 6.25
    },
    "performance": {
-    "median_output_tokens_per_second": 48.01,
-    "median_time_to_first_token_seconds": 1.22,
-    "median_time_to_first_answer_token_seconds": 1.22,
-    "median_end_to_end_response_time_seconds": 11.63
+    "median_output_tokens_per_second": 45.29,
+    "median_time_to_first_token_seconds": 1.02,
+    "median_time_to_first_answer_token_seconds": 1.02,
+    "median_end_to_end_response_time_seconds": 12.06
    }
   },
   {
@@ -5177,10 +5177,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 62.05,
-    "median_time_to_first_token_seconds": 2.68,
-    "median_time_to_first_answer_token_seconds": 34.92,
-    "median_end_to_end_response_time_seconds": 42.97
+    "median_output_tokens_per_second": 65.31,
+    "median_time_to_first_token_seconds": 3.32,
+    "median_time_to_first_answer_token_seconds": 33.94,
+    "median_end_to_end_response_time_seconds": 41.59
    }
   },
   {
@@ -5211,10 +5211,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 8.52,
-    "median_time_to_first_token_seconds": 1.02,
-    "median_time_to_first_answer_token_seconds": 1.02,
-    "median_end_to_end_response_time_seconds": 59.69
+    "median_output_tokens_per_second": 13.7,
+    "median_time_to_first_token_seconds": 0.91,
+    "median_time_to_first_answer_token_seconds": 0.91,
+    "median_end_to_end_response_time_seconds": 37.39
    }
   },
   {
@@ -5245,10 +5245,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 56.61,
-    "median_time_to_first_token_seconds": 2.25,
-    "median_time_to_first_answer_token_seconds": 2.25,
-    "median_end_to_end_response_time_seconds": 11.08
+    "median_output_tokens_per_second": 59.62,
+    "median_time_to_first_token_seconds": 2.21,
+    "median_time_to_first_answer_token_seconds": 2.21,
+    "median_end_to_end_response_time_seconds": 10.6
    }
   },
   {
@@ -5307,16 +5307,16 @@
    },
    "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
-    "price_1m_input_tokens": 0.22,
-    "price_1m_output_tokens": 0.88,
-    "price_1m_cache_hit_tokens": 0.22,
+    "price_1m_input_tokens": 0.21,
+    "price_1m_output_tokens": 0.84,
+    "price_1m_cache_hit_tokens": 0.21,
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 47.8,
-    "median_time_to_first_token_seconds": 1.28,
-    "median_time_to_first_answer_token_seconds": 1.28,
-    "median_end_to_end_response_time_seconds": 11.74
+    "median_output_tokens_per_second": 49.5,
+    "median_time_to_first_token_seconds": 1.23,
+    "median_time_to_first_answer_token_seconds": 1.23,
+    "median_end_to_end_response_time_seconds": 11.33
    }
   },
   {
@@ -5483,10 +5483,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 301.33,
-    "median_time_to_first_token_seconds": 0.85,
-    "median_time_to_first_answer_token_seconds": 0.85,
-    "median_end_to_end_response_time_seconds": 2.51
+    "median_output_tokens_per_second": 266.93,
+    "median_time_to_first_token_seconds": 0.8,
+    "median_time_to_first_answer_token_seconds": 0.8,
+    "median_end_to_end_response_time_seconds": 2.67
    }
   },
   {
@@ -5539,14 +5539,14 @@
     "artificial_analysis_finance_and_accounting_index": 38.3,
     "artificial_analysis_strategy_and_ops_index": 42.2,
     "artificial_analysis_legal_index": 37,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 34.9,
     "artificial_analysis_engineering_index": 37.6,
     "artificial_analysis_economics_index": 43.6
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 1607.12,
+    "total_cost": 1607.86,
     "cost_per_task": {
-     "total_cost": 1.1341
+     "total_cost": 1.1344
     }
    },
    "pricing": {
@@ -5556,10 +5556,10 @@
     "price_1m_cache_write_tokens": 1.36
    },
    "performance": {
-    "median_output_tokens_per_second": 74.17,
-    "median_time_to_first_token_seconds": 1.61,
-    "median_time_to_first_answer_token_seconds": 28.57,
-    "median_end_to_end_response_time_seconds": 35.32
+    "median_output_tokens_per_second": 109.38,
+    "median_time_to_first_token_seconds": 1.63,
+    "median_time_to_first_answer_token_seconds": 19.92,
+    "median_end_to_end_response_time_seconds": 24.49
    }
   },
   {
@@ -5584,9 +5584,9 @@
    },
    "artificial_analysis_intelligence_index_cost": null,
    "pricing": {
-    "price_1m_input_tokens": 0.05,
-    "price_1m_output_tokens": 0.2,
-    "price_1m_cache_hit_tokens": 0.01,
+    "price_1m_input_tokens": null,
+    "price_1m_output_tokens": null,
+    "price_1m_cache_hit_tokens": null,
     "price_1m_cache_write_tokens": null
    },
    "performance": {
@@ -5646,7 +5646,7 @@
     "artificial_analysis_finance_and_accounting_index": 18.7,
     "artificial_analysis_strategy_and_ops_index": 16,
     "artificial_analysis_legal_index": 22.2,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 20.8,
     "artificial_analysis_engineering_index": 22.1,
     "artificial_analysis_economics_index": 29.7
    },
@@ -5663,10 +5663,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 43.61,
-    "median_time_to_first_token_seconds": 3.94,
-    "median_time_to_first_answer_token_seconds": 3.94,
-    "median_end_to_end_response_time_seconds": 15.41
+    "median_output_tokens_per_second": 49.91,
+    "median_time_to_first_token_seconds": 3.96,
+    "median_time_to_first_answer_token_seconds": 3.96,
+    "median_end_to_end_response_time_seconds": 13.98
    }
   },
   {
@@ -5719,14 +5719,14 @@
     "artificial_analysis_finance_and_accounting_index": 42.5,
     "artificial_analysis_strategy_and_ops_index": 42.7,
     "artificial_analysis_legal_index": 44.5,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 39,
     "artificial_analysis_engineering_index": 40.4,
     "artificial_analysis_economics_index": 51
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 1183.43,
+    "total_cost": 1184.9,
     "cost_per_task": {
-     "total_cost": 0.8435
+     "total_cost": 0.8442
     }
    },
    "pricing": {
@@ -5736,10 +5736,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 141.04,
-    "median_time_to_first_token_seconds": 0.8,
-    "median_time_to_first_answer_token_seconds": 14.98,
-    "median_end_to_end_response_time_seconds": 18.53
+    "median_output_tokens_per_second": 165.36,
+    "median_time_to_first_token_seconds": 0.79,
+    "median_time_to_first_answer_token_seconds": 12.88,
+    "median_end_to_end_response_time_seconds": 15.9
    }
   },
   {
@@ -5758,7 +5758,7 @@
     "artificial_analysis_finance_and_accounting_index": 32.9,
     "artificial_analysis_strategy_and_ops_index": 37.5,
     "artificial_analysis_legal_index": 33,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 32.4,
     "artificial_analysis_engineering_index": 29.4,
     "artificial_analysis_economics_index": 37.1
    },
@@ -5831,27 +5831,27 @@
     "artificial_analysis_finance_and_accounting_index": 7.3,
     "artificial_analysis_strategy_and_ops_index": 4.8,
     "artificial_analysis_legal_index": 7.3,
-    "artificial_analysis_healthcare_and_medical_index": 6.6,
+    "artificial_analysis_healthcare_and_medical_index": 6.7,
     "artificial_analysis_engineering_index": 11.7,
     "artificial_analysis_economics_index": 11.3
    },
    "artificial_analysis_intelligence_index_cost": {
-    "total_cost": 30.48,
+    "total_cost": 28.81,
     "cost_per_task": {
-     "total_cost": 0.0115
+     "total_cost": 0.0106
     }
    },
    "pricing": {
-    "price_1m_input_tokens": 0.0575,
-    "price_1m_output_tokens": 0.215,
+    "price_1m_input_tokens": 0.05,
+    "price_1m_output_tokens": 0.22,
     "price_1m_cache_hit_tokens": null,
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 249.65,
-    "median_time_to_first_token_seconds": 0.72,
-    "median_time_to_first_answer_token_seconds": 8.73,
-    "median_end_to_end_response_time_seconds": 10.73
+    "median_output_tokens_per_second": 175.84,
+    "median_time_to_first_token_seconds": 0.8,
+    "median_time_to_first_answer_token_seconds": 12.18,
+    "median_end_to_end_response_time_seconds": 15.02
    }
   },
   {
@@ -5916,10 +5916,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 251.03,
-    "median_time_to_first_token_seconds": 4.13,
-    "median_time_to_first_answer_token_seconds": 4.13,
-    "median_end_to_end_response_time_seconds": 6.12
+    "median_output_tokens_per_second": 205.29,
+    "median_time_to_first_token_seconds": 5.47,
+    "median_time_to_first_answer_token_seconds": 5.47,
+    "median_end_to_end_response_time_seconds": 7.9
    }
   },
   {
@@ -5984,9 +5984,9 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 56.87,
-    "median_time_to_first_token_seconds": 3.62,
-    "median_time_to_first_answer_token_seconds": 3.62,
+    "median_output_tokens_per_second": 56.75,
+    "median_time_to_first_token_seconds": 3.6,
+    "median_time_to_first_answer_token_seconds": 3.6,
     "median_end_to_end_response_time_seconds": 12.41
    }
   },
@@ -6052,10 +6052,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 170.05,
-    "median_time_to_first_token_seconds": 0.82,
-    "median_time_to_first_answer_token_seconds": 0.82,
-    "median_end_to_end_response_time_seconds": 3.76
+    "median_output_tokens_per_second": 183.97,
+    "median_time_to_first_token_seconds": 0.83,
+    "median_time_to_first_answer_token_seconds": 0.83,
+    "median_end_to_end_response_time_seconds": 3.55
    }
   },
   {
@@ -6074,7 +6074,7 @@
     "artificial_analysis_finance_and_accounting_index": 51.3,
     "artificial_analysis_strategy_and_ops_index": 53.9,
     "artificial_analysis_legal_index": 56.7,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 44.6,
     "artificial_analysis_engineering_index": 51.5,
     "artificial_analysis_economics_index": 57.8
    },
@@ -6091,10 +6091,10 @@
     "price_1m_cache_write_tokens": 12.5
    },
    "performance": {
-    "median_output_tokens_per_second": 59.48,
-    "median_time_to_first_token_seconds": 14.26,
-    "median_time_to_first_answer_token_seconds": 14.26,
-    "median_end_to_end_response_time_seconds": 22.67
+    "median_output_tokens_per_second": 54.31,
+    "median_time_to_first_token_seconds": 9.06,
+    "median_time_to_first_answer_token_seconds": 9.06,
+    "median_end_to_end_response_time_seconds": 18.27
    }
   },
   {
@@ -6113,7 +6113,7 @@
     "artificial_analysis_finance_and_accounting_index": 52.6,
     "artificial_analysis_strategy_and_ops_index": 54.9,
     "artificial_analysis_legal_index": 56.2,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 49,
     "artificial_analysis_engineering_index": 51.9,
     "artificial_analysis_economics_index": 57.6
    },
@@ -6130,10 +6130,10 @@
     "price_1m_cache_write_tokens": 2.5
    },
    "performance": {
-    "median_output_tokens_per_second": 52.17,
-    "median_time_to_first_token_seconds": 45.79,
-    "median_time_to_first_answer_token_seconds": 45.79,
-    "median_end_to_end_response_time_seconds": 55.37
+    "median_output_tokens_per_second": 52.01,
+    "median_time_to_first_token_seconds": 48.33,
+    "median_time_to_first_answer_token_seconds": 48.33,
+    "median_end_to_end_response_time_seconds": 57.94
    }
   },
   {
@@ -6164,10 +6164,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 63.13,
-    "median_time_to_first_token_seconds": 1.7,
-    "median_time_to_first_answer_token_seconds": 1.7,
-    "median_end_to_end_response_time_seconds": 9.62
+    "median_output_tokens_per_second": 24.77,
+    "median_time_to_first_token_seconds": 2.11,
+    "median_time_to_first_answer_token_seconds": 2.11,
+    "median_end_to_end_response_time_seconds": 22.29
    }
   },
   {
@@ -6368,10 +6368,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 129.71,
-    "median_time_to_first_token_seconds": 0.53,
-    "median_time_to_first_answer_token_seconds": 15.95,
-    "median_end_to_end_response_time_seconds": 19.8
+    "median_output_tokens_per_second": 151.82,
+    "median_time_to_first_token_seconds": 0.58,
+    "median_time_to_first_answer_token_seconds": 13.75,
+    "median_end_to_end_response_time_seconds": 17.04
    }
   },
   {
@@ -6390,7 +6390,7 @@
     "artificial_analysis_finance_and_accounting_index": 56.4,
     "artificial_analysis_strategy_and_ops_index": 59.7,
     "artificial_analysis_legal_index": 60.5,
-    "artificial_analysis_healthcare_and_medical_index": 58,
+    "artificial_analysis_healthcare_and_medical_index": 49.7,
     "artificial_analysis_engineering_index": 56.5,
     "artificial_analysis_economics_index": 62.7
    },
@@ -6407,10 +6407,10 @@
     "price_1m_cache_write_tokens": 12.5
    },
    "performance": {
-    "median_output_tokens_per_second": 68.9,
-    "median_time_to_first_token_seconds": 126.65,
-    "median_time_to_first_answer_token_seconds": 126.65,
-    "median_end_to_end_response_time_seconds": 133.91
+    "median_output_tokens_per_second": 69.84,
+    "median_time_to_first_token_seconds": 239.84,
+    "median_time_to_first_answer_token_seconds": 239.84,
+    "median_end_to_end_response_time_seconds": 247
    }
   },
   {
@@ -6441,10 +6441,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 24,
-    "median_time_to_first_token_seconds": 1.12,
-    "median_time_to_first_answer_token_seconds": 1.12,
-    "median_end_to_end_response_time_seconds": 21.96
+    "median_output_tokens_per_second": 25.38,
+    "median_time_to_first_token_seconds": 1.05,
+    "median_time_to_first_answer_token_seconds": 1.05,
+    "median_end_to_end_response_time_seconds": 20.76
    }
   },
   {
@@ -6497,7 +6497,7 @@
     "artificial_analysis_finance_and_accounting_index": 10.5,
     "artificial_analysis_strategy_and_ops_index": 6.7,
     "artificial_analysis_legal_index": 12.8,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 10.8,
     "artificial_analysis_engineering_index": 16.4,
     "artificial_analysis_economics_index": 18.1
    },
@@ -6514,10 +6514,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 210.11,
-    "median_time_to_first_token_seconds": 0.74,
-    "median_time_to_first_answer_token_seconds": 10.26,
-    "median_end_to_end_response_time_seconds": 12.64
+    "median_output_tokens_per_second": 174.64,
+    "median_time_to_first_token_seconds": 0.81,
+    "median_time_to_first_answer_token_seconds": 12.26,
+    "median_end_to_end_response_time_seconds": 15.12
    }
   },
   {
@@ -6582,10 +6582,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 76.84,
-    "median_time_to_first_token_seconds": 1.54,
-    "median_time_to_first_answer_token_seconds": 41.95,
-    "median_end_to_end_response_time_seconds": 48.45
+    "median_output_tokens_per_second": 71.07,
+    "median_time_to_first_token_seconds": 1.81,
+    "median_time_to_first_answer_token_seconds": 45.5,
+    "median_end_to_end_response_time_seconds": 52.54
    }
   },
   {
@@ -6616,10 +6616,10 @@
     "price_1m_cache_write_tokens": 6.25
    },
    "performance": {
-    "median_output_tokens_per_second": 50.11,
-    "median_time_to_first_token_seconds": 1.06,
-    "median_time_to_first_answer_token_seconds": 1.06,
-    "median_end_to_end_response_time_seconds": 11.04
+    "median_output_tokens_per_second": 48.72,
+    "median_time_to_first_token_seconds": 1,
+    "median_time_to_first_answer_token_seconds": 1,
+    "median_end_to_end_response_time_seconds": 11.26
    }
   },
   {
@@ -6638,7 +6638,7 @@
     "artificial_analysis_finance_and_accounting_index": 40.8,
     "artificial_analysis_strategy_and_ops_index": 39.3,
     "artificial_analysis_legal_index": 39.9,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 35.4,
     "artificial_analysis_engineering_index": 43.1,
     "artificial_analysis_economics_index": 48.7
    },
@@ -6655,10 +6655,10 @@
     "price_1m_cache_write_tokens": 0.125
    },
    "performance": {
-    "median_output_tokens_per_second": 197.98,
-    "median_time_to_first_token_seconds": 58.33,
-    "median_time_to_first_answer_token_seconds": 58.33,
-    "median_end_to_end_response_time_seconds": 60.86
+    "median_output_tokens_per_second": 183.58,
+    "median_time_to_first_token_seconds": 66.99,
+    "median_time_to_first_answer_token_seconds": 66.99,
+    "median_end_to_end_response_time_seconds": 69.71
    }
   },
   {
@@ -6745,7 +6745,7 @@
     "artificial_analysis_finance_and_accounting_index": 40.1,
     "artificial_analysis_strategy_and_ops_index": 44.1,
     "artificial_analysis_legal_index": 36.9,
-    "artificial_analysis_healthcare_and_medical_index": 35.7,
+    "artificial_analysis_healthcare_and_medical_index": 35.8,
     "artificial_analysis_engineering_index": 36.2,
     "artificial_analysis_economics_index": 42.7
    },
@@ -6762,10 +6762,10 @@
     "price_1m_cache_write_tokens": 0.25
    },
    "performance": {
-    "median_output_tokens_per_second": 140.35,
-    "median_time_to_first_token_seconds": 91.95,
-    "median_time_to_first_answer_token_seconds": 91.95,
-    "median_end_to_end_response_time_seconds": 95.51
+    "median_output_tokens_per_second": 125.02,
+    "median_time_to_first_token_seconds": 101.47,
+    "median_time_to_first_answer_token_seconds": 101.47,
+    "median_end_to_end_response_time_seconds": 105.47
    }
   },
   {
@@ -6784,7 +6784,7 @@
     "artificial_analysis_finance_and_accounting_index": 28.8,
     "artificial_analysis_strategy_and_ops_index": 28,
     "artificial_analysis_legal_index": 30.6,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 27,
     "artificial_analysis_engineering_index": 31.2,
     "artificial_analysis_economics_index": 37.5
    },
@@ -6801,10 +6801,10 @@
     "price_1m_cache_write_tokens": 0.125
    },
    "performance": {
-    "median_output_tokens_per_second": 173.43,
-    "median_time_to_first_token_seconds": 7.75,
-    "median_time_to_first_answer_token_seconds": 7.75,
-    "median_end_to_end_response_time_seconds": 10.63
+    "median_output_tokens_per_second": 162.34,
+    "median_time_to_first_token_seconds": 7.77,
+    "median_time_to_first_answer_token_seconds": 7.77,
+    "median_end_to_end_response_time_seconds": 10.85
    }
   },
   {
@@ -6835,10 +6835,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 85.5,
-    "median_time_to_first_token_seconds": 3.25,
-    "median_time_to_first_answer_token_seconds": 3.25,
-    "median_end_to_end_response_time_seconds": 9.1
+    "median_output_tokens_per_second": 95.1,
+    "median_time_to_first_token_seconds": 3.82,
+    "median_time_to_first_answer_token_seconds": 3.82,
+    "median_end_to_end_response_time_seconds": 9.07
    }
   },
   {
@@ -6891,7 +6891,7 @@
     "artificial_analysis_finance_and_accounting_index": 23.5,
     "artificial_analysis_strategy_and_ops_index": 20.5,
     "artificial_analysis_legal_index": 26.1,
-    "artificial_analysis_healthcare_and_medical_index": null,
+    "artificial_analysis_healthcare_and_medical_index": 23.2,
     "artificial_analysis_engineering_index": 27.5,
     "artificial_analysis_economics_index": 35.2
    },
@@ -7039,10 +7039,10 @@
     "price_1m_cache_write_tokens": 6.25
    },
    "performance": {
-    "median_output_tokens_per_second": 39.91,
-    "median_time_to_first_token_seconds": 1.94,
-    "median_time_to_first_answer_token_seconds": 1.94,
-    "median_end_to_end_response_time_seconds": 14.47
+    "median_output_tokens_per_second": 37.36,
+    "median_time_to_first_token_seconds": 1.97,
+    "median_time_to_first_answer_token_seconds": 1.97,
+    "median_end_to_end_response_time_seconds": 15.36
    }
   },
   {
@@ -7078,10 +7078,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 31.34,
-    "median_time_to_first_token_seconds": 1.02,
-    "median_time_to_first_answer_token_seconds": 1.02,
-    "median_end_to_end_response_time_seconds": 16.97
+    "median_output_tokens_per_second": 52.38,
+    "median_time_to_first_token_seconds": 1,
+    "median_time_to_first_answer_token_seconds": 1,
+    "median_end_to_end_response_time_seconds": 10.55
    }
   },
   {
@@ -7117,10 +7117,10 @@
     "price_1m_cache_write_tokens": null
    },
    "performance": {
-    "median_output_tokens_per_second": 61.1,
-    "median_time_to_first_token_seconds": 0.97,
-    "median_time_to_first_answer_token_seconds": 0.97,
-    "median_end_to_end_response_time_seconds": 9.15
+    "median_output_tokens_per_second": 38.65,
+    "median_time_to_first_token_seconds": 0.92,
+    "median_time_to_first_answer_token_seconds": 0.92,
+    "median_end_to_end_response_time_seconds": 13.85
    }
   }
  ]
