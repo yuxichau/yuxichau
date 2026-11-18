@@ -3,7 +3,7 @@
 
 Reads the Artificial Analysis free-tier API snapshots (saved in this repo under
 _scripts/data/snapshots/aa_p*.json), takes the top 200 models by Intelligence
-Index (v4.3), and writes:
+Index (v5.0), and writes:
   - _pages/llm-model-analysis.html   (the dashboard page, embedded data)
   - _scripts/data/aa_top200_raw.json  (top-200 raw snapshot for audit)
 
@@ -159,7 +159,7 @@ def main():
     os.makedirs(os.path.dirname(RAW), exist_ok=True)
     with open(RAW, "w") as f:
         json.dump({"pulled_at": datetime.now(timezone.utc).isoformat(),
-                   "intelligence_index_version": "4.3",
+                   "intelligence_index_version": "5.0",
                    "top_200": [m for m in top]}, f, indent=1)
 
     data_json = json.dumps(rows)
@@ -171,6 +171,7 @@ def main():
     page = (TEMPLATE
             .replace("__DATA__", data_json)
             .replace("__PULLED__", pulled)
+            .replace("__NCOUNT__", str(len(rows)))
             .replace("__CHARTJS__", chartjs))
     os.makedirs(os.path.dirname(PAGE), exist_ok=True)
     with open(PAGE, "w") as f:
@@ -254,7 +255,7 @@ permalink: /projects/llm-model-analysis/
 
 <div class="dash-header">
   <h2>LLM Intelligence vs Cost</h2>
-  <p class="dash-sub">Top 200 models by Artificial Analysis Intelligence Index (v4.3), plotted against the cost to complete one intelligence-index task. Data pulled __PULLED__ from <a href="https://artificialanalysis.ai" target="_blank" rel="noopener">artificialanalysis.ai</a>. This is a snapshot, not a live benchmark.</p>
+  <p class="dash-sub">Top __NCOUNT__ models by Artificial Analysis Intelligence Index (v5.0), plotted against the cost to complete one intelligence-index task. Data pulled __PULLED__ from <a href="https://artificialanalysis.ai" target="_blank" rel="noopener">artificialanalysis.ai</a>. This is a snapshot, not a live benchmark.</p>
 </div>
 
 <div class="kpis" id="kpis"></div>
@@ -317,7 +318,7 @@ permalink: /projects/llm-model-analysis/
 </div>
 
 <div class="foot">
-  <p><strong>Methodology.</strong> Intelligence Index v4.3 and cost-per-task figures are published by <a href="https://artificialanalysis.ai" target="_blank" rel="noopener">Artificial Analysis</a> and reproduced here with attribution. Cost per task is the USD price to complete their standard intelligence-index task set at a 3:1 input-output ratio. Where Artificial Analysis has not published a cost, the model appears in the table only. Scores from different index versions are not comparable; this snapshot uses one version throughout.</p>
+  <p><strong>Methodology.</strong> Intelligence Index v5.0.1 and cost-per-task figures are published by <a href="https://artificialanalysis.ai" target="_blank" rel="noopener">Artificial Analysis</a> and reproduced here with attribution. Cost per task is the USD price to complete their standard intelligence-index task set at a 3:1 input-output ratio. Where Artificial Analysis has not published a cost, the model appears in the table only. Scores from different index versions are not comparable; this snapshot uses one version throughout. It covers the models exposed on Artificial Analysis's free-tier API, not every model they evaluate.</p>
   <p><strong>Best in class.</strong> The green diagonal line connects models where no cheaper model scores higher, tracing the top-left edge of the point cloud; anything below the line is dominated on intelligence per dollar at its own price point. License labels reflect weights availability at the data-pull date (open-weights releases after that date are not reflected); Kimi K3 ships under its own license with commercial conditions and is counted as open source.</p>
 </div>
 
@@ -491,7 +492,7 @@ function renderChart(bic) {
       },
       scales: {
         x: { type: logX ? "logarithmic" : "linear", title: { display: true, text: "Cost per task (USD, " + (logX ? "log scale" : "linear scale") + ")" }, grid: { color: "#eaeef2" } },
-        y: { title: { display: true, text: "Intelligence Index (v4.3)" }, grid: { color: "#eaeef2" } }
+        y: { title: { display: true, text: "Intelligence Index (v5.0)" }, grid: { color: "#eaeef2" } }
       }
     }
   });

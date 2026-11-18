@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """Fetch the Artificial Analysis free-tier snapshot into _scripts/data/snapshots/.
 
-Calls the free language-models endpoint (200 models/page) and saves the first
-2 pages as aa_p1.json and aa_p2.json plus pulled_at.txt (fetch timestamp
-marker). Two pages safely cover the top 200 scored models, so a refresh uses 2
-API requests rather than downloading every page. The generator reads the
-snapshots offline.
+Calls the free language-models endpoint (200 models/page) and saves every page
+it returns (aa_p1..pN.json, N <= MAX_PAGES) plus pulled_at.txt (fetch timestamp
+marker). The endpoint is NOT sorted by score, so scored models are spread across
+all pages; MAX_PAGES=4 covers the whole free-tier list (~760 models). The
+generator reads the snapshots offline.
 
 API:  base  https://artificialanalysis.ai/api/v2
       auth  x-api-key header (NOT Authorization: Bearer)
-      free  GET /language/models/free?tier=free&intelligence_index_version=4.3&page=N
+      free  GET /language/models/free?tier=free&intelligence_index_version=5.0&page=N
       free tier quota: 100 requests / 24h (fixed window)
 
 Requires the ARTIFICIAL_ANALYSIS_API env var. Docs: https://artificialanalysis.ai/data-api/docs
@@ -26,8 +26,8 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 SNAP_DIR = SCRIPT_DIR / "data" / "snapshots"
 BASE = "https://artificialanalysis.ai/api/v2/language/models/free"
 TIER = "free"
-VERSION = "4.3"
-MAX_PAGES = 2  # two 200-model pages safely cover the top 200 scored models
+VERSION = "5.0"
+MAX_PAGES = 4  # free tier serves 4 pages (~760 models); scored models are spread across all
 
 
 def main() -> int:

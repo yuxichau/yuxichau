@@ -6,7 +6,7 @@ dashboard page (`_pages/llm-model-analysis.html`).
 ## Pipeline
 
 ```
-fetch_snapshots.py  ->  _scripts/data/snapshots/aa_p1..p2.json + pulled_at.txt
+fetch_snapshots.py  ->  _scripts/data/snapshots/aa_p1..p4.json + pulled_at.txt
                               |
 generate_llm_dashboard.py <-- snapshots + _scripts/vendor/chart.umd.js
                               |
@@ -19,7 +19,7 @@ generate_llm_dashboard.py <-- snapshots + _scripts/vendor/chart.umd.js
   quota 100 req/24h) and stores the raw pages in the repo. Needs
   `ARTIFICIAL_ANALYSIS_API`.
 - **`generate_llm_dashboard.py`** — offline, deterministic: takes the top 200
-  models by Intelligence Index v4.3 from the vendored snapshots, inlines the
+  models by Intelligence Index v5.0 from the vendored snapshots, inlines the
   vendored Chart.js bundle (v4.4.1) and the data into the page. No API calls.
 - **`refresh_dashboard.sh`** — the one-command entry point: fetch → generate →
   commit → push → trigger the Cloudflare Pages build (via `deploy.sh`).
@@ -31,7 +31,7 @@ generate_llm_dashboard.py <-- snapshots + _scripts/vendor/chart.umd.js
 
 | Path | What | Why |
 | --- | --- | --- |
-| `data/snapshots/aa_p1..p2.json` | raw AA API pages (200/page) | offline regeneration + audit |
+| `data/snapshots/aa_p1..p4.json` | raw AA API pages (200/page) | offline regeneration + audit |
 | `data/snapshots/pulled_at.txt` | fetch timestamp | the "Data pulled" date on the page |
 | `data/aa_top200_raw.json` | top-200 raw snapshot | audit trail of what's displayed |
 | `vendor/chart.umd.js` | Chart.js 4.4.1 UMD bundle | page is self-contained; no CDN dep |
