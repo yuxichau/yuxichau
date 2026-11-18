@@ -21,7 +21,7 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO = SCRIPT_DIR.parent
-SNAPS = [SCRIPT_DIR / "data" / "snapshots" / f"aa_p{i}.json" for i in range(1, 3)]
+SNAPS = sorted((SCRIPT_DIR / "data" / "snapshots").glob("aa_p*.json"))
 PAGE = REPO / "_pages/llm-model-analysis.html"
 TOP_N = 200
 RAW = SCRIPT_DIR / "data" / "aa_top200_raw.json"
