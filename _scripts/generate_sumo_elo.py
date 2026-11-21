@@ -417,6 +417,7 @@ document.querySelectorAll("#sep-app .preset").forEach(b=>{
 
 (function init(){
   const best = rikishi.slice().sort((a,b)=>b[3]-a[3]).slice(0,1)[0];
+  const missing_japanese = rikishi.filter(r=>!r[4]).length;
   kpi("Bashos", bashos.length);
   kpi("Rikishi rated", rikishi.length.toLocaleString());
   kpi("Bouts replayed", "748,204");
@@ -431,8 +432,6 @@ document.querySelectorAll("#sep-app .preset").forEach(b=>{
 })();
 </script>
 </div>
-</body>
-</html>
 """
 
 # ---- emit page + static asset ----

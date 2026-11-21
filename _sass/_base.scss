@@ -1,0 +1,192 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--sj-bg);
+  color: var(--sj-ink);
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  background: var(--sj-bg);
+  color: var(--sj-ink);
+  font-family: var(--sj-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background: var(--sj-soft);
+  color: var(--sj-ink);
+}
+
+a {
+  color: var(--sj-green);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--sj-green-dark);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--sj-green);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--sj-serif);
+  color: var(--sj-ink);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--sj-line);
+  margin: 2.25rem 0;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 2px solid var(--sj-green);
+  color: var(--sj-muted);
+  font-style: italic;
+}
+
+code, kbd, pre {
+  font-family: var(--sj-mono);
+  font-size: 0.875em;
+}
+
+:not(pre) > code {
+  background: var(--sj-code-bg);
+  padding: 0.12em 0.38em;
+  border-radius: 4px;
+  color: var(--sj-ink);
+}
+
+kbd {
+  background: var(--sj-paper);
+  border: 1px solid var(--sj-line);
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-size: 0.8em;
+}
+
+pre {
+  background: var(--sj-paper);
+  border: 1px solid var(--sj-line);
+  border-radius: var(--sj-radius);
+  padding: 1rem 1.15rem;
+  overflow-x: auto;
+  line-height: 1.55;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.55rem 0.7rem;
+  border-bottom: 1px solid var(--sj-line);
+  vertical-align: top;
+}
+
+th {
+  font-weight: 600;
+  border-bottom-width: 2px;
+}
+
+.notice--info {
+  background: var(--sj-paper);
+  border: 1px solid var(--sj-line);
+  border-left: 3px solid var(--sj-green);
+  border-radius: var(--sj-radius);
+  padding: 0.9rem 1.1rem;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+  color: var(--sj-muted);
+}
+
+.notice--info strong {
+  color: var(--sj-ink);
+}
+
+.sj-disclaimer {
+  color: var(--sj-muted);
+  font-size: 0.88rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--sj-green);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* Warm-paper Rouge syntax tokens */
+.highlight .c, .highlight .c1, .highlight .cm { color: #6c7773; font-style: italic; }
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt { color: var(--sj-green); font-weight: 600; }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sc { color: var(--sj-vermilion); }
+.highlight .m, .highlight .mi, .highlight .mf, .highlight .mh { color: #2b5b84; }
+.highlight .nf, .highlight .nc, .highlight .nb { color: #1b3a30; }

@@ -1,81 +1,57 @@
-title: "Yu Xi Chau | Systems Journal"
+title: "Yu Xi Chau"
+tagline: "AI systems, governance & engineering notes"
 name: "Yu Xi Chau"
-description: "Yu-Xi Chau builds efficient AI systems that organizations can use, govern and trust, with writing on AI systems, AI governance, and AI application."
+description: "Yu Xi Chau builds efficient AI systems that organizations can use, govern, and trust. Writing and interactive projects on AI systems, governance, and application."
 url: "https://yuxichau.com"
 baseurl: ""
-logo: "assets/images/logo.png"
-favicon: "assets/images/favicon.svg" 
-
-
-# Theme
-theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+lang: en
 
 # Site Author
 author:
   name: "Yu Xi Chau"
-  avatar: "/assets/images/bio-photo-20260912.png" # Optional
-  bio: "I build efficient AI systems that organizations can use, govern and trust."
+  avatar: "/assets/images/bio-photo-20260912.png"
+  bio: "Building efficient AI systems that organizations can use, govern, and trust."
   location: "Hong Kong"
-  links:
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/yuxichau/"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://yuxichau.com"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/yuxichau"
-
+  github: "https://github.com/yuxichau"
+  linkedin: "https://www.linkedin.com/in/yuxichau/"
 
 # Build settings
 markdown: kramdown
-highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-paginate
-  - jekyll-include-cache
 
 # Include files/folders
-include: ["_pages", "_redirects"]
+include:
+  - _pages
+  - _redirects
+  - llms.txt
 
-# Pagination
-paginate: 5
-paginate_path: /page:num/
+# Exclude non-site files
+exclude:
+  - Makefile
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - _scripts/
+  - docs/
+  - .playwright-mcp/
 
 # Defaults
-tag_archive:
-  type: Liquid
-  path: /tags/
-
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
     values:
       layout: single
-      author_profile: true
-      read_time: true
-      comments: false
-      share: true
-      related: true
       permalink: /posts/:title/
-  # _pages
   - scope:
       path: "_pages"
       type: pages
     values:
       layout: single
-      author_profile: true
-
-# Main navigation lives in _data/navigation.yml (single source of truth)
-
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/yuxichau"

@@ -1,0 +1,82 @@
+---
+layout: default
+---
+<div class="sj-article sj-article--wide">
+  <header class="sj-article__header">
+    <h1 class="sj-article__title">{{ page.title | default: "Writing" }}</h1>
+    <div class="sj-article__meta">
+      <span id="sj-post-count">{{ site.posts.size }} essays &amp; engineering notes</span>
+      <span>·</span>
+      <a href="{{ '/topics/' | relative_url }}">Browse by topic</a>
+      <span>·</span>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </div>
+  </header>
+
+  <div class="sj-filter-bar" role="region" aria-label="Filter writing">
+    <input id="sj-post-search" class="sj-filter-search" type="search" placeholder="Filter by title or tag…" aria-label="Filter posts by title or tag">
+    <div class="sj-filter-chips" id="sj-tag-chips">
+      <button type="button" class="sj-chip is-active" data-tag="all">All</button>
+      {% assign all_tags = site.tags | sort %}
+      {% for tag in all_tags %}
+      <button type="button" class="sj-chip" data-tag="{{ tag[0] | downcase }}">{{ tag[0] }} ({{ tag[1].size }})</button>
+      {% endfor %}
+    </div>
+  </div>
+
+  {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% for year in posts_by_year %}
+  <section class="sj-year-group" data-year="{{ year.name }}">
+    <h2 class="sj-year-heading">{{ year.name }}</h2>
+    {% for post in year.items %}
+    <div class="sj-archive-row" data-title="{{ post.title | downcase | escape }}" data-tags="{{ post.tags | join: ',' | downcase | escape }}">
+      <time class="sj-list__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      <a class="sj-list__title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span class="sj-archive-row__tags">{{ post.tags | join: " · " }}</span>
+    </div>
+    {% endfor %}
+  </section>
+  {% endfor %}
+</div>
+
+<script>
+(function () {
+  var search = document.getElementById('sj-post-search');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('#sj-tag-chips .sj-chip'));
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.sj-archive-row'));
+  var groups = Array.prototype.slice.call(document.querySelectorAll('.sj-year-group'));
+  var countEl = document.getElementById('sj-post-count');
+  var activeTag = 'all';
+
+  function applyFilter() {
+    var q = (search.value || '').trim().toLowerCase();
+    var visible = 0;
+    rows.forEach(function (row) {
+      var tags = (row.getAttribute('data-tags') || '').split(',');
+      var title = row.getAttribute('data-title') || '';
+      var tagMatch = activeTag === 'all' || tags.indexOf(activeTag) !== -1;
+      var textMatch = !q || title.indexOf(q) !== -1 || tags.join(' ').indexOf(q) !== -1;
+      var show = tagMatch && textMatch;
+      row.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+    groups.forEach(function (g) {
+      var any = g.querySelector('.sj-archive-row:not([style*="display: none"])');
+      g.style.display = any ? '' : 'none';
+    });
+    if (countEl) {
+      countEl.textContent = visible + ' of ' + rows.length + ' notes';
+    }
+  }
+
+  chips.forEach(function (chip) {
+    chip.addEventListener('click', function () {
+      activeTag = chip.getAttribute('data-tag');
+      chips.forEach(function (c) { c.classList.toggle('is-active', c === chip); });
+      applyFilter();
+    });
+  });
+
+  if (search) search.addEventListener('input', applyFilter);
+})();
+</script>

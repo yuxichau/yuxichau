@@ -1,0 +1,5 @@
+<div class="sj-archive-row">
+  <time class="sj-list__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+  <a class="sj-list__title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  <span class="sj-archive-row__tags">{{ post.tags | join: " · " }}</span>
+</div>

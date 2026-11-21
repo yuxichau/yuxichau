@@ -1,11 +1,9 @@
 main:
   - title: "Writing"
     url: /posts/
-  - title: "Topics"
-    url: /topics/
   - title: "Projects"
     url: /projects/
+  - title: "Topics"
+    url: /topics/
   - title: "About"
     url: /about/
-  - title: "Future ideas"
-    url: /topics/future-ideas/

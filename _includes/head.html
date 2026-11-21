@@ -1,15 +1,31 @@
-<!-- Systems Journal metadata, structured data, and navigation enhancements -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+{% assign page_description = page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 %}
+{% if page.seo_title %}
+  {% assign meta_title = page.seo_title %}
+{% elsif page.url == '/' or page.url == '/index.html' %}
+  {% assign meta_title = "Yu Xi Chau — AI systems, governance & engineering notes" %}
+{% else %}
+  {% assign meta_title = page.title | append: " — " | append: site.title %}
+{% endif %}
+{% assign page_image = page.header.overlay_image | default: '/assets/images/bio-photo-20260912.png' %}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ meta_title | escape }}</title>
+<meta name="description" content="{{ page_description | escape }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
 <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
 <link rel="apple-touch-icon" href="{{ '/assets/images/favicon.svg' | relative_url }}">
-{% assign page_description = page.description | default: site.description %}
-{% assign page_title = page.seo_title | default: page.title | default: site.title %}
-{% assign page_image = page.header.overlay_image | default: '/assets/images/bio-photo-20260912.png' %}
+<meta property="og:type" content="{% if page.collection == 'posts' %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ meta_title | escape }}">
+<meta property="og:description" content="{{ page_description | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
 <meta property="og:image" content="{{ page_image | absolute_url }}">
 <meta name="twitter:card" content="summary_large_image">
 {% if page.url contains '/tags/' %}<meta name="robots" content="noindex,follow">{% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -20,7 +36,7 @@
       "name": "Yu Xi Chau",
       "url": "{{ site.url }}/about/",
       "image": "{{ '/assets/images/bio-photo-20260912.png' | absolute_url }}",
-      "sameAs": ["https://github.com/yuxichau", "https://www.linkedin.com/in/yuxichau/"]
+      "sameAs": ["{{ site.author.github }}", "{{ site.author.linkedin }}"]
     },
     {
       "@type": "WebSite",
@@ -34,11 +50,11 @@
       "@type": "WebPage",
       "@id": "{{ page.url | absolute_url }}#webpage",
       "url": "{{ page.url | absolute_url }}",
-      "name": {{ page_title | jsonify }},
+      "name": {{ meta_title | jsonify }},
       "description": {{ page_description | jsonify }},
       "isPartOf": {"@id": "{{ site.url }}/#website"},
       "about": {"@id": "{{ site.url }}/about/#person"}
-    }{% if page.date and page.layout == 'single' and page.collection == 'posts' %},
+    }{% if page.date and page.collection == 'posts' %},
     {
       "@type": "BlogPosting",
       "@id": "{{ page.url | absolute_url }}#article",
@@ -62,7 +78,7 @@
   "@type": "BreadcrumbList",
   "itemListElement": [
     {"@type":"ListItem","position":1,"name":"Home","item":"{{ site.url }}/"},
-    {"@type":"ListItem","position":2,"name":{{ page_title | jsonify }},"item":"{{ page.url | absolute_url }}"}
+    {"@type":"ListItem","position":2,"name":{{ page.title | default: site.title | jsonify }},"item":"{{ page.url | absolute_url }}"}
   ]
 }
 </script>
@@ -79,24 +95,3 @@ window.MathJax = {
 </script>
 <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 {% endif %}
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  var toggle = document.querySelector('.greedy-nav__toggle');
-  var nav = document.getElementById('site-nav');
-  var menu = nav && nav.querySelector('.hidden-links');
-  if (!toggle || !nav || !menu) return;
-  menu.id = 'site-nav-links';
-  toggle.setAttribute('aria-controls', 'site-nav-links');
-  toggle.setAttribute('aria-expanded', 'false');
-  var setOpen = function (open) {
-    toggle.setAttribute('aria-expanded', String(open));
-    menu.classList.toggle('hidden', !open);
-    menu.classList.toggle('is-open', open);
-    if (open) { var first = menu.querySelector('a'); if (first) first.focus(); }
-    else toggle.focus();
-  };
-  toggle.addEventListener('click', function () { setOpen(toggle.getAttribute('aria-expanded') !== 'true'); });
-  document.addEventListener('keydown', function (event) { if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') setOpen(false); });
-  menu.addEventListener('click', function (event) { if (event.target.closest('a') && window.innerWidth < 1024) setOpen(false); });
-});
-</script>

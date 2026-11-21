@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="sj-article sj-article--wide">
+  <header class="sj-article__header">
+    <h1 class="sj-article__title">{{ page.title | default: "Tags" }}</h1>
+  </header>
+  {% assign all_tags = site.tags | sort %}
+  {% for tag in all_tags %}
+  <section class="sj-year-group" id="{{ tag[0] | slugify }}">
+    <h2 class="sj-year-heading">{{ tag[0] }} ({{ tag[1].size }})</h2>
+    {% for post in tag[1] %}
+    <div class="sj-archive-row">
+      <time class="sj-list__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      <a class="sj-list__title" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span class="sj-archive-row__tags">{{ post.tags | join: " · " }}</span>
+    </div>
+    {% endfor %}
+  </section>
+  {% endfor %}
+</div>

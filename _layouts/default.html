@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  {% include head.html %}
+</head>
+<body class="layout--{{ page.layout }}">
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include header.html %}
+  <main id="main" class="sj-main">
+    {{ content }}
+  </main>
+  {% include footer.html %}
+  <script>
+  (function () {
+    var btn = document.querySelector('.sj-nav__toggle');
+    var nav = document.getElementById('sj-primary-nav');
+    if (!btn || !nav) return;
+    var setOpen = function (open) {
+      btn.setAttribute('aria-expanded', String(open));
+      btn.textContent = open ? 'close' : 'menu';
+      nav.classList.toggle('is-open', open);
+    };
+    btn.addEventListener('click', function () {
+      setOpen(btn.getAttribute('aria-expanded') !== 'true');
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
+        setOpen(false);
+        btn.focus();
+      }
+    });
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+---
+layout: default
+---
+{% assign is_wide = false %}
+{% if page.classes contains 'wide' %}{% assign is_wide = true %}{% endif %}
+<article class="sj-article{% if is_wide %} sj-article--wide{% endif %}">
+  {% unless page.hide_title %}
+  <header class="sj-article__header">
+    <h1 class="sj-article__title">{{ page.title }}</h1>
+    {% if page.collection == 'posts' %}
+    <div class="sj-article__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %b %Y" }}</time>
+      {% assign words = content | number_of_words %}
+      {% assign mins = words | divided_by: 220 | plus: 1 %}
+      <span>· {{ mins }} min read</span>
+      {% if page.tags and page.tags.size > 0 %}
+        {% for tag in page.tags %}
+          <span class="sj-tag">{{ tag }}</span>
+        {% endfor %}
+      {% endif %}
+    </div>
+    {% endif %}
+  </header>
+  {% endunless %}
+
+  <div class="sj-article__content">
+    {{ content }}
+  </div>
+
+  {% if page.collection == 'posts' %}
+  <nav class="sj-post-nav" aria-label="Adjacent posts">
+    <div>
+      {% if page.previous %}
+      <a class="sj-post-nav__link" href="{{ page.previous.url | relative_url }}">
+        <span class="sj-post-nav__label">← Older</span>
+        <span class="sj-post-nav__title">{{ page.previous.title }}</span>
+      </a>
+      {% endif %}
+    </div>
+    <div>
+      {% if page.next %}
+      <a class="sj-post-nav__link sj-post-nav__link--next" href="{{ page.next.url | relative_url }}">
+        <span class="sj-post-nav__label">Newer →</span>
+        <span class="sj-post-nav__title">{{ page.next.title }}</span>
+      </a>
+      {% endif %}
+    </div>
+  </nav>
+  {% endif %}
+</article>

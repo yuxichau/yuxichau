@@ -1,0 +1,76 @@
+/* Harmonize interactive data dashboards with the warm-paper design system */
+body #llm-dash,
+body #hri-app,
+body #sep-app,
+body #go-frontier,
+body #chess-app {
+  --bg: var(--sj-bg);
+  --card: var(--sj-paper);
+  --border: var(--sj-line);
+  --line: var(--sj-line);
+  --border-hover: var(--sj-green);
+  --text: var(--sj-ink);
+  --ink: var(--sj-ink);
+  --muted: var(--sj-muted);
+  --accent: var(--sj-green);
+  --blue: var(--sj-green);
+  --accent-bg: var(--sj-soft);
+  --bluebg: var(--sj-soft);
+  --blue-soft: var(--sj-soft);
+  --good: var(--sj-green);
+  --good-bg: var(--sj-soft);
+  --warn: var(--sj-vermilion);
+  --warn-bg: #f6ede6;
+  --soft: var(--sj-bg);
+  font-family: var(--sj-sans) !important;
+  color: var(--sj-ink) !important;
+  accent-color: var(--sj-green);
+}
+
+body #llm-dash .kpi,
+body #llm-dash .filters,
+body #llm-dash .chart-card,
+body #llm-dash .bic,
+body #hri-app .kpi,
+body #hri-app .panel,
+body #sep-app .kpi,
+body #sep-app .panel,
+body #go-frontier .kpi,
+body #go-frontier .card,
+body #chess-app .kpi,
+body #chess-app .panel,
+body #chess-app .method-card {
+  background: var(--sj-paper) !important;
+  border-color: var(--sj-line) !important;
+  box-shadow: none !important;
+}
+
+body #llm-dash .chip.on,
+body #hri-app button.pill.active,
+body #sep-app button.pill.active,
+body #sep-app .view-tab.active,
+body #chess-app button.mode.active {
+  background: var(--sj-soft) !important;
+  border-color: var(--sj-green) !important;
+  color: var(--sj-green) !important;
+}
+
+body #hri-app button.pill.active,
+body #sep-app button.pill.active,
+body #sep-app .view-tab.active,
+body #chess-app button.mode.active {
+  background: var(--sj-green) !important;
+  color: #fff !important;
+}
+
+body #sep-app .chip {
+  background: var(--sj-soft) !important;
+  color: var(--sj-green) !important;
+  border-color: rgba(35, 90, 71, 0.35) !important;
+}
+
+body #sep-app a,
+body #go-frontier a,
+body #llm-dash a {
+  color: var(--sj-green) !important;
+}

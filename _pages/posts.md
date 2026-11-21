@@ -1,6 +1,6 @@
 ---
-title: "Posts"
+title: "Writing"
 layout: posts
 permalink: /posts/
-author_profile: true
+description: "Essays and engineering notes on AI systems, governance, applied AI, economics, and mathematical tools."
 ---

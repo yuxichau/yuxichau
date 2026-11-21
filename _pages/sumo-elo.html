@@ -7,14 +7,6 @@ permalink: /projects/sumo-elo/
 description: "An interactive Elo history of sumo wrestlers across divisions from 1958 onward, with searchable career curves."
 ---
 
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>All-Division Sumo Elo Explorer</title>
-</head>
-<body>
 <div id="sep-app">
 <style>
 #sep-app { font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; color:var(--sj-ink,#202d2b); line-height:1.5; }
@@ -74,7 +66,6 @@ description: "An interactive Elo history of sumo wrestlers across divisions from
 @media(max-width:700px){ #sep-app .chart-wrap{height:320px;} #sep-app .search-results{width:260px;} }
 </style>
 
-<h1 class="sep">All-Division Sumo Elo Explorer</h1>
 <p class="sub">Every honbasho bout replayed day-by-day, Mar 1958 to Jul 2026 &bull; K=64 &bull; all six divisions &bull; ky&#363;j&#333;/fusen excluded &bull; no decay</p>
 
 <div class="kpis" id="sep-kpis"></div>
@@ -390,6 +381,7 @@ document.querySelectorAll("#sep-app .preset").forEach(b=>{
 
 (function init(){
   const best = rikishi.slice().sort((a,b)=>b[3]-a[3]).slice(0,1)[0];
+  const missing_japanese = rikishi.filter(r=>!r[4]).length;
   kpi("Bashos", bashos.length);
   kpi("Rikishi rated", rikishi.length.toLocaleString());
   kpi("Bouts replayed", "748,204");
@@ -404,5 +396,3 @@ document.querySelectorAll("#sep-app .preset").forEach(b=>{
 })();
 </script>
 </div>
-</body>
-</html>

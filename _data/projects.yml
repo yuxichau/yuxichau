@@ -1,0 +1,72 @@
+- title: "LLM Intelligence vs Cost"
+  url: /projects/llm-model-analysis/
+  category: "Dashboards"
+  tag: "AI systems"
+  featured: true
+  image: /assets/images/projects/llm-intelligence-cost.png
+  summary: "Interactive Pareto frontier comparing Artificial Analysis Intelligence Index against task cost across 150+ models, with filters for lab, reasoning mode, and effort."
+
+- title: "OpenCode Go Frontier Analysis"
+  url: /projects/opencode-go-frontier-analysis/
+  category: "Dashboards"
+  tag: "AI systems"
+  featured: false
+  summary: "Translates Artificial Analysis task cost into estimated share of OpenCode Go's monthly model-specific allowance."
+
+- title: "Measuring Bias in Jev"
+  url: /projects/measuring-bias-in-jev/
+  category: "AI & Measurement"
+  tag: "AI governance"
+  featured: true
+  summary: "An interactive audit of the Type Safe Jev model across chance calibration, matched hiring comparisons, sponsor labels, and moral evaluations."
+
+- title: "Sumo Elo History (All Divisions)"
+  url: /projects/sumo-elo/
+  category: "Elo everything"
+  tag: "Data"
+  featured: true
+  image: /assets/images/projects/sumo-elo.png
+  summary: "Day-by-day Elo history across all six professional sumo divisions from 1958 onward, with searchable career curves and head-to-head comparisons."
+
+- title: "Chess FIDE Elo Explorer"
+  url: /projects/chess-elo/
+  category: "Elo everything"
+  tag: "Data"
+  featured: false
+  summary: "Historical FIDE top-100 lists from 1971 onward, comparing published ratings against a peer-calibrated elite-field baseline."
+
+- title: "Hong Kong Rental Index Explorer"
+  url: /projects/hk-rent-index/
+  category: "Dashboards"
+  tag: "Data"
+  featured: false
+  image: /assets/images/projects/hk-rent-index.png
+  summary: "Hong Kong's private domestic rental index from 1979 onward by flat class, with rebased window comparisons."
+
+- title: "Explosive Condensation"
+  url: /projects/explosive-condensation/
+  category: "Mathematics & Physics"
+  tag: "Complexity"
+  featured: false
+  summary: "An interactive field guide and ring simulation of nonlinear mass-transport condensation from my 2015 complexity science paper (arXiv:1508.07516)."
+
+- title: "Slide Rule"
+  url: /projects/slide-rule/
+  category: "Instruments"
+  tag: "Mathematics"
+  featured: false
+  summary: "A dependency-free browser virtual slide rule with mouse drag, keyboard micro-stepping, and direct logarithmic positioning."
+
+- title: "Blender Viewer"
+  url: /projects/blender-viewer/
+  category: "Instruments"
+  tag: "Graphics"
+  featured: false
+  summary: "A zero-dependency local browser viewer for Blender-exported OBJ meshes with orbit and zoom controls."
+
+- title: "Hong Kong Tycoon (1852)"
+  url: /projects/hong-kong-tycoon/
+  category: "Games"
+  tag: "History"
+  featured: false
+  summary: "An offline browser trading game set in 1852 Hong Kong: build a trading house, manage cargo and credit, and pursue appointment as Governor."

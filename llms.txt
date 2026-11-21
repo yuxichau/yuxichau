@@ -1,0 +1,31 @@
+# Yu Xi Chau
+
+> Engineering notes, interactive data projects, and governance thinking from Yu Xi Chau — an AI leader and applied mathematician based in Hong Kong.
+
+## Profile
+- **Name:** Yu Xi Chau
+- **Location:** Hong Kong
+- **Current Role:** AI leadership at FWD Insurance (GenAI applications, RAG, agentic workflows, production readiness, and AI governance). Views on this site are personal and do not represent FWD Insurance or any other employer.
+- **Academic Background:** PhD in Applied Mathematics (Complexity Science). Co-author of *Explosive condensation in symmetric mass transport models* (arXiv:1508.07516).
+- **Focus Areas:** AI systems engineering, practical AI governance in regulated organisations, and applied AI in financial services and complex enterprises.
+- **Profiles:** [LinkedIn](https://www.linkedin.com/in/yuxichau/) · [GitHub](https://github.com/yuxichau) · [RSS](https://yuxichau.com/feed.xml)
+
+## Key Pages
+- [About](https://yuxichau.com/about/): Full background, industry experience (insurance, real estate, retail, CRM, gaming), and focus areas.
+- [Work with me / Collaboration](https://yuxichau.com/work-with-me/): Advisory, speaking, workshops, and executive/engineering collaboration scope.
+- [Selected Case Studies](https://yuxichau.com/case-studies/): Concise breakdowns of purpose, data, method, limitations, and lessons across key projects.
+- [Pro-bono Consulting](https://yuxichau.com/pro-bono/): Free technology-stack reviews, operationalisation, AI training, and vendor evaluation for Hong Kong non-profits.
+- [All Writing](https://yuxichau.com/posts/): Complete chronological archive of 55+ essays and technical notes.
+- [All Projects](https://yuxichau.com/projects/): Interactive browser tools, dashboards, and simulations.
+
+## Topic Hubs
+- [AI Systems](https://yuxichau.com/topics/ai-systems/): Agent harnesses, model gateways, reliability, evaluation, and cost-capability trade-offs.
+- [AI Governance](https://yuxichau.com/topics/ai-governance/): Proactive governance, guardrails, accountability, and risk in regulated organisations.
+- [AI Application](https://yuxichau.com/topics/ai-application/): Operationalising AI in enterprises, agent-first software economics, and human judgement.
+- [Future Ideas](https://yuxichau.com/topics/future-ideas/): Working backlog of essays and experiments.
+
+## Featured Interactive Projects
+- [LLM Intelligence vs Cost](https://yuxichau.com/projects/llm-model-analysis/): Pareto frontier of 150+ language models plotted by intelligence vs task cost.
+- [Measuring Bias in Jev](https://yuxichau.com/projects/measuring-bias-in-jev/): Interactive calibration and bias audit of the Type Safe Jev model.
+- [Sumo Elo History](https://yuxichau.com/projects/sumo-elo/): All-division professional sumo Elo explorer from 1958 onward.
+- [Explosive Condensation](https://yuxichau.com/projects/explosive-condensation/): Interactive ring simulation of nonlinear mass-transport condensation.
