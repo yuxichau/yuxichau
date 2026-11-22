@@ -185,6 +185,14 @@ body.layout--home .sj-header.is-visible {
   text-decoration: underline;
 }
 
+.sj-beat__links--near {
+  margin-top: 0.9rem;
+}
+
+.sj-beat__links--near a {
+  text-decoration: underline;
+}
+
 /* The sentence lights word by word. The overlap between the 40ms step
    and the 0.9s fade is what makes the brightness travel. */
 .sj-beat [data-words] .w {
@@ -213,6 +221,12 @@ body.layout--home .sj-header.is-visible {
 .sj-beat.is-lit .sj-beat__links {
   opacity: 1;
   transform: none;
+}
+
+.sj-beat__links--near:focus-within {
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
