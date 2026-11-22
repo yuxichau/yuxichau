@@ -43,6 +43,13 @@
   image: /assets/images/projects/hk-rent-index.png
   summary: "Hong Kong's private domestic rental index from 1979 onward by flat class, with rebased window comparisons."
 
+- title: "The BTW Sandpile"
+  url: /projects/btw-sandpile/
+  category: "Mathematics & Physics"
+  tag: "Complexity"
+  featured: false
+  summary: "Drop grains, trigger avalanches, and compare their size distributions on log–log axes in an interactive Bak–Tang–Wiesenfeld sandpile."
+
 - title: "Explosive Condensation"
   url: /projects/explosive-condensation/
   category: "Mathematics & Physics"

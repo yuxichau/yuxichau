@@ -1,0 +1,243 @@
+---
+layout: null
+permalink: /projects/btw-sandpile/
+description: "An interactive Bak–Tang–Wiesenfeld sandpile lab."
+---
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="An interactive Bak–Tang–Wiesenfeld sandpile lab. Trigger avalanches and compare their size distributions on log–log axes.">
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | relative_url }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<title>The BTW sandpile | Systems Journal</title>
+<style>
+  :root{color-scheme:light dark;--bg:#f5f4ef;--paper:#fffefa;--ink:#202d2b;--muted:#525f5b;--green:#235a47;--accent:#8d4c2d;--line:#d5dbd3;--wash:#e7eee5;--button:#235a47;--on-button:#fffefa;--h0:#e7e8dc;--h1:#c5d6c6;--h2:#81aa92;--h3:#356752;--board:#f8f6ee;--flash:#dd9956;--serif:Georgia,serif;--sans:system-ui,sans-serif;--mono:ui-monospace,Menlo,monospace}
+  @media(prefers-color-scheme:dark){:root{--bg:#1a2320;--paper:#212d28;--ink:#eef2eb;--muted:#b9c5bd;--green:#a9d9bf;--accent:#edb795;--line:#43554b;--wash:#2a3a32;--button:#a9d9bf;--on-button:#14251d;--h0:#23332d;--h1:#355447;--h2:#568571;--h3:#93bda4;--board:#161f1c;--flash:#e7ad71}}
+  *,*::after,*::before{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.6 var(--sans)}
+  a{color:var(--green);text-underline-offset:.22em} a:hover{text-decoration-thickness:2px} :focus-visible{outline:2px solid var(--green);outline-offset:3px}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.13;margin:0;letter-spacing:-.035em} h2{font-size:clamp(1.6rem,3vw,2.2rem)} h3{font-size:1.25rem} p{margin:0} p+p{margin-block-start:.75rem}
+  .wrap{inline-size:min(100% - 3rem,70rem);margin-inline:auto}.site{border-block-end:1px solid var(--line)}.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:.55rem 1rem;flex-wrap:wrap;padding-block:.85rem}.brand{font:600 1.22rem var(--serif);color:var(--ink);text-decoration:none}.site nav{display:flex;gap:1rem;font-size:.8rem}
+  .skip:not(:focus),.sr-only{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%)} .skip:focus{display:inline-block;margin:.65rem}
+  .hero{padding-block:clamp(2rem,5vw,4.1rem) 1.6rem;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,17rem);align-items:end;gap:1rem 2rem}.eyebrow,.label{font:600 .73rem/1.4 var(--mono);letter-spacing:.085em;text-transform:uppercase;color:var(--accent)}
+  h1{font-size:clamp(2.5rem,7vw,5rem);letter-spacing:-.058em;margin-block:.45rem .65rem}.lede{font:clamp(1.05rem,2.45vw,1.37rem)/1.45 var(--serif);max-inline-size:39rem;text-wrap:pretty}.hero aside{border-inline-start:1px solid var(--line);padding-inline-start:1rem;color:var(--muted);font-size:.86rem}.hero aside p+p{margin-block-start:.38rem}
+  .lab{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:clamp(.85rem,2.35vw,1.35rem);min-inline-size:0}.panel h2{margin-block:.2rem .25rem}.muted{color:var(--muted);font-size:.88rem}.panel-head{margin-block-end:.75rem}
+  .controls{display:flex;flex-wrap:wrap;gap:.43rem;align-items:center;margin-block:.7rem}.controls label{font-size:.84rem;color:var(--muted)}button,select{font:inherit;font-size:.82rem;min-block-size:2.5rem;border:1px solid var(--line);border-radius:5px;background:var(--paper);color:var(--ink);padding:.4rem .65rem}button{cursor:pointer}button:hover:not(:disabled){border-color:var(--green)}button:disabled{opacity:.55;cursor:not-allowed}.primary{color:var(--on-button);background:var(--button);border-color:var(--button)}
+  canvas{inline-size:100%;aspect-ratio:1;display:block;border:1px solid var(--line);border-radius:7px;background:var(--board);cursor:crosshair;margin-block:.65rem;touch-action:manipulation}canvas:focus-visible{outline-offset:4px}.legend,.metrics{display:flex;flex-wrap:wrap;gap:.32rem .8rem;color:var(--muted);font:.72rem/1.5 var(--mono)}.legend span{display:inline-flex;align-items:center;gap:.3rem}.swatch{inline-size:.66rem;block-size:.66rem;border-radius:2px;border:1px solid var(--line);display:inline-block;background:var(--swatch)}.metrics{border-block-start:1px solid var(--line);margin-block-start:.75rem;padding-block-start:.6rem}.metrics strong{color:var(--ink)}.last{margin-block-start:.55rem;min-block-size:2.8em}.hint{margin-block-start:.65rem}
+  .chart{inline-size:100%;block-size:auto;display:block;overflow:visible;margin-block:.35rem .2rem}.chart text{fill:var(--muted);font:13px var(--mono)}.chart .axis{stroke:var(--muted);stroke-width:1}.chart .grid{stroke:var(--line);stroke-width:1}.chart .curve{fill:none;stroke-width:2.2;vector-effect:non-scaling-stroke}.chart .current{stroke:var(--green)}.chart .pinned{stroke:var(--accent);stroke-dasharray:5 4}.chart .dot{fill:var(--green)}.chart .pinned-dot{fill:var(--accent)}.keys{display:flex;flex-wrap:wrap;gap:.25rem 1rem;font:.73rem/1.5 var(--mono);color:var(--muted)}.keys span::before{content:"";display:inline-block;vertical-align:middle;inline-size:1rem;border-block-start:2px solid var(--green);margin-inline-end:.35rem}.keys #pinned-key::before{border-block-start:2px dashed var(--accent)}.keys [hidden]{display:none}
+  .try{margin-block-start:1rem;padding:.75rem .85rem;background:var(--wash);border-radius:5px;font-size:.85rem}.try strong{color:var(--green)}
+  .notes{margin-block:2rem;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.35rem 2rem;border-block-start:1px solid var(--line);padding-block-start:1.5rem}.notes article{min-inline-size:0}.notes h3{margin-block:.3rem .55rem}.notes p{max-inline-size:62ch;font-size:.94rem}.equation{font:1.07rem/1.65 var(--serif);padding:.55rem .75rem;margin-block:.7rem;background:var(--wash);border-radius:4px;overflow-wrap:anywhere}.sources{padding-block:1.15rem 2rem;border-block-start:1px solid var(--line)}.sources ul{padding-inline-start:1.1rem;margin-block:.55rem 0;font-size:.86rem}.sources li+li{margin-block-start:.3rem}
+  @media(max-width:52rem){.hero{grid-template-columns:1fr}.hero aside{max-inline-size:36rem}.lab,.notes{grid-template-columns:1fr}.panel{inline-size:100%}canvas{max-inline-size:34rem;margin-inline:auto}}@media(max-width:31rem){.wrap{inline-size:calc(100% - 1.5rem)}.panel{padding:.75rem}.controls button,.controls select{min-block-size:2.75rem}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the experiment</a>
+<header class="site"><div class="wrap"><a class="brand" href="{{ '/' | relative_url }}">Yu Xi Chau</a><nav aria-label="Main"><a href="{{ '/projects/' | relative_url }}">Projects</a><a href="{{ '/about/' | relative_url }}">About</a></nav></div></header>
+<main id="main" class="wrap" tabindex="-1">
+  <div class="hero">
+    <div><p class="eyebrow">Field notes / Complexity science</p><h1>The BTW sandpile</h1><p class="lede">One grain can do nothing at all, or set off an avalanche across the grid. What changes if the rule is always the same?</p></div>
+    <aside><p class="label">Bak · Tang · Wiesenfeld</p><p>A small model of <strong>self-organised criticality</strong>: how a system can develop cascades at many scales without tuning an external parameter to a threshold.</p></aside>
+  </div>
+  <div class="lab">
+    <section class="panel" aria-labelledby="play">
+      <div class="panel-head"><p class="label">01 / Play</p><h2 id="play">Drop a grain</h2><p id="board-help" class="muted">Click or tap a cell. With the board focused, use the arrow keys to move and Enter to drop.</p></div>
+      <div class="controls"><button class="primary" id="random" type="button">Random drop</button><button id="auto" type="button">Start auto-drop</button></div>
+      <canvas id="board" width="640" height="640" tabindex="0" aria-label="Interactive sandpile board" aria-describedby="board-help">Use Random drop to run the model without the board.</canvas>
+      <div class="legend" aria-label="Grains per cell"><span><i class="swatch" style="--swatch:var(--h0)"></i>0</span><span><i class="swatch" style="--swatch:var(--h1)"></i>1</span><span><i class="swatch" style="--swatch:var(--h2)"></i>2</span><span><i class="swatch" style="--swatch:var(--h3)"></i>3 grains</span><span><i class="swatch" style="--swatch:var(--flash)"></i>toppled last drop</span></div>
+      <p id="last" class="muted last"></p>
+      <div class="controls"><label for="size">Grid</label><select id="size"><option value="16">16 × 16</option><option value="32" selected>32 × 32</option><option value="48">48 × 48</option></select><button id="warm" type="button">Reset warmed</button><button id="empty" type="button">Start empty</button></div>
+      <p class="muted hint">The warmed pile has already received many random drops. Start empty to see cascades emerge as the grid fills.</p>
+    </section>
+    <section class="panel" aria-labelledby="measure">
+      <div class="panel-head"><p class="label">02 / Measure</p><h2 id="measure">How big are the avalanches?</h2><p class="muted">For each size <em>s</em>, the curve shows the fraction of nonzero avalanches with at least <em>s</em> topplings.</p></div>
+      <div class="controls"><button class="primary" id="collect" type="button">Collect 1,000 drops</button><button id="pin" type="button">Pin curve</button><button id="clear" type="button">Clear data</button></div>
+      <div class="controls"><label for="scale">Chart axes</label><select id="scale"><option value="log" selected>Log–log</option><option value="linear">Linear</option></select></div>
+      <svg id="chart" class="chart" viewBox="0 0 460 270" role="img" aria-labelledby="plot-title plot-desc"><title id="plot-title">Log–log plot of avalanche sizes</title><desc id="plot-desc">Waiting for random drops.</desc><g id="plot"></g></svg>
+      <div class="keys"><span id="current-key">Current grid</span><span id="pinned-key" hidden></span></div>
+      <div class="metrics" id="stats"></div>
+      <p class="muted hint">Only uniform random drops enter the chart. Drops with no topplings are counted below the plot but excluded from the curve.</p>
+      <div class="try"><strong>Try this:</strong> collect a curve on 16 × 16 and pin it. Switch to 48 × 48 and collect again. Do larger grids let avalanches reach bigger sizes?</div>
+    </section>
+  </div>
+  <div class="notes">
+    <article><p class="label">03 / Local rules</p><h3>Four grains and an open edge</h3><p>Each site holds an integer height <em>h</em>. Add one grain, then wait until the grid is stable before adding another. When <em>h</em> reaches 4, the site topples: it loses four grains and sends one in each cardinal direction.</p><div class="equation"><i>h</i><sub>site</sub> → <i>h</i><sub>site</sub> − 4; &nbsp; <i>h</i><sub>neighbour</sub> → <i>h</i><sub>neighbour</sub> + 1</div><p>Grains sent off-grid are lost. Away from the edge, toppling conserves grains. The order of legal topplings changes neither the final heights nor the total number of topplings. That’s the model’s <em>Abelian</em> property.</p></article>
+    <article><p class="label">04 / Reading the chart</p><h3>What a power law would look like</h3><p>If positive avalanche sizes obeyed a power law, their probability mass would fall as <i>s</i><sup>−τ</sup>. For τ &gt; 1, the large-<i>s</i> tail would then scale as:</p><div class="equation"><i>P</i>(<i>S</i> ≥ <i>s</i> | <i>S</i> &gt; 0) ∝ <i>s</i><sup>1−τ</sup></div><p>That would look straight over the scaling range on log–log axes. A short straight stretch isn’t proof. Finite grids limit the tail, and the two-dimensional BTW model has more complicated scaling than one universal fitted line would suggest.</p></article>
+    <article><p class="label">05 / Why it matters</p><h3>Simple rules, no typical cascade size</h3><p>Slow input builds up the pile; local topplings spread activity; the edges let grains escape. After a long run, the grid can produce cascades over many scales even though every input is the same size. Broad scaling here means no single typical scale <em>within the scaling range</em>, not that a finite board can produce arbitrarily large events.</p></article>
+    <article><p class="label">06 / Beyond the grid</p><h3>A possibility proof, not a diagnosis</h3><p>Think of a fault that accumulates stress slowly and releases it in slips of very different sizes. The sandpile shows how local thresholds and redistribution <em>can</em> generate that kind of broad spread. It doesn’t establish the mechanism behind real earthquakes. Different processes can give similar-looking plots, so field data and independent evidence still matter.</p></article>
+  </div>
+  <footer class="sources"><h3>Further reading</h3><ul><li><a href="https://doi.org/10.1103/PhysRevLett.59.381">Bak, Tang &amp; Wiesenfeld (1987): Self-organized criticality</a></li><li><a href="https://doi.org/10.1103/PhysRevLett.83.3952">Tebaldi, De Menech &amp; Stella (1999): Multifractal scaling and edge events</a></li></ul></footer>
+</main>
+<p id="announcement" class="sr-only" role="status"></p>
+<noscript><p class="wrap">Enable JavaScript to run the experiment. The explanation and sources are available above.</p></noscript>
+<script>
+'use strict';
+function makePile(n, seed) {
+  const cells = n*n, heights = new Uint16Array(cells), touched = new Uint8Array(cells);
+  const active = new Uint8Array(cells), queue = new Int32Array(cells), neighbours = new Int32Array(cells*4);
+  let rng = seed >>> 0, mass = 0;
+  for (let i=0;i<cells;i++) {
+    const x=i%n, y=Math.floor(i/n), j=i*4;
+    neighbours[j]=x>0?i-1:-1; neighbours[j+1]=x<n-1?i+1:-1;
+    neighbours[j+2]=y>0?i-n:-1; neighbours[j+3]=y<n-1?i+n:-1;
+  }
+  function randomSite() {
+    rng=(Math.imul(1664525,rng)+1013904223)>>>0;
+    return Math.floor(rng/4294967296*cells);
+  }
+  function drop(site, mark=true) {
+    let size=0, area=0, lost=0, count=0;
+    if(mark) touched.fill(0);
+    mass++;
+    if(++heights[site]>=4) { active[site]=1; queue[count++]=site; }
+    while(count) {
+      const i=queue[--count]; active[i]=0;
+      const times=heights[i]>>2;
+      heights[i]-=times*4; size+=times;
+      if(mark&&!touched[i]) { touched[i]=1; area++; }
+      for(let k=i*4;k<i*4+4;k++) {
+        const j=neighbours[k];
+        if(j<0) { lost+=times; continue; }
+        heights[j]+=times;
+        if(heights[j]>=4&&!active[j]) { active[j]=1; queue[count++]=j; }
+      }
+    }
+    mass-=lost;
+    return {site,size,area,lost};
+  }
+  return {n,cells,heights,touched,drop,randomSite,get mass(){return mass;}};
+}
+
+const $ = id => document.getElementById(id), canvas=$('board'), ctx=canvas.getContext('2d');
+const theme=matchMedia('(prefers-color-scheme: dark)'), fmt=new Intl.NumberFormat('en');
+const percentFmt=new Intl.NumberFormat('en',{style:'percent',maximumSignificantDigits:3});
+let pile, hist, total, positive, maximum, pinned=null, latest=null, cursor=0, autoTimer=0, pending=0, left=0;
+const announce = text => { $('announcement').textContent=text; };
+function randomDrop(mark=true) {
+  const result=pile.drop(pile.randomSite(),mark);
+  total++;
+  if(result.size) { positive++; maximum=Math.max(maximum,result.size); hist.set(result.size,(hist.get(result.size)||0)+1); }
+  if(mark) latest=result;
+}
+function rebuild(warmed,initial=false) {
+  stop();
+  const n=Number($('size').value);
+  pile=makePile(n,1987+n); cursor=Math.floor(n/2)*n+Math.floor(n/2);
+  hist=new Map(); total=positive=maximum=0; latest=null;
+  if(warmed) for(let i=0;i<8*pile.cells;i++) pile.drop(pile.randomSite(),false);
+  if(initial) for(let i=0;i<500;i++) randomDrop(i===499);
+  refresh();
+  if(!initial) announce(`${n} by ${n} grid, ${warmed?'warmed':'empty'}. Current samples cleared.`);
+}
+function drawBoard() {
+  const css=getComputedStyle(document.documentElement), color=v=>css.getPropertyValue(v).trim();
+  const colors=['--h0','--h1','--h2','--h3'].map(color);
+  const w=canvas.width, d=w/pile.n, gap=Math.max(1,d*.065);
+  ctx.fillStyle=color('--board'); ctx.fillRect(0,0,w,w);
+  for(let i=0;i<pile.cells;i++) {
+    const x=(i%pile.n)*d, y=Math.floor(i/pile.n)*d;
+    ctx.fillStyle=colors[pile.heights[i]]; ctx.fillRect(x+gap,y+gap,d-2*gap,d-2*gap);
+    if(pile.touched[i]) { ctx.fillStyle=color('--flash'); ctx.globalAlpha=.7; ctx.fillRect(x+gap,y+gap,d-2*gap,d-2*gap); ctx.globalAlpha=1; }
+  }
+  if(latest) {
+    ctx.fillStyle=color('--ink'); ctx.beginPath();
+    ctx.arc((latest.site%pile.n+.5)*d,(Math.floor(latest.site/pile.n)+.5)*d,Math.max(2,d*.16),0,2*Math.PI); ctx.fill();
+  }
+  if(document.activeElement===canvas) {
+    const x=(cursor%pile.n)*d, y=Math.floor(cursor/pile.n)*d;
+    ctx.strokeStyle=color('--paper'); ctx.lineWidth=4; ctx.strokeRect(x+2,y+2,d-4,d-4);
+    ctx.strokeStyle=color('--ink'); ctx.lineWidth=2; ctx.strokeRect(x+2,y+2,d-4,d-4);
+  }
+}
+function distribution() {
+  let tail=0;
+  const points=[...hist].sort((a,b)=>b[0]-a[0]).map(([size,count])=>[size,(tail+=count)/positive]).reverse();
+  return {n:pile.n, points, total, positive, maximum};
+}
+function drawChart() {
+  const current=distribution(), sets=[pinned,current].filter(s=>s&&s.positive);
+  const log=$('scale').value==='log', largest=Math.max(1,...sets.map(s=>s.maximum));
+  const xMax=Math.max(2,Math.ceil(Math.log10(largest)));
+  const yMax=Math.max(1,...sets.map(s=>Math.ceil(-Math.log10(s.points.at(-1)[1]))));
+  const unit=10**Math.floor(Math.log10(Math.max(1,largest/4)));
+  const step=[1,2,5,10].map(k=>k*unit).find(k=>k>=largest/4);
+  const nTicks=Math.ceil(largest/step);
+  const x=s=>68+(log?Math.log10(s)/xMax:s/(nTicks*step))*373;
+  const y=p=>20+(log?-Math.log10(p)/yMax:1-p)*196;
+  const xTicks=log?Array.from({length:xMax+1},(_,i)=>10**i):Array.from({length:nTicks+1},(_,i)=>i*step);
+  const yTicks=log?Array.from({length:yMax+1},(_,i)=>10**-i):[1,.75,.5,.25,0];
+  let html='';
+  for(const s of xTicks) {const xx=x(s);html+=`<line class="grid" x1="${xx}" x2="${xx}" y1="20" y2="216"/><text x="${xx}" y="237" text-anchor="middle">${fmt.format(s)}</text>`;}
+  for(const p of yTicks) {const yy=y(p);html+=`<line class="grid" x1="68" x2="441" y1="${yy}" y2="${yy}"/><text x="60" y="${yy+4}" text-anchor="end">${percentFmt.format(p)}</text>`;}
+  html+='<path class="axis" d="M68 20V216H441" fill="none"/><text x="255" y="262" text-anchor="middle">Topplings s · '+(log?'log–log axes':'linear axes')+'</text>';
+  for(const s of sets) {
+    const isPin=s===pinned, coords=s.points.map(([a,b])=>[x(a),y(b)]);
+    const path=coords.map(([a,b],i)=>i===0?`M${a},${b}`:`H${coords[i-1][0]}V${b}H${a}`).join('');
+    html+=`<path class="curve ${isPin?'pinned':'current'}" d="${path}"/><circle class="${isPin?'pinned-dot':'dot'}" cx="${coords.at(-1)[0]}" cy="${coords.at(-1)[1]}" r="3"/>`;
+  }
+  if(!sets.length) html+='<text x="254" y="116" text-anchor="middle">No avalanches sampled yet</text>';
+  $('plot').innerHTML=html;
+  $('plot-title').textContent=`${log?'Log–log':'Linear'} plot of avalanche sizes`;
+  $('plot-desc').textContent=`Current ${pile.n} by ${pile.n} grid: ${positive} positive avalanches, largest ${maximum} topplings.`+(pinned?` Pinned ${pinned.n} by ${pinned.n}: ${pinned.positive} positive avalanches, largest ${pinned.maximum}.`:'');
+  $('current-key').textContent=`Current · ${pile.n} × ${pile.n}`;
+  $('pinned-key').hidden=!pinned;
+  if(pinned) $('pinned-key').textContent=`Pinned · ${pinned.n} × ${pinned.n} · ${fmt.format(pinned.total)} drops`;
+  $('stats').innerHTML=`<span><strong>${fmt.format(total)}</strong> random ${total===1?'drop':'drops'}</span><span><strong>${fmt.format(total-positive)}</strong> without toppling</span><span><strong>${fmt.format(maximum)}</strong> largest size</span>`;
+  $('pin').disabled=!pinned&&!positive; $('pin').textContent=pinned?'Unpin curve':'Pin curve';
+}
+function lastText() {
+  if(!latest) return 'Ready. Add a grain to see which cells topple.';
+  const {size,area,lost}=latest;
+  return `Last drop: ${fmt.format(size)} ${size===1?'toppling':'topplings'} across ${fmt.format(area)} ${area===1?'cell':'cells'}; ${fmt.format(lost)} ${lost===1?'grain':'grains'} lost at the edge.`;
+}
+function refresh() {drawBoard(); drawChart(); $('last').textContent=lastText();}
+function stop() {
+  clearInterval(autoTimer); autoTimer=0;
+  clearTimeout(pending); pending=0; left=0;
+  $('auto').textContent='Start auto-drop'; $('collect').textContent='Collect 1,000 drops';
+}
+function manual(site) { stop(); cursor=site; latest=pile.drop(site); refresh(); announce(lastText()); }
+canvas.addEventListener('click',e=>{
+  const r=canvas.getBoundingClientRect(), n=pile.n;
+  const x=Math.min(n-1,Math.max(0,Math.floor((e.clientX-r.left)/r.width*n)));
+  const y=Math.min(n-1,Math.max(0,Math.floor((e.clientY-r.top)/r.height*n)));
+  manual(y*n+x);
+});
+canvas.addEventListener('keydown',e=>{
+  const delta={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1]}[e.key];
+  if(e.key==='Enter'||e.key===' ') {e.preventDefault(); manual(cursor); return;}
+  if(!delta) return;
+  e.preventDefault();
+  const n=pile.n, x=Math.max(0,Math.min(n-1,cursor%n+delta[0])), y=Math.max(0,Math.min(n-1,Math.floor(cursor/n)+delta[1]));
+  cursor=y*n+x; drawBoard(); announce(`Row ${y+1}, column ${x+1}, ${pile.heights[cursor]} grains.`);
+});
+canvas.addEventListener('focus',drawBoard); canvas.addEventListener('blur',drawBoard);
+theme.addEventListener('change',drawBoard);
+$('random').addEventListener('click',()=>{stop();randomDrop();refresh();announce(lastText());});
+$('auto').addEventListener('click',()=>{
+  if(autoTimer) {stop();announce('Auto-drop stopped.');return;}
+  stop(); $('auto').textContent='Stop auto-drop';
+  autoTimer=setInterval(()=>{randomDrop();refresh();},220); announce('Auto-drop started.');
+});
+$('collect').addEventListener('click',()=>{
+  if(left) {stop();announce('Collection stopped.');return;}
+  stop(); left=1000; $('collect').textContent='Stop collection';
+  function batch() {
+    const deadline=performance.now()+8;
+    do {left--; randomDrop(left%50===0);} while(left && performance.now()<deadline);
+    refresh();
+    if(left) pending=setTimeout(batch,0);
+    else {stop();announce(`Collected 1,000 drops. ${fmt.format(total)} random drops on this grid.`);}
+  }
+  pending=setTimeout(batch,0);
+});
+$('pin').addEventListener('click',()=>{pinned=pinned?null:distribution();drawChart();announce(pinned?'Curve pinned. Change the grid size to compare.':'Reference curve removed.');});
+$('scale').addEventListener('change',drawChart);
+$('clear').addEventListener('click',()=>{stop();hist.clear();total=positive=maximum=0;drawChart();announce('Current samples cleared. The grid and any pinned curve are unchanged.');});
+$('warm').addEventListener('click',()=>rebuild(true)); $('empty').addEventListener('click',()=>rebuild(false)); $('size').addEventListener('change',()=>rebuild(true));
+document.addEventListener('visibilitychange',()=>{if(document.hidden) stop();});
+rebuild(true,true);
+</script>
+</body>
+</html>
