@@ -1,0 +1,49 @@
+categories:
+  research: Research & Simulation
+  data: Data & AI
+  tools: Languages & Tools
+  systems: Systems & Cloud
+  business: Business Domains
+  leadership: Leadership & Governance
+
+stops:
+  fwd:
+    - { category: leadership, name: Platform Ownership }
+    - { category: leadership, name: Risk Operating Models }
+    - { category: systems, name: AIOps }
+    - { category: systems, name: Front End }
+    - { category: systems, name: AWS }
+    - { category: systems, name: GCP }
+  aia:
+    - { category: business, name: Insurance Business }
+    - { category: leadership, name: AI Governance }
+    - { category: systems, name: MLOps }
+    - { category: systems, name: Computer Engineering }
+    - { category: data, name: Generative AI }
+  swire:
+    - { category: data, name: Data Engineering }
+    - { category: business, name: Property Management }
+  watson:
+    - { category: systems, name: System Design }
+    - { category: business, name: Retail }
+    - { category: business, name: CRM }
+    - { category: systems, name: Cloud }
+    - { category: systems, name: Azure }
+    - { category: systems, name: Back End }
+  hkjc:
+    - { category: data, name: Data Science }
+    - { category: leadership, name: Running a Team }
+    - { category: data, name: Databases }
+    - { category: tools, name: R }
+    - { category: tools, name: Python }
+    - { category: data, name: Advanced Analytics }
+  warwick:
+    - { category: research, name: Interacting Particle Systems }
+    - { category: data, name: Machine Learning }
+    - { category: data, name: Neural Networks }
+    - { category: tools, name: MATLAB }
+  imperial:
+    - { category: research, name: Statistical Mechanics }
+    - { category: research, name: Computational Simulation }
+    - { category: research, name: Solid-State Physics }
+    - { category: tools, name: C++ }

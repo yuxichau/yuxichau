@@ -1,0 +1,8 @@
+<div class="sj-about-stop-skills">
+  <p class="sj-about-skill-label">Levelled up</p>
+  <div class="sj-about-skill-chips">
+    {%- for skill in site.data.about_skills.stops[include.stop] %}
+    <span class="sj-about-skill-chip sj-skill-{{ skill.category }}" title="{{ site.data.about_skills.categories[skill.category] | escape }}">{{ skill.name | escape }}</span>
+    {%- endfor %}
+  </div>
+</div>
