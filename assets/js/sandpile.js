@@ -297,19 +297,55 @@
     header.classList.add('is-visible');
   }
 
-  // Reveal narrative beats one by one on scroll
+  // Split narrative copy into word spans, then light each beat on scroll.
+  // CSS runs the 40ms stagger; the observer only decides when a beat starts.
+  function splitWords(target) {
+    var wordIndex = 0;
+    var walker = document.createTreeWalker(target, NodeFilter.SHOW_TEXT);
+    var nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(function (node) {
+      if (!node.textContent.trim()) return;
+      var frag = document.createDocumentFragment();
+      node.textContent.split(/(\s+)/).forEach(function (part) {
+        if (!part) return;
+        if (!part.trim()) {
+          frag.appendChild(document.createTextNode(part));
+          return;
+        }
+        var span = document.createElement('span');
+        span.className = 'w';
+        span.textContent = part;
+        span.style.setProperty('--i', wordIndex++);
+        frag.appendChild(span);
+      });
+      node.parentNode.replaceChild(frag, node);
+    });
+    return wordIndex;
+  }
+
   var beats = Array.prototype.slice.call(document.querySelectorAll('.sj-beat'));
-  if (beats.length && 'IntersectionObserver' in window && !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+  var beatTriggers = [];
+  beats.forEach(function (beat) {
+    var target = beat.querySelector('[data-words]');
+    if (!target) return;
+    var trigger = beat.querySelector('.sj-beat__inner') || beat;
+    trigger._beat = beat;
+    beatTriggers.push(trigger);
+    beat.style.setProperty('--words', splitWords(target));
+  });
+
+  if (beatTriggers.length && 'IntersectionObserver' in window && !reducedMotion) {
     var beatObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          beatObserver.unobserve(entry.target);
-        }
+        if (!entry.isIntersecting) return;
+        var host = entry.target._beat || entry.target;
+        host.classList.add('is-lit');
+        beatObserver.unobserve(entry.target);
       });
-    }, { threshold: 0.32 });
-    beats.forEach(function (b) { beatObserver.observe(b); });
+    }, { threshold: 0.55, rootMargin: '0px 0px -10% 0px' });
+    beatTriggers.forEach(function (trigger) { beatObserver.observe(trigger); });
   } else {
-    beats.forEach(function (b) { b.classList.add('is-visible'); });
+    beats.forEach(function (beat) { beat.classList.add('is-lit'); });
   }
 })();

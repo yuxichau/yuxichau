@@ -62,6 +62,14 @@ body.layout--home .sj-header.is-visible {
   font-family: var(--sj-mono);
   font-size: 0.74rem;
   color: var(--sj-muted);
+  animation: sjStageClear 1.6s cubic-bezier(0.23, 1, 0.32, 1) 3s backwards;
+}
+
+/* The bar holds the fogged state during the 3s delay, then clears.
+   Keep opacity/filter off the base rule, or the bar snaps back to fog. */
+@keyframes sjStageClear {
+  from { opacity: 0.32; filter: blur(6px); }
+  to { opacity: 1; filter: none; }
 }
 
 .sj-opening__hint {
@@ -116,15 +124,6 @@ body.layout--home .sj-header.is-visible {
   align-items: center;
   justify-content: center;
   padding: 5rem 28px;
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.sj-beat.is-visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .sj-beat__inner {
@@ -186,8 +185,48 @@ body.layout--home .sj-header.is-visible {
   text-decoration: underline;
 }
 
+/* The sentence lights word by word. The overlap between the 40ms step
+   and the 0.9s fade is what makes the brightness travel. */
+.sj-beat [data-words] .w {
+  display: inline-block;
+  opacity: 0.14;
+}
+
+.sj-beat.is-lit [data-words] .w {
+  animation: sjWordLit 0.9s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  animation-delay: calc(var(--i) * 40ms);
+}
+
+@keyframes sjWordLit {
+  to { opacity: 1; }
+}
+
+.sj-quote footer,
+.sj-beat__links {
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition-delay: calc(var(--words, 20) * 40ms + 900ms);
+}
+
+.sj-beat.is-lit .sj-quote footer,
+.sj-beat.is-lit .sj-beat__links {
+  opacity: 1;
+  transform: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .sj-beat {
+  .sj-opening__bar {
+    animation: none;
+  }
+
+  .sj-beat [data-words] .w {
+    opacity: 1;
+    animation: none !important;
+  }
+
+  .sj-quote footer,
+  .sj-beat__links {
     opacity: 1;
     transform: none;
     transition: none;
