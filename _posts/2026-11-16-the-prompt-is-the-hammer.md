@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "The prompt is the hammer"
-date: 2026-11-25 09:00:00 -0000
+date: 2026-11-16 09:00:00 -0000
 tags: [AI, Technology]
 author: Yu Xi Chau
 ---
