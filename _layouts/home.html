@@ -11,8 +11,24 @@ layout: default
   <!-- Opening Stage: Full-viewport rounded rectangular Bak-Tang-Wiesenfeld sandpile, no header -->
   <section id="sj-opening" class="sj-opening" aria-label="Bak-Tang-Wiesenfeld abelian sandpile">
     <h1 class="visually-hidden">Yu Xi Chau: Notes on AI systems, governance, and small mathematical tools</h1>
+    <p class="sj-note sj-note--top">
+      The sandpile toy model that inspired me when I was in high school…
+    </p>
     <div class="sj-opening__canvas-wrap">
-      <canvas id="sj-sandpile" role="img" aria-label="A Bak-Tang-Wiesenfeld sandpile lattice initialized at self-organized criticality on warm paper. Click or drag anywhere to drop grains and trigger cascading avalanches."></canvas>
+      <div class="sj-opening__canvas-slot">
+        <canvas id="sj-sandpile" role="img" aria-label="A Bak-Tang-Wiesenfeld sandpile lattice initialized at self-organized criticality on warm paper. Click or drag anywhere to drop grains and trigger cascading avalanches."></canvas>
+      </div>
+      <div class="sj-note sj-note--side" aria-hidden="true">
+        <span class="sj-note__label">Drop a grain of sand<br>by pressing it!</span>
+        <svg class="sj-note__arrow sj-note__arrow--side" viewBox="0 0 96 58" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
+          <path class="sj-note__shaft" d="M 88 12 C 66 8, 42 18, 13 40" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="sj-note__head" d="M 24 25 C 19 32, 14 36, 10 41 C 17 40, 24 41, 31 44" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg class="sj-note__arrow sj-note__arrow--up" viewBox="0 0 58 46" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
+          <path class="sj-note__shaft" d="M 52 36 C 32 37, 19 26, 14 8" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="sj-note__head" d="M 6 19 C 10 14, 12 10, 14 5 C 17 10, 20 14, 25 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
     </div>
     <div class="sj-opening__bar">
       <p class="sj-opening__hint">
