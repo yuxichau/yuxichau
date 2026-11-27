@@ -15,6 +15,10 @@ Good resources I've found and keep coming back to, for my own reference and for 
 
 - [Deep Learning with Python](https://deeplearningwithpython.io/chapters/chapter16_text-generation) - Chapters 15-16 are one of the clearest explanations of how transformers work, with coding examples, by the great François Chollet.
 
+## Markets
+
+- [TrustMRR](https://trustmrr.com) - A database of verified startup revenues: founders publish their real MRR through payment integrations, so you can see exactly what small software products earn before you copy or buy one.
+
 ## Computer engineering
 
 - [CPU.land](https://cpu.land) - A tutorial that walks through how computers actually run, CPU first, and is clear enough for anyone without a computing background who got pulled into engineering.
