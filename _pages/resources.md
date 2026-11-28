@@ -7,6 +7,11 @@ description: "A curated list of useful AI, computer engineering, and interactive
 
 Good resources I've found and keep coming back to, for my own reference and for anyone who finds them useful.
 
+## Recommendations
+
+- [HackerTube](https://hackertube.org/) - YouTube rebuilt from the 6,454 videos Hacker News commenters have recommended to each other since 2007.
+- [HackerBooks](https://hackerbooks.org/) - The same idea for books, with 15,737 titles ranked by how many different Hacker News commenters recommended them.
+
 ## Fun things
 
 - [ciechanow.ski](https://ciechanow.ski/mechanical-watch/) - One of the best explanations of how mechanical watches work, interactive and a joy to click through.
