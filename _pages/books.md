@@ -2,10 +2,10 @@
 layout: single
 title: "Books that I read"
 permalink: /books/
-description: "Books Yu Xi Chau has read, grouped by theme, with links to each on Goodreads."
+description: "Selected readings from Yu Xi Chau, updated over time, with links to each on Goodreads."
 ---
 
-Books I have finished, grouped roughly by what they are about. Each title links to its Goodreads page.
+Selected readings, and I keep updating the page as I go. The short list reflects what I have got around to writing down, not everything I have read. Each title links to its Goodreads page.
 
 ## History
 
