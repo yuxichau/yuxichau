@@ -9,6 +9,7 @@ Good resources I've found and keep coming back to, for my own reference and for 
 
 ## Recommendations
 
+- [Books that I read](/books/) - The books I have finished, grouped by theme, with a link to each on Goodreads.
 - [HackerTube](https://hackertube.org/) - YouTube rebuilt from the 6,454 videos Hacker News commenters have recommended to each other since 2007.
 - [HackerBooks](https://hackerbooks.org/) - The same idea for books, with 15,737 titles ranked by how many different Hacker News commenters recommended them.
 
